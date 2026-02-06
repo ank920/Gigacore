@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
@@ -19,9 +20,11 @@ export default function IndiaFirst() {
                         className="flex-1 w-full"
                     >
                         <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border border-gray-100">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center"
-                                style={{ backgroundImage: "url('/home/INDIA-FIRST + GLOBAL OPPORTUNITY.webp')" }}
+                            <Image
+                                src="/home/build.jpg"
+                                alt="Built for India's Scale"
+                                fill
+                                className="object-cover"
                             />
                         </div>
                     </motion.div>
