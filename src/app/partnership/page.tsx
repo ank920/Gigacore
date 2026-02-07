@@ -42,14 +42,14 @@ export default function PartnershipPage() {
                             The platform is designed to be deployed with <span className="text-brand-green font-bold">partners</span>, combining technical capability with industrial reach, project execution expertise, and long-term operating experience.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4">
-                            <Link href="/contact">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base min-w-[200px]">
+                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Discuss Partnership
                                 </button>
                             </Link>
-                            <Link href="/contact">
-                                <button className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold transition-all duration-300 text-base min-w-[200px] shadow-sm">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold transition-all duration-300 text-base w-full md:w-auto min-w-[200px] shadow-sm">
                                     Explore Pilot Collaboration
                                 </button>
                             </Link>
@@ -288,9 +288,9 @@ export default function PartnershipPage() {
                         <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
                             Engagement is focused on partners seeking deployable, scalable hydrogen solutions.
                         </p>
-                        <div className="flex justify-center items-center">
-                            <Link href="/contact">
-                                <button className="px-10 py-4 bg-brand-blue text-white font-bold rounded-full shadow-xl hover:bg-sky-600 hover:scale-105 transition-all text-lg min-w-[240px]">
+                        <div className="flex justify-center items-center w-full">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-10 py-4 bg-brand-blue text-white font-bold rounded-full shadow-xl hover:bg-sky-600 hover:scale-105 transition-all text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px]">
                                     Discuss Opportunities
                                 </button>
                             </Link>

@@ -75,9 +75,9 @@ export default function Navbar() {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="fixed inset-0 z-40 bg-white pt-24 px-6 xl:hidden"
+                        className="fixed inset-0 z-40 bg-white pt-24 px-6 xl:hidden overflow-y-auto h-[100dvh]"
                     >
-                        <div className="flex flex-col space-y-6">
+                        <div className="flex flex-col space-y-6 pb-8">
                             {NAV_LINKS.map((link) => (
                                 <Link
                                     key={link.name}

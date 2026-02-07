@@ -42,9 +42,9 @@ export default function EconomicsPage() {
                             Gigacore Energy’s economics are anchored in a different physical regime: <span className="text-brand-blue font-bold">cold-plasma–enabled water dissociation</span>, which materially lowers the electrical energy required per unit of hydrogen produced.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4">
-                            <Link href="/contact">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-lg min-w-[200px]">
+                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px]">
                                     Request Investor Deck
                                 </button>
                             </Link>
@@ -352,13 +352,13 @@ export default function EconomicsPage() {
                             </p>
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-                                <Link href="/contact">
-                                    <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl min-w-[260px]">
+                                <Link href="/contact" className="w-full md:w-auto">
+                                    <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                         Request Economics Brief
                                     </button>
                                 </Link>
-                                <Link href="/partnership">
-                                    <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl min-w-[260px] flex items-center justify-center gap-2">
+                                <Link href="/partnership" className="w-full md:w-auto">
+                                    <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px] flex items-center justify-center gap-2">
                                         Discuss Pilot Deployment <ArrowRight className="w-6 h-6" />
                                     </button>
                                 </Link>

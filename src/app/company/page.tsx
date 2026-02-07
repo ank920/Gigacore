@@ -42,14 +42,14 @@ export default function CompanyPage() {
                             We address a fundamental challenge: how to produce clean hydrogen at the <span className="text-brand-green font-bold">scale and cost required by industry</span>, without relying on incremental improvements to legacy technologies.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4">
-                            <Link href="/technology">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base min-w-[200px]">
+                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                            <Link href="/technology" className="w-full md:w-auto">
+                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Learn More
                                 </button>
                             </Link>
-                            <Link href="/partnership">
-                                <button className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold transition-all duration-300 text-base min-w-[200px] shadow-sm">
+                            <Link href="/partnership" className="w-full md:w-auto">
+                                <button className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold transition-all duration-300 text-base w-full md:w-auto min-w-[200px] shadow-sm">
                                     Explore Partnerships
                                 </button>
                             </Link>
@@ -301,13 +301,13 @@ export default function CompanyPage() {
                         </p>
 
                         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-                            <Link href="/contact">
-                                <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all text-xl min-w-[260px]">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                     Strategic Discussions
                                 </button>
                             </Link>
-                            <Link href="/contact">
-                                <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl min-w-[260px] flex items-center justify-center gap-2">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px] flex items-center justify-center gap-2">
                                     Request Executive Brief <ArrowRight className="w-6 h-6" />
                                 </button>
                             </Link>

@@ -38,14 +38,14 @@ export default function TechnologyPage() {
                             Hydrogen production has traditionally relied on applying <span className="text-brand-blue font-bold">constant electrical force</span> to water molecules until they separate. While effective, this approach is inherently <span className="text-brand-green font-bold">energy-intensive</span> and constrained by well-understood physical limits.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center gap-6">
-                            <Link href="/contact">
-                                <button className="px-10 py-4 bg-brand-blue text-white rounded-full font-bold transition-all duration-300 shadow-xl text-lg min-w-[240px] hover:bg-sky-600">
+                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
+                            <Link href="/contact" className="w-full md:w-auto">
+                                <button className="px-10 py-4 bg-brand-blue text-white rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px] hover:bg-sky-600">
                                     Request Technical Overview
                                 </button>
                             </Link>
-                            <Link href="/partnership">
-                                <button className="text-gray-900 font-bold text-lg hover:text-brand-blue transition-colors flex items-center gap-2">
+                            <Link href="/partnership" className="w-full md:w-auto">
+                                <button className="text-gray-900 font-bold text-lg hover:text-brand-blue transition-colors flex items-center gap-2 justify-center w-full md:w-auto">
                                     Engage as a Partner <ArrowRight className="w-5 h-5" />
                                 </button>
                             </Link>
@@ -396,13 +396,13 @@ export default function TechnologyPage() {
                                     </p>
 
                                     <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-                                        <Link href="/contact">
-                                            <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl min-w-[260px]">
+                                        <Link href="/contact" className="w-full md:w-auto">
+                                            <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                                 Request Technical Overview
                                             </button>
                                         </Link>
-                                        <Link href="/partnership">
-                                            <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl min-w-[260px] flex items-center justify-center gap-2">
+                                        <Link href="/partnership" className="w-full md:w-auto">
+                                            <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px] flex items-center justify-center gap-2">
                                                 Engage as a Partner <ArrowRight className="w-6 h-6" />
                                             </button>
                                         </Link>
