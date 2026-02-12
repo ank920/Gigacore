@@ -31,7 +31,7 @@ export default function Credibility() {
                         viewport={{ once: true }}
                         className="flex-1"
                     >
-                        <motion.span variants={fadeUp} className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">
+                        <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">
                             Built for Industrial Reality
                         </motion.span>
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">

@@ -37,7 +37,7 @@ export default function IndiaFirst() {
                         viewport={{ once: true }}
                         className="flex-1"
                     >
-                        <motion.span variants={fadeUp} className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">
+                        <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">
                             India-First, Globally Relevant
                         </motion.span>
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
@@ -48,7 +48,7 @@ export default function IndiaFirst() {
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="space-y-6">
-                            <div className="border-l-2 border-brand-blue pl-6">
+                            <div className="border-l-2 border-brand-primary pl-6">
                                 <h4 className="font-bold text-xl mb-2">India Strategy</h4>
                                 <ul className="space-y-2 text-gray-600 text-sm">
                                     <li>• Alignment to India’s National Green Hydrogen Mission</li>

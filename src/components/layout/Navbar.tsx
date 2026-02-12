@@ -7,6 +7,8 @@ import clsx from "clsx";
 import SectionWrapper from "../ui/SectionWrapper";
 import { menuSlide } from "@/lib/motion";
 
+import Logo from "../ui/Logo";
+
 const NAV_LINKS = [
     { name: "Technology", href: "/technology" },
     { name: "Economics", href: "/economics" },
@@ -33,15 +35,13 @@ export default function Navbar() {
                 className={clsx(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                     isScrolled || isMobileOpen
-                        ? "bg-white text-gray-900 border-b border-gray-100 py-4 shadow-sm"
-                        : "bg-gradient-to-b from-black/50 to-transparent py-6 text-white"
+                        ? "bg-white/95 backdrop-blur-md text-gray-900 border-b border-gray-100 py-3 shadow-sm"
+                        : "bg-gradient-to-b from-black/50 to-transparent py-5 text-white"
                 )}
             >
                 <SectionWrapper className="flex items-center justify-between">
                     <Link href="/" className="relative z-50 group translate-y-[-2px]">
-                        <div className="flex flex-col leading-tight">
-                            <span className="font-bold text-2xl uppercase tracking-tighter">Gigacore</span>
-                        </div>
+                        <Logo className="w-[140px] md:w-auto" />
                     </Link>
 
                     {/* Desktop Nav */}
@@ -50,7 +50,7 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-base font-bold hover:text-brand-blue transition-colors relative group tracking-tight"
+                                className="text-sm font-bold hover:text-brand-primary transition-colors relative group tracking-tight"
                             >
                                 {link.name}
                             </Link>
@@ -60,9 +60,9 @@ export default function Navbar() {
                     {/* Mobile Toggle */}
                     <button
                         onClick={() => setIsMobileOpen(!isMobileOpen)}
-                        className={clsx("xl:hidden relative z-50 p-2 hover:text-brand-blue transition-colors", isMobileOpen ? "text-gray-900" : "text-current")}
+                        className={clsx("xl:hidden relative z-50 p-2 hover:text-brand-primary transition-colors", isMobileOpen ? "text-gray-900" : "text-current")}
                     >
-                        {isMobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                        {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </SectionWrapper>
             </header>
@@ -75,15 +75,15 @@ export default function Navbar() {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="fixed inset-0 z-40 bg-white pt-24 px-6 xl:hidden overflow-y-auto h-[100dvh]"
+                        className="fixed inset-0 z-40 bg-white/98 backdrop-blur-xl pt-24 px-6 xl:hidden overflow-y-auto h-[100dvh] flex flex-col items-center justify-center"
                     >
-                        <div className="flex flex-col space-y-6 pb-8">
+                        <div className="flex flex-col space-y-6 text-center">
                             {NAV_LINKS.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileOpen(false)}
-                                    className="text-2xl font-bold text-gray-900 border-b border-gray-100 pb-4 hover:text-brand-blue transition-colors"
+                                    className="text-3xl font-bold text-gray-900 hover:text-brand-primary transition-colors"
                                 >
                                     {link.name}
                                 </Link>

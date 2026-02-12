@@ -30,7 +30,7 @@ const DIFFERENTIATORS = [
 
 export default function Differentiators() {
     return (
-        <section className="py-24 bg-brand-blue/5 relative overflow-hidden">
+        <section className="py-24 bg-brand-primary/5 relative overflow-hidden">
             {/* Background Image Overlay - faint */}
             <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
                 <div className="absolute inset-0 bg-[url('/home/CORE DIFFERENTIATORS.png')] bg-cover bg-center" />
@@ -42,7 +42,7 @@ export default function Differentiators() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block"
+                        className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block"
                     >
                         Core Differentiators
                     </motion.span>

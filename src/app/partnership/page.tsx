@@ -31,7 +31,7 @@ export default function PartnershipPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            Built to Scale Through <span className="text-brand-blue">Collaboration</span>
+                            Built to Scale Through <span className="text-brand-green">Collaboration</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -44,7 +44,7 @@ export default function PartnershipPage() {
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
+                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Discuss Partnership
                                 </button>
                             </Link>
@@ -74,8 +74,8 @@ export default function PartnershipPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <HeartHandshake className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Philosophy</span>
+                                <HeartHandshake className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Philosophy</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Partnership Philosophy</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -84,19 +84,19 @@ export default function PartnershipPage() {
                             <h4 className="font-bold text-gray-900 mb-4">Guiding Principles:</h4>
                             <ul className="space-y-4 mb-8">
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span className="text-gray-700 font-medium">Long-term alignment rather than transactional engagement</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span className="text-gray-700 font-medium">Clear division of roles and responsibilities</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span className="text-gray-700 font-medium">Transparency in technical and economic validation</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span className="text-gray-700 font-medium">Deployment at meaningful industrial scale</span>
                                 </li>
                             </ul>
@@ -156,11 +156,11 @@ export default function PartnershipPage() {
                             <div className="rounded-lg overflow-hidden shadow-lg border border-gray-100 mb-8 h-[300px]">
                                 <img src="/patnership/Public-Sector%20&%20PSU%20Collaboration.avif" alt="Public Sector" className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Landmark className="w-6 h-6 text-brand-blue" /> Public-Sector & PSU Collaboration</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Landmark className="w-6 h-6 text-brand-green" /> Public-Sector & PSU Collaboration</h3>
                             <p className="text-gray-600 mb-6">
                                 Public-sector enterprises play a critical role in markets where scale, reliability, and national priorities intersect.
                             </p>
-                            <div className="mt-auto p-4 bg-brand-blue/5 rounded border border-brand-blue/10">
+                            <div className="mt-auto p-4 bg-brand-green/5 rounded border border-brand-green/10">
                                 <ul className="space-y-2 text-sm text-gray-700">
                                     <li>• Pilot and demonstration facilities</li>
                                     <li>• Brownfield integration</li>
@@ -196,8 +196,8 @@ export default function PartnershipPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
                         <div>
                             <div className="flex items-center gap-2 mb-4">
-                                <Wrench className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Localization</span>
+                                <Wrench className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Localization</span>
                             </div>
                             <h2 className="text-3xl font-bold mb-6 text-gray-900">Manufacturing & Localization Partners</h2>
                             <p className="text-lg text-gray-600 mb-6">
@@ -237,7 +237,7 @@ export default function PartnershipPage() {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                             <div className="p-8 bg-gray-50 rounded-xl border border-gray-200">
-                                <Coins className="w-10 h-10 text-brand-blue mb-4" />
+                                <Coins className="w-10 h-10 text-brand-green mb-4" />
                                 <h4 className="text-xl font-bold text-gray-900 mb-4">Capital & Infrastructure Investors</h4>
                                 <ul className="space-y-2 text-gray-600">
                                     <li>Infrastructure-grade risk assessment</li>
@@ -257,15 +257,15 @@ export default function PartnershipPage() {
                         </div>
                     </div>
 
-                    <div className="max-w-3xl mx-auto bg-brand-blue/5 rounded-full px-8 py-4 border border-brand-blue/10 inline-block">
-                        <span className="font-bold text-brand-blue uppercase tracking-wide text-sm">Pathway:</span>
+                    <div className="max-w-3xl mx-auto bg-brand-green/5 rounded-full px-8 py-4 border border-brand-green/10 inline-block">
+                        <span className="font-bold text-brand-green uppercase tracking-wide text-sm">Pathway:</span>
                         <span className="mx-2 text-gray-400">Alignment</span>
                         <ArrowRight className="inline w-4 h-4 text-gray-400 mx-1" />
                         <span className="mx-2 text-gray-400">Pilot</span>
                         <ArrowRight className="inline w-4 h-4 text-gray-400 mx-1" />
                         <span className="mx-2 text-gray-400">Validation</span>
                         <ArrowRight className="inline w-4 h-4 text-gray-400 mx-1" />
-                        <span className="mx-2 text-brand-blue font-bold">Scale</span>
+                        <span className="mx-2 text-brand-green font-bold">Scale</span>
                     </div>
                 </SectionWrapper>
             </section>
@@ -290,7 +290,7 @@ export default function PartnershipPage() {
                         </p>
                         <div className="flex justify-center items-center w-full">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-10 py-4 bg-brand-blue text-white font-bold rounded-full shadow-xl hover:bg-sky-600 hover:scale-105 transition-all text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px]">
+                                <button className="px-10 py-4 bg-brand-green text-white font-bold rounded-full shadow-xl hover:bg-green-700 hover:scale-105 transition-all text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px]">
                                     Discuss Opportunities
                                 </button>
                             </Link>

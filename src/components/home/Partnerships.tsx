@@ -21,7 +21,7 @@ export default function Partnerships() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block"
+                        className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block"
                     >
                         Partnerships & Collaboration
                     </motion.span>
@@ -54,12 +54,12 @@ export default function Partnerships() {
                         <motion.div
                             key={idx}
                             variants={fadeUp}
-                            className="flex flex-col items-center justify-center p-8 bg-white border border-brand-blue/10 hover:border-brand-blue rounded-sm hover:shadow-xl transition-all text-center aspect-square md:aspect-auto md:h-64 group"
+                            className="flex flex-col items-center justify-center p-8 bg-white border border-brand-primary/10 hover:border-brand-primary rounded-sm hover:shadow-xl transition-all text-center aspect-square md:aspect-auto md:h-64 group"
                         >
-                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-gray-400 group-hover:text-brand-blue transition-colors">
+                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-gray-400 group-hover:text-brand-primary transition-colors">
                                 <p.icon className="w-8 h-8" />
                             </div>
-                            <h3 className="font-bold text-gray-900 group-hover:text-brand-blue transition-colors">{p.label}</h3>
+                            <h3 className="font-bold text-gray-900 group-hover:text-brand-primary transition-colors">{p.label}</h3>
                         </motion.div>
                     ))}
                 </motion.div>

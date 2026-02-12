@@ -31,21 +31,21 @@ export default function TechnologyPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            A Different Way to <span className="text-brand-blue">Split</span> <span className="text-brand-green">Water</span>
+                            A Different Way to <span className="text-gray-900">Split</span> <span className="text-brand-green">Water</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
-                            Hydrogen production has traditionally relied on applying <span className="text-brand-blue font-bold">constant electrical force</span> to water molecules until they separate. While effective, this approach is inherently <span className="text-brand-green font-bold">energy-intensive</span> and constrained by well-understood physical limits.
+                            Hydrogen production has traditionally relied on applying <span className="text-gray-900 font-bold">constant electrical force</span> to water molecules until they separate. While effective, this approach is inherently <span className="text-brand-green font-bold">energy-intensive</span> and constrained by well-understood physical limits.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-10 py-4 bg-brand-blue text-white rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px] hover:bg-sky-600">
+                                <button className="px-10 py-4 bg-brand-green text-white rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px] md:min-w-[240px] hover:bg-green-700">
                                     Request Technical Overview
                                 </button>
                             </Link>
                             <Link href="/partnership" className="w-full md:w-auto">
-                                <button className="text-gray-900 font-bold text-lg hover:text-brand-blue transition-colors flex items-center gap-2 justify-center w-full md:w-auto">
+                                <button className="text-gray-900 font-bold text-lg hover:text-brand-green transition-colors flex items-center gap-2 justify-center w-full md:w-auto">
                                     Engage as a Partner <ArrowRight className="w-5 h-5" />
                                 </button>
                             </Link>
@@ -227,7 +227,7 @@ export default function TechnologyPage() {
                             <p className="text-gray-600 mb-6 leading-relaxed">
                                 The platform delivers energy in short, precisely timed electrical pulses rather than constant voltage. This allows energy to interact with water molecules when it is most effective, reduced wasted electricity, and improved efficiency at the system level.
                             </p>
-                            <div className="p-4 bg-white border-l-4 border-brand-blue text-brand-blue font-medium">
+                            <div className="p-4 bg-white border-l-4 border-brand-green text-brand-green font-medium">
                                 In simple terms, the system works with the natural behavior of molecules rather than forcing a reaction through brute electrical input.
                             </div>
                         </div>
@@ -251,8 +251,8 @@ export default function TechnologyPage() {
                                     "Electric fields are used more efficiently",
                                     "The process remains stable and uniform"
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3 p-4 bg-gray-50 rounded-sm border-l-4 border-brand-blue">
-                                        <div className="w-2 h-2 bg-brand-blue rounded-full" />
+                                    <div key={i} className="flex items-center gap-3 p-4 bg-gray-50 rounded-sm border-l-4 border-brand-green">
+                                        <div className="w-2 h-2 bg-brand-green rounded-full" />
                                         <span className="font-bold text-gray-800">{item}</span>
                                     </div>
                                 ))}
@@ -274,7 +274,7 @@ export default function TechnologyPage() {
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-4 text-brand-blue">
+                            <div className="flex items-center gap-3 mb-4 text-brand-green">
                                 <Thermometer className="w-6 h-6" />
                                 <span className="font-bold uppercase tracking-wider text-sm">Industrial Design</span>
                             </div>
@@ -321,7 +321,7 @@ export default function TechnologyPage() {
                                     "Enables phased deployment aligned with demand"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-gray-700 bg-gray-50 p-3 rounded-sm border border-gray-100">
-                                        <Scale className="w-5 h-5 text-brand-blue" />
+                                        <Scale className="w-5 h-5 text-brand-green" />
                                         {item}
                                     </li>
                                 ))}
@@ -384,9 +384,9 @@ export default function TechnologyPage() {
                     {/* 10. CTA Section */}
                     <section className="py-24 bg-white">
                         <SectionWrapper>
-                            <div className="relative rounded-2xl overflow-hidden bg-brand-blue shadow-2xl text-center py-24 px-8">
+                            <div className="relative rounded-2xl overflow-hidden bg-brand-green shadow-2xl text-center py-24 px-8">
                                 {/* Background Gradients */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-green opacity-90 z-0" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-brand-green to-gray-900 opacity-90 z-0" />
                                 <div className="absolute inset-0 bg-[url('/Technology/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
 
                                 <div className="relative z-10 max-w-4xl mx-auto">
@@ -397,7 +397,7 @@ export default function TechnologyPage() {
 
                                     <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                         <Link href="/contact" className="w-full md:w-auto">
-                                            <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                            <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                                 Request Technical Overview
                                             </button>
                                         </Link>

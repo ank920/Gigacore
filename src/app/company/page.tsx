@@ -31,7 +31,7 @@ export default function CompanyPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            About <span className="text-brand-blue">Giga Cora Energy</span>
+                            About <span className="text-brand-green">Giga Cora Energy</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -44,7 +44,7 @@ export default function CompanyPage() {
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                             <Link href="/technology" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
+                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Learn More
                                 </button>
                             </Link>
@@ -76,14 +76,14 @@ export default function CompanyPage() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-4">
-                                    <Target className="w-6 h-6 text-brand-blue" />
-                                    <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Purpose</span>
+                                    <Target className="w-6 h-6 text-brand-green" />
+                                    <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Purpose</span>
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Mission</h2>
                                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                                     To enable the global transition to clean energy by developing innovative hydrogen technologies that are economically viable, industrially scalable, and deployable where energy demand already exists.
                                 </p>
-                                <div className="p-6 bg-brand-blue/5 rounded-xl border border-brand-blue/10">
+                                <div className="p-6 bg-brand-green/5 rounded-xl border border-brand-green/10">
                                     <p className="text-gray-800 font-medium italic">
                                         "Clean energy solutions must compete on fundamentals—cost, reliability, and scale—to achieve lasting impact."
                                     </p>
@@ -149,8 +149,8 @@ export default function CompanyPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <Rocket className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">The Challenge</span>
+                                <Rocket className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">The Challenge</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Why Giga Cora Energy Exists</h2>
                             <p className="text-lg text-gray-600 mb-6">
@@ -159,15 +159,15 @@ export default function CompanyPage() {
                             <h4 className="font-bold text-gray-900 mb-4">We challenge these constraints by:</h4>
                             <ul className="space-y-4">
                                 <li className="flex gap-4 p-4 bg-white rounded border border-gray-100 shadow-sm">
-                                    <span className="text-brand-blue font-bold">•</span>
+                                    <span className="text-brand-green font-bold">•</span>
                                     <span className="text-gray-700">Rethinking how energy is delivered at the molecular level</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-white rounded border border-gray-100 shadow-sm">
-                                    <span className="text-brand-blue font-bold">•</span>
+                                    <span className="text-brand-green font-bold">•</span>
                                     <span className="text-gray-700">Applying advanced electrical and plasma-based concepts</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-white rounded border border-gray-100 shadow-sm">
-                                    <span className="text-brand-blue font-bold">•</span>
+                                    <span className="text-brand-green font-bold">•</span>
                                     <span className="text-gray-700">Designing systems around efficiency and scalability from the outset</span>
                                 </li>
                             </ul>
@@ -185,7 +185,7 @@ export default function CompanyPage() {
                             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 mb-8 h-64">
                                 <img src="/company/Technology%20Philosophy.png" alt="Philosophy" className="w-full h-full object-contain" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Zap className="w-6 h-6 text-brand-blue" /> Technology Philosophy</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2"><Zap className="w-6 h-6 text-brand-green" /> Technology Philosophy</h3>
                             <p className="text-gray-600 mb-6">
                                 Rather than optimizing existing electrochemical systems, we focus on alternative physical mechanisms that enable hydrogen separation using less total energy.
                             </p>
@@ -230,8 +230,8 @@ export default function CompanyPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <Globe className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Reach</span>
+                                <Globe className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Reach</span>
                             </div>
                             <h2 className="text-3xl font-bold mb-6 text-gray-900">Global Impact, Practical Focus</h2>
                             <p className="text-lg text-gray-600 mb-6">
@@ -264,7 +264,7 @@ export default function CompanyPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                             <div className="p-8 border border-gray-100 rounded-xl bg-gray-50">
-                                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2"><UserCheck className="w-5 h-5 text-brand-blue" /> Collaboration-Driven Growth</h4>
+                                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2"><UserCheck className="w-5 h-5 text-brand-green" /> Collaboration-Driven Growth</h4>
                                 <p className="text-gray-600 mb-4">Growth is pursued through partnerships that align technical capability with execution scale.</p>
                                 <ul className="text-sm text-gray-500 space-y-1">
                                     <li>• Industrial operators</li>
@@ -290,7 +290,7 @@ export default function CompanyPage() {
             <section className="relative py-32 bg-gray-900 text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[url('/company/Engage%20with%20Giga%20Cora%20Energy.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/90 to-brand-green/90 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-brand-green/90 mix-blend-multiply" />
                 </div>
 
                 <SectionWrapper className="relative z-10 text-center">
@@ -302,7 +302,7 @@ export default function CompanyPage() {
 
                         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                     Strategic Discussions
                                 </button>
                             </Link>

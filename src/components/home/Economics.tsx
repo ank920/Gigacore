@@ -14,7 +14,7 @@ export default function Economics() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block"
+                        className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block"
                     >
                         Economics Snapshot
                     </motion.span>
@@ -63,7 +63,7 @@ export default function Economics() {
                         <motion.h3 variants={fadeUp} className="text-2xl font-bold text-gray-900">Economic Focus Areas</motion.h3>
 
                         <motion.div variants={fadeUp} className="flex gap-4">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-blue flex-shrink-0">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-primary flex-shrink-0">
                                 <TrendingDown className="w-6 h-6" />
                             </div>
                             <div>
@@ -73,7 +73,7 @@ export default function Economics() {
                         </motion.div>
 
                         <motion.div variants={fadeUp} className="flex gap-4">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-blue flex-shrink-0">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-primary flex-shrink-0">
                                 <Settings className="w-6 h-6" />
                             </div>
                             <div>
@@ -83,7 +83,7 @@ export default function Economics() {
                         </motion.div>
 
                         <motion.div variants={fadeUp} className="flex gap-4">
-                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-blue flex-shrink-0">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-brand-primary flex-shrink-0">
                                 <BatteryCharging className="w-6 h-6" />
                             </div>
                             <div>

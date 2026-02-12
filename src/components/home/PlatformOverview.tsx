@@ -31,7 +31,7 @@ export default function PlatformOverview() {
                         viewport={{ once: true }}
                         className="flex-1 order-2 lg:order-1"
                     >
-                        <motion.span variants={fadeUp} className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">
+                        <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">
                             Cold-Plasma Hydrogen Platform
                         </motion.span>
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
@@ -46,19 +46,19 @@ export default function PlatformOverview() {
                             <ul className="space-y-3">
                                 {FEATURES.map((item, idx) => (
                                     <li key={idx} className="flex items-start gap-3 text-gray-600">
-                                        <Check className="w-5 h-5 text-brand-blue mt-1 flex-shrink-0" />
+                                        <Check className="w-5 h-5 text-brand-primary mt-1 flex-shrink-0" />
                                         <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </motion.div>
 
-                        <motion.div variants={fadeUp} className="bg-gray-50 p-6 border-l-4 border-brand-blue">
+                        <motion.div variants={fadeUp} className="bg-gray-50 p-6 border-l-4 border-brand-primary">
                             <h3 className="text-lg font-bold mb-3 text-gray-900">The platform is being engineered with:</h3>
                             <ul className="space-y-2">
                                 {ENGINEERING_SPECS.map((item, idx) => (
                                     <li key={idx} className="text-gray-600 text-sm flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
+                                        <div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />
                                         {item}
                                     </li>
                                 ))}

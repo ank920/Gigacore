@@ -31,7 +31,7 @@ export default function ContactPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            Let’s Start the <span className="text-brand-blue">Right Conversation</span>
+                            Let’s Start the <span className="text-brand-green">Right Conversation</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -62,8 +62,8 @@ export default function ContactPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <MessageSquare className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Contact</span>
+                                <MessageSquare className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Contact</span>
                             </div>
                             <h2 className="text-3xl font-bold mb-6 text-gray-900">General Enquiries</h2>
                             <p className="text-lg text-gray-600 mb-8">
@@ -73,7 +73,7 @@ export default function ContactPage() {
                             <div className="flex flex-col gap-1 mb-6">
                                 <div className="flex items-center gap-3">
                                     <Mail className="w-5 h-5 text-gray-400" />
-                                    <a href="mailto:info@gigacora.energy" className="text-xl font-bold text-brand-blue hover:underline">info@gigacora.energy</a>
+                                    <a href="mailto:info@gigacora.energy" className="text-xl font-bold text-brand-green hover:underline">info@gigacora.energy</a>
                                 </div>
                                 <p className="text-sm text-gray-500 ml-8">Response window: 1–2 business days</p>
                             </div>
@@ -116,8 +116,8 @@ export default function ContactPage() {
                             </div>
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-4">
-                                    <Microscope className="w-6 h-6 text-brand-blue" />
-                                    <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Validation</span>
+                                    <Microscope className="w-6 h-6 text-brand-green" />
+                                    <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Validation</span>
                                 </div>
                                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Technical & Validation</h3>
                                 <p className="text-gray-600 mb-6">
@@ -144,7 +144,7 @@ export default function ContactPage() {
                         <div className="lg:order-1 space-y-12">
                             {/* Investor */}
                             <div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2"><TrendingUp className="w-6 h-6 text-brand-blue" /> Investor & Capital Engagement</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2"><TrendingUp className="w-6 h-6 text-brand-green" /> Investor & Capital Engagement</h3>
                                 <p className="text-gray-600 mb-4">We engage with long-term capital providers aligned with infrastructure-grade deployment.</p>
                             </div>
 
@@ -165,12 +165,12 @@ export default function ContactPage() {
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                            <Globe className="w-10 h-10 text-brand-blue mx-auto mb-4" />
+                            <Globe className="w-10 h-10 text-brand-green mx-auto mb-4" />
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Operating Regions</h3>
                             <p className="text-gray-600 mb-6">Our work is focused on industrial demand centers with immediate relevance.</p>
                             <ul className="text-left space-y-3 inline-block mx-auto">
-                                <li className="flex items-center gap-3"><span className="text-brand-blue font-bold">IN</span> India (Primary deployment focus)</li>
-                                <li className="flex items-center gap-3"><span className="text-brand-blue font-bold">GL</span> Global industrial & export markets</li>
+                                <li className="flex items-center gap-3"><span className="text-brand-green font-bold">IN</span> India (Primary deployment focus)</li>
+                                <li className="flex items-center gap-3"><span className="text-brand-green font-bold">GL</span> Global industrial & export markets</li>
                             </ul>
                         </div>
 
@@ -190,7 +190,7 @@ export default function ContactPage() {
             </section>
 
             {/* 7. CTA Section */}
-            <section className="py-12 bg-brand-blue/5 border-t border-brand-blue/10 text-center">
+            <section className="py-12 bg-brand-green/5 border-t border-brand-green/10 text-center">
                 <SectionWrapper>
                     <h2 className="text-4xl font-bold text-gray-900 mb-8">Get in Touch</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -198,7 +198,7 @@ export default function ContactPage() {
                     </p>
                     <div className="flex justify-center">
                         <a href="mailto:info@gigacora.energy?subject=Request Executive Overview">
-                            <button className="px-8 py-4 bg-brand-blue text-white font-bold rounded-lg shadow-lg hover:bg-sky-600 transition-colors">
+                            <button className="px-8 py-4 bg-brand-green text-white font-bold rounded-lg shadow-lg hover:bg-green-700 transition-colors">
                                 Request Executive Overview
                             </button>
                         </a>

@@ -31,7 +31,7 @@ export default function MarketPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            Hydrogen Demand Is <span className="text-brand-blue">Structural</span>, Not Speculative
+                            Hydrogen Demand Is <span className="text-brand-green">Structural</span>, Not Speculative
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -44,7 +44,7 @@ export default function MarketPage() {
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
+                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Discuss Market Fit
                                 </button>
                             </Link>
@@ -74,8 +74,8 @@ export default function MarketPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <TrendingUp className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Market Dynamics</span>
+                                <TrendingUp className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Market Dynamics</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">What Is Changing in the Market</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -83,15 +83,15 @@ export default function MarketPage() {
                             </p>
                             <ul className="space-y-4 mb-8">
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0 text-brand-blue font-bold">1</div>
+                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">1</div>
                                     <span className="text-gray-700 font-medium my-auto">Policy pressure to decarbonize hard-to-abate industries</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0 text-brand-blue font-bold">2</div>
+                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">2</div>
                                     <span className="text-gray-700 font-medium my-auto">Industrial demand for reliable, continuous hydrogen supply</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0 text-brand-blue font-bold">3</div>
+                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">3</div>
                                     <span className="text-gray-700 font-medium my-auto">Economic reality that limits adoption above certain cost thresholds</span>
                                 </li>
                             </ul>
@@ -166,15 +166,15 @@ export default function MarketPage() {
                             "Rapidly expanding energy infrastructure",
                             "Strong policy momentum for domestic production"
                         ].map((item, i) => (
-                            <div key={i} className="p-6 bg-brand-blue/5 rounded-xl border border-brand-blue/20 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                                <div className="w-3 h-3 bg-brand-blue rounded-full mx-auto mb-4 shadow-sm" />
+                            <div key={i} className="p-6 bg-brand-green/5 rounded-xl border border-brand-green/20 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                                <div className="w-3 h-3 bg-brand-green rounded-full mx-auto mb-4 shadow-sm" />
                                 <span className="font-bold text-gray-900">{item}</span>
                             </div>
                         ))}
                     </div>
 
-                    <div className="bg-brand-blue/5 rounded-2xl p-12 border border-brand-blue/10">
-                        <h3 className="text-2xl font-bold text-brand-blue mb-8 text-center">Priority Demand Centers in India</h3>
+                    <div className="bg-brand-green/5 rounded-2xl p-12 border border-brand-green/10">
+                        <h3 className="text-2xl font-bold text-brand-green mb-8 text-center">Priority Demand Centers in India</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white p-6 rounded shadow-sm">
                                 <h4 className="font-bold text-gray-900 mb-2">Immediate Opportunities</h4>
@@ -218,15 +218,15 @@ export default function MarketPage() {
                             <h4 className="font-bold text-gray-900 mb-4">Export dynamics are shaped by:</h4>
                             <ul className="space-y-4">
                                 <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-blue" />
+                                    <Anchor className="w-5 h-5 text-brand-green" />
                                     <span className="text-gray-700">Global demand for low-carbon ammonia</span>
                                 </li>
                                 <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-blue" />
+                                    <Anchor className="w-5 h-5 text-brand-green" />
                                     <span className="text-gray-700">Cost competitiveness at the point of production</span>
                                 </li>
                                 <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-blue" />
+                                    <Anchor className="w-5 h-5 text-brand-green" />
                                     <span className="text-gray-700">Access to ports and logistics infrastructure</span>
                                 </li>
                             </ul>
@@ -273,7 +273,7 @@ export default function MarketPage() {
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                            <h3 className="text-2xl font-bold text-brand-blue mb-6 flex items-center gap-2"><Target className="w-6 h-6" /> Market Entry Philosophy</h3>
+                            <h3 className="text-2xl font-bold text-brand-green mb-6 flex items-center gap-2"><Target className="w-6 h-6" /> Market Entry Philosophy</h3>
                             <p className="text-gray-600 mb-6">
                                 Rather than spreading across many small pilots, entry is structured around few, scalable, high-impact deployments.
                             </p>
@@ -318,13 +318,13 @@ export default function MarketPage() {
                                 Policy frameworks can accelerate adoption, but commercial viability determines longevity. The market opportunity is defined by the ability to deliver:
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-blue transition-colors">
+                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
                                     <h4 className="font-bold text-gray-900">Predictable Cost</h4>
                                 </div>
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-blue transition-colors">
+                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
                                     <h4 className="font-bold text-gray-900">Scalable Supply</h4>
                                 </div>
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-blue transition-colors">
+                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
                                     <h4 className="font-bold text-gray-900">Industrial Reliability</h4>
                                 </div>
                             </div>
@@ -336,9 +336,9 @@ export default function MarketPage() {
             {/* 9. CTA Section */}
             <section className="py-24 bg-white">
                 <SectionWrapper>
-                    <div className="relative rounded-2xl overflow-hidden bg-brand-blue shadow-2xl text-center py-24 px-8">
+                    <div className="relative rounded-2xl overflow-hidden bg-brand-green shadow-2xl text-center py-24 px-8">
                         {/* Background Gradients */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-green opacity-90 z-0" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-green to-gray-900 opacity-90 z-0" />
                         <div className="absolute inset-0 bg-[url('/market/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
@@ -349,7 +349,7 @@ export default function MarketPage() {
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                 <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                    <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                         Discuss Market Fit
                                     </button>
                                 </Link>

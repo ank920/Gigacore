@@ -31,7 +31,7 @@ export default function ApplicationsPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            Hydrogen Where It Is <span className="text-brand-blue">Actually Used</span>
+                            Hydrogen Where It Is <span className="text-brand-green">Actually Used</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -44,7 +44,7 @@ export default function ApplicationsPage() {
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
+                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
                                     Discuss Application Fit
                                 </button>
                             </Link>
@@ -74,8 +74,8 @@ export default function ApplicationsPage() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <Factory className="w-6 h-6 text-brand-blue" />
-                                <span className="text-brand-blue font-bold uppercase tracking-wider text-sm">Core Input</span>
+                                <Factory className="w-6 h-6 text-brand-green" />
+                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Core Input</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Industrial Hydrogen Feedstock</h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -84,15 +84,15 @@ export default function ApplicationsPage() {
                             <h4 className="font-bold text-gray-900 mb-4">Applicable use cases:</h4>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex gap-3 text-gray-700">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span>Chemical and petrochemical feedstock</span>
                                 </li>
                                 <li className="flex gap-3 text-gray-700">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span>Process hydrogen for industrial manufacturing</span>
                                 </li>
                                 <li className="flex gap-3 text-gray-700">
-                                    <div className="w-2 h-2 mt-2 bg-brand-blue rounded-full shrink-0" />
+                                    <div className="w-2 h-2 mt-2 bg-brand-green rounded-full shrink-0" />
                                     <span>Replacement of captive grey hydrogen systems</span>
                                 </li>
                             </ul>
@@ -155,8 +155,8 @@ export default function ApplicationsPage() {
                             <p className="text-gray-600 mb-6">
                                 Steelmaking is challenging to decarbonize due to high energy demand. Hydrogen applications include direct reduction, fuel substitution, and metallurgical integration.
                             </p>
-                            <div className="mt-auto p-4 bg-brand-blue/5 rounded border border-brand-blue/10">
-                                <p className="text-brand-blue font-medium text-sm">Modular nature supports phased adoption without full plant redesign.</p>
+                            <div className="mt-auto p-4 bg-brand-green/5 rounded border border-brand-green/10">
+                                <p className="text-brand-green font-medium text-sm">Modular nature supports phased adoption without full plant redesign.</p>
                             </div>
                         </div>
 
@@ -188,15 +188,15 @@ export default function ApplicationsPage() {
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex gap-4 p-4 bg-white rounded shadow-sm">
-                                    <MapPin className="w-6 h-6 text-brand-blue shrink-0" />
+                                    <MapPin className="w-6 h-6 text-brand-green shrink-0" />
                                     <span className="text-gray-800">On-site hydrogen generation</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-white rounded shadow-sm">
-                                    <Truck className="w-6 h-6 text-brand-blue shrink-0" />
+                                    <Truck className="w-6 h-6 text-brand-green shrink-0" />
                                     <span className="text-gray-800">Reduced logistics and handling requirements</span>
                                 </li>
                                 <li className="flex gap-4 p-4 bg-white rounded shadow-sm">
-                                    <Zap className="w-6 h-6 text-brand-blue shrink-0" />
+                                    <Zap className="w-6 h-6 text-brand-green shrink-0" />
                                     <span className="text-gray-800">Improved energy security for industrial clusters</span>
                                 </li>
                             </ul>
@@ -212,7 +212,7 @@ export default function ApplicationsPage() {
                             <p className="text-lg text-gray-600 mb-8">
                                 Beyond direct consumption, hydrogen plays a growing role in energy storage. Relevant pathways include H2-to-ammonia, combustion integration, and hybrid systems.
                             </p>
-                            <div className="p-6 bg-brand-blue/5 border-l-4 border-brand-blue rounded-r">
+                            <div className="p-6 bg-brand-green/5 border-l-4 border-brand-green rounded-r">
                                 <p className="text-gray-700 italic">The platform is designed to remain compatible with downstream conversion technologies.</p>
                             </div>
                         </div>
@@ -258,7 +258,7 @@ export default function ApplicationsPage() {
                                 <img src="/application/Globally%20Scalable%20Use%20Cases.png" alt="Global Scale" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <Globe className="w-8 h-8 text-brand-blue" />
+                                <Globe className="w-8 h-8 text-brand-green" />
                                 Globally Scalable
                             </h3>
                             <p className="text-gray-600 mb-6">
@@ -285,7 +285,7 @@ export default function ApplicationsPage() {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="p-6 bg-white/10 rounded-lg border border-white/10 backdrop-blur-sm">
-                                <Beaker className="w-8 h-8 text-brand-blue mx-auto mb-4" />
+                                <Beaker className="w-8 h-8 text-brand-green mx-auto mb-4" />
                                 <h4 className="font-bold mb-2">Existing Demand</h4>
                                 <p className="text-sm text-gray-300">Replacement of grey hydrogen users</p>
                             </div>
@@ -295,7 +295,7 @@ export default function ApplicationsPage() {
                                 <p className="text-sm text-gray-300">Where OPEX dominates decision making</p>
                             </div>
                             <div className="p-6 bg-white/10 rounded-lg border border-white/10 backdrop-blur-sm">
-                                <Factory className="w-8 h-8 text-brand-blue mx-auto mb-4" />
+                                <Factory className="w-8 h-8 text-brand-green mx-auto mb-4" />
                                 <h4 className="font-bold mb-2">Industrial Scale</h4>
                                 <p className="text-sm text-gray-300">Partnerships for large consumption</p>
                             </div>
@@ -307,9 +307,9 @@ export default function ApplicationsPage() {
             {/* 8. CTA Section */}
             <section className="py-24 bg-white">
                 <SectionWrapper>
-                    <div className="relative rounded-2xl overflow-hidden bg-brand-blue shadow-2xl text-center py-24 px-8">
+                    <div className="relative rounded-2xl overflow-hidden bg-brand-green shadow-2xl text-center py-24 px-8">
                         {/* Background Gradients */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-green opacity-90 z-0" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-green to-gray-900 opacity-90 z-0" />
                         <div className="absolute inset-0 bg-[url('/application/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
@@ -320,7 +320,7 @@ export default function ApplicationsPage() {
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                 <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                    <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                         Discuss Application Fit
                                     </button>
                                 </Link>

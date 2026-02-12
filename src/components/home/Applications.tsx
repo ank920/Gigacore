@@ -39,10 +39,10 @@ export default function Applications() {
             <SectionWrapper>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">
-                        <span className="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">Applications Overview</span>
+                        <span className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">Applications Overview</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">Designed for Where Hydrogen Is Actually Used</h2>
                     </div>
-                    <Link href="/applications" className="text-brand-blue font-bold text-sm hover:underline flex items-center mb-2">
+                    <Link href="/applications" className="text-brand-primary font-bold text-sm hover:underline flex items-center mb-2">
                         View All Applications <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
                 </div>
@@ -72,15 +72,15 @@ export default function Applications() {
 
                                 {/* Content Area */}
                                 <div className="p-6 flex flex-col flex-grow relative">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors leading-tight">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors leading-tight">
                                         {app.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm leading-relaxed mb-8">
                                         {app.desc}
                                     </p>
 
-                                    {/* Black Arrow Button - Absolute Bottom Right */}
-                                    <div className="absolute bottom-0 right-0 w-12 h-12 bg-black text-white flex items-center justify-center transition-colors group-hover:bg-brand-blue z-10">
+                                    {/* Arrow Button - Absolute Bottom Right */}
+                                    <div className="absolute bottom-0 right-0 w-12 h-12 bg-gray-900 text-white flex items-center justify-center transition-colors group-hover:bg-brand-primary z-10">
                                         <ChevronRight className="w-6 h-6" />
                                     </div>
                                 </div>

@@ -31,7 +31,7 @@ export default function EconomicsPage() {
                             variants={fadeUp}
                             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
                         >
-                            Hydrogen Economics Is an <span className="text-brand-blue">Energy Problem</span>
+                            Hydrogen Economics Is an <span className="text-brand-green">Energy Problem</span>
                         </motion.h1>
 
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
@@ -39,12 +39,12 @@ export default function EconomicsPage() {
                         </motion.p>
 
                         <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-500 mb-10 max-w-3xl leading-relaxed">
-                            Gigacore Energy’s economics are anchored in a different physical regime: <span className="text-brand-blue font-bold">cold-plasma–enabled water dissociation</span>, which materially lowers the electrical energy required per unit of hydrogen produced.
+                            Gigacore Energy’s economics are anchored in a different physical regime: <span className="text-brand-green font-bold">cold-plasma–enabled water dissociation</span>, which materially lowers the electrical energy required per unit of hydrogen produced.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                             <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-blue text-white hover:bg-sky-600 rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px]">
+                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-lg w-full md:w-auto min-w-[200px]">
                                     Request Investor Deck
                                 </button>
                             </Link>
@@ -75,7 +75,7 @@ export default function EconomicsPage() {
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex gap-4">
-                                    <Zap className="w-6 h-6 text-brand-blue shrink-0" />
+                                    <Zap className="w-6 h-6 text-brand-green shrink-0" />
                                     <span className="text-gray-700"><strong>Energy consumption:</strong> ~50 kWh/kg H₂ for traditional electrolyzers</span>
                                 </li>
                                 <li className="flex gap-4">
@@ -121,7 +121,7 @@ export default function EconomicsPage() {
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                 <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                                    <div className="text-4xl font-bold text-brand-blue mb-2">~22</div>
+                                    <div className="text-4xl font-bold text-gray-900 mb-2">~22</div>
                                     <div className="text-sm text-gray-500 font-bold uppercase">kWh/kg H₂</div>
                                     <p className="text-gray-600 mt-2">Already demonstrated in operating demo system</p>
                                 </div>
@@ -160,7 +160,7 @@ export default function EconomicsPage() {
                             </div>
                         </div>
                         <div className="flex-1 space-y-8">
-                            <div className="bg-brand-blue/5 p-8 rounded-lg border border-brand-blue/10">
+                            <div className="bg-brand-green/5 p-8 rounded-lg border border-brand-green/10">
                                 <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Model Estimates</h3>
                                 <ul className="space-y-4">
                                     <li className="flex justify-between items-center border-b border-gray-200 pb-2">
@@ -192,22 +192,22 @@ export default function EconomicsPage() {
                         {/* Capital Efficiency */}
                         <div>
                             <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
-                                <Factory className="w-6 h-6 text-brand-blue" /> Capital Efficiency & System Architecture
+                                <Factory className="w-6 h-6 text-brand-green" /> Capital Efficiency & System Architecture
                             </h3>
                             <p className="text-gray-600 mb-6">
                                 Beyond operating cost, the materials highlight several system-level economic advantages:
                             </p>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex gap-3 text-gray-700">
-                                    <CheckCircle className="w-5 h-5 text-brand-blue shrink-0" />
+                                    <CheckCircle className="w-5 h-5 text-brand-green shrink-0" />
                                     Lower operating temperatures (60–80°C vs hundreds of °C)
                                 </li>
                                 <li className="flex gap-3 text-gray-700">
-                                    <CheckCircle className="w-5 h-5 text-brand-blue shrink-0" />
+                                    <CheckCircle className="w-5 h-5 text-brand-green shrink-0" />
                                     Compact reactor footprint, ~70% smaller than electrolyzers
                                 </li>
                                 <li className="flex gap-3 text-gray-700">
-                                    <CheckCircle className="w-5 h-5 text-brand-blue shrink-0" />
+                                    <CheckCircle className="w-5 h-5 text-brand-green shrink-0" />
                                     Modular units designed at 25–50 kg/hour scale
                                 </li>
                             </ul>
@@ -239,7 +239,7 @@ export default function EconomicsPage() {
                                         <div className="text-xs text-gray-500 uppercase">kg/hour (10-20 modules)</div>
                                     </div>
                                 </div>
-                                <p className="text-center text-brand-blue font-medium mt-4">Scaling preserves energy performance</p>
+                                <p className="text-center text-brand-green font-medium mt-4">Scaling preserves energy performance</p>
                             </div>
                             <div className="rounded-sm overflow-hidden shadow-md border border-gray-200">
                                 <img
@@ -276,8 +276,8 @@ export default function EconomicsPage() {
                                     <h4 className="font-bold text-brand-green mb-1">Green Ammonia</h4>
                                     <p className="text-gray-700 text-sm">Targeting sub-$400–450/ton parity thresholds</p>
                                 </div>
-                                <div className="p-4 bg-brand-blue/10 rounded-lg border border-brand-blue/20">
-                                    <h4 className="font-bold text-brand-blue mb-1">Industrial Substitution</h4>
+                                <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                    <h4 className="font-bold text-gray-900 mb-1">Industrial Substitution</h4>
                                     <p className="text-gray-700 text-sm">Refining and chemicals replacement</p>
                                 </div>
                                 <div className="p-4 bg-gray-100 rounded-lg border border-gray-200">
@@ -298,7 +298,7 @@ export default function EconomicsPage() {
                             <h2 className="text-3xl font-bold mb-8">Validation Status</h2>
                             <ul className="space-y-6">
                                 <li className="flex gap-4">
-                                    <BarChart3 className="w-6 h-6 text-brand-blue shrink-0" />
+                                    <BarChart3 className="w-6 h-6 text-brand-green shrink-0" />
                                     <div>
                                         <h4 className="font-bold">Grounded Data</h4>
                                         <p className="text-gray-400 text-sm">Operating demo plant data (~22 kWh/kg achieved) and engineering roadmap toward ~15 kWh/kg.</p>
@@ -341,9 +341,9 @@ export default function EconomicsPage() {
             {/* 8. CTA Section */}
             <section className="py-24 bg-white">
                 <SectionWrapper>
-                    <div className="relative rounded-2xl overflow-hidden bg-brand-blue shadow-2xl text-center py-24 px-8">
+                    <div className="relative rounded-2xl overflow-hidden bg-brand-green shadow-2xl text-center py-24 px-8">
                         {/* Background Gradients */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-green opacity-90 z-0" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-green to-gray-900 opacity-90 z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">Engage on Economics</h2>
@@ -353,7 +353,7 @@ export default function EconomicsPage() {
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                 <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-white text-brand-blue font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                    <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                         Request Economics Brief
                                     </button>
                                 </Link>

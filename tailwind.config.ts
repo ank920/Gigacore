@@ -10,11 +10,15 @@ const config: Config = {
         extend: {
             colors: {
                 brand: {
-                    blue: "#0EA5E9", // Hydrogen Blue
-                    green: "#22C55E", // Green Energy
+                    primary: "#16A34A", // Primary Green (was green)
+                    secondary: "#111827", // Dark Gray/Black
+                    accent: "#84CC16", // Lime Green
+                    green: "#16A34A", // Kept for backward compatibility
+                    blue: "#3B82F6", // Standard Blue (deprioritized)
                     gray: {
                         50: "#F9FAFB",
                         100: "#F3F4F6",
+                        200: "#E5E7EB",
                         800: "#1F2937",
                         900: "#111827",
                     }
