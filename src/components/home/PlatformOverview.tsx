@@ -19,9 +19,9 @@ const ENGINEERING_SPECS = [
 
 export default function PlatformOverview() {
     return (
-        <section className="py-24 bg-white text-gray-900 border-b border-gray-100 overflow-hidden">
-            <SectionWrapper>
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <section className="py-12 md:py-20 bg-brand-light border-b border-gray-100 overflow-hidden">
+            <SectionWrapper className="max-w-7xl">
+                <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
 
                     {/* Content Side */}
                     <motion.div
@@ -31,39 +31,54 @@ export default function PlatformOverview() {
                         viewport={{ once: true }}
                         className="flex-1 order-2 lg:order-1"
                     >
-                        <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">
-                            Cold-Plasma Hydrogen Platform
-                        </motion.span>
-                        <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
-                            A New Approach to Hydrogen Generation
+                        <motion.div variants={fadeUp} className="flex items-center gap-2 mb-6">
+                            <span className="h-px w-8 bg-brand-primary"></span>
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">
+                                Cold-Plasma Hydrogen Platform
+                            </span>
+                        </motion.div>
+
+                        <motion.h2 variants={fadeUp} className="text-2xl md:text-4xl font-bold mb-4 leading-tight text-brand-secondary">
+                            A New Approach to <span className="text-gradient-green-glow font-bold">Hydrogen Generation</span>
                         </motion.h2>
-                        <motion.p variants={fadeUp} className="text-gray-600 text-lg mb-8 leading-relaxed">
+                        <motion.p variants={fadeUp} className="text-gray-600 text-base md:text-lg mb-6 leading-relaxed font-light">
                             Gigacore’s platform uses cold-plasma excitation to activate water molecules under controlled electromagnetic conditions, enabling hydrogen generation through a fundamentally different energy transfer mechanism.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="mb-8">
-                            <h3 className="text-xl font-bold mb-4 text-gray-900">Unlike classical electrolysis, the system:</h3>
-                            <ul className="space-y-3">
+                        <motion.div variants={fadeUp} className="mb-5">
+                            <h3 className="text-base md:text-lg font-bold mb-3 text-brand-secondary">Unlike classical electrolysis, the system:</h3>
+                            <ul className="space-y-1.5 md:space-y-2">
                                 {FEATURES.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600">
-                                        <Check className="w-5 h-5 text-brand-primary mt-1 flex-shrink-0" />
-                                        <span>{item}</span>
+                                    <li key={idx} className="flex items-start gap-2.5 text-gray-700 bg-white p-2.5 md:p-3 rounded-lg shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-brand-primary/20">
+                                        <div className="bg-brand-primary/10 p-1 rounded-full text-brand-primary mt-0.5">
+                                            <Check className="w-4 h-4" />
+                                        </div>
+                                        <span className="font-medium text-sm md:text-base">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </motion.div>
 
-                        <motion.div variants={fadeUp} className="bg-gray-50 p-6 border-l-4 border-brand-primary">
-                            <h3 className="text-lg font-bold mb-3 text-gray-900">The platform is being engineered with:</h3>
-                            <ul className="space-y-2">
-                                {ENGINEERING_SPECS.map((item, idx) => (
-                                    <li key={idx} className="text-gray-600 text-sm flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />
-                                        {item}
-                                    </li>
+                        <motion.div variants={fadeUp} className="bg-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-card border border-gray-100 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-brand-accent/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                            <h3 className="text-sm md:text-base font-bold mb-2.5 md:mb-3 text-brand-secondary">The platform is being engineered with:</h3>
+                            <ul className="space-y-1.5 md:space-y-2">
+                                {ENGINEERING_SPECS.map((spec, idx) => (
+                                    <motion.li
+                                        key={idx}
+                                        variants={fadeUp}
+                                        className="flex items-start gap-2.5 group"
+                                    >
+                                        <div className="relative mt-1">
+                                            {/* Decorative glow */}
+                                            <div className="absolute inset-0 bg-brand-primary/20 blur-xl rounded-full scale-150 group-hover:scale-175 transition-transform duration-300" />
+                                            <Check className="w-6 h-6 text-brand-primary relative z-10 stroke-[3]" />
+                                        </div>
+                                        <span className="text-gray-700 text-sm md:text-base font-light leading-relaxed flex-1">{spec}</span>
+                                    </motion.li>
                                 ))}
                             </ul>
-                            <p className="mt-4 text-gray-500 text-sm italic">
+                            <p className="mt-4 text-gray-400 text-xs italic border-t border-gray-100 pt-3">
                                 This architecture is intended to reduce system complexity while opening a pathway to materially lower operating costs.
                             </p>
                         </motion.div>
@@ -72,19 +87,20 @@ export default function PlatformOverview() {
 
                     {/* Image Side */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                         className="flex-1 w-full order-1 lg:order-2"
                     >
                         {/* Using an img tag for full visibility and containment, ensuring no cropping */}
-                        <div className="relative rounded-sm overflow-hidden bg-white shadow-2xl border border-gray-100">
+                        <div className="relative rounded-2xl overflow-hidden bg-white shadow-2xl border border-gray-100 group hover:shadow-glow transition-all duration-500">
                             <img
-                                src="/home/COLD-PLASMA HYDROGEN PLATFORM.webp"
+                                src="/home/COLD-PLASMA HYDROGEN PLATFORM.png"
                                 alt="Cold-Plasma Hydrogen Platform Schematic"
-                                className="w-full h-auto object-contain"
+                                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-105"
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                         </div>
                     </motion.div>
 
