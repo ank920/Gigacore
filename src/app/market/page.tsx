@@ -5,53 +5,59 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { ArrowRight, Globe, TrendingUp, BarChart3, Anchor, ShieldCheck, Target, Zap, Building2, Briefcase } from "lucide-react";
+import { ArrowRight, Globe, TrendingUp, BarChart3, Anchor, ShieldCheck, Target, Zap, Building2, Briefcase, CheckCircle, Truck } from "lucide-react";
+import Button from "@/components/ui/Button";
 
 export default function MarketPage() {
     return (
         <main className="bg-white">
 
-            {/* 1. Hero Section (NO TEXT - Just Image) */}
-            <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden bg-gray-100">
+            {/* 1. Hero Section */}
+            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/market/hero%20section.jpg')] bg-cover bg-center" />
+                    <div className="absolute inset-0 bg-[url('/market/hero%20section.jpg')] bg-cover bg-center opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
                 </div>
+                <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight text-white"
+                    >
+                        Hydrogen Demand Is <span className="text-gradient-green-glow">Structural</span>, Not Speculative
+                    </motion.h1>
+                </SectionWrapper>
             </section>
 
-            {/* 2. Intro Section (Text + Buttons Moved Here) */}
-            <section className="py-12 bg-white text-center">
+            {/* 2. Intro Section */}
+            <section className="py-20 bg-white text-center">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
-                        animate="visible"
+                        whileInView="visible"
+                        viewport={{ once: true }}
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
-                        <motion.h1
-                            variants={fadeUp}
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-gray-900"
-                        >
-                            Hydrogen Demand Is <span className="text-brand-green">Structural</span>, Not Speculative
-                        </motion.h1>
-
                         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
                             Hydrogen is already embedded in global industrial systems. Demand is driven by essential sectors—fertilizers, refining, chemicals, and metals—where hydrogen is a core input rather than an optional fuel.
                         </motion.p>
 
                         <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-500 mb-10 max-w-3xl leading-relaxed">
-                            As decarbonization mandates accelerate, these sectors face a clear constraint: <span className="text-brand-green font-bold">hydrogen must become cost-competitive</span> at scale to enable meaningful transition.
+                            As decarbonization mandates accelerate, these sectors face a clear constraint: <span className="text-brand-primary font-bold">hydrogen must become cost-competitive</span> at scale to enable meaningful transition.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-                            <Link href="/contact" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-brand-green text-white hover:bg-green-700 rounded-full font-bold transition-all duration-300 shadow-xl text-base w-full md:w-auto min-w-[200px]">
+                            <Link href="/contact">
+                                <Button variant="primary" size="lg" className="min-w-[240px]">
                                     Discuss Market Fit
-                                </button>
+                                </Button>
                             </Link>
-                            <Link href="/partnership" className="w-full md:w-auto">
-                                <button className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white rounded-full font-bold transition-all duration-300 text-base w-full md:w-auto min-w-[200px] shadow-sm">
-                                    Explore Deployment Opportunities
-                                </button>
+                            <Link href="/partnership">
+                                <Button variant="outline" size="lg" className="min-w-[240px]">
+                                    Explore Deployment
+                                </Button>
                             </Link>
                         </motion.div>
 
@@ -60,84 +66,88 @@ export default function MarketPage() {
             </section>
 
             {/* 2. What Is Changing */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                                 <img
                                     src="/market/What%20Is%20Changing%20in%20the%20Market.png"
                                     alt="Market Changing"
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <TrendingUp className="w-6 h-6 text-brand-green" />
-                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Market Dynamics</span>
+                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <TrendingUp className="w-4 h-4" /> Market Dynamics
+                                </span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">What Is Changing in the Market</h2>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">What Is Changing in the <span className="text-gradient-green-glow">Market</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 Three forces are reshaping the hydrogen market:
                             </p>
                             <ul className="space-y-4 mb-8">
-                                <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">1</div>
-                                    <span className="text-gray-700 font-medium my-auto">Policy pressure to decarbonize hard-to-abate industries</span>
-                                </li>
-                                <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">2</div>
-                                    <span className="text-gray-700 font-medium my-auto">Industrial demand for reliable, continuous hydrogen supply</span>
-                                </li>
-                                <li className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                                    <div className="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 text-brand-green font-bold">3</div>
-                                    <span className="text-gray-700 font-medium my-auto">Economic reality that limits adoption above certain cost thresholds</span>
-                                </li>
+                                {[
+                                    "Policy pressure to decarbonize hard-to-abate industries",
+                                    "Industrial demand for reliable, continuous hydrogen supply",
+                                    "Economic reality that limits adoption above certain cost thresholds"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-primary/30 transition-colors">
+                                        <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center shrink-0 text-brand-primary font-bold">
+                                            {i + 1}
+                                        </div>
+                                        <span className="text-gray-700 font-medium my-auto">{item}</span>
+                                    </li>
+                                ))}
                             </ul>
-                            <p className="text-gray-500 italic">
-                                While incentives and subsidies can accelerate early projects, long-term deployment depends on structural cost reduction.
-                            </p>
+                            <div className="p-4 bg-white rounded-lg border-l-4 border-brand-primary shadow-sm">
+                                <p className="text-brand-primary font-medium italic">
+                                    While incentives and subsidies can accelerate early projects, long-term deployment depends on structural cost reduction.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </SectionWrapper>
             </section>
 
             {/* 3. Cost Threshold (Visualized) */}
-            <section className="py-24 bg-gray-50 border-y border-gray-200">
+            <section className="py-12 md:py-20 bg-white">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                                 <img
                                     src="/market/Green%20Hydrogen%20category%20photo.jpg"
                                     alt="Green Hydrogen Cost"
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <BarChart3 className="w-6 h-6 text-brand-green" />
-                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Economic Inflection Point</span>
+                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <BarChart3 className="w-4 h-4" /> Economic Inflection Point
+                                </span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">The Cost Threshold That Unlocks Scale</h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">The Cost Threshold That <span className="text-gradient-green-glow">Unlocks Scale</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 Across downstream applications, a consistent economic signal has emerged:
                             </p>
 
-                            <div className="bg-white p-8 rounded-xl shadow-md border-l-8 border-brand-green mb-8">
-                                <div className="text-5xl font-bold text-gray-900 mb-2">~$2<span className="text-xl text-gray-500">/kg</span></div>
+                            <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-brand-primary/10 mb-8 hover:shadow-[0_4px_20px_rgba(0,213,99,0.1)] transition-all">
+                                <div className="text-5xl font-bold text-brand-primary mb-2 flex items-baseline gap-1">~$2<span className="text-2xl text-gray-500 font-medium">/kg</span></div>
                                 <p className="text-gray-600 font-medium">The inflection point for large-scale industrial adoption.</p>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
+                                <div className="p-5 bg-red-50/50 rounded-xl border border-red-100">
                                     <h4 className="font-bold text-red-500 mb-2 flex items-center gap-2"><ArrowRight className="rotate-[-45deg]" /> Above this level</h4>
                                     <p className="text-sm text-gray-600">Green hydrogen remains confined to pilots and subsidized projects.</p>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-brand-green mb-2 flex items-center gap-2"><ArrowRight className="rotate-45" /> Below this level</h4>
+                                <div className="p-5 bg-brand-primary/5 rounded-xl border border-brand-primary/20">
+                                    <h4 className="font-bold text-brand-primary mb-2 flex items-center gap-2"><ArrowRight className="rotate-45" /> Below this level</h4>
                                     <p className="text-sm text-gray-600">Hydrogen becomes a viable replacement for incumbent fossil-derived supply.</p>
                                 </div>
                             </div>
@@ -147,14 +157,14 @@ export default function MarketPage() {
             </section>
 
             {/* 4. India Market Context */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 flex items-center justify-center gap-4">
-                            <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-10 rounded shadow-sm" />
-                            India: A First-Principles Hydrogen Market
-                        </h2>
-                        <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+                        <div className="inline-flex items-center gap-3 justify-center mb-4">
+                            <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
+                            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">India: A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
+                        </div>
+                        <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
                             Unlike markets driven primarily by subsidies, India’s hydrogen transition must succeed on economics and scale.
                         </p>
                     </div>
@@ -166,30 +176,31 @@ export default function MarketPage() {
                             "Rapidly expanding energy infrastructure",
                             "Strong policy momentum for domestic production"
                         ].map((item, i) => (
-                            <div key={i} className="p-6 bg-brand-green/5 rounded-xl border border-brand-green/20 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                                <div className="w-3 h-3 bg-brand-green rounded-full mx-auto mb-4 shadow-sm" />
+                            <div key={i} className="p-6 bg-white rounded-2xl border border-brand-primary/10 text-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,213,99,0.1)] transition-all duration-300 hover:-translate-y-1">
+                                <div className="w-3 h-3 bg-brand-primary rounded-full mx-auto mb-4 shadow-[0_0_10px_rgba(0,213,99,0.6)]" />
                                 <span className="font-bold text-gray-900">{item}</span>
                             </div>
                         ))}
                     </div>
 
-                    <div className="bg-brand-green/5 rounded-2xl p-12 border border-brand-green/10">
-                        <h3 className="text-2xl font-bold text-brand-green mb-8 text-center">Priority Demand Centers in India</h3>
+                    <div className="bg-white rounded-3xl p-8 md:p-12 border border-brand-primary/10 shadow-lg relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-primary to-brand-accent opacity-50" />
+                        <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Priority Demand Centers in India</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="bg-white p-6 rounded shadow-sm">
-                                <h4 className="font-bold text-gray-900 mb-2">Immediate Opportunities</h4>
-                                <ul className="space-y-2 text-gray-600">
-                                    <li>• Fertilizer and ammonia production</li>
-                                    <li>• Public-sector and private refineries</li>
-                                    <li>• Steel and metals processing</li>
+                            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition-colors">
+                                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2"><Target className="w-5 h-5 text-brand-primary" /> Immediate Opportunities</h4>
+                                <ul className="space-y-3 text-gray-600">
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Fertilizer and ammonia production</li>
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Public-sector and private refineries</li>
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Steel and metals processing</li>
                                 </ul>
                             </div>
-                            <div className="bg-white p-6 rounded shadow-sm">
-                                <h4 className="font-bold text-gray-900 mb-2">Strategic Advantage</h4>
-                                <ul className="space-y-2 text-gray-600">
-                                    <li>• Existing hydrogen handling infrastructure</li>
-                                    <li>• Continuous offtake requirements</li>
-                                    <li>• Clear pathways to scale</li>
+                            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition-colors">
+                                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-brand-primary" /> Strategic Advantage</h4>
+                                <ul className="space-y-3 text-gray-600">
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Existing hydrogen handling infrastructure</li>
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Continuous offtake requirements</li>
+                                    <li className="flex gap-2 items-center"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Clear pathways to scale</li>
                                 </ul>
                             </div>
                         </div>
@@ -198,36 +209,47 @@ export default function MarketPage() {
             </section>
 
             {/* 5. Export Strategy */}
-            <section className="py-24 bg-gray-50 border-y border-gray-200">
+            <section className="py-12 md:py-20 bg-white">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                                 <img
                                     src="/market/Export-Linked%20Market%20Opportunities.jpg"
                                     alt="Export Market"
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Export-Linked Market Opportunities</h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <div className="flex items-center gap-2 mb-4">
+                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <Anchor className="w-4 h-4" /> Global Trade
+                                </span>
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">Export-Linked Market <span className="text-gradient-green-glow">Opportunities</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 Beyond domestic consumption, hydrogen enables export-oriented value chains—particularly through ammonia. Markets that can produce hydrogen at structurally lower cost gain a durable advantage in these global flows.
                             </p>
-                            <h4 className="font-bold text-gray-900 mb-4">Export dynamics are shaped by:</h4>
+                            <h4 className="font-bold text-gray-900 mb-4 text-lg">Export dynamics are shaped by:</h4>
                             <ul className="space-y-4">
-                                <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-green" />
-                                    <span className="text-gray-700">Global demand for low-carbon ammonia</span>
+                                <li className="flex gap-4 items-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                                    <div className="p-2 bg-brand-primary/10 rounded-full text-brand-primary">
+                                        <Anchor className="w-5 h-5" />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Global demand for low-carbon ammonia</span>
                                 </li>
-                                <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-green" />
-                                    <span className="text-gray-700">Cost competitiveness at the point of production</span>
+                                <li className="flex gap-4 items-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                                    <div className="p-2 bg-brand-primary/10 rounded-full text-brand-primary">
+                                        <BarChart3 className="w-5 h-5" />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Cost competitiveness at the point of production</span>
                                 </li>
-                                <li className="flex gap-4 items-center">
-                                    <Anchor className="w-5 h-5 text-brand-green" />
-                                    <span className="text-gray-700">Access to ports and logistics infrastructure</span>
+                                <li className="flex gap-4 items-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                                    <div className="p-2 bg-brand-primary/10 rounded-full text-brand-primary">
+                                        <Truck className="w-5 h-5" />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Access to ports and logistics infrastructure</span>
                                 </li>
                             </ul>
                         </div>
@@ -236,32 +258,35 @@ export default function MarketPage() {
             </section>
 
             {/* 6. Global Relevance */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
                             <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
                                 <img
                                     src="/market/Global%20Relevance%20Beyond%20India.jpg"
                                     alt="Global Relevance"
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
-                                <Globe className="w-6 h-6 text-brand-green" />
-                                <span className="text-brand-green font-bold uppercase tracking-wider text-sm">Scalable Impact</span>
+                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <Globe className="w-4 h-4" /> Scalable Impact
+                                </span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Global Relevance Beyond India</h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">Global Relevance <span className="text-gradient-green-glow">Beyond India</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 While India is a primary focus, the same economic logic applies globally. As subsidies normalize and projects mature, cost-led hydrogen platforms are expected to outperform subsidy-dependent models.
                             </p>
-                            <h4 className="font-bold text-gray-900 mb-4">Relevant Markets:</h4>
-                            <div className="flex flex-wrap gap-4">
-                                <span className="px-4 py-2 bg-gray-100 rounded-full text-gray-700 border border-gray-200">Industrial decarbonization zones</span>
-                                <span className="px-4 py-2 bg-gray-100 rounded-full text-gray-700 border border-gray-200">Energy-intensive manufacturing regions</span>
-                                <span className="px-4 py-2 bg-gray-100 rounded-full text-gray-700 border border-gray-200">Export hubs linked to shipping</span>
+                            <div className="p-6 bg-white rounded-2xl shadow-sm border border-brand-primary/10">
+                                <h4 className="font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Relevant Markets:</h4>
+                                <div className="flex flex-wrap gap-3">
+                                    <span className="px-4 py-2 bg-gray-50 rounded-lg text-gray-700 font-medium border border-gray-100 hover:border-brand-primary/30 transition-colors">Industrial decarbonization zones</span>
+                                    <span className="px-4 py-2 bg-gray-50 rounded-lg text-gray-700 font-medium border border-gray-100 hover:border-brand-primary/30 transition-colors">Energy-intensive manufacturing regions</span>
+                                    <span className="px-4 py-2 bg-gray-50 rounded-lg text-gray-700 font-medium border border-gray-100 hover:border-brand-primary/30 transition-colors">Export hubs linked to shipping</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -269,30 +294,30 @@ export default function MarketPage() {
             </section>
 
             {/* 7. Market Philosophy & Participants */}
-            <section className="py-24 bg-gray-50 border-t border-gray-200">
+            <section className="py-12 md:py-20 bg-white border-t border-gray-100">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                            <h3 className="text-2xl font-bold text-brand-green mb-6 flex items-center gap-2"><Target className="w-6 h-6" /> Market Entry Philosophy</h3>
-                            <p className="text-gray-600 mb-6">
+                        <div className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_30px_rgba(0,213,99,0.08)] transition-all">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3"><Target className="w-6 h-6 text-brand-primary" /> Market Entry Philosophy</h3>
+                            <p className="text-gray-600 mb-6 text-lg">
                                 Rather than spreading across many small pilots, entry is structured around few, scalable, high-impact deployments.
                             </p>
-                            <ul className="space-y-3 text-gray-700">
-                                <li>• Industrial demand over consumer use cases</li>
-                                <li>• Anchor customers with continuous offtake</li>
-                                <li>• Phased deployment aligned with real consumption</li>
+                            <ul className="space-y-4 text-gray-700">
+                                <li className="flex items-center gap-3 font-medium"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Industrial demand over consumer use cases</li>
+                                <li className="flex items-center gap-3 font-medium"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Anchor customers with continuous offtake</li>
+                                <li className="flex items-center gap-3 font-medium"><div className="w-1.5 h-1.5 bg-brand-primary rounded-full" />Phased deployment aligned with real consumption</li>
                             </ul>
                         </div>
-                        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                            <h3 className="text-2xl font-bold text-brand-green mb-6 flex items-center gap-2"><Briefcase className="w-6 h-6" /> Who the Market Is For</h3>
-                            <p className="text-gray-600 mb-6">
+                        <div className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_30px_rgba(0,213,99,0.08)] transition-all">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3"><Briefcase className="w-6 h-6 text-brand-primary" /> Who the Market Is For</h3>
+                            <p className="text-gray-600 mb-6 text-lg">
                                 The platform is designed for stakeholders who operate at infrastructure scale and evaluate hydrogen as a core input.
                             </p>
                             <div className="flex flex-wrap gap-3">
-                                <span className="px-3 py-1 bg-brand-green/10 text-brand-green rounded text-sm font-semibold">Industrial Consumers</span>
-                                <span className="px-3 py-1 bg-brand-green/10 text-brand-green rounded text-sm font-semibold">Public-Sector/Utilities</span>
-                                <span className="px-3 py-1 bg-brand-green/10 text-brand-green rounded text-sm font-semibold">EPCs</span>
-                                <span className="px-3 py-1 bg-brand-green/10 text-brand-green rounded text-sm font-semibold">Capital Providers</span>
+                                <span className="px-3 py-1 bg-brand-primary/10 text-brand-primary rounded-lg text-sm font-bold border border-brand-primary/10">Industrial Consumers</span>
+                                <span className="px-3 py-1 bg-brand-primary/10 text-brand-primary rounded-lg text-sm font-bold border border-brand-primary/10">Public-Sector/Utilities</span>
+                                <span className="px-3 py-1 bg-brand-primary/10 text-brand-primary rounded-lg text-sm font-bold border border-brand-primary/10">EPCs</span>
+                                <span className="px-3 py-1 bg-brand-primary/10 text-brand-primary rounded-lg text-sm font-bold border border-brand-primary/10">Capital Providers</span>
                             </div>
                         </div>
                     </div>
@@ -300,31 +325,31 @@ export default function MarketPage() {
             </section>
 
             {/* 8. Policy to Reality */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                                 <img
                                     src="/market/From%20Policy%20Alignment%20to%20Commercial%20Realit.jpg"
                                     alt="Policy to Reality"
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
                         <div className="flex-1">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">From Policy Alignment to Commercial Reality</h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">From Policy Alignment to <span className="text-gradient-green-glow">Commercial Reality</span></h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 Policy frameworks can accelerate adoption, but commercial viability determines longevity. The market opportunity is defined by the ability to deliver:
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
+                                <div className="p-6 bg-white rounded-xl border border-gray-100 hover:border-brand-primary/50 shadow-sm transition-all hover:-translate-y-1">
                                     <h4 className="font-bold text-gray-900">Predictable Cost</h4>
                                 </div>
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
+                                <div className="p-6 bg-white rounded-xl border border-gray-100 hover:border-brand-primary/50 shadow-sm transition-all hover:-translate-y-1">
                                     <h4 className="font-bold text-gray-900">Scalable Supply</h4>
                                 </div>
-                                <div className="p-4 bg-gray-50 rounded border border-gray-200 hover:border-brand-green transition-colors">
+                                <div className="p-6 bg-white rounded-xl border border-gray-100 hover:border-brand-primary/50 shadow-sm transition-all hover:-translate-y-1">
                                     <h4 className="font-bold text-gray-900">Industrial Reliability</h4>
                                 </div>
                             </div>
@@ -334,22 +359,22 @@ export default function MarketPage() {
             </section>
 
             {/* 9. CTA Section */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-20 bg-white">
                 <SectionWrapper>
-                    <div className="relative rounded-2xl overflow-hidden bg-brand-green shadow-2xl text-center py-24 px-8">
+                    <div className="relative rounded-3xl overflow-hidden bg-brand-primary shadow-[0_0_40px_rgba(0,213,99,0.4)] border border-brand-primary/30 text-center py-20 px-6 md:px-12 group">
                         {/* Background Gradients */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-green to-gray-900 opacity-90 z-0" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90 z-0" />
                         <div className="absolute inset-0 bg-[url('/market/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">Engage on the Market</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-md">Engage on the Market</h2>
                             <p className="text-white/95 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
                                 Engagement is focused on stakeholders evaluating hydrogen as a commercial input, not a trial technology.
                             </p>
 
                             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                 <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-white text-brand-green font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
+                                    <button className="px-10 py-5 bg-white text-brand-primary font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
                                         Discuss Market Fit
                                     </button>
                                 </Link>

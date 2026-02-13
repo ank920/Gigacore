@@ -7,9 +7,9 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function IndiaFirst() {
     return (
-        <section className="py-24 bg-brand-green/5 text-gray-900 relative border-b border-gray-200">
-            <SectionWrapper>
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <section className="py-12 md:py-20 bg-white border-b border-gray-100 overflow-hidden">
+            <SectionWrapper className="max-w-7xl">
+                <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
 
                     {/* Image Side - Map/Visual */}
                     <motion.div
@@ -19,13 +19,14 @@ export default function IndiaFirst() {
                         transition={{ duration: 0.8 }}
                         className="flex-1 w-full"
                     >
-                        <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border border-gray-100">
+                        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-100 group">
                             <Image
                                 src="/home/build.jpg"
                                 alt="Built for India's Scale"
                                 fill
-                                className="object-cover"
+                                className="object-cover transform transition-transform duration-700 group-hover:scale-105"
                             />
+                            <div className="absolute inset-0 bg-brand-secondary/10 mix-blend-multiply transition-opacity group-hover:opacity-0" />
                         </div>
                     </motion.div>
 
@@ -37,29 +38,42 @@ export default function IndiaFirst() {
                         viewport={{ once: true }}
                         className="flex-1"
                     >
-                        <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-wider text-sm mb-4 block">
-                            India-First, Globally Relevant
-                        </motion.span>
-                        <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                            Built for India’s Scale—Relevant Worldwide
+                        <motion.div variants={fadeUp} className="flex items-center gap-2 mb-6">
+                            <span className="h-px w-8 bg-brand-primary"></span>
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">
+                                India-First, Globally Relevant
+                            </span>
+                        </motion.div>
+
+                        <motion.h2 variants={fadeUp} className="text-2xl md:text-4xl font-bold mb-4 leading-tight text-brand-secondary">
+                            Built for <span className="text-gradient-green-glow font-bold">India's Scale</span> — Relevant Worldwide
                         </motion.h2>
-                        <motion.p variants={fadeUp} className="text-gray-600 text-lg mb-8 leading-relaxed">
+                        <motion.p variants={fadeUp} className="text-gray-600 text-base md:text-lg mb-6 leading-relaxed font-light">
                             India represents one of the world’s most demanding hydrogen markets: price-sensitive, scale-intensive, and policy-driven.
                         </motion.p>
 
-                        <motion.div variants={fadeUp} className="space-y-6">
-                            <div className="border-l-2 border-brand-primary pl-6">
-                                <h4 className="font-bold text-xl mb-2">India Strategy</h4>
-                                <ul className="space-y-2 text-gray-600 text-sm">
-                                    <li>• Alignment to India’s National Green Hydrogen Mission</li>
-                                    <li>• Compatibility with domestic manufacturing and localization</li>
-                                    <li>• Readiness for PSU-led and private industrial deployment</li>
+                        <motion.div variants={fadeUp} className="space-y-8">
+                            <div className="pl-6 border-l-2 border-brand-primary">
+                                <h4 className="font-bold text-xl mb-3 text-brand-secondary">India Strategy</h4>
+                                <ul className="space-y-3 text-gray-600 text-sm">
+                                    <li className="flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                                        Alignment to India’s National Green Hydrogen Mission
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                                        Compatibility with domestic manufacturing and localization
+                                    </li>
+                                    <li className="flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                                        Readiness for PSU-led and private industrial deployment
+                                    </li>
                                 </ul>
                             </div>
 
-                            <div className="border-l-2 border-gray-200 pl-6">
-                                <h4 className="font-bold text-xl mb-2">Global Relevance</h4>
-                                <p className="text-gray-600 text-sm">
+                            <div className="pl-6 border-l-2 border-gray-200">
+                                <h4 className="font-bold text-xl mb-3 text-gray-400">Global Relevance</h4>
+                                <p className="text-gray-500 text-sm leading-relaxed">
                                     At the same time, the underlying economics and architecture are applicable to global industrial markets seeking cost-competitive green hydrogen.
                                 </p>
                             </div>

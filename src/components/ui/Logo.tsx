@@ -1,22 +1,17 @@
 import Image from "next/image";
 
-export default function Logo({ className = "", textClassName = "text-gray-900" }: { className?: string, textClassName?: string }) {
+export default function Logo({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) {
     return (
         <div className={`flex items-center gap-3 ${className}`}>
-            {/* Logo Image */}
-            <div className="relative w-32 h-10 md:w-48 md:h-16 shrink-0">
+            {/* Logo Image - changes based on navbar background */}
+            <div className="relative w-36 h-12 md:w-52 md:h-20 shrink-0">
                 <Image
-                    src="/logo.png"
+                    src={isScrolled ? "/black_logo.png" : "/white_logo.png"}
                     alt="Gigacore Energy Logo"
                     fill
-                    className="object-contain object-left"
+                    className="object-contain object-left transition-opacity duration-300"
                 />
             </div>
-
-            {/* Text REMOVED as per user request */}
-            {/* <div className={`flex flex-col leading-none ${textClassName}`}>
-                <span className="font-bold text-xl tracking-tighter uppercase">Gigacore</span>
-            </div> */}
         </div>
     );
 }
