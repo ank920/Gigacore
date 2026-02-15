@@ -241,7 +241,7 @@ export default function ContactPage() {
                             <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary relative z-10">
                                 <CheckCircle className="w-8 h-8" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 relative z-10">Engagement Process</h3>
+                            <h3 className="text-2xl font-bold mb-4 relative z-10 text-white">Engagement Process</h3>
                             <p className="text-gray-300 mb-8 font-light relative z-10">Structured approach for productive discussions.</p>
 
                             <div className="space-y-4 text-left max-w-xs mx-auto relative z-10">
@@ -253,7 +253,7 @@ export default function ContactPage() {
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-4 border-b border-white/10 pb-2 last:border-0">
                                         <span className="text-brand-primary font-mono text-sm">{item.step}</span>
-                                        <span className="font-medium text-gray-200">{item.text}</span>
+                                        <span className="font-medium text-white">{item.text}</span>
                                     </div>
                                 ))}
                             </div>

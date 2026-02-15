@@ -264,7 +264,7 @@ export default function EconomicsPage() {
                             </div>
                             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 mt-auto h-72 w-full">
                                 <img
-                                    src="/economics/scale.jpg"
+                                    src="/economics/Scale.jpg"
                                     alt="Scale Economics"
                                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                                 />
