@@ -79,7 +79,7 @@ export default function CompanyPage() {
                                             src="/company/Our%20Mission.jpg"
                                             alt="Our Mission"
                                             fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="object-contain transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
                                     </div>
@@ -112,7 +112,7 @@ export default function CompanyPage() {
                                             src="/company/Our%20Vision.jpg"
                                             alt="Our Vision"
                                             fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="object-contain transition-transform duration-700 group-hover:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
                                     </div>
@@ -160,7 +160,7 @@ export default function CompanyPage() {
                                     alt="Why We Exist"
                                     width={800}
                                     height={600}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-contain"
                                 />
                             </div>
                         </div>
@@ -257,7 +257,7 @@ export default function CompanyPage() {
                                     alt="Global Impact"
                                     width={800}
                                     height={600}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-contain"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
                             </div>

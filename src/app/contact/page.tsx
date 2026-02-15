@@ -88,7 +88,7 @@ export default function ContactPage() {
                                     src="/contact/General%20Enquiries.webp"
                                     alt="General Enquiries"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                 />
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                                     We work with organizations seeking deployable, scalable hydrogen solutions.
                                 </p>
                                 <div className="rounded-lg overflow-hidden h-48 w-full relative mb-6 border border-gray-100">
-                                    <Image src="/contact/Partnerships%20&%20Deployment.jpg" alt="Partnerships & Deployment" fill className="object-cover" />
+                                    <Image src="/contact/Partnerships%20&%20Deployment.jpg" alt="Partnerships & Deployment" fill className="object-contain" />
                                 </div>
                                 <ul className="space-y-3">
                                     {[
@@ -147,7 +147,7 @@ export default function ContactPage() {
                                     For technical reviews, diligence requests, or validation discussions under appropriate confidentiality.
                                 </p>
                                 <div className="rounded-lg overflow-hidden h-48 w-full relative mb-6 border border-gray-100">
-                                    <Image src="/contact/Technical%20&%20Validation%20Section.png" alt="Technical & Validation" fill className="object-cover" />
+                                    <Image src="/contact/Technical%20&%20Validation%20Section.png" alt="Technical & Validation" fill className="object-contain" />
                                 </div>
                                 <div className="flex items-center gap-2 text-brand-primary font-bold uppercase tracking-wider text-sm cursor-pointer group-hover:gap-3 transition-all">
                                     Initiate Discussion <ArrowRight className="w-4 h-4" />
@@ -197,7 +197,7 @@ export default function ContactPage() {
                                 src="/contact/Investor%20Engagement%20Section.jpg"
                                 alt="Investor Engagement"
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                             />
                         </div>
                     </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                                 <p className="text-gray-600 mb-8 font-light">Focused on industrial demand centers with immediate relevance.</p>
 
                                 <div className="rounded-lg overflow-hidden h-40 w-full relative mb-8 border border-gray-100 shadow-sm">
-                                    <Image src="/contact/India-Aligned,%20Globally%20Competitive.jpg" alt="India Aligned, Globally Competitive" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <Image src="/contact/India-Aligned,%20Globally%20Competitive.jpg" alt="India Aligned, Globally Competitive" fill className="object-contain group-hover:scale-105 transition-transform duration-500" />
                                 </div>
 
                                 <div className="flex flex-col gap-3 max-w-xs mx-auto">

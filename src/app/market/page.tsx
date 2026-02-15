@@ -74,7 +74,7 @@ export default function MarketPage() {
                                 <img
                                     src="/market/What%20Is%20Changing%20in%20the%20Market.png"
                                     alt="Market Changing"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -121,7 +121,7 @@ export default function MarketPage() {
                                 <img
                                     src="/market/Green%20Hydrogen%20category%20photo.jpg"
                                     alt="Green Hydrogen Cost"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -217,7 +217,7 @@ export default function MarketPage() {
                                 <img
                                     src="/market/Export-Linked%20Market%20Opportunities.jpg"
                                     alt="Export Market"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -266,7 +266,7 @@ export default function MarketPage() {
                                 <img
                                     src="/market/Global%20Relevance%20Beyond%20India.jpg"
                                     alt="Global Relevance"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -333,7 +333,7 @@ export default function MarketPage() {
                                 <img
                                     src="/market/From%20Policy%20Alignment%20to%20Commercial%20Realit.jpg"
                                     alt="Policy to Reality"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
