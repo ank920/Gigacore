@@ -111,7 +111,7 @@ export default function TechnologyPage() {
                                 <img
                                     src="/Technology/A New Hydrogen Production Architecture2.webp"
                                     alt="Targeted Energy Delivery"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -180,7 +180,7 @@ export default function TechnologyPage() {
                                     <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-60" />
                                     {/* Abstract Background Image */}
                                     <div className="absolute inset-0 opacity-15 mix-blend-multiply">
-                                        <img src="/Technology/analogy_resonance.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="/Technology/analogy_resonance.png" alt="" className="w-full h-full object-contain" />
                                     </div>
 
                                     <div className="relative z-10 flex gap-6 items-start">
@@ -235,7 +235,7 @@ export default function TechnologyPage() {
                                         <img
                                             src="/Technology/How Cold Plasma Is Created.jpg"
                                             alt="How Cold Plasma Is Created"
-                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                            className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@ export default function TechnologyPage() {
                             <img
                                 src="/Technology/Distributed Interaction Architecture.png"
                                 alt="Distributed Interaction Architecture"
-                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </div>
@@ -372,7 +372,7 @@ export default function TechnologyPage() {
                                 <img
                                     src="/Technology/Technology Readiness & Validation Path.jpg"
                                     alt="Readiness Path"
-                                    className="w-full h-40 object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-40 object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                             <ul className="space-y-2">

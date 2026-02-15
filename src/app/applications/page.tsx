@@ -74,7 +74,7 @@ export default function ApplicationsPage() {
                                 <img
                                     src="/application/Industrial%20Hydrogen%20Feedstock.png"
                                     alt="Industrial Feedstock"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -122,7 +122,7 @@ export default function ApplicationsPage() {
                                 <img
                                     src="/application/Green%20Ammonia.jpg"
                                     alt="Green Ammonia"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -175,7 +175,7 @@ export default function ApplicationsPage() {
                         <div className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-primary/5 hover:shadow-lg transition-all duration-500 group">
                             <div className="h-[300px] overflow-hidden relative">
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img src="/application/Steel%20and%20Metals%20Processing.webp" alt="Steel" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <img src="/application/Steel%20and%20Metals%20Processing.webp" alt="Steel" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Steel and Metals Processing</h3>
@@ -192,7 +192,7 @@ export default function ApplicationsPage() {
                         <div className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-primary/5 hover:shadow-lg transition-all duration-500 group">
                             <div className="h-[300px] overflow-hidden relative">
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img src="/application/Refining%20and%20Petrochemicals.webp" alt="Refining" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <img src="/application/Refining%20and%20Petrochemicals.webp" alt="Refining" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="p-8 flex flex-col flex-1">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Refining and Petrochemicals</h3>
@@ -277,7 +277,7 @@ export default function ApplicationsPage() {
                         {/* India First */}
                         <div className="bg-white rounded-3xl p-8 border border-brand-primary/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_40px_rgba(0,213,99,0.1)] transition-all duration-300">
                             <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
-                                <img src="/application/India-First%20Industrial%20Deployment.jpg" alt="India Deployment" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                <img src="/application/India-First%20Industrial%20Deployment.jpg" alt="India Deployment" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                                 <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
@@ -299,7 +299,7 @@ export default function ApplicationsPage() {
                         {/* Global Scale */}
                         <div className="bg-white rounded-3xl p-8 border border-brand-primary/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_40px_rgba(0,213,99,0.1)] transition-all duration-300">
                             <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
-                                <img src="/application/Globally%20Scalable%20Use%20Cases.png" alt="Global Scale" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                <img src="/application/Globally%20Scalable%20Use%20Cases.png" alt="Global Scale" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                                 <Globe className="w-8 h-8 text-brand-primary" />

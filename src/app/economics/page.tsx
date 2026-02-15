@@ -69,10 +69,9 @@ export default function EconomicsPage() {
                                 <img
                                     src="/economics/Conventional%20Hydrogen%20Cost%20Structure.avif"
                                     alt="Conventional Hydrogen Cost Structure"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
-                            <p className="text-sm text-gray-400 mt-2 italic text-center">Enervoxa - Water to Hydrogen Wh...</p>
                         </div>
                         <div className="flex-1">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">Baseline: Conventional <span className="text-gradient-green-glow">Hydrogen Cost Structure</span></h2>
@@ -118,10 +117,9 @@ export default function EconomicsPage() {
                                 <img
                                     src="/economics/Demonstrated%20Energy%20Reduction.jpg"
                                     alt="Demonstrated Energy Reduction"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
-                            <p className="text-sm text-gray-400 mt-2 italic text-center">Revolutionizing_Global_Hydrogen…</p>
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-4">
@@ -170,7 +168,7 @@ export default function EconomicsPage() {
                                 <img
                                     src="/economics/Implication%20for%20Operating%20Cost%20(OPEX).avif"
                                     alt="OPEX Implication"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -203,9 +201,9 @@ export default function EconomicsPage() {
             {/* 5. Capital Efficiency & Scale */}
             <section className="py-12 md:py-20 bg-white">
                 <SectionWrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-stretch">
                         {/* Capital Efficiency */}
-                        <div>
+                        <div className="flex flex-col h-full">
                             <div className="flex items-center gap-3 mb-6">
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Factory className="w-6 h-6" />
@@ -228,17 +226,17 @@ export default function EconomicsPage() {
                                     </li>
                                 ))}
                             </ul>
-                            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200">
+                            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 mt-auto h-72 w-full">
                                 <img
                                     src="/economics/Capital%20Efficiency%20&%20System%20Simplicity.webp"
                                     alt="Capital Efficiency"
-                                    className="w-full h-auto hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
 
                         {/* Scale Economics */}
-                        <div>
+                        <div className="flex flex-col h-full">
                             <div className="flex items-center gap-3 mb-6">
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Scale className="w-6 h-6" />
@@ -264,11 +262,11 @@ export default function EconomicsPage() {
                                     <p className="text-brand-primary font-bold">Scaling preserves energy performance</p>
                                 </div>
                             </div>
-                            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200">
+                            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 mt-auto h-72 w-full">
                                 <img
-                                    src="/economics/Scale%20Economics.jpg"
+                                    src="/economics/scale.jpg"
                                     alt="Scale Economics"
-                                    className="w-full h-auto hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
@@ -285,7 +283,7 @@ export default function EconomicsPage() {
                                 <img
                                     src="/economics/Application-Level%20Economic%20Impact2.webp"
                                     alt="Application Level Impact"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </div>
