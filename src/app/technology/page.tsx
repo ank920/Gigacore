@@ -142,74 +142,103 @@ export default function TechnologyPage() {
             </section>
 
             {/* 5. Analogy & How Creation */}
-            <section className="py-12 md:py-20 bg-brand-light border-b border-brand-primary/5">
+            <section className="py-12 md:py-24 bg-gray-50 border-b border-brand-primary/5">
                 <SectionWrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                        {/* Analogy */}
-                        <div className="flex flex-col h-full">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 tracking-tight">
-                                A Simple <span className="text-gradient-green-glow">Analogy</span>
-                            </h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                        {/* Left Column: Analogy (Stacked) */}
+                        <div className="flex flex-col h-full gap-6">
+                            <div className="mb-2">
+                                <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-3 block">Comparative Analysis</span>
+                                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight">
+                                    A Simple <span className="text-gradient-green-glow">Analogy</span>
+                                </h3>
+                                <p className="text-gray-600 mt-4 leading-relaxed font-light">
+                                    Understanding the fundamental shift in efficiency.
+                                </p>
+                            </div>
 
-                            <div className="space-y-4">
-                                {/* Traditional */}
-                                <div className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-200 transition-all hover:shadow-md relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                        <Scale className="w-16 h-16 text-gray-400" />
+                            <div className="flex flex-col gap-6 flex-1">
+                                {/* Traditional Card */}
+                                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 flex-1 flex flex-col justify-center hover:shadow-md hover:border-gray-300">
+                                    <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                                        <Scale className="w-24 h-24 text-gray-400" />
                                     </div>
-                                    <div className="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 shadow-sm relative z-10 text-gray-400">
-                                        <Scale className="w-4 h-4" />
-                                    </div>
-                                    <div className="relative z-10">
-                                        <h4 className="font-bold text-gray-500 mb-1 uppercase tracking-wide text-xs">Traditional Electrolysis</h4>
-                                        <p className="text-gray-600 leading-relaxed text-sm">Like pushing a heavy object continuously against friction—requiring constant, high-intensity force to maintain any movement.</p>
+                                    <div className="relative z-10 flex gap-6 items-start">
+                                        <div className="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center shrink-0 text-gray-500 border border-gray-100 group-hover:bg-gray-100 transition-colors">
+                                            <Scale className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-gray-400 mb-1 uppercase tracking-wide text-xs">Traditional Electrolysis</h4>
+                                            <h5 className="text-xl font-bold text-gray-700 mb-2">Brute Force</h5>
+                                            <p className="text-gray-500 leading-relaxed text-sm">Like pushing a heavy object continuously against friction—requiring constant, high-intensity force to maintain any movement.</p>
+                                        </div>
                                     </div>
                                 </div>
 
-                                {/* Cold Plasma */}
-                                <div className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-brand-primary/20 shadow-[0_4px_15px_rgba(0,213,99,0.05)] relative overflow-hidden group">
-                                    <div className="absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                        <Zap className="w-16 h-16 text-brand-primary" />
+                                {/* Cold Plasma Card - Highlighted */}
+                                <div className="group relative bg-white p-8 rounded-2xl border border-brand-primary/20 shadow-[0_10px_40px_rgba(0,213,99,0.08)] hover:shadow-[0_15px_50px_rgba(0,213,99,0.15)] hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex-1 flex flex-col justify-center transform hover:-translate-y-1">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-60" />
+                                    {/* Abstract Background Image */}
+                                    <div className="absolute inset-0 opacity-15 mix-blend-multiply">
+                                        <img src="/Technology/analogy_resonance.png" alt="" className="w-full h-full object-cover" />
                                     </div>
 
-                                    <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center shrink-0 border border-brand-primary/20 relative z-10 text-brand-primary">
-                                        <Zap className="w-5 h-5" />
-                                    </div>
-                                    <div className="relative z-10">
-                                        <h4 className="font-bold text-brand-primary mb-1 uppercase tracking-wide text-xs flex items-center gap-2">
-                                            Cold Plasma Tech <span className="bg-brand-primary/10 px-1.5 py-0.5 rounded text-[9px]">REVOLUTIONARY</span>
-                                        </h4>
-                                        <p className="text-gray-800 leading-relaxed text-sm font-medium">Like tapping the object at exactly the right resonant frequency—using precise, minimal energy to create massive separation.</p>
+                                    <div className="relative z-10 flex gap-6 items-start">
+                                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center shrink-0 text-white shadow-lg shadow-brand-primary/30 group-hover:scale-110 transition-transform duration-300">
+                                            <Zap className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <div className="flex items-center gap-3 mb-2">
+                                                <h4 className="font-bold text-brand-primary uppercase tracking-wide text-xs">Cold Plasma Tech</h4>
+                                                <span className="bg-brand-primary/10 text-brand-primary text-[10px] font-bold px-2 py-0.5 rounded-full border border-brand-primary/20">REVOLUTIONARY</span>
+                                            </div>
+                                            <h5 className="text-xl font-bold text-brand-secondary mb-2">Resonance & Precision</h5>
+                                            <p className="text-gray-800 leading-relaxed text-sm font-medium">Like tapping the object at exactly the right resonant frequency—using precise, minimal energy to create massive separation.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* How Created */}
-                        <div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 tracking-tight">How Cold Plasma Is <span className="text-gradient-green-glow">Created</span></h3>
-                            <p className="text-gray-600 mb-6 text-base font-light">
-                                Cold plasma is created using carefully controlled electrical pulses rather than heat or combustion.
-                            </p>
-                            <ul className="space-y-3 mb-6">
-                                {[
-                                    "Electricity is applied in short, controlled bursts",
-                                    "These pulses create localized electrical discharges",
-                                    "The surrounding environment remains at moderate temperature"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-gray-700 text-sm md:text-base">
-                                        <div className="w-1.5 h-1.5 bg-brand-primary rounded-full shadow-[0_0_8px_rgba(0,213,99,0.6)]" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-md">
-                                <img
-                                    src="/Technology/How Cold Plasma Is Created.jpg"
-                                    alt="How Cold Plasma Is Created"
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                                />
+                        {/* Right Column: How Created (Full Height) */}
+                        <div className="flex flex-col h-full">
+                            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-gray-200/50 border border-gray-100 relative overflow-hidden h-full flex flex-col">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+
+                                <div className="relative z-10 mb-auto">
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 tracking-tight">
+                                        How Cold Plasma Is <span className="text-gradient-green-glow">Created</span>
+                                    </h3>
+                                    <p className="text-gray-600 mb-8 text-lg font-light leading-relaxed">
+                                        Cold plasma is created using carefully controlled <span className="font-medium text-gray-900">electrical pulses</span> rather than heat or combustion.
+                                    </p>
+
+                                    <ul className="space-y-4 mb-8">
+                                        {[
+                                            "Electricity is applied in short, controlled bursts",
+                                            "These pulses create localized electrical discharges",
+                                            "The surrounding environment remains at moderate temperature"
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-4">
+                                                <div className="w-6 h-6 rounded-full bg-brand-primary/10 flex items-center justify-center shrink-0 mt-0.5 text-brand-primary">
+                                                    <Check className="w-4 h-4" strokeWidth={3} />
+                                                </div>
+                                                <span className="text-gray-700 font-medium">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="relative z-10 mt-6 md:mt-auto">
+                                    <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg relative group h-64 w-full">
+                                        <div className="absolute inset-0 bg-gray-900/10 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                                        <img
+                                            src="/Technology/How Cold Plasma Is Created.jpg"
+                                            alt="How Cold Plasma Is Created"
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

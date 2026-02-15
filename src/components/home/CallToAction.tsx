@@ -23,9 +23,9 @@ export default function CallToAction() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-lg tracking-tight"
+                            className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-lg tracking-tight leading-tight"
                         >
-                            Engage with Gigacore Energy
+                            Engage With <br className="hidden md:block" /> Gigacore Energy
                         </motion.h2>
                         <motion.p
                             variants={fadeUp}
@@ -48,7 +48,7 @@ export default function CallToAction() {
                                 variant="primary"
                                 size="lg"
                                 href="/partnership"
-                                className="w-full md:w-auto min-w-[200px] bg-white text-brand-secondary hover:bg-brand-accent hover:text-white border-0"
+                                className="w-full md:w-auto min-w-[200px] bg-[#00D563] text-white hover:bg-white hover:text-[#00D563] border-0 font-bold transition-all duration-300"
                             >
                                 Request Partner Discussion
                             </Button>
@@ -57,7 +57,7 @@ export default function CallToAction() {
                                 variant="outline"
                                 size="lg"
                                 href="/contact"
-                                className="w-full md:w-auto min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent"
+                                className="w-full md:w-auto min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent group"
                             >
                                 Technical Overview <ArrowRight className="w-5 h-5 ml-2" />
                             </Button>

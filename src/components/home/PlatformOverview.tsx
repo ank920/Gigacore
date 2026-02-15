@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { ChevronRight, ArrowUpRight, Check } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
+import Image from "next/image";
 
 const FEATURES = [
     "Operates without conventional electrolyzer stacks",
@@ -94,13 +95,15 @@ export default function PlatformOverview() {
                         className="flex-1 w-full order-1 lg:order-2"
                     >
                         {/* Using an img tag for full visibility and containment, ensuring no cropping */}
-                        <div className="relative rounded-2xl overflow-hidden bg-white shadow-2xl border border-gray-100 group hover:shadow-glow transition-all duration-500">
-                            <img
-                                src="/home/COLD-PLASMA HYDROGEN PLATFORM.png"
+                        <div className="relative aspect-[16/9] w-full h-full">
+                            <Image
+                                src="/home/COLD-PLASMA HYDROGEN PLATFORM SECTION.png"
                                 alt="Cold-Plasma Hydrogen Platform Schematic"
-                                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-105"
+                                fill
+                                className="object-contain transform transition-transform duration-700 group-hover:scale-105"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                         </div>
                     </motion.div>
 
