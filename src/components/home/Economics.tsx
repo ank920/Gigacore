@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import { TrendingDown, Settings, BatteryCharging } from "lucide-react";
+import Image from "next/image";
 
 export default function Economics() {
     return (
@@ -50,10 +51,13 @@ export default function Economics() {
                         transition={{ duration: 0.8 }}
                         className="bg-white p-4 rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300 border border-gray-100"
                     >
-                        <img
+                        <Image
                             src="/home/ECONOMICS SNAPSHOT.png"
                             alt="Hydrogen Cost Curve Chart"
+                            width={800}
+                            height={600}
                             className="w-full h-auto rounded-lg"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </motion.div>
 

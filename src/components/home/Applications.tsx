@@ -10,13 +10,13 @@ const APPLICATIONS = [
     {
         title: "Green Hydrogen Production",
         desc: "For refining, chemicals, steel, and industrial feedstock",
-        image: "/home/green hydrogen energy fuel generation isometric set.jpg",
+        image: "/home/Green Hydrogen Production.jpg",
         link: "/applications#production"
     },
     {
         title: "Green Ammonia",
         desc: "Export and domestic fertilizer and energy storage pathways",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
+        image: "/home/Green Ammonia.png",
         link: "/applications#ammonia"
     },
     {

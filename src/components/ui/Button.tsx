@@ -38,7 +38,22 @@ const Button: React.FC<ButtonProps> = ({
 
     const classes = clsx(baseStyles, variants[variant], sizes[size], className);
 
-    const content = (
+    if (href) {
+        return (
+            <Link href={href} legacyBehavior passHref>
+                <motion.a
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={classes}
+                    {...(props as any)}
+                >
+                    {children}
+                </motion.a>
+            </Link>
+        );
+    }
+
+    return (
         <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -48,12 +63,6 @@ const Button: React.FC<ButtonProps> = ({
             {children}
         </motion.button>
     );
-
-    if (href) {
-        return <Link href={href}>{content}</Link>;
-    }
-
-    return content;
 };
 
 export default Button;
