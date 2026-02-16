@@ -25,11 +25,11 @@ export default function Hero() {
                     minHeight: 200.00,
                     minWidth: 200.00,
                     scale: 1.00,
-                    color1: 0x00D563, // Bloom Energy logo green
-                    color2: 0x1e293b, // Lighter slate for contrast
-                    size: isMobile ? 2.0 : 3.0, // Larger cells for visibility
-                    speed: 2.5,
-                    distro: -1.5,
+                    color1: 0x00D563, // Brand Primary (Bright Green) - Neural pathways
+                    color2: 0x020617, // Deepest Black/Slate - Infinite depth
+                    size: isMobile ? 1.0 : 1.8, // Smaller cells for more "complexity"
+                    speed: 1.0, // Slow, deliberate movement
+                    distro: -1.0, // Organic distribution
                     THREE: THREE
                 })
             );
@@ -40,69 +40,44 @@ export default function Hero() {
     }, [vantaEffect]);
 
     return (
-        <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-brand-secondary text-white">
+        <section className="relative h-screen min-h-[800px] flex items-center overflow-hidden bg-brand-secondary text-white">
             {/* Background Vanta Effect */}
-            <div ref={vantaRef} className="absolute inset-0 z-0" />
+            <div ref={vantaRef} className="absolute inset-0 z-0 opacity-100" />
 
-            {/* Bottom gradient for text readability */}
-            <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-t from-brand-secondary/80 to-transparent z-10" />
+            {/* Cinematic Vignette Overlay - Adds depth and focus */}
+            <div className="absolute inset-0 bg-radial-gradient from-transparent via-brand-secondary/20 to-brand-secondary/90 z-10 pointer-events-none" />
 
-            <SectionWrapper className="relative z-20 text-center">
+            <SectionWrapper className="relative z-20 w-full">
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     animate="visible"
-                    className="max-w-5xl mx-auto flex flex-col items-center"
+                    className="max-w-4xl mr-auto flex flex-col items-start text-left px-4 md:px-0"
                 >
-                    <motion.div
-                        variants={fadeUp}
-                        className="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1 text-sm font-medium text-brand-accent backdrop-blur-sm"
-                    >
-                        <span className="flex h-2 w-2 rounded-full bg-brand-accent mr-2 animate-pulse"></span>
-                        Next-Gen Hydrogen Technology
-                    </motion.div>
-
                     <motion.h1
                         variants={fadeUp}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1] text-white drop-shadow-2xl"
+                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
                     >
-                        The Future of <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-light to-brand-primary/80">
-                            Green Hydrogen
+                        Industrial Hydrogen.<br />
+                        <span className="text-gray-300">
+                            Engineered for Deployment.
                         </span>
                     </motion.h1>
 
                     <motion.p
                         variants={fadeUp}
-                        className="text-xl md:text-2xl text-gray-300 mb-12 max-w-[700px] leading-relaxed font-light"
+                        className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-[600px] leading-relaxed font-light"
                     >
-                        Industrial-scale cold plasma electrolysis. <br className="hidden md:block" />
-                        Breaking the <span className="text-white font-medium">$2/kg</span> cost barrier.
+                        Cold plasma hydrogen systems designed for continuous operation, modular scale, and industrial integration.
                     </motion.p>
 
-                    <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 w-full justify-center relative z-20">
-                        <Button href="/partnership" variant="primary" size="lg" className="min-w-[200px] shadow-glow">
-                            Partner with Us
+                    <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 w-full justify-start relative z-20">
+                        <Button href="/technology" variant="primary" size="lg" className="min-w-[200px] !bg-brand-primary !text-brand-secondary font-bold hover:!bg-white transition-colors border-none">
+                            Explore the Platform
                         </Button>
-                        <Button href="/technology" variant="outline" size="lg" className="min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent">
-                            View Technology
+                        <Button href="/contact" variant="outline" size="lg" className="min-w-[200px] !border-white/30 !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent backdrop-blur-sm">
+                            Contact Us
                         </Button>
-                    </motion.div>
-
-                    {/* Scroll Indicator - Centered relative to content */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.5, duration: 1 }}
-                        className="mt-16 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer group"
-                    >
-                        <div className="w-[30px] h-[50px] border-2 border-gray-400 group-hover:border-white rounded-full flex justify-center p-2 transition-colors duration-300">
-                            <motion.div
-                                animate={{ y: [0, 12, 0] }}
-                                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                                className="w-1 h-2 bg-gray-400 group-hover:bg-white rounded-full"
-                            />
-                        </div>
                     </motion.div>
                 </motion.div>
             </SectionWrapper>

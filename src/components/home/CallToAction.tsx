@@ -3,66 +3,61 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp } from "@/lib/motion";
-import { ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
+
+import Image from "next/image";
 
 export default function CallToAction() {
     return (
-        <section className="py-24 bg-white">
-            <SectionWrapper>
-                <div className="relative rounded-3xl overflow-hidden bg-brand-primary shadow-[0_0_40px_rgba(0,213,99,0.4)] border border-brand-primary/30 text-center py-24 px-8 group">
-                    {/* Background Gradients */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary to-brand-primary opacity-100 z-0" />
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 z-0" />
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/20 rounded-full blur-3xl -mr-32 -mt-32 mix-blend-overlay" />
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-3xl -ml-32 -mb-32 mix-blend-overlay" />
+        <section className="relative py-32 overflow-hidden bg-brand-secondary border-t border-white/10">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/home/build.jpg"
+                    alt="Industrial Facility Background"
+                    fill
+                    className="object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary via-brand-secondary/95 to-brand-secondary/50" />
+            </div>
 
-                    <div className="relative z-10 max-w-4xl mx-auto">
-                        <motion.h2
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-lg tracking-tight leading-tight"
-                        >
-                            Engage With <br className="hidden md:block" /> Gigacore Energy
-                        </motion.h2>
-                        <motion.p
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            className="text-white/90 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-light"
-                        >
-                            If you are evaluating next-generation hydrogen platforms with a serious focus on cost, scale, and industrial viability, we welcome a conversation.
-                        </motion.p>
-
+            <SectionWrapper className="relative z-10">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                    <div className="text-left max-w-2xl">
                         <motion.div
                             variants={fadeUp}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
-                            className="flex flex-col md:flex-row justify-center items-center gap-6"
                         >
-                            <Button
-                                variant="primary"
-                                size="lg"
-                                href="/partnership"
-                                className="w-full md:w-auto min-w-[200px] bg-[#00D563] text-white hover:bg-white hover:text-[#00D563] border-0 font-bold transition-all duration-300"
-                            >
-                                Request Partner Discussion
-                            </Button>
-
-                            <Button
-                                variant="outline"
-                                size="lg"
-                                href="/contact"
-                                className="w-full md:w-auto min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent group"
-                            >
-                                Technical Overview <ArrowRight className="w-5 h-5 ml-2" />
-                            </Button>
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-sm mb-4 block">
+                                Ready to Scale?
+                            </span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 tracking-tight leading-[1.1]">
+                                Engage with Gigacore
+                            </h2>
+                            <p className="text-[length:var(--font-intro)] text-gray-300 mb-0 leading-relaxed font-light">
+                                For organizations evaluating industrial hydrogen systems, our team welcomes a structured technical discussion.
+                            </p>
                         </motion.div>
                     </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="flex-shrink-0"
+                    >
+                        <Button
+                            variant="primary"
+                            size="lg"
+                            href="/contact"
+                            className="!bg-brand-primary !text-brand-secondary font-bold hover:!bg-white hover:!text-brand-secondary transition-all duration-300 min-w-[280px] shadow-[0_0_20px_rgba(0,213,99,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+                        >
+                            Request Technical Overview
+                        </Button>
+                    </motion.div>
                 </div>
             </SectionWrapper>
         </section>

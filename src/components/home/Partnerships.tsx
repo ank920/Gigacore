@@ -1,103 +1,85 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Building2, Landmark, Beaker } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
-const PARTNERS = [
-    { icon: Building2, label: "Energy and industrial groups" },
-    { icon: Users, label: "EPC and infrastructure developers" },
-    { icon: Landmark, label: "Government and public-sector entities" },
-    { icon: Beaker, label: "Research and validation partners" },
+const COLLABORATION_MODELS = [
+    {
+        title: "Pilot System Deployment",
+        description: "Validation of Gigacore stacks in representative industrial environments to confirm performance benchmarks."
+    },
+    {
+        title: "Joint Integration Programs",
+        description: "Co-engineering of balance-of-plant systems for specific downstream applications in steel and chemical sectors."
+    },
+    {
+        title: "Licensed Manufacturing Pathways",
+        description: "Enabling localized production for large-scale infrastructure projects through technology transfer agreements."
+    }
 ];
 
 export default function Partnerships() {
     return (
-        <section className="py-12 md:py-24 bg-white border-b border-gray-100 overflow-hidden">
-            <SectionWrapper>
-                <div className="text-center max-w-4xl mx-auto mb-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="flex items-center justify-center gap-2 mb-6"
-                    >
-                        <span className="h-px w-8 bg-brand-primary"></span>
-                        <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">
-                            Partnerships & Collaboration
-                        </span>
-                        <span className="h-px w-8 bg-brand-primary"></span>
-                    </motion.div>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold text-brand-secondary mb-6 leading-tight"
-                    >
-                        Building within an <span className="text-gradient-green-glow font-bold">Ecosystem</span>
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-xl text-gray-500 leading-relaxed font-light"
-                    >
-                        Our approach prioritizes long-term alignment, technical transparency, and commercial readiness.
-                    </motion.p>
-                </div>
-
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:grid-cols-4 gap-6"
-                >
-                    {PARTNERS.map((p, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={fadeUp}
-                            className="flex flex-col items-center justify-center p-4 md:p-10 bg-white border border-gray-100 rounded-xl md:rounded-2xl hover:shadow-card-hover hover:border-brand-primary/20 transition-all duration-300 text-center group relative overflow-hidden"
+        <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
+            <SectionWrapper className="max-w-7xl">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+                    <div className="flex-1 max-w-xl">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-[length:var(--font-h1)] font-bold leading-[1.15] text-brand-secondary mb-6"
                         >
-                            <div className="absolute inset-0 bg-brand-primary/5 opacity-100 transition-opacity duration-300" />
+                            Industry Collaboration
+                        </motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-[length:var(--font-intro)] text-brand-gray-600 font-light leading-relaxed mb-10"
+                        >
+                            Gigacore works with industrial operators, engineering developers, and manufacturing partners to advance deployment readiness.
+                        </motion.p>
 
-                            <div className="w-14 h-14 md:w-20 md:h-20 bg-brand-primary rounded-full flex items-center justify-center shadow-sm mb-3 md:mb-6 text-white transition-all duration-300 relative z-10">
-                                <p.icon className="w-6 h-6 md:w-8 md:h-8" />
+                        {/* Image Integration */}
+                        <div className="relative w-full aspect-[16/9] mb-10 bg-gray-50 border border-gray-100 p-2">
+                            <div className="relative w-full h-full overflow-hidden">
+                                <Image
+                                    src="/home/Industry Collaboration.png"
+                                    alt="Global Industry Collaboration"
+                                    fill
+                                    className="object-contain"
+                                />
                             </div>
-                            <h3 className="font-bold text-gradient-green-glow text-sm md:text-lg transition-colors relative z-10">{p.label}</h3>
-                        </motion.div>
-                    ))}
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mt-16 text-center"
-                >
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 bg-white border border-brand-primary/10 shadow-[0_4px_20px_rgba(0,213,99,0.05)] p-6 md:px-10 md:py-5 rounded-2xl md:rounded-full">
-                        <span className="flex items-center gap-3">
-                            <span className="w-2 h-2 rounded-full bg-brand-primary shadow-[0_0_10px_rgba(0,213,99,0.5)]"></span>
-                            <span className="text-gray-600 font-medium">Pilot deployments</span>
-                        </span>
-
-                        <span className="hidden md:block w-px h-5 bg-gray-200"></span>
-
-                        <span className="flex items-center gap-3">
-                            <span className="w-2 h-2 rounded-full bg-brand-primary shadow-[0_0_10px_rgba(0,213,99,0.5)]"></span>
-                            <span className="text-gray-600 font-medium">Joint development programs</span>
-                        </span>
-
-                        <span className="hidden md:block w-px h-5 bg-gray-200"></span>
-
-                        <span className="flex items-center gap-3">
-                            <span className="w-2 h-2 rounded-full bg-brand-primary shadow-[0_0_10px_rgba(0,213,99,0.5)]"></span>
-                            <span className="text-gray-600 font-medium">Licensing and manufacturing</span>
-                        </span>
+                        </div>
                     </div>
-                </motion.div>
 
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="flex-1 w-full space-y-10 pt-4"
+                    >
+                        {COLLABORATION_MODELS.map((model, idx) => (
+                            <motion.div
+                                key={idx}
+                                variants={fadeUp}
+                                className="group"
+                            >
+                                <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary mb-3 group-hover:text-brand-primary transition-colors">
+                                    {model.title}
+                                </h3>
+                                <p className="text-gray-500 text-lg font-light leading-relaxed border-t border-gray-100 pt-3">
+                                    {model.description}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
             </SectionWrapper>
         </section>
     );

@@ -1,71 +1,61 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
-const APPLICATIONS = [
+const DEPLOYMENT_PATHWAYS = [
     {
         title: "Green Hydrogen Production",
-        desc: "For refining, chemicals, steel, and industrial feedstock",
-        image: "/home/Green Hydrogen Production.jpg",
+        desc: "Integrated stacks for refining, steel, and chemical feedstock.",
+        image: "/home/Green Hydrogen Production.jpg", // Keeping existing valid image
         link: "/applications#production"
     },
     {
-        title: "Green Ammonia",
-        desc: "Export and domestic fertilizer and energy storage pathways",
-        image: "/home/Green Ammonia.png",
+        title: "Ammonia & Derivative Value Chains",
+        desc: "Direct integration for massive-scale fertilizer and fuel synthesis.",
+        image: "/home/Green Ammonia.png", // Keeping existing valid image
         link: "/applications#ammonia"
     },
     {
-        title: "On-Site & Distributed",
-        desc: "Reducing transport, compression, and logistics costs",
-        image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80",
+        title: "On-Site Industrial Supply",
+        desc: "Distributed generation eliminating cryogenic logistics costs.",
+        image: "https://images.unsplash.com/photo-1518709590660-4f5faa0ef881?auto=format&fit=crop&q=80", // More industrial
         link: "/applications#distributed"
     },
     {
-        title: "Future Energy Integration",
-        desc: "Compatibility with cracking, combustion, and hybrid energy systems",
-        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80",
+        title: "Hybrid Energy Integration Environments",
+        desc: "Balancing mechanism for renewable-heavy grids and thermal assets.",
+        image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80", // Energy grid/Wind farm cinematic
         link: "/applications#integration"
     }
 ];
 
 export default function Applications() {
     return (
-        <section className="bg-white text-gray-900 py-24 border-b border-gray-100">
+        <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
             <SectionWrapper>
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                    <div className="max-w-3xl">
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="flex items-center gap-2 mb-4"
-                        >
-                            <span className="h-px w-8 bg-brand-primary"></span>
-                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">
-                                Applications Overview
-                            </span>
-                        </motion.div>
-                        <motion.h2
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-5xl font-bold text-brand-secondary leading-tight"
-                        >
-                            Designed for Where <span className="text-gradient-green-glow font-bold">Hydrogen</span> Is Actually Used
-                        </motion.h2>
-                    </div>
-                    <Link href="/applications" className="group flex items-center gap-2 text-brand-primary font-bold text-sm uppercase tracking-widest hover:text-brand-dark transition-colors">
-                        View All Applications
-                        <span className="bg-brand-primary/10 p-1.5 rounded-full group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
-                            <ChevronRight className="w-4 h-4" />
-                        </span>
-                    </Link>
+                <div className="max-w-4xl mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-[36px] md:text-[52px] font-bold mb-6 leading-[1.15] text-brand-secondary"
+                    >
+                        Deployment Pathways
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-xl text-brand-gray-600 font-light max-w-2xl"
+                    >
+                        Gigacore systems are structured for massive-scale integration across critical industrial sectors.
+                    </motion.p>
                 </div>
 
                 <motion.div
@@ -73,56 +63,65 @@ export default function Applications() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
                 >
-                    {APPLICATIONS.map((app, idx) => (
+                    {[
+                        {
+                            title: "Green Ammonia",
+                            desc: "Decarbonizing fertilizer production with scalable H2 feedstock.",
+                            link: "/applications#ammonia",
+                            image: "/home/Green Ammonia.png"
+                        },
+                        {
+                            title: "Industrial Supply",
+                            desc: "On-site generation replacing delivered bulk hydrogen logistics.",
+                            link: "/applications#industrial",
+                            image: "/home/On-Site Industrial Supply.png"
+                        },
+                        {
+                            title: "Hybrid Integration",
+                            desc: "Balancing renewable intermittency with baseload industrial demand.",
+                            link: "/applications#integration",
+                            image: "/home/Hybrid Energy Integration.png"
+                        },
+                        {
+                            title: "Modular Scaling", /* Placeholder title since ChatGPT image name was weird, assuming this is last slot */
+                            desc: "Flexible capacity expansion for growing industrial needs.",
+                            link: "/technology",
+                            image: "/home/ChatGPT Image Feb 16, 2026, 02_31_56 PM.png"
+                        }
+                    ].map((app, idx) => (
                         <Link href={app.link} key={idx} className="block group cursor-pointer h-full">
                             <motion.div
                                 variants={fadeUp}
-                                className="flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-500 border border-gray-100"
+                                className="flex flex-col h-full"
                             >
-                                {/* Image Area */}
-                                <div className="relative aspect-[4/3] overflow-hidden">
-                                    <div
-                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                        style={{ backgroundImage: `url('${app.image}')` }}
+                                {/* Precise Image Container - No Crop, No Zoom */}
+                                <div className="relative aspect-[4/3] w-full overflow-hidden mb-6 bg-gray-50 border border-gray-100">
+                                    <Image
+                                        src={app.image}
+                                        alt={app.title}
+                                        fill
+                                        className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]" /* Minimal scale, object-contain prevents crop */
+                                        sizes="(max-width: 768px) 100vw, 25vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-
-                                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                                        <ArrowUpRight className="w-4 h-4" />
-                                    </div>
                                 </div>
 
-                                {/* Content Area */}
-                                <div className="p-4 md:p-8 flex flex-col flex-grow relative bg-white">
-                                    <h3 className="text-lg md:text-xl font-bold text-gradient-green-glow mb-2 md:mb-3 transition-colors leading-tight">
+                                <div className="flex flex-col flex-grow">
+                                    <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary mb-3 leading-tight group-hover:text-brand-primary transition-colors">
                                         {app.title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4 md:mb-6 font-light flex-grow">
+                                    <p className="text-gray-500 text-sm leading-relaxed mb-4 font-light flex-grow">
                                         {app.desc}
                                     </p>
-
-                                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center text-brand-primary text-xs font-bold uppercase tracking-wider opacity-100 transition-opacity duration-300 transform translate-y-0">
-                                        Learn More <ChevronRight className="w-3 h-3 ml-1" />
+                                    <div className="flex items-center text-brand-primary text-xs font-bold uppercase tracking-widest mt-auto group-hover:text-brand-hover transition-colors">
+                                        View Application <ArrowUpRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                     </div>
                                 </div>
                             </motion.div>
                         </Link>
                     ))}
                 </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mt-16 text-center"
-                >
-                    <p className="text-gray-400 italic text-sm font-light">
-                        Each application is evaluated against real deployment economics, not theoretical efficiency.
-                    </p>
-                </motion.div>
-
             </SectionWrapper>
         </section>
     );

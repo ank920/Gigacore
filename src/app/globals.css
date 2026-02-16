@@ -8,101 +8,112 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  @apply bg-white font-sans;
-  font-size: 18px;
-  /* Bloom Energy pattern */
-  line-height: 1.6;
-  /* Bloom Energy pattern */
-  color: #001F1B;
-  /* Bloom's dark green for text */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+/* Bloom-Level Strict Color System */
+:root {
+  /* 70% White, 20% Dark Green, 10% Accent */
+
+  /* Backgrounds */
+  --bg-white: #FFFFFF;
+  --bg-dark: #001F1B;
+  /* Deep Forest Green */
+  --bg-light: #F8F9FA;
+  /* Industrial Light Gray */
+
+  /* Text */
+  --text-primary: #001F1B;
+  /* Dark Green (Almost Black) */
+  --text-secondary: #4A5568;
+  /* Cool Gray */
+  --text-inverse: #FFFFFF;
+
+  /* Accents */
+  --accent-green: #00D563;
+  /* Bloom Green */
+  --accent-hover: #00B353;
+
+  /* Strict Spacing System */
+  --spacing-section: 72px;
+  /* Fixed section spacing */
+  --spacing-element: 24px;
+  /* Fixed element spacing */
+
+  /* Typography - Bloom Standard */
+  /* Hero: Large but controlled (64px max), Mobile readable (40px) */
+  --font-hero: clamp(40px, 5vw, 64px);
+
+  /* H1/H2: Section headers (48px max) */
+  --font-h1: clamp(32px, 4vw, 48px);
+  --font-h2: clamp(28px, 3vw, 42px);
+
+  /* Sub-headers */
+  --font-h3: clamp(24px, 2vw, 32px);
+
+  /* Body: Highly readable, larger standard (20px base, 18px mobile) */
+  --font-body: clamp(18px, 2vw, 20px);
+
+  /* Intro Text: Large lead paragraphs (24px) */
+  --font-intro: clamp(20px, 2.5vw, 24px);
 }
 
-/* Headings with fluid typography (Ceres pattern) + Bloom colors */
-h1 {
-  font-size: clamp(2rem, 1.375rem + 1.5vw, 2.5rem);
-  /* ~32px to 40px */
-  line-height: 1.2;
+body {
+  @apply bg-white font-sans;
+  font-size: var(--font-body);
+  line-height: 1.6;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings - Authority Style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
   font-weight: 700;
-  color: #001F1B;
-  /* Bloom's dark green */
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: var(--font-h1);
 }
 
 h2 {
-  font-size: clamp(1.75rem, 1.325rem + 0.9vw, 2.125rem);
-  /* ~28px to 34px */
-  line-height: 1.25;
-  font-weight: 700;
-  color: #001F1B;
-  /* Bloom's dark green */
+  font-size: var(--font-h2);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.75rem);
-  /* ~24px to 28px */
-  line-height: 1.3;
-  font-weight: 600;
-  color: #001F1B;
-  /* Bloom's dark green */
+  font-size: var(--font-h3);
 }
 
-/* Selection styling */
-::selection {
-  @apply bg-brand-primary text-white;
-}
-
-/* Scrollbar refinement - Premium Theme */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-brand-gray-100;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-brand-gray-300 rounded-full border-4 border-brand-gray-100;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-brand-gray-400;
-}
-
-/* Accessibility: Reduced motion support (Ceres pattern) */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Focus states for accessibility */
-:focus-visible {
-  outline: 2px solid theme('colors.brand.primary');
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Premium gradient text utilities */
+/* Utilities */
 @layer utilities {
-  .text-gradient-green {
-    @apply bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent;
+  .text-bloom-green {
+    color: var(--accent-green);
   }
 
-  .text-glow-green {
-    text-shadow: 0 0 20px rgba(0, 213, 99, 0.3), 0 0 40px rgba(0, 213, 99, 0.15);
+  .bg-bloom-dark {
+    background-color: var(--bg-dark);
   }
 
-  .text-gradient-green-glow {
-    @apply bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent;
-    filter: drop-shadow(0 0 20px rgba(0, 213, 99, 0.4));
+  .border-bloom-green {
+    border-color: var(--accent-green);
+  }
+
+  @keyframes wave-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .animate-wave {
+    animation: wave-scroll 12s linear infinite;
   }
 }

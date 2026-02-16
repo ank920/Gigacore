@@ -1,108 +1,118 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { Atom, Zap, Maximize2, Scale } from "lucide-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import SectionWrapper from "../ui/SectionWrapper";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { fadeUp } from "@/lib/motion";
+import { Plus, Minus } from "lucide-react";
 
-const DIFFERENTIATORS = [
+const OPERATIONAL_BENEFITS = [
     {
-        icon: Atom,
-        title: "Physics-Led, Not Catalyst-Led",
-        technicalExplanation: "Reduces molecular dissociation energy using pulsed excitation.",
-        description: "Our approach is based on controlled plasma–water interaction rather than precious-metal-intensive electrochemical stacks."
+        title: "Continuous Operation",
+        description: "Systems designed for 24/7 industrial duty cycles without frequent stack degradation. Our proprietary thermal management ensures consistent output even under variable load conditions."
     },
     {
-        icon: Zap,
-        title: "Energy Intensity as Design Variable",
-        technicalExplanation: "Optimizes ionization efficiency to maximize hydrogen yield per kilowatt-hour.",
-        description: "We target step-change reductions in electrical input per kilogram of hydrogen, recognizing electricity as the dominant cost driver."
+        title: "Maintainable Modular Expansion",
+        description: "Cluster-based architecture allows for capacity scaling without plant shutdowns. individual reactor modules can be serviced or swapped while the rest of the array maintains production."
     },
     {
-        icon: Maximize2,
-        title: "Modular, Industrial Architecture",
-        technicalExplanation: "Scalable reactor clusters ensure continuous operation during maintenance cycles.",
-        description: "Designed for modular deployment, redundancy, and scalable integration—rather than monolithic plants."
+        title: "Simplified Balance-of-Plant",
+        description: "Reduced auxiliary complexity through atmospheric pressure operation. Eliminates the need for high-maintenance compressors and complex membrane management systems within the generation loop."
     },
     {
-        icon: Scale,
-        title: "Cost Parity as a Constraint",
-        technicalExplanation: "Utilizes abundant materials to eliminate supply chain volatility and reduce CAPEX.",
-        description: "Economic parity with incumbent hydrogen pathways is treated as a hard requirement, not an aspiration."
+        title: "Deployment-Ready Configuration",
+        description: "Skid-mounted systems pre-integrated for rapid site installation. Reduces on-site engineering requirements and accelerates time-to-production for industrial off-takers."
     }
 ];
 
 export default function Differentiators() {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
     return (
-        <section className="py-12 md:py-20 bg-white border-b border-gray-100 overflow-hidden">
-            <SectionWrapper className="max-w-7xl">
-                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-3 block"
-                    >
-                        Core Differentiators
-                    </motion.span>
+        <section className="py-[var(--spacing-section)] bg-brand-secondary text-white border-t border-white/10">
+            <SectionWrapper className="max-w-4xl mr-auto"> {/* Left aligned container */}
+                <div className="mb-20 text-left">
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-2xl md:text-4xl font-bold leading-tight tracking-tight text-brand-secondary mb-4"
+                        className="text-[length:var(--font-h1)] font-bold mb-8 leading-[1.0] tracking-tight"
                     >
-                        Why Gigacore Is <span className="text-gradient-green-glow">Structurally Different</span>
+                        <span className="text-white">Industrial Reliability.</span><br />
+                        <span className="text-brand-primary">Engineered for Uptime.</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-gray-600 text-base md:text-lg leading-relaxed font-light"
+                        transition={{ delay: 0.1 }}
+                        className="text-[length:var(--font-intro)] text-white font-light max-w-2xl leading-relaxed"
                     >
-                        A fundamentally different approach to hydrogen generation
+                        Industrial systems require predictable performance. Gigacore’s architecture is engineered for reliability, redundancy, and scale—delivering consistent output in the harshest environments.
                     </motion.p>
                 </div>
 
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5"
-                >
-                    {DIFFERENTIATORS.map((feature, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={fadeUp}
-                            className="bg-white border border-brand-primary/20 p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 group rounded-xl relative overflow-hidden"
-                        >
-                            {/* Subtle gradient background - always visible */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-100 transition-opacity duration-300" />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                    {/* Left Side - Accordion */}
+                    <div className="space-y-0 border-t border-white/20">
+                        {OPERATIONAL_BENEFITS.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                                className="border-b border-white/20"
+                            >
+                                <button
+                                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                                    className="w-full flex items-center justify-between py-8 text-left group transition-all duration-300"
+                                >
+                                    <span className={`text-[length:var(--font-h3)] font-bold transition-colors ${openIndex === idx ? 'text-brand-primary' : 'text-white group-hover:text-brand-primary'}`}>
+                                        {item.title}
+                                    </span>
+                                    {/* Bloom-style minimal toggle */}
+                                    <span className={`flex items-center justify-center w-8 h-8 transition-colors ${openIndex === idx ? 'text-brand-primary' : 'text-white/50 group-hover:text-brand-primary'}`}>
+                                        {openIndex === idx ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
+                                    </span>
+                                </button>
+                                <AnimatePresence>
+                                    {openIndex === idx && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            className="overflow-hidden"
+                                        >
+                                            <p className="text-white text-lg md:text-xl font-light leading-relaxed pb-8 pr-4">
+                                                {item.description}
+                                            </p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </motion.div>
+                        ))}
+                    </div>
 
-                            <div className="relative z-10">
-                                <div className="mb-6 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
-                                    <feature.icon className="w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
-                                </div>
-
-                                <h3 className="text-xl md:text-2xl font-bold mb-3 text-brand-secondary group-hover:text-brand-primary transition-colors leading-tight">
-                                    {feature.title}
-                                </h3>
-
-                                <div className="mb-4 pb-4 border-b border-brand-primary/10">
-                                    <p className="text-brand-primary font-medium text-sm md:text-base italic">
-                                        "{feature.technicalExplanation}"
-                                    </p>
-                                </div>
-
-                                <p className="text-gray-600 leading-relaxed text-base md:text-lg font-light">
-                                    {feature.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                    {/* Right Side - Industrial Image (Build.jpg) */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="relative w-full h-[300px] lg:h-full lg:min-h-[500px] bg-brand-dark/50 border border-white/10 overflow-hidden"
+                    >
+                        <Image
+                            src="/home/build.jpg"
+                            alt="Industrial Hydrogen Infrastructure Construction"
+                            fill
+                            className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none" />
+                    </motion.div>
+                </div>
             </SectionWrapper>
         </section>
     );
