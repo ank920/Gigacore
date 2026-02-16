@@ -33,7 +33,7 @@ const metrics = [
 const AnimatedNumber = ({ value, from = 0, prefix = "", suffix = "" }: { value: number, from?: number, prefix?: string, suffix?: string }) => {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(from);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "0px" });
 
     useEffect(() => {
         if (isInView) {
@@ -45,11 +45,12 @@ const AnimatedNumber = ({ value, from = 0, prefix = "", suffix = "" }: { value: 
     }, [isInView, value, motionValue]);
 
     useEffect(() => {
-        motionValue.on("change", (latest) => {
+        const unsubscribe = motionValue.on("change", (latest) => {
             if (ref.current) {
                 ref.current.textContent = latest.toFixed(0);
             }
         });
+        return unsubscribe;
     }, [motionValue]);
 
     return (
