@@ -59,7 +59,7 @@ export default function Applications() {
                 </div>
 
                 {/* Horizontal Scrolling Carousel */}
-                <div className="relative w-full overflow-hidden mask-gradient-x">
+                <div className="relative w-full overflow-hidden">
                     <div className="flex w-max animate-[wave-scroll_50s_linear_infinite] hover:[animation-play-state:paused]">
                         {/* Duplicate items for seamless infinite scroll (2 sets) */}
                         {[...[

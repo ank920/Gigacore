@@ -75,7 +75,7 @@ export default function EconomicsPage() {
                         </div>
                         <div className="flex-1">
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Baseline: Conventional <span className="text-gradient-green-glow">Hydrogen Cost Structure</span></h2>
-                            <p className="text-lg text-gray-600 mb-6">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 Industry benchmarks referenced in the Enervoxa materials indicate:
                             </p>
                             <ul className="space-y-4">
@@ -114,10 +114,13 @@ export default function EconomicsPage() {
                     <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
                             <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
-                                <img
-                                    src="/economics/Demonstrated%20Energy%20Reduction.jpg"
-                                    alt="Demonstrated Energy Reduction"
-                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
+                                <video
+                                    src="/economics/Proven Performance.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
                         </div>
@@ -144,7 +147,7 @@ export default function EconomicsPage() {
                                     <p className="text-gray-700 mt-3 text-sm font-medium relative z-10">Targeted reduction next optimization milestone</p>
                                 </div>
                             </div>
-                            <p className="text-xl font-medium text-gray-800">
+                            <p className="text-[length:var(--font-intro)] font-medium text-gray-800">
                                 Compared to ~50 kWh/kg H₂ for conventional electrolysis, this represents a <span className="text-brand-primary font-bold">~70% reduction</span> in electrical energy input.
                             </p>
                         </div>
@@ -157,7 +160,7 @@ export default function EconomicsPage() {
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto text-center mb-12">
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Implication for <span className="text-gradient-green-glow">Operating Cost (OPEX)</span></h2>
-                        <p className="text-xl text-gray-600">
+                        <p className="text-[length:var(--font-intro)] text-gray-600">
                             Because electricity dominates hydrogen OPEX, the energy reduction has a direct and linear economic effect.
                         </p>
                     </div>
@@ -208,10 +211,10 @@ export default function EconomicsPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Factory className="w-6 h-6" />
                                 </span>
-                                <h3 className="text-2xl font-bold text-brand-secondary">Capital Efficiency & System Architecture</h3>
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Capital Efficiency & System Architecture</h3>
                             </div>
 
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 Beyond operating cost, the materials highlight several system-level economic advantages:
                             </p>
                             <ul className="space-y-4 mb-8">
@@ -241,9 +244,9 @@ export default function EconomicsPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Scale className="w-6 h-6" />
                                 </span>
-                                <h3 className="text-2xl font-bold text-brand-secondary">Scale Economics</h3>
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Scale Economics</h3>
                             </div>
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 The system is designed to scale through replication of standardized modules rather than single large units:
                             </p>
                             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-brand-primary/10 mb-8 hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
@@ -289,7 +292,7 @@ export default function EconomicsPage() {
                         </div>
                         <div className="flex-1">
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Application-Level <span className="text-gradient-green-glow">Economic Impact</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 Lower hydrogen production cost directly enables downstream markets that are currently uneconomic at scale. The documents explicitly position <span className="font-bold text-brand-primary">sub-$2/kg hydrogen</span> as the inflection point for industrial adoption.
                             </p>
                             <div className="space-y-4">
@@ -316,7 +319,7 @@ export default function EconomicsPage() {
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                         <div>
-                            <h2 className="text-3xl font-bold mb-8 text-brand-secondary">Validation <span className="text-gradient-green-glow">Status</span></h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-8 text-brand-secondary">Validation <span className="text-gradient-green-glow">Status</span></h2>
                             <ul className="space-y-6">
                                 <li className="flex gap-4 p-6 bg-brand-light rounded-2xl border border-brand-primary/5">
                                     <div className="p-2 bg-white rounded-lg shadow-sm text-brand-primary h-fit">
@@ -373,7 +376,7 @@ export default function EconomicsPage() {
 
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Engage on Economics</h2>
-                            <p className="text-white/95 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+                            <p className="text-white/95 text-[length:var(--font-intro)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
                                 Gigacore Energy engages with partners seeking data-driven evaluation.
                             </p>
 

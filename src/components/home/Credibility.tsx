@@ -15,7 +15,7 @@ export default function Credibility() {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    <div className="relative w-full overflow-hidden mask-gradient-x">
+                    <div className="relative w-full overflow-hidden">
                         <div className="flex w-max animate-[wave-scroll_40s_linear_infinite] hover:[animation-play-state:paused]">
                             {/* Duplicate items for seamless infinite scroll (2 sets) */}
                             {[...[

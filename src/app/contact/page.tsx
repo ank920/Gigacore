@@ -34,7 +34,7 @@ export default function ContactPage() {
                         <motion.span variants={fadeUp} className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-3 block">
                             Get in Touch
                         </motion.span>
-                        <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-brand-secondary mb-6">
+                        <motion.h2 variants={fadeUp} className="text-[length:var(--font-h1)] font-bold leading-tight tracking-tight text-brand-secondary mb-6">
                             Partnering for <span className="text-gradient-green-glow">Scale</span>
                         </motion.h2>
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
                                         <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">General Enquiries</h3>
                                     </div>
 
-                                    <p className="text-gray-600 mb-8 leading-relaxed text-lg font-light">
+                                    <p className="text-gray-600 mb-8 leading-relaxed text-[length:var(--font-body)] font-light">
                                         For general questions, introductions, or to request an overview of our platform.
                                     </p>
 
@@ -112,7 +112,7 @@ export default function ContactPage() {
                                 <div className="mb-6 w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
                                     <HeartHandshake className="w-8 h-8" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-brand-secondary mb-4">Partnerships & Deployment</h3>
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-4">Partnerships & Deployment</h3>
                                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
                                     We work with organizations seeking deployable, scalable hydrogen solutions.
                                 </p>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                                 <div className="mb-6 w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
                                     <Microscope className="w-8 h-8" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-brand-secondary mb-4">Technical & Validation</h3>
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-4">Technical & Validation</h3>
                                 <p className="text-gray-600 mb-6 font-light leading-relaxed">
                                     For technical reviews, diligence requests, or validation discussions under appropriate confidentiality.
                                 </p>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                                         <TrendingUp className="w-7 h-7" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-brand-secondary mb-2">Investor Engagement</h3>
+                                        <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary mb-2">Investor Engagement</h3>
                                         <p className="text-gray-600 font-light leading-relaxed">
                                             We engage with long-term capital providers aligned with infrastructure-grade deployment.
                                         </p>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                                         <Megaphone className="w-7 h-7" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-brand-secondary mb-2">Media & Comms</h3>
+                                        <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary mb-2">Media & Comms</h3>
                                         <p className="text-gray-600 font-light leading-relaxed">
                                             For media requests, speaking engagements, or corporate communications.
                                         </p>
@@ -209,53 +209,68 @@ export default function ContactPage() {
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {/* Operating Regions */}
-                        <div className="bg-gray-50 border border-brand-primary/10 p-10 rounded-xl text-center hover:border-brand-primary/30 transition-colors relative overflow-hidden group">
-                            <div className="relative z-10">
-                                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-brand-primary">
+                        <div className="bg-white border border-brand-primary/10 p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-all duration-500 relative overflow-hidden group flex flex-col">
+                            <div className="relative z-10 flex-1 flex flex-col">
+                                <div className="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-primary group-hover:scale-110 transition-transform duration-500">
                                     <Globe className="w-8 h-8" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-brand-secondary mb-4">Operating Regions</h3>
-                                <p className="text-gray-600 mb-8 font-light">Focused on industrial demand centers with immediate relevance.</p>
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-4">Operating Regions</h3>
+                                <p className="text-[length:var(--font-body)] text-gray-600 mb-8 font-light">
+                                    Focused on industrial demand centers with immediate relevance.
+                                </p>
 
-                                <div className="rounded-lg overflow-hidden h-40 w-full relative mb-8 border border-gray-100 shadow-sm">
-                                    <Image src="/contact/India-Aligned,%20Globally%20Competitive.jpg" alt="India Aligned, Globally Competitive" fill className="object-contain group-hover:scale-105 transition-transform duration-500" />
-                                </div>
-
-                                <div className="flex flex-col gap-3 max-w-xs mx-auto">
-                                    <div className="flex items-center justify-between bg-white px-5 py-3 rounded-lg border border-gray-100 shadow-sm">
-                                        <span className="font-bold text-brand-secondary">India</span>
-                                        <span className="text-xs font-bold text-brand-primary bg-brand-primary/10 px-2 py-1 rounded">PRIMARY</span>
+                                <div className="mt-auto">
+                                    <div className="rounded-2xl overflow-hidden h-48 w-full relative mb-8 border border-gray-100 shadow-inner">
+                                        <Image
+                                            src="/contact/India-Aligned,%20Globally%20Competitive.jpg"
+                                            alt="India Aligned, Globally Competitive"
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        />
                                     </div>
-                                    <div className="flex items-center justify-between bg-white px-5 py-3 rounded-lg border border-gray-100 shadow-sm">
-                                        <span className="font-bold text-brand-secondary">Global</span>
-                                        <span className="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded">EXPORT</span>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center text-center hover:border-brand-primary/20 transition-colors">
+                                            <span className="font-bold text-brand-secondary mb-1">India</span>
+                                            <span className="text-[10px] font-bold text-brand-primary bg-brand-primary/10 px-2 py-0.5 rounded-full tracking-wider uppercase">PRIMARY</span>
+                                        </div>
+                                        <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center text-center hover:border-brand-primary/20 transition-colors">
+                                            <span className="font-bold text-brand-secondary mb-1">Global</span>
+                                            <span className="text-[10px] font-bold text-gray-500 bg-gray-200 px-2 py-0.5 rounded-full tracking-wider uppercase">EXPORT</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Process */}
-                        <div className="bg-brand-secondary text-white p-10 rounded-xl text-center relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-brand-primary/20 rounded-full blur-3xl" />
+                        <div className="bg-brand-secondary text-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,70,30,0.2)] relative overflow-hidden flex flex-col group">
+                            {/* Animated Background */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 rounded-full blur-[80px] group-hover:bg-brand-primary/30 transition-colors duration-700" />
+                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-brand-accent/10 rounded-full blur-[60px]" />
 
-                            <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 text-brand-primary relative z-10">
-                                <CheckCircle className="w-8 h-8" strokeWidth={1.5} />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-4 relative z-10 text-white">Engagement Process</h3>
-                            <p className="text-gray-300 mb-8 font-light relative z-10">Structured approach for productive discussions.</p>
+                            <div className="relative z-10 flex-1 flex flex-col">
+                                <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 text-brand-primary border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                                    <CheckCircle className="w-8 h-8" strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-[length:var(--font-h2)] font-bold mb-4 text-white">Engagement Process</h3>
+                                <p className="text-[length:var(--font-body)] text-gray-300 mb-10 font-light">
+                                    Structured approach for productive discussions.
+                                </p>
 
-                            <div className="space-y-4 text-left max-w-xs mx-auto relative z-10">
-                                {[
-                                    { step: "01", text: "Initial context" },
-                                    { step: "02", text: "Alignment on scope" },
-                                    { step: "03", text: "Technical discussion" },
-                                    { step: "04", text: "Pilot / Partner" }
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-4 border-b border-white/10 pb-2 last:border-0">
-                                        <span className="text-brand-primary font-mono text-sm">{item.step}</span>
-                                        <span className="font-medium text-white">{item.text}</span>
-                                    </div>
-                                ))}
+                                <div className="space-y-0 mt-auto bg-white/5 rounded-2xl border border-white/5 overflow-hidden backdrop-blur-sm">
+                                    {[
+                                        { step: "01", text: "Initial context" },
+                                        { step: "02", text: "Alignment on scope" },
+                                        { step: "03", text: "Technical discussion" },
+                                        { step: "04", text: "Pilot / Partner" }
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-center gap-5 p-5 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors group/item">
+                                            <span className="text-brand-primary font-mono text-sm font-bold opacity-80 group-hover/item:opacity-100">{item.step}</span>
+                                            <span className="font-medium text-gray-200 group-hover/item:text-white transition-colors">{item.text}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -266,8 +281,8 @@ export default function ContactPage() {
             <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Engage?</h2>
-                    <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Ready to Engage?</h2>
+                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                         If you are evaluating hydrogen solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
                     </p>
                     <Link href="mailto:info@gigacora.energy?subject=Request Executive Overview">

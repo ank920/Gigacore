@@ -23,7 +23,7 @@ export default function PartnershipPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white"
+                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-tight text-white"
                     >
                         Partnerships: <span className="text-gradient-green-glow">Built to Scale Through Collaboration</span>
                     </motion.h1>
@@ -44,7 +44,7 @@ export default function PartnershipPage() {
                             Large-scale hydrogen deployment does not succeed in isolation. It requires coordinated execution across technology, infrastructure, capital, and operations.
                         </motion.p>
 
-                        <motion.p variants={fadeUp} className="text-base md:text-lg text-gray-500 mb-6 max-w-4xl leading-relaxed">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-500 mb-6 max-w-4xl leading-relaxed">
                             Gigacore's platform is designed for deployment with partners — combining technical capability with industrial reach, execution expertise, and long-term operating experience.
                         </motion.p>
 
@@ -70,7 +70,7 @@ export default function PartnershipPage() {
                         </div>
                         <div className="flex-1">
                             <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary leading-tight">Partnership <span className="text-gradient-green-glow">Philosophy</span></h2>
-                            <p className="text-lg text-gray-600 mb-6">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 Partnerships are structured around shared execution — not vendor relationships.
                             </p>
                             <p className="text-base text-gray-500 font-bold mb-4">Guiding principles:</p>
@@ -87,7 +87,7 @@ export default function PartnershipPage() {
                                     </li>
                                 ))}
                             </ul>
-                            <p className="text-lg text-gray-800 font-medium">
+                            <p className="text-[length:var(--font-body)] text-gray-800 font-medium">
                                 The focus is <span className="text-brand-primary font-bold">disciplined scale-up</span> — de-risked, validated, and operationally grounded.
                             </p>
                         </div>
