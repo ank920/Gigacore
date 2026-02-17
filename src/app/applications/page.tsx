@@ -13,7 +13,7 @@ export default function ApplicationsPage() {
         <main className="bg-white">
 
             {/* 1. Hero Section */}
-            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
+            <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-[url('/application/hero%20section.jpg')] bg-cover bg-center opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
@@ -23,7 +23,7 @@ export default function ApplicationsPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight text-white"
+                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
                     >
                         Hydrogen Where It Is <span className="text-gradient-green-glow">Actually Used</span>
                     </motion.h1>
@@ -31,7 +31,7 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="py-20 bg-white text-center">
+            <section className="py-[var(--spacing-section)] bg-white text-center">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -40,11 +40,11 @@ export default function ApplicationsPage() {
                         viewport={{ once: true }}
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
-                        <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed font-medium">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-gray-600 mb-10 max-w-3xl leading-relaxed font-light">
                             The platform is designed for applications where hydrogen demand already exists at scale and where cost, reliability, and integration determine adoption.
                         </motion.p>
 
-                        <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-500 mb-10 max-w-3xl leading-relaxed">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed font-light">
                             Rather than targeting speculative or niche use cases, deployment is focused on <span className="text-brand-primary font-bold">industrial sectors</span> with continuous hydrogen consumption and clear economic drivers.
                         </motion.p>
 
@@ -66,11 +66,11 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 2. Industrial Hydrogen Feedstock */}
-            <section id="production" className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
+            <section id="production" className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/application/Industrial%20Hydrogen%20Feedstock.png"
                                     alt="Industrial Feedstock"
@@ -84,8 +84,8 @@ export default function ApplicationsPage() {
                                     <Factory className="w-4 h-4" /> Core Input
                                 </span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">Industrial Hydrogen <span className="text-gradient-green-glow">Feedstock</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Industrial Hydrogen <span className="text-gradient-green-glow">Feedstock</span></h2>
+                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 Hydrogen is a core input for multiple industrial processes. Replacing fossil-derived hydrogen requires a solution that can operate continuously and at competitive cost.
                             </p>
                             <h4 className="font-bold text-gray-900 mb-4 text-lg">Applicable use cases:</h4>
@@ -133,7 +133,7 @@ export default function ApplicationsPage() {
                                 </span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Green <span className="text-gradient-green-glow">Ammonia</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 Ammonia is one of the largest existing sinks for hydrogen and a cornerstone of both fertilizer production and emerging energy-export strategies.
                             </p>
                             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-brand-primary/10 mb-6 hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
@@ -209,12 +209,12 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 5. Deployment Models */}
-            <section id="distributed" className="py-24 bg-white">
+            <section id="distributed" className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">On-Site and <span className="text-gradient-green-glow">Distributed Hydrogen</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">On-Site and <span className="text-gradient-green-glow">Distributed Hydrogen</span></h2>
+                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 For many industrial users, hydrogen transport, storage, and compression add significant cost and complexity.
                             </p>
                             <ul className="space-y-4">
@@ -238,7 +238,7 @@ export default function ApplicationsPage() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                             <img src="/application/On-Site%20and%20Distributed%20Hydrogen.jpg" alt="On Site Hydrogen" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
                         </div>
                     </div>
@@ -250,15 +250,15 @@ export default function ApplicationsPage() {
                                     <Beaker className="w-4 h-4" /> Energy Conversion
                                 </span>
                             </div>
-                            <h2 id="integration" className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Energy <span className="text-gradient-green-glow">Storage</span> and Conversion</h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <h2 id="integration" className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Energy <span className="text-gradient-green-glow">Storage</span> and Conversion</h2>
+                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 Beyond direct consumption, hydrogen plays a growing role in energy storage. Relevant pathways include H2-to-ammonia, combustion integration, and hybrid systems.
                             </p>
                             <div className="p-6 bg-brand-primary/5 border-l-4 border-brand-primary rounded-r-xl">
                                 <p className="text-gray-700 italic font-medium">The platform is designed to remain compatible with downstream conversion technologies.</p>
                             </div>
                         </div>
-                        <div className="md:order-1 rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <div className="md:order-1 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                             <img src="/application/Energy%20Storage%20and%20Conversion%20Pathways.jpg" alt="Energy Storage" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
                         </div>
                     </div>
@@ -266,10 +266,10 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 6. Geographic Strategy */}
-            <section className="py-24 bg-brand-light border-y border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Deployment <span className="text-gradient-green-glow">Strategy</span></h2>
+                        <h2 className="text-[length:var(--font-h1)] font-bold mb-4 text-brand-secondary">Deployment <span className="text-gradient-green-glow">Strategy</span></h2>
                         <p className="text-xl text-gray-500">From Local Impact to Global Scale</p>
                     </div>
 
@@ -322,11 +322,11 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 7. Strategic Deployment */}
-            <section className="py-12 md:py-20 bg-gray-900 text-white text-center">
+            <section className="py-[var(--spacing-section)] bg-gray-900 text-white text-center">
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8">Application-Driven <span className="text-gradient-green-glow">Deployment Strategy</span></h2>
-                        <p className="text-xl text-white/80 mb-12 leading-relaxed">
+                        <h2 className="text-[length:var(--font-h1)] font-bold mb-8">Application-Driven <span className="text-gradient-green-glow">Deployment Strategy</span></h2>
+                        <p className="text-[length:var(--font-intro)] text-white/80 mb-12 leading-relaxed font-light">
                             Deployment is prioritized where hydrogen demand already exists, cost sensitivity is high, and scale can be achieved through industrial partnerships.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -351,7 +351,7 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 8. CTA Section */}
-            <section className="py-24 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="relative rounded-3xl overflow-hidden bg-brand-primary shadow-[0_0_40px_rgba(0,213,99,0.4)] border border-brand-primary/30 text-center py-20 px-6 md:px-12 group">
                         {/* Background Gradients */}
@@ -359,8 +359,8 @@ export default function ApplicationsPage() {
                         <div className="absolute inset-0 bg-[url('/application/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-md">Engage on Applications</h2>
-                            <p className="text-white/95 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Engage on Applications</h2>
+                            <p className="text-white/95 text-[length:var(--font-intro)] mb-12 max-w-3xl mx-auto leading-relaxed font-light">
                                 The platform is intended for partners seeking deployable hydrogen solutions, not conceptual pilots.
                             </p>
 

@@ -22,7 +22,7 @@ export default function ContactPage() {
             </section>
 
             {/* 2. Intro Section - Matching Home Page Intro Typography */}
-            <section className="py-12 md:py-20 bg-white text-center border-b border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-white text-center border-b border-gray-100">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -38,7 +38,7 @@ export default function ContactPage() {
                             Partnering for <span className="text-gradient-green-glow">Scale</span>
                         </motion.h2>
 
-                        <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                             We engage with partners, institutions, and stakeholders evaluating hydrogen as an industrial input and infrastructure asset.
                         </motion.p>
                     </motion.div>
@@ -46,11 +46,11 @@ export default function ContactPage() {
             </section>
 
             {/* 3. General Enquiries - Matching 'Differentiators' Card Style */}
-            <section className="py-12 md:py-20 bg-gray-50">
+            <section className="py-[var(--spacing-section)] bg-gray-50">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         <div className="order-2 lg:order-1 h-full">
-                            <div className="bg-white border border-brand-primary/20 p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 rounded-xl h-full flex flex-col justify-center relative overflow-hidden group">
+                            <div className="bg-white border border-brand-primary/20 p-8 md:p-10 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 rounded-xl h-full flex flex-col justify-center relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-100" />
 
                                 <div className="relative z-10">
@@ -58,7 +58,7 @@ export default function ContactPage() {
                                         <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md">
                                             <Mail className="w-8 h-8" strokeWidth={1.5} />
                                         </div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-brand-secondary">General Enquiries</h3>
+                                        <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">General Enquiries</h3>
                                     </div>
 
                                     <p className="text-gray-600 mb-8 leading-relaxed text-lg font-light">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                                     <div className="space-y-6">
                                         <div>
                                             <p className="text-sm text-brand-primary font-bold uppercase tracking-wider mb-2">Email Us</p>
-                                            <a href="mailto:info@gigacora.energy" className="text-2xl md:text-3xl font-bold text-brand-secondary hover:text-brand-primary transition-colors block">
+                                            <a href="mailto:info@gigacora.energy" className="text-[length:var(--font-h2)] font-bold text-brand-secondary hover:text-brand-primary transition-colors block">
                                                 info@gigacora.energy
                                             </a>
                                         </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                         </div>
 
                         <div className="order-1 lg:order-2">
-                            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 relative h-[400px] w-full">
+                            <div className="rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 relative h-[400px] w-full">
                                 <Image
                                     src="/contact/General%20Enquiries.webp"
                                     alt="General Enquiries"
@@ -97,16 +97,16 @@ export default function ContactPage() {
             </section>
 
             {/* 4. Partnerships & Technical - Grid Layout matching Home Page Features */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-3 block">Collaborate</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-4">Specialized Engagement</h2>
+                        <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">Specialized Engagement</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         {/* Partnerships Card */}
-                        <div className="bg-white border border-brand-primary/20 p-8 shadow-sm hover:shadow-lg transition-all duration-300 rounded-xl relative overflow-hidden group">
+                        <div className="bg-white border border-brand-primary/20 p-8 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 rounded-xl relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent" />
                             <div className="relative z-10">
                                 <div className="mb-6 w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                         </div>
 
                         {/* Technical Card */}
-                        <div className="bg-white border border-brand-primary/20 p-8 shadow-sm hover:shadow-lg transition-all duration-300 rounded-xl relative overflow-hidden group">
+                        <div className="bg-white border border-brand-primary/20 p-8 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 rounded-xl relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent" />
                             <div className="relative z-10">
                                 <div className="mb-6 w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
@@ -159,7 +159,7 @@ export default function ContactPage() {
             </section>
 
             {/* 5. Investor & Media - Consistent Card Style */}
-            <section className="py-12 md:py-20 bg-gray-50 border-t border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-gray-50 border-t border-gray-100">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
@@ -192,7 +192,7 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 relative h-[400px] w-full">
+                        <div className="rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 relative h-[400px] w-full">
                             <Image
                                 src="/contact/Investor%20Engagement%20Section.jpg"
                                 alt="Investor Engagement"
@@ -205,7 +205,7 @@ export default function ContactPage() {
             </section>
 
             {/* 6. Operating Regions & Process - Clean Grid */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {/* Operating Regions */}

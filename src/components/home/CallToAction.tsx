@@ -13,7 +13,7 @@ export default function CallToAction() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/home/build.jpg"
+                    src="/home/build.png"
                     alt="Industrial Facility Background"
                     fill
                     className="object-cover opacity-20"

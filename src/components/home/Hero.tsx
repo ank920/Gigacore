@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "../ui/Button";
@@ -8,9 +8,27 @@ import * as THREE from "three";
 // @ts-ignore
 import CELLS from "vanta/dist/vanta.cells.min";
 
+const rotatingTexts = [
+    "Deployment.",
+    "Reliability.",
+    "Scale.",
+    "Uptime.",
+    "Integration."
+];
+
 export default function Hero() {
     const vantaRef = useRef(null);
     const [vantaEffect, setVantaEffect] = useState(null);
+    const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+    // Rotating text effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTextIndex((prev) => (prev + 1) % rotatingTexts.length);
+        }, 3500); // 3.5 second interval
+
+        return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         const isMobile = window.innerWidth < 768;
@@ -59,8 +77,24 @@ export default function Hero() {
                         className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
                     >
                         Industrial Hydrogen.<br />
-                        <span className="text-gray-300">
-                            Engineered for Deployment.
+                        <span className="text-gray-300 relative inline-block w-full align-top">
+                            Engineered for{" "}
+                            <span className="relative inline-block align-top min-w-[120px]">
+                                {/* Spacer to prevent layout shifts */}
+                                <span className="invisible">Reliability.</span>
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={currentTextIndex}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -20 }}
+                                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                                        className="absolute left-0 top-0 whitespace-nowrap"
+                                    >
+                                        {rotatingTexts[currentTextIndex]}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </span>
                         </span>
                     </motion.h1>
 
