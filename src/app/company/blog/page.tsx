@@ -24,73 +24,64 @@ export default function BlogPage() {
     return (
         <main className="bg-white">
             {/* Hero Section */}
-            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary via-brand-green-950 to-brand-secondary" />
-                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_40%,rgba(0,213,99,0.3),transparent_60%)]" />
-                </div>
-                <SectionWrapper className="relative h-full flex flex-col justify-center z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-                        <div className="flex-1">
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                                className="flex items-center gap-2 mb-4"
-                            >
-                                <span className="bg-brand-primary/20 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
-                                    Blog
-                                </span>
-                            </motion.div>
+            <section className="relative py-20 lg:py-28 w-full overflow-hidden bg-gray-50">
+                <SectionWrapper className="relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        {/* Text Content */}
+                        <div className="flex-1 text-left">
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.1 }}
-                                className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-tight text-white"
+                                transition={{ duration: 0.6 }}
+                                className="text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-brand-secondary leading-[1.1]"
                             >
-                                The Giga Cora{" "}
-                                <span className="text-gradient-green-glow">
-                                    Energy Blog
-                                </span>
+                                The Always<span className="text-brand-primary">ON</span>
+                                <br />
+                                Energy Blog
                             </motion.h1>
-                            <motion.p
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="text-lg text-gray-300 max-w-xl leading-relaxed"
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                                className="space-y-4 max-w-xl"
                             >
-                                Insights on hydrogen technology, industrial
-                                decarbonization, and the future of clean energy
-                                infrastructure.
-                            </motion.p>
+                                <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                                    Thanks for visiting Gigacore Energy&rsquo;s blog. Here you&rsquo;ll read articles about us, our industry-leading customers, partners, and beyond.
+                                </p>
+                                <p className="text-base text-gray-600 leading-relaxed">
+                                    Through each post, we aim to provide insight and provoke thoughtful conversations around global energy challenges, including adapting to a rapidly transforming energy landscape and addressing the causes and consequences of climate change.
+                                </p>
+                            </motion.div>
                         </div>
+
                         {/* Featured Post Card */}
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
+                            initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                            className="flex-1 w-full max-w-lg hidden lg:block"
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="flex-1 w-full max-w-xl"
                         >
-                            <Link
-                                href={`/company/blog/${featuredPost.slug}`}
-                                className="block group"
-                            >
-                                <div className="bg-white rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_60px_rgba(0,213,99,0.15)] transition-all duration-500">
-                                    <div className="relative h-[220px] w-full overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-brand-green-100 to-brand-green-50 flex items-center justify-center">
-                                            <div className="w-20 h-20 rounded-full bg-brand-primary/10 flex items-center justify-center">
-                                                <ArrowRight className="w-8 h-8 text-brand-primary group-hover:translate-x-1 transition-transform" />
+                            <Link href={`/company/blog/${featuredPost.slug}`} className="block group">
+                                <div className="bg-white rounded-xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] transition-all duration-300 transform group-hover:-translate-y-1">
+                                    <div className="relative h-[260px] sm:h-[320px] w-full bg-gray-200 overflow-hidden">
+                                        {featuredPost.image ? (
+                                            <div
+                                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                                style={{ backgroundImage: `url('${featuredPost.image}')` }}
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                                                <div className="bg-brand-primary/10 p-4 rounded-full">
+                                                    <ArrowRight className="w-8 h-8 text-brand-primary" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        )}
                                     </div>
-                                    <div className="p-6">
-                                        <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
-                                            {featuredPost.category}
-                                        </span>
-                                        <h3 className="text-lg font-bold text-brand-secondary mt-2 mb-2 group-hover:text-brand-primary transition-colors leading-snug">
+                                    <div className="p-8">
+                                        <h3 className="text-2xl font-medium text-brand-primary mb-3 leading-tight group-hover:text-brand-secondary transition-colors">
                                             {featuredPost.title}
                                         </h3>
-                                        <p className="text-sm text-gray-500">
+                                        <p className="text-sm font-bold text-black">
                                             {featuredPost.date}
                                         </p>
                                     </div>
@@ -123,11 +114,10 @@ export default function BlogPage() {
                                                 setActiveCategory(cat);
                                                 setVisibleCount(6);
                                             }}
-                                            className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                                                activeCategory === cat
-                                                    ? "bg-brand-primary text-white shadow-sm"
-                                                    : "text-gray-600 hover:text-brand-primary hover:bg-white"
-                                            }`}
+                                            className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${activeCategory === cat
+                                                ? "bg-brand-primary text-white shadow-sm"
+                                                : "text-gray-600 hover:text-brand-primary hover:bg-white"
+                                                }`}
                                         >
                                             {cat}
                                         </button>
@@ -145,12 +135,19 @@ export default function BlogPage() {
                                     className="block group"
                                 >
                                     <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_10px_30px_rgba(0,213,99,0.1)] transition-all">
-                                        <div className="relative h-[200px] w-full">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-brand-green-100 to-brand-green-50 flex items-center justify-center">
-                                                <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center">
-                                                    <ArrowRight className="w-6 h-6 text-brand-primary" />
+                                        <div className="relative h-[200px] w-full overflow-hidden">
+                                            {featuredPost.image ? (
+                                                <div
+                                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                                    style={{ backgroundImage: `url('${featuredPost.image}')` }}
+                                                />
+                                            ) : (
+                                                <div className="absolute inset-0 bg-gradient-to-br from-brand-green-100 to-brand-green-50 flex items-center justify-center">
+                                                    <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center">
+                                                        <ArrowRight className="w-6 h-6 text-brand-primary" />
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            )}
                                         </div>
                                         <div className="p-6">
                                             <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
@@ -189,11 +186,18 @@ export default function BlogPage() {
                                         >
                                             <article className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(0,213,99,0.1)] transition-all duration-300 border border-gray-100 h-full flex flex-col">
                                                 <div className="relative h-[200px] w-full overflow-hidden">
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-brand-green-50 via-white to-brand-green-100 flex items-center justify-center">
-                                                        <div className="w-14 h-14 rounded-full bg-brand-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                                            <ArrowRight className="w-5 h-5 text-brand-primary group-hover:translate-x-1 transition-transform" />
+                                                    {post.image ? (
+                                                        <div
+                                                            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                                            style={{ backgroundImage: `url('${post.image}')` }}
+                                                        />
+                                                    ) : (
+                                                        <div className="absolute inset-0 bg-gradient-to-br from-brand-green-50 via-white to-brand-green-100 flex items-center justify-center">
+                                                            <div className="w-14 h-14 rounded-full bg-brand-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                                <ArrowRight className="w-5 h-5 text-brand-primary group-hover:translate-x-1 transition-transform" />
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    )}
                                                 </div>
                                                 <div className="p-6 flex flex-col flex-1">
                                                     <div className="flex items-center gap-2 mb-3">
