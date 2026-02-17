@@ -58,6 +58,7 @@ export default function Footer() {
                                 { name: "Market Opportunity", href: "/market" },
                                 { name: "Partnerships", href: "/partnership" },
                                 { name: "About Us", href: "/company" },
+                                { name: "Blog", href: "/company/blog" },
                                 { name: "Contact", href: "/contact" }
                             ].map((item) => (
                                 <li key={item.name}>
