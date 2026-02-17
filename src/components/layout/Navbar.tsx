@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Users, MessageSquare, Phone } from "lucide-react";
 import clsx from "clsx";
 import SectionWrapper from "../ui/SectionWrapper";
 import { menuSlide } from "@/lib/motion";
@@ -11,7 +12,7 @@ import Logo from "../ui/Logo";
 interface NavLink {
     name: string;
     href: string;
-    children?: { name: string; href: string }[];
+    children?: { name: string; href: string; icon?: React.ElementType }[];
 }
 
 const NAV_LINKS: NavLink[] = [
@@ -24,18 +25,24 @@ const NAV_LINKS: NavLink[] = [
         name: "Company",
         href: "/company",
         children: [
-            { name: "About Us", href: "/company" },
-            { name: "Blog", href: "/company/blog" },
+            { name: "About Us", href: "/company", icon: Users },
+            { name: "Blog", href: "/company/blog", icon: MessageSquare },
+            { name: "Contact", href: "/contact", icon: Phone },
         ],
     },
 ];
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
     const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Force dark text/white bg on blog pages
+    const isBlogPage = pathname?.includes("/company/blog");
+    const useDarkText = isScrolled || isBlogPage;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -60,16 +67,16 @@ export default function Navbar() {
                 className={clsx(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                     isScrolled
-                        ? "bg-white shadow-[0_4px_30px_rgba(0,213,99,0.1)] border-b border-brand-primary/10 py-3" // Pure white navbar
+                        ? "bg-white/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-white/20 py-3"
                         : "bg-transparent py-4"
                 )}
             >
                 <SectionWrapper className="flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <Logo className="w-[176px] md:w-auto" isScrolled={isScrolled} />
+                        <Logo className="w-[176px] md:w-auto" isScrolled={useDarkText || isMobileOpen} />
                     </Link>
 
-                    {/* Desktop Nav */}
+                    {/* Desktop nav */}
                     <nav className="hidden xl:flex items-center gap-8">
                         {NAV_LINKS.map((link) =>
                             link.children ? (
@@ -82,7 +89,7 @@ export default function Navbar() {
                                     <button
                                         className={clsx(
                                             "text-sm font-medium transition-all duration-300 relative group tracking-wide flex items-center gap-1",
-                                            isScrolled ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
+                                            useDarkText ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
                                         )}
                                     >
                                         {link.name}
@@ -95,21 +102,24 @@ export default function Navbar() {
                                     <AnimatePresence>
                                         {openDropdown === link.name && (
                                             <motion.div
-                                                initial={{ opacity: 0, y: 8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 8 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                                                initial={{ opacity: 0, y: 8, filter: "blur(4px)" }}
+                                                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                                exit={{ opacity: 0, y: 8, filter: "blur(4px)" }}
+                                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                                className="absolute top-full right-0 pt-4"
                                             >
-                                                <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-gray-100 py-2 min-w-[180px] overflow-hidden">
+                                                <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] ring-1 ring-black/5 py-2 min-w-[240px] overflow-hidden">
                                                     {link.children.map((child) => (
                                                         <Link
                                                             key={child.name}
                                                             href={child.href}
                                                             onClick={() => setOpenDropdown(null)}
-                                                            className="block px-5 py-2.5 text-sm text-brand-secondary hover:text-brand-primary hover:bg-brand-green-50 transition-colors font-medium"
+                                                            className="flex items-center justify-between px-6 py-3.5 text-sm text-brand-secondary hover:text-brand-primary hover:bg-brand-primary/5 transition-all duration-200 font-medium group"
                                                         >
-                                                            {child.name}
+                                                            <span>{child.name}</span>
+                                                            {child.icon && (
+                                                                <child.icon className="w-4 h-4 text-gray-400 group-hover:text-brand-primary group-hover:translate-x-0.5 transition-all duration-200" />
+                                                            )}
                                                         </Link>
                                                     ))}
                                                 </div>
@@ -123,7 +133,7 @@ export default function Navbar() {
                                     href={link.href}
                                     className={clsx(
                                         "text-sm font-medium transition-all duration-300 relative group tracking-wide",
-                                        isScrolled ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
+                                        useDarkText ? "text-brand-secondary hover:text-brand-primary" : "text-white hover:text-brand-primary"
                                     )}
                                 >
                                     {link.name}
@@ -133,17 +143,6 @@ export default function Navbar() {
                                 </Link>
                             )
                         )}
-                        <Link
-                            href="/contact"
-                            className={clsx(
-                                "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border",
-                                isScrolled
-                                    ? "bg-brand-primary text-white border-brand-primary hover:bg-brand-accent hover:border-brand-accent hover:shadow-lg"
-                                    : "bg-white/10 text-white border-white/30 hover:bg-brand-primary hover:text-white hover:border-brand-primary backdrop-blur-sm"
-                            )}
-                        >
-                            Contact Us
-                        </Link>
                     </nav>
 
                     {/* Mobile Toggle */}
@@ -151,7 +150,7 @@ export default function Navbar() {
                         onClick={() => setIsMobileOpen(!isMobileOpen)}
                         className={clsx(
                             "xl:hidden relative z-50 p-2 transition-colors duration-300",
-                            isMobileOpen || isScrolled ? "text-brand-secondary" : "text-white"
+                            isMobileOpen || useDarkText ? "text-brand-secondary" : "text-white"
                         )}
                     >
                         {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -167,24 +166,24 @@ export default function Navbar() {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="fixed inset-0 z-40 bg-brand-light/95 backdrop-blur-2xl pt-20 px-6 xl:hidden overflow-y-auto h-[100dvh] flex flex-col"
+                        className="fixed inset-0 z-40 bg-white/95 backdrop-blur-2xl pt-24 px-6 xl:hidden overflow-y-auto h-[100dvh] flex flex-col"
                     >
-                        <div className="flex flex-col space-y-2 mt-4">
+                        <div className="flex flex-col space-y-2">
                             {NAV_LINKS.map((link, idx) =>
                                 link.children ? (
-                                    <div key={link.name}>
+                                    <div key={link.name} className="border-b border-gray-100/50 pb-3 last:border-0">
                                         <button
                                             onClick={() => setMobileExpanded(mobileExpanded === link.name ? null : link.name)}
-                                            className="text-2xl font-light text-brand-secondary hover:text-brand-primary transition-colors tracking-tight flex items-center gap-2 w-full text-left"
+                                            className="text-xl font-medium text-brand-secondary hover:text-brand-primary transition-colors tracking-tight flex items-center justify-between w-full text-left group"
                                         >
-                                            <span className="text-[10px] font-bold text-brand-primary/50 block mb-0.5">0{idx + 1}</span>
-                                            <span className="flex items-center gap-2">
-                                                {link.name}
-                                                <ChevronDown className={clsx(
-                                                    "w-5 h-5 transition-transform duration-200",
-                                                    mobileExpanded === link.name && "rotate-180"
-                                                )} />
-                                            </span>
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-[10px] font-bold text-brand-primary/60 tracking-widest uppercase">0{idx + 1}</span>
+                                                <span>{link.name}</span>
+                                            </div>
+                                            <ChevronDown className={clsx(
+                                                "w-5 h-5 text-gray-300 group-hover:text-brand-primary transition-all duration-300",
+                                                mobileExpanded === link.name && "rotate-180 text-brand-primary"
+                                            )} />
                                         </button>
                                         <AnimatePresence>
                                             {mobileExpanded === link.name && (
@@ -192,19 +191,24 @@ export default function Navbar() {
                                                     initial={{ height: 0, opacity: 0 }}
                                                     animate={{ height: "auto", opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
-                                                    transition={{ duration: 0.2 }}
-                                                    className="overflow-hidden pl-8"
+                                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                                    className="overflow-hidden"
                                                 >
-                                                    {link.children.map((child) => (
-                                                        <Link
-                                                            key={child.name}
-                                                            href={child.href}
-                                                            onClick={() => setIsMobileOpen(false)}
-                                                            className="block text-lg text-gray-600 hover:text-brand-primary transition-colors py-2"
-                                                        >
-                                                            {child.name}
-                                                        </Link>
-                                                    ))}
+                                                    <div className="pt-2 flex flex-col gap-1 pl-4 border-l-2 border-brand-primary/10 ml-1.5 mt-2">
+                                                        {link.children.map((child) => (
+                                                            <Link
+                                                                key={child.name}
+                                                                href={child.href}
+                                                                onClick={() => setIsMobileOpen(false)}
+                                                                className="flex items-center justify-between text-base text-gray-500 hover:text-brand-primary transition-colors py-2 group"
+                                                            >
+                                                                <span>{child.name}</span>
+                                                                {child.icon && (
+                                                                    <child.icon className="w-4 h-4 text-gray-300 group-hover:text-brand-primary transition-colors" />
+                                                                )}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
@@ -214,21 +218,15 @@ export default function Navbar() {
                                         key={link.name}
                                         href={link.href}
                                         onClick={() => setIsMobileOpen(false)}
-                                        className="text-2xl font-light text-brand-secondary hover:text-brand-primary transition-colors tracking-tight"
+                                        className="text-xl font-medium text-brand-secondary hover:text-brand-primary transition-colors tracking-tight border-b border-gray-100/50 pb-3 last:border-0 block"
                                     >
-                                        <span className="text-[10px] font-bold text-brand-primary/50 block mb-0.5">0{idx + 1}</span>
-                                        {link.name}
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-[10px] font-bold text-brand-primary/60 tracking-widest uppercase">0{idx + 1}</span>
+                                            {link.name}
+                                        </div>
                                     </Link>
                                 )
                             )}
-                            <Link
-                                href="/contact"
-                                onClick={() => setIsMobileOpen(false)}
-                                className="text-2xl font-light text-brand-secondary hover:text-brand-primary transition-colors tracking-tight"
-                            >
-                                <span className="text-[10px] font-bold text-brand-primary/50 block mb-0.5">07</span>
-                                Contact
-                            </Link>
                         </div>
                     </motion.div>
                 )}
@@ -236,3 +234,4 @@ export default function Navbar() {
         </>
     );
 }
+

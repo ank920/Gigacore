@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
             "How advanced electrolysis architectures are reshaping the economics of green hydrogen for heavy industry, and what it means for the global energy transition.",
         category: "Hydrogen Technology",
         date: "January 28, 2026",
-        image: "/blog/hydrogen-electrolysis.jpg",
+        image: "/blog/hydrogen-electrolysis.png",
         featured: true,
         content: [
             {
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
             "Heavy industry accounts for nearly 30% of global emissions. Exploring how hydrogen serves as a critical decarbonization vector for sectors that cannot easily electrify.",
         category: "Industrial Deployment",
         date: "January 15, 2026",
-        image: "/blog/heavy-industry.jpg",
+        image: "/blog/heavy-industry.png",
         content: [
             {
                 type: "paragraph",
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
             "An analysis of the cost trajectories for green hydrogen production and the technological breakthroughs needed to achieve parity with fossil-derived hydrogen.",
         category: "Market Insights",
         date: "December 20, 2025",
-        image: "/blog/economics-parity.jpg",
+        image: "/blog/economics-parity.png",
         content: [
             {
                 type: "paragraph",
@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
             "Examining hydrogen's position in the evolving global energy landscape and the policy frameworks accelerating its adoption across major economies.",
         category: "Policy & Regulation",
         date: "December 5, 2025",
-        image: "/blog/energy-transition.jpg",
+        image: "/blog/energy-transition.png",
         content: [
             {
                 type: "paragraph",
@@ -196,7 +196,7 @@ export const blogPosts: BlogPost[] = [
             "The infrastructure challenge is often cited as the biggest barrier to hydrogen adoption. A practical look at how infrastructure can scale with demand rather than ahead of it.",
         category: "Industrial Deployment",
         date: "November 18, 2025",
-        image: "/blog/infrastructure.jpg",
+        image: "/blog/Building Hydrogen Infrastructure for Tomorrow.png",
         content: [
             {
                 type: "paragraph",
@@ -227,7 +227,7 @@ export const blogPosts: BlogPost[] = [
             "Safety is paramount in hydrogen systems. An overview of the evolving standards landscape and best practices for industrial hydrogen handling.",
         category: "Research & Innovation",
         date: "November 2, 2025",
-        image: "/blog/safety-standards.jpg",
+        image: "/blog/Hydrogen Safety Standards for Industrial Deployment.png",
         content: [
             {
                 type: "paragraph",
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
             "How collaborative partnerships between technology developers, industrial operators, and infrastructure companies are accelerating the path to commercial hydrogen deployment.",
         category: "Partnerships",
         date: "October 15, 2025",
-        image: "/blog/partnerships.jpg",
+        image: "/blog/Strategic Partnerships Accelerating Hydrogen Adoption.png",
         content: [
             {
                 type: "paragraph",
@@ -289,7 +289,7 @@ export const blogPosts: BlogPost[] = [
             "Beyond carbon intensity: a comprehensive look at the sustainability metrics that matter for evaluating hydrogen production pathways.",
         category: "Sustainability",
         date: "October 1, 2025",
-        image: "/blog/sustainability.jpg",
+        image: "/blog/Sustainability Metrics for Hydrogen Production.png",
         content: [
             {
                 type: "paragraph",
@@ -320,7 +320,7 @@ export const blogPosts: BlogPost[] = [
             "An inside look at how Giga Cora Energy is developing hydrogen production systems designed from the ground up for industrial scale and economic viability.",
         category: "Company News",
         date: "September 15, 2025",
-        image: "/blog/giga-cora-approach.jpg",
+        image: "/blog/Giga Cora Energy's Approach to Scalable Hydrogen.png",
         content: [
             {
                 type: "paragraph",

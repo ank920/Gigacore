@@ -57,55 +57,56 @@ export default function BlogPostPage() {
     return (
         <main className="bg-white">
             {/* Hero Section */}
-            <section className="relative min-h-[50vh] w-full overflow-hidden bg-gray-900">
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary via-brand-green-950 to-brand-secondary" />
-                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_40%,rgba(0,213,99,0.3),transparent_60%)]" />
-                </div>
-                <SectionWrapper className="relative z-10 pt-32 pb-16">
-                    <div className="max-w-4xl">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <div className="flex items-center gap-3 mb-6">
-                                <Link
-                                    href="/company/blog"
-                                    className="text-gray-400 hover:text-brand-primary transition-colors text-sm font-medium flex items-center gap-1"
-                                >
-                                    <ArrowLeft className="w-4 h-4" />
-                                    All Posts
-                                </Link>
-                                <span className="text-gray-600">/</span>
-                                <span className="bg-brand-primary/20 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                                    {post.category}
-                                </span>
-                            </div>
-                        </motion.div>
+            <section className="relative py-20 lg:py-28 w-full overflow-hidden bg-[#F3F4F6]">
+                <SectionWrapper className="relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        {/* Left Column: Text */}
+                        <div className="flex-1 text-left">
+                            <motion.h1
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-brand-secondary"
+                            >
+                                {post.title}
+                            </motion.h1>
 
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.1 }}
-                            className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-tight text-white"
-                        >
-                            {post.title}
-                        </motion.h1>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                                className="text-sm font-medium text-gray-900 mb-6"
+                            >
+                                Published: {post.date} <span className="mx-2 text-gray-400">|</span> Updated: {post.date}
+                            </motion.div>
 
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="text-brand-primary font-medium text-lg"
+                            >
+                                {post.category}
+                            </motion.div>
+                        </div>
+
+                        {/* Right Column: Image */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="flex items-center gap-4 text-gray-400"
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="flex-1 w-full"
                         >
-                            <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
-                                <span className="text-sm">{post.date}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Tag className="w-4 h-4" />
-                                <span className="text-sm">{post.category}</span>
+                            <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-2xl">
+                                {/* Use post.image if available, otherwise fallback */}
+                                {post.image ? (
+                                    <div
+                                        className="h-full w-full bg-cover bg-center"
+                                        style={{ backgroundImage: `url('${post.image}')` }}
+                                    />
+                                ) : (
+                                    <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary via-brand-secondary to-brand-green-900" />
+                                )}
                             </div>
                         </motion.div>
                     </div>
@@ -133,11 +134,10 @@ export default function BlogPostPage() {
                                         <Link
                                             key={cat}
                                             href={`/company/blog`}
-                                            className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                                                post.category === cat
-                                                    ? "bg-brand-primary text-white shadow-sm"
-                                                    : "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
-                                            }`}
+                                            className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${post.category === cat
+                                                ? "bg-brand-primary text-white shadow-sm"
+                                                : "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
+                                                }`}
                                         >
                                             {cat}
                                         </Link>
@@ -264,11 +264,18 @@ export default function BlogPostPage() {
                             >
                                 <article className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(0,213,99,0.1)] transition-all duration-300 border border-gray-100 h-full flex flex-col">
                                     <div className="relative h-[200px] w-full overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-brand-green-50 via-white to-brand-green-100 flex items-center justify-center">
-                                            <div className="w-14 h-14 rounded-full bg-brand-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                                <ArrowRight className="w-5 h-5 text-brand-primary group-hover:translate-x-1 transition-transform" />
+                                        {rp.image ? (
+                                            <div
+                                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                                style={{ backgroundImage: `url('${rp.image}')` }}
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 bg-gradient-to-br from-brand-green-50 via-white to-brand-green-100 flex items-center justify-center">
+                                                <div className="w-14 h-14 rounded-full bg-brand-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                    <ArrowRight className="w-5 h-5 text-brand-primary group-hover:translate-x-1 transition-transform" />
+                                                </div>
                                             </div>
-                                        </div>
+                                        )}
                                     </div>
                                     <div className="p-6 flex flex-col flex-1">
                                         <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
