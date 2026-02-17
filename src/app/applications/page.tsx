@@ -88,7 +88,7 @@ export default function ApplicationsPage() {
                             <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 Hydrogen is a core input for multiple industrial processes. Replacing fossil-derived hydrogen requires a solution that can operate continuously and at competitive cost.
                             </p>
-                            <h4 className="font-bold text-gray-900 mb-4 text-lg">Applicable use cases:</h4>
+                            <h4 className="font-bold text-gray-900 mb-4 text-[length:var(--font-body)]">Applicable use cases:</h4>
                             <ul className="space-y-4 mb-8">
                                 {[
                                     "Chemical and petrochemical feedstock",
@@ -132,12 +132,12 @@ export default function ApplicationsPage() {
                                     <Leaf className="w-4 h-4" /> Fertilizer & Energy Export
                                 </span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Green <span className="text-gradient-green-glow">Ammonia</span></h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-gray-900">Green <span className="text-gradient-green-glow">Ammonia</span></h2>
                             <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
                                 Ammonia is one of the largest existing sinks for hydrogen and a cornerstone of both fertilizer production and emerging energy-export strategies.
                             </p>
                             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-brand-primary/10 mb-6 hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
-                                <h4 className="font-bold text-gray-900 mb-6 text-lg border-b border-gray-100 pb-2">Platform Capabilities:</h4>
+                                <h4 className="font-bold text-gray-900 mb-6 text-[length:var(--font-body)] border-b border-gray-100 pb-2">Platform Capabilities:</h4>
                                 <ul className="space-y-4">
                                     <li className="flex items-center gap-3 text-gray-700 font-medium">
                                         <div className="p-1.5 bg-brand-primary/10 rounded-full text-brand-primary">
@@ -178,8 +178,8 @@ export default function ApplicationsPage() {
                                 <img src="/application/Steel%20and%20Metals%20Processing.webp" alt="Steel" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="p-8 flex flex-col flex-1">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Steel and Metals Processing</h3>
-                                <p className="text-gray-600 mb-6 flex-1 text-lg">
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4">Steel and Metals Processing</h3>
+                                <p className="text-gray-600 mb-6 flex-1 text-[length:var(--font-body)]">
                                     Steelmaking is challenging to decarbonize due to high energy demand. Hydrogen applications include direct reduction, fuel substitution, and metallurgical integration.
                                 </p>
                                 <div className="mt-auto p-4 bg-brand-primary/5 rounded-xl border border-brand-primary/10">
@@ -195,8 +195,8 @@ export default function ApplicationsPage() {
                                 <img src="/application/Refining%20and%20Petrochemicals.webp" alt="Refining" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="p-8 flex flex-col flex-1">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Refining and Petrochemicals</h3>
-                                <p className="text-gray-600 mb-6 flex-1 text-lg">
+                                <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4">Refining and Petrochemicals</h3>
+                                <p className="text-gray-600 mb-6 flex-1 text-[length:var(--font-body)]">
                                     Refineries are natural early adopters. Deployment models include on-site generation, partial replacement of grey hydrogen, and renewable integration.
                                 </p>
                                 <div className="mt-auto p-4 bg-brand-primary/5 rounded-xl border border-brand-primary/10">
@@ -270,7 +270,7 @@ export default function ApplicationsPage() {
                 <SectionWrapper>
                     <div className="text-center mb-16">
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-4 text-brand-secondary">Deployment <span className="text-gradient-green-glow">Strategy</span></h2>
-                        <p className="text-xl text-gray-500">From Local Impact to Global Scale</p>
+                        <p className="text-[length:var(--font-intro)] text-gray-500">From Local Impact to Global Scale</p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -279,11 +279,11 @@ export default function ApplicationsPage() {
                             <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
                                 <img src="/application/India-First%20Industrial%20Deployment.jpg" alt="India Deployment" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4 flex items-center gap-3">
                                 <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
                                 India-First Deployment
                             </h3>
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <p className="text-gray-600 mb-6 text-[length:var(--font-body)]">
                                 India presents a unique combination of large hydrogen demand, cost sensitivity, and strong policy momentum.
                             </p>
                             <div className="bg-brand-primary/5 p-4 rounded-xl">
@@ -301,11 +301,11 @@ export default function ApplicationsPage() {
                             <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
                                 <img src="/application/Globally%20Scalable%20Use%20Cases.png" alt="Global Scale" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4 flex items-center gap-3">
                                 <Globe className="w-8 h-8 text-brand-primary" />
                                 Globally Scalable
                             </h3>
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <p className="text-gray-600 mb-6 text-[length:var(--font-body)]">
                                 The same application logic applies globally where industries face rising pressure to decarbonize without eroding margins.
                             </p>
                             <div className="bg-brand-primary/5 p-4 rounded-xl">
@@ -325,24 +325,24 @@ export default function ApplicationsPage() {
             <section className="py-[var(--spacing-section)] bg-gray-900 text-white text-center">
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-[length:var(--font-h1)] font-bold mb-8">Application-Driven <span className="text-gradient-green-glow">Deployment Strategy</span></h2>
+                        <h2 className="text-[length:var(--font-h1)] font-bold mb-8 text-white">Application-Driven <span className="text-gradient-green-glow">Deployment Strategy</span></h2>
                         <p className="text-[length:var(--font-intro)] text-white/80 mb-12 leading-relaxed font-light">
                             Deployment is prioritized where hydrogen demand already exists, cost sensitivity is high, and scale can be achieved through industrial partnerships.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <Beaker className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg">Existing Demand</h4>
+                                <h4 className="font-bold mb-2 text-lg text-white">Existing Demand</h4>
                                 <p className="text-sm text-gray-300">Replacement of grey hydrogen users</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <TrendingUp className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg">High Cost Sensitivity</h4>
+                                <h4 className="font-bold mb-2 text-lg text-white">High Cost Sensitivity</h4>
                                 <p className="text-sm text-gray-300">Where OPEX dominates decision making</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <Factory className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg">Industrial Scale</h4>
+                                <h4 className="font-bold mb-2 text-lg text-white">Industrial Scale</h4>
                                 <p className="text-sm text-gray-300">Partnerships for large consumption</p>
                             </div>
                         </div>

@@ -37,8 +37,7 @@ export default function Footer() {
                             {[
                                 { name: "Technology", href: "/technology" },
                                 { name: "Economics", href: "/economics" },
-                                { name: "Applications", href: "/applications" },
-                                { name: "Sustainability", href: "/sustainability" }
+                                { name: "Applications", href: "/applications" }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="hover:text-brand-primary transition-colors flex items-center gap-3 group">

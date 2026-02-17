@@ -40,7 +40,7 @@ export default function CompanyPage() {
                         viewport={{ once: true }}
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
-                        <motion.p variants={fadeUp} className="text-xl md:text-3xl text-brand-secondary mb-10 max-w-4xl leading-relaxed font-medium">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-brand-secondary mb-10 max-w-4xl leading-relaxed font-medium">
                             Giga Cora Energy is a climate-technology company focused on advancing next-generation hydrogen production systems designed for real-world industrial deployment.
                         </motion.p>
 
@@ -92,7 +92,7 @@ export default function CompanyPage() {
                                     </span>
                                 </div>
                                 <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Our <span className="text-gradient-green-glow">Mission</span></h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                     To enable the global transition to clean energy by developing innovative hydrogen technologies that are economically viable, industrially scalable, and deployable where energy demand already exists.
                                 </p>
                                 <div className="p-6 bg-white rounded-2xl border border-brand-primary/10 shadow-[0_4px_20px_rgba(0,213,99,0.05)]">
@@ -125,7 +125,7 @@ export default function CompanyPage() {
                                     </span>
                                 </div>
                                 <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Our <span className="text-gradient-green-glow">Vision</span></h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                     Giga Cora Energy envisions a future where green hydrogen is not a niche solution, but a core industrial input. We see a world where energy infrastructure is decoupled from carbon intensity without compromising on reliability or economic output.
                                 </p>
                                 <ul className="space-y-4 mb-8">
@@ -171,7 +171,7 @@ export default function CompanyPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Why Giga Cora Energy <span className="text-gradient-green-glow">Exists</span></h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8">
                                 Conventional hydrogen production methods struggle to meet the cost thresholds required for widespread industrial adoption.
                             </p>
 
@@ -212,7 +212,7 @@ export default function CompanyPage() {
                             <div className="rounded-2xl overflow-hidden mb-8 h-64 w-full relative">
                                 <Image src="/company/Technology%20Philosophy.png" alt="Philosophy" fill className="object-contain" />
                             </div>
-                            <h3 className="text-2xl font-bold text-brand-secondary mb-4 flex items-center gap-3"><Zap className="w-6 h-6 text-brand-primary" /> Technology Philosophy</h3>
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-4 flex items-center gap-3"><Zap className="w-6 h-6 text-brand-primary" /> Technology Philosophy</h3>
                             <p className="text-gray-600 mb-6 flex-grow">
                                 Rather than optimizing existing electrochemical systems, we focus on alternative physical mechanisms that enable hydrogen separation using less total energy.
                             </p>
@@ -230,7 +230,7 @@ export default function CompanyPage() {
                             <div className="rounded-2xl overflow-hidden mb-8 h-64 w-full relative">
                                 <Image src="/company/Built%20for%20Industrial%20Deployment.jpg" alt="Deployment" fill className="object-contain" />
                             </div>
-                            <h3 className="text-2xl font-bold text-brand-secondary mb-4 flex items-center gap-3"><Briefcase className="w-6 h-6 text-brand-primary" /> Industrial Deployment</h3>
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-4 flex items-center gap-3"><Briefcase className="w-6 h-6 text-brand-primary" /> Industrial Deployment</h3>
                             <p className="text-gray-600 mb-6 flex-grow">
                                 The objective is to move beyond laboratory success toward commercially relevant, infrastructure-grade systems.
                             </p>
@@ -269,7 +269,7 @@ export default function CompanyPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Global Impact, <span className="text-gradient-green-glow">Practical Focus</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 While the technology has global relevance, deployment strategy emphasizes regions and sectors where hydrogen demand is immediate and substantial.
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -291,7 +291,7 @@ export default function CompanyPage() {
                             <ShieldCheck className="w-8 h-8" />
                         </div>
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Commitment to <span className="text-gradient-green-glow">Credibility</span></h2>
-                        <p className="text-xl text-gray-600 mb-12">
+                        <p className="text-[length:var(--font-intro)] text-gray-600 mb-12">
                             We prioritize long-term credibility over short-term visibility. We build trust through measurable performance, transparent milestones, and structured validation.
                         </p>
 
@@ -299,7 +299,7 @@ export default function CompanyPage() {
                             <div className="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all hover:-translate-y-1">
                                 <div className="flex items-center gap-3 mb-4">
                                     <UserCheck className="w-6 h-6 text-brand-primary" />
-                                    <h4 className="text-xl font-bold text-brand-secondary">Collaboration-Driven Growth</h4>
+                                    <h4 className="text-[length:var(--font-h3)] font-bold text-brand-secondary">Collaboration-Driven Growth</h4>
                                 </div>
                                 <p className="text-gray-600 mb-4">Growth is pursued through partnerships that align technical capability with execution scale.</p>
                                 <ul className="space-y-2">
@@ -311,7 +311,7 @@ export default function CompanyPage() {
                             <div className="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all hover:-translate-y-1">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Rocket className="w-6 h-6 text-brand-primary" />
-                                    <h4 className="text-xl font-bold text-brand-secondary">Looking Ahead</h4>
+                                    <h4 className="text-[length:var(--font-h3)] font-bold text-brand-secondary">Looking Ahead</h4>
                                 </div>
                                 <p className="text-gray-600 mb-4">The company’s journey is defined not by hype, but by execution.</p>
                                 <ul className="space-y-2">

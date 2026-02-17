@@ -85,7 +85,7 @@ export default function MarketPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">What Is Changing in the <span className="text-gradient-green-glow">Market</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 Three forces are reshaping the hydrogen market:
                             </p>
                             <ul className="space-y-4 mb-8">
@@ -132,7 +132,7 @@ export default function MarketPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">The Cost Threshold That <span className="text-gradient-green-glow">Unlocks Scale</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 Across downstream applications, a consistent economic signal has emerged:
                             </p>
 
@@ -162,9 +162,9 @@ export default function MarketPage() {
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-3 justify-center mb-4">
                             <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
-                            <h2 className="text-3xl md:text-5xl font-bold text-brand-secondary">India: A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary">India: A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
                         </div>
-                        <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-[length:var(--font-intro)] text-gray-500 max-w-3xl mx-auto leading-relaxed">
                             Unlike markets driven primarily by subsidies, India’s hydrogen transition must succeed on economics and scale.
                         </p>
                     </div>
@@ -185,7 +185,7 @@ export default function MarketPage() {
 
                     <div className="bg-white rounded-3xl p-8 md:p-12 border border-brand-primary/10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-primary to-brand-accent opacity-50" />
-                        <h3 className="text-2xl font-bold text-brand-secondary mb-8 text-center">Priority Demand Centers in India</h3>
+                        <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-8 text-center">Priority Demand Centers in India</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition-colors">
                                 <h4 className="font-bold text-brand-secondary mb-4 flex items-center gap-2"><Target className="w-5 h-5 text-brand-primary" /> Immediate Opportunities</h4>
@@ -228,7 +228,7 @@ export default function MarketPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Export-Linked Market <span className="text-gradient-green-glow">Opportunities</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 Beyond domestic consumption, hydrogen enables export-oriented value chains—particularly through ammonia. Markets that can produce hydrogen at structurally lower cost gain a durable advantage in these global flows.
                             </p>
                             <h4 className="font-bold text-brand-secondary mb-4 text-lg">Export dynamics are shaped by:</h4>
@@ -264,7 +264,7 @@ export default function MarketPage() {
                         <div className="flex-1 w-full">
                             <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
-                                    src="/market/Global%20Relevance%20Beyond%20India.jpg"
+                                    src="/market/Global%20Relevance%20Beyond%20India.jpeg"
                                     alt="Global Relevance"
                                     className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                                 />
@@ -277,7 +277,7 @@ export default function MarketPage() {
                                 </span>
                             </div>
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Global Relevance <span className="text-gradient-green-glow">Beyond India</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 While India is a primary focus, the same economic logic applies globally. As subsidies normalize and projects mature, cost-led hydrogen platforms are expected to outperform subsidy-dependent models.
                             </p>
                             <div className="p-6 bg-white rounded-2xl shadow-sm border border-brand-primary/10">
@@ -298,8 +298,8 @@ export default function MarketPage() {
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_30px_rgba(0,213,99,0.08)] transition-all">
-                            <h3 className="text-2xl font-bold text-brand-secondary mb-6 flex items-center gap-3"><Target className="w-6 h-6 text-brand-primary" /> Market Entry Philosophy</h3>
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-6 flex items-center gap-3"><Target className="w-6 h-6 text-brand-primary" /> Market Entry Philosophy</h3>
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 Rather than spreading across many small pilots, entry is structured around few, scalable, high-impact deployments.
                             </p>
                             <ul className="space-y-4 text-gray-700">
@@ -309,8 +309,8 @@ export default function MarketPage() {
                             </ul>
                         </div>
                         <div className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_10px_30px_rgba(0,213,99,0.08)] transition-all">
-                            <h3 className="text-2xl font-bold text-brand-secondary mb-6 flex items-center gap-3"><Briefcase className="w-6 h-6 text-brand-primary" /> Who the Market Is For</h3>
-                            <p className="text-gray-600 mb-6 text-lg">
+                            <h3 className="text-[length:var(--font-h2)] font-bold text-brand-secondary mb-6 flex items-center gap-3"><Briefcase className="w-6 h-6 text-brand-primary" /> Who the Market Is For</h3>
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-6">
                                 The platform is designed for stakeholders who operate at infrastructure scale and evaluate hydrogen as a core input.
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -339,7 +339,7 @@ export default function MarketPage() {
                         </div>
                         <div className="flex-1">
                             <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">From Policy Alignment to <span className="text-gradient-green-glow">Commercial Reality</span></h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-[length:var(--font-body)] text-gray-600 mb-8 leading-relaxed">
                                 Policy frameworks can accelerate adoption, but commercial viability determines longevity. The market opportunity is defined by the ability to deliver:
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
@@ -368,7 +368,7 @@ export default function MarketPage() {
 
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Engage on the Market</h2>
-                            <p className="text-white/95 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+                            <p className="text-white/95 text-[length:var(--font-intro)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
                                 Engagement is focused on stakeholders evaluating hydrogen as a commercial input, not a trial technology.
                             </p>
 

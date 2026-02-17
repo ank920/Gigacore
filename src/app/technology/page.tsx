@@ -343,7 +343,7 @@ export default function TechnologyPage() {
                         </div>
                         <div className="flex-1 w-full">
                             <img
-                                src="/Technology/Scalability & Modularity.webp"
+                                src="/Technology/Scalability Through Modularity.jpeg"
                                 alt="Scalability"
                                 className="w-full h-auto rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:scale-105 transition-transform duration-700"
                             />
