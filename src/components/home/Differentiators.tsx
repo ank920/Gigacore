@@ -104,7 +104,7 @@ export default function Differentiators() {
                         className="relative w-full h-[300px] lg:h-full lg:min-h-[500px] bg-brand-dark/50 border border-white/10 overflow-hidden"
                     >
                         <Image
-                            src="/home/build.jpg"
+                            src="/home/build.png"
                             alt="Industrial Hydrogen Infrastructure Construction"
                             fill
                             className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"

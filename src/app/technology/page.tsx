@@ -53,7 +53,7 @@ export default function TechnologyPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight drop-shadow-lg"
+                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] drop-shadow-lg"
                     >
                         A Different Way to <span className="text-gradient-green-glow">Split Water</span>
                     </motion.h1>
@@ -61,7 +61,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="py-12 md:py-20 bg-white text-center border-b border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-white text-center border-b border-gray-100">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -70,7 +70,7 @@ export default function TechnologyPage() {
                         viewport={{ once: true }}
                         className="max-w-4xl mx-auto flex flex-col items-center"
                     >
-                        <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl leading-relaxed font-light">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-gray-600 mb-8 max-w-3xl leading-relaxed font-light">
                             Hydrogen production has traditionally relied on applying <span className="text-gray-900 font-semibold">constant electrical force</span> to water molecules until they separate. While effective, this approach is inherently <span className="text-brand-primary font-semibold">energy-intensive</span> and constrained by well-understood physical limits.
                         </motion.p>
 
@@ -92,17 +92,17 @@ export default function TechnologyPage() {
             </section>
 
             {/* 3. The Shift / Core Concept */}
-            <section className="py-12 md:py-20 bg-brand-light border-b border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-b border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 leading-tight tracking-tight">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight tracking-tight">
                                 From Constant Force to <br /><span className="text-gradient-green-glow">Targeted Energy</span>
                             </h2>
-                            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 font-light">
+                            <p className="text-[length:var(--font-intro)] text-gray-600 leading-relaxed mb-6 font-light">
                                 The technology platform under development takes a fundamentally different path. Instead of steady voltage, it uses controlled electrical excitation within a cold plasma environment to interact with water in a more precise and efficient way.
                             </p>
-                            <p className="text-base text-brand-secondary font-medium border-l-4 border-brand-primary pl-4 py-1">
+                            <p className="text-[length:var(--font-body)] text-brand-secondary font-medium border-l-4 border-brand-primary pl-4 py-2">
                                 This shift—from constant force to targeted energy delivery—is the foundation of the platform.
                             </p>
                         </div>
@@ -120,18 +120,18 @@ export default function TechnologyPage() {
             </section>
 
             {/* 4. What Is Cold Plasma */}
-            <section className="py-12 md:py-20 bg-white border-b border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto text-center mb-10">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 tracking-tight">What Is <span className="text-gradient-green-glow">Cold Plasma?</span></h2>
-                        <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light max-w-3xl mx-auto">
+                        <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary tracking-tight">What Is <span className="text-gradient-green-glow">Cold Plasma?</span></h2>
+                        <p className="text-[length:var(--font-intro)] text-gray-600 leading-relaxed font-light max-w-3xl mx-auto">
                             Most people are familiar with solids, liquids, and gases. Plasma is often called the fourth state of matter.
                             Cold plasma is created when electricity energizes a gas or vapor without heating it to extreme temperatures.
                             Instead of making everything hot, only a small fraction of particles—mainly electrons—carry high energy.
                             Because the bulk material stays near room temperature, it is called cold plasma.
                         </p>
                     </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white max-w-4xl mx-auto">
+                    <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 bg-white max-w-4xl mx-auto">
                         <img
                             src="/Technology/Plasma_Animation_AdobeStock_165519357.gif"
                             alt="Cold Plasma Animation"
@@ -142,14 +142,14 @@ export default function TechnologyPage() {
             </section>
 
             {/* 5. Analogy & How Creation */}
-            <section className="py-12 md:py-24 bg-gray-50 border-b border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-b border-brand-primary/5">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                         {/* Left Column: Analogy (Stacked) */}
                         <div className="flex flex-col h-full gap-6">
                             <div className="mb-2">
                                 <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-3 block">Comparative Analysis</span>
-                                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight leading-tight">
+                                <h3 className="text-[length:var(--font-h1)] font-bold text-brand-secondary tracking-tight leading-tight">
                                     A Simple <span className="text-gradient-green-glow">Analogy</span>
                                 </h3>
                                 <p className="text-gray-600 mt-4 leading-relaxed font-light">
@@ -159,7 +159,7 @@ export default function TechnologyPage() {
 
                             <div className="flex flex-col gap-6 flex-1">
                                 {/* Traditional Card */}
-                                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm transition-all duration-300 flex-1 flex flex-col justify-center hover:shadow-md hover:border-gray-300">
+                                <div className="group relative bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 flex-1 flex flex-col justify-center hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:border-gray-200">
                                     <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                                         <Scale className="w-24 h-24 text-gray-400" />
                                     </div>
@@ -202,14 +202,14 @@ export default function TechnologyPage() {
 
                         {/* Right Column: How Created (Full Height) */}
                         <div className="flex flex-col h-full">
-                            <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-gray-200/50 border border-gray-100 relative overflow-hidden h-full flex flex-col">
+                            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 relative overflow-hidden h-full flex flex-col">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
 
                                 <div className="relative z-10 mb-auto">
-                                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 tracking-tight">
+                                    <h3 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary tracking-tight">
                                         How Cold Plasma Is <span className="text-gradient-green-glow">Created</span>
                                     </h3>
-                                    <p className="text-gray-600 mb-8 text-lg font-light leading-relaxed">
+                                    <p className="text-gray-600 mb-8 text-[length:var(--font-intro)] font-light leading-relaxed">
                                         Cold plasma is created using carefully controlled <span className="font-medium text-gray-900">electrical pulses</span> rather than heat or combustion.
                                     </p>
 
@@ -246,14 +246,14 @@ export default function TechnologyPage() {
             </section>
 
             {/* 6. Distributed Architecture */}
-            <section className="py-12 md:py-20 bg-white border-b border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 leading-tight tracking-tight">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight tracking-tight">
                                 Distributed <span className="text-gradient-green-glow">Interaction Architecture</span>
                             </h2>
-                            <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed font-light">
+                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-6 leading-relaxed font-light">
                                 Instead of relying on a few fixed reaction points, the platform operates with a distributed internal interaction structure.
                             </p>
                             <div className="space-y-3">
@@ -269,7 +269,7 @@ export default function TechnologyPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="flex-1 w-full relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                        <div className="flex-1 w-full relative rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                             <img
                                 src="/Technology/Distributed Interaction Architecture.png"
                                 alt="Distributed Interaction Architecture"
@@ -281,7 +281,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 7. Industrial Conditions */}
-            <section className="py-12 md:py-20 bg-brand-light border-b border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-b border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1">
@@ -289,8 +289,8 @@ export default function TechnologyPage() {
                                 <span className="h-px w-8 bg-brand-primary"></span>
                                 <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">Industrial Design</span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 tracking-tight">Designed for <span className="text-gradient-green-glow">Industrial Conditions</span></h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed text-base md:text-lg font-light">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary tracking-tight">Designed for <span className="text-gradient-green-glow">Industrial Conditions</span></h2>
+                            <p className="text-gray-600 mb-6 leading-relaxed text-[length:var(--font-intro)] font-light">
                                 The platform is engineered to operate under moderate temperatures and pressures, avoiding the extremes associated with some alternative hydrogen pathways.
                             </p>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -308,7 +308,7 @@ export default function TechnologyPage() {
                             <img
                                 src="/Technology/Designed for Industrial Operating Conditions.png"
                                 alt="Industrial Operating Conditions"
-                                className="w-full h-auto rounded-2xl border border-gray-200 shadow-xl hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </div>
@@ -316,7 +316,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 8. Scalability */}
-            <section className="py-12 md:py-20 bg-white border-b border-gray-100">
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1">
@@ -324,8 +324,8 @@ export default function TechnologyPage() {
                                 <span className="h-px w-8 bg-brand-primary"></span>
                                 <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">Scalability</span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 tracking-tight">Scalability Through <span className="text-gradient-green-glow">Modularity</span></h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed text-base md:text-lg font-light">
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary tracking-tight">Scalability Through <span className="text-gradient-green-glow">Modularity</span></h2>
+                            <p className="text-gray-600 mb-6 leading-relaxed text-[length:var(--font-intro)] font-light">
                                 Rather than scaling through single, oversized units, the system scales by replicating standardized modules. Scalability is treated as an engineering requirement from the outset.
                             </p>
                             <ul className="space-y-3">
@@ -345,7 +345,7 @@ export default function TechnologyPage() {
                             <img
                                 src="/Technology/Scalability & Modularity.webp"
                                 alt="Scalability"
-                                className="w-full h-auto rounded-2xl border border-gray-200 shadow-xl hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </div>
@@ -353,7 +353,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 9. Readiness & Trust */}
-            <section className="py-12 md:py-20 bg-brand-light border-t border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-t border-brand-primary/5">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         {/* Readiness */}
@@ -362,10 +362,10 @@ export default function TechnologyPage() {
                                 <span className="p-1.5 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <ShieldCheck className="w-5 h-5" />
                                 </span>
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Readiness & Validation</h3>
+                                <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary">Readiness & Validation</h3>
                             </div>
 
-                            <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base font-light">
+                            <p className="text-gray-600 mb-6 leading-relaxed text-[length:var(--font-body)] font-light">
                                 The platform is progressing through a staged development and validation roadmap aligned with industrial expectations.
                             </p>
                             <div className="rounded-xl overflow-hidden mb-6 shadow-sm">
@@ -390,9 +390,9 @@ export default function TechnologyPage() {
                                 <span className="p-1.5 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Check className="w-5 h-5" />
                                 </span>
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Built for Trust</h3>
+                                <h3 className="text-[length:var(--font-h3)] font-bold text-brand-secondary">Built for Trust</h3>
                             </div>
-                            <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base font-light">
+                            <p className="text-gray-600 mb-6 leading-relaxed text-[length:var(--font-body)] font-light">
                                 The technology is being developed to withstand scrutiny from industrial customers, government stakeholders, and infrastructure investors.
                             </p>
                             <div className="rounded-xl overflow-hidden mb-6 shadow-sm">
@@ -411,7 +411,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 10. CTA Section */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="relative rounded-3xl overflow-hidden bg-brand-primary shadow-[0_0_40px_rgba(0,213,99,0.4)] border border-brand-primary/30 text-center py-16 px-6 md:px-12 group">
                         {/* Background Gradients */}
@@ -419,8 +419,8 @@ export default function TechnologyPage() {
                         <div className="absolute inset-0 bg-[url('/Technology/hero%20section.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-md">Engage on the Technology</h2>
-                            <p className="text-white/95 text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Engage on the Technology</h2>
+                            <p className="text-white/95 text-[length:var(--font-intro)] mb-10 max-w-3xl mx-auto leading-relaxed font-light">
                                 This platform is intended for partners who prioritize deployability, efficiency, and long-term economics.
                             </p>
 

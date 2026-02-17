@@ -31,7 +31,7 @@ export default function PartnershipPage() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="py-20 bg-white text-center">
+            <section className="py-[var(--spacing-section)] bg-white text-center">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -40,7 +40,7 @@ export default function PartnershipPage() {
                         viewport={{ once: true }}
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
-                        <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-600 mb-6 max-w-4xl leading-relaxed font-medium">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-gray-600 mb-6 max-w-4xl leading-relaxed font-medium">
                             Large-scale hydrogen deployment does not succeed in isolation. It requires coordinated execution across technology, infrastructure, capital, and operations.
                         </motion.p>
 
@@ -48,7 +48,7 @@ export default function PartnershipPage() {
                             Gigacore's platform is designed for deployment with partners — combining technical capability with industrial reach, execution expertise, and long-term operating experience.
                         </motion.p>
 
-                        <motion.p variants={fadeUp} className="text-lg md:text-xl text-gray-900 font-bold mb-10">
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-brand-secondary font-bold mb-10">
                             The objective is simple: <span className="text-brand-primary">Move from pilot to disciplined commercial scale.</span>
                         </motion.p>
                     </motion.div>
@@ -56,11 +56,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 3. Partnership Philosophy */}
-            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Partnership%20Philosophy.avif"
                                     alt="Partnership Philosophy"
@@ -69,7 +69,7 @@ export default function PartnershipPage() {
                             </div>
                         </div>
                         <div className="flex-1">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 leading-tight">Partnership <span className="text-gradient-green-glow">Philosophy</span></h2>
+                            <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary leading-tight">Partnership <span className="text-gradient-green-glow">Philosophy</span></h2>
                             <p className="text-lg text-gray-600 mb-6">
                                 Partnerships are structured around shared execution — not vendor relationships.
                             </p>
@@ -96,11 +96,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 4. Industrial & Offtake Partners */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Industrial%20&%20Offtake%20Partners.jpg"
                                     alt="Industrial & Offtake Partners"
@@ -113,7 +113,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Factory className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Industrial & Offtake Partners</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Industrial & Offtake Partners</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 Industrial partners anchor deployment by providing:
@@ -150,11 +150,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 5. Public-Sector & PSU Collaboration */}
-            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Public-Sector%20&%20PSU%20Collaboration.jpg"
                                     alt="Public-Sector & PSU Collaboration"
@@ -167,7 +167,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Building2 className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Public-Sector & PSU Collaboration</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Public-Sector & PSU Collaboration</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 Public-sector enterprises play a critical role where scale, reliability, and national priorities intersect.
@@ -195,11 +195,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 6. EPC & Infrastructure Partners */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/EPC%20&%20Infrastructure%20Partners.jpg"
                                     alt="EPC & Infrastructure Partners"
@@ -212,7 +212,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Zap className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">EPC & Infrastructure Partners</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">EPC & Infrastructure Partners</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 EPC partners translate technology into bankable infrastructure.
@@ -240,11 +240,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 7. Manufacturing & Localization Partners */}
-            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Manufacturing%20&%20Localization%20Partners.jpg"
                                     alt="Manufacturing & Localization Partners"
@@ -257,7 +257,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Factory className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Manufacturing & Localization Partners</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Manufacturing & Localization Partners</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 Scalable deployment requires aligned manufacturing capability.
@@ -285,11 +285,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 8. Research & Validation Partners */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Research%20&%20Validation%20Partners.jpg"
                                     alt="Research & Validation Partners"
@@ -302,7 +302,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Microscope className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Research & Validation Partners</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Research & Validation Partners</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 Independent validation underpins industrial adoption and financing.
@@ -330,11 +330,11 @@ export default function PartnershipPage() {
             </section>
 
             {/* 9. Capital & Infrastructure Investors */}
-            <section className="py-12 md:py-20 bg-brand-light border-y border-brand-primary/5">
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
                 <SectionWrapper>
                     <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
                         <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
                                 <img
                                     src="/patnership/Partnerships.png"
                                     alt="Capital & Infrastructure Investors"
@@ -347,7 +347,7 @@ export default function PartnershipPage() {
                                 <span className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                     <Coins className="w-6 h-6" />
                                 </span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Capital & Infrastructure Investors</h2>
+                                <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary">Capital & Infrastructure Investors</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6">
                                 Hydrogen infrastructure requires patient, infrastructure-aligned capital.
@@ -375,12 +375,12 @@ export default function PartnershipPage() {
             </section>
 
             {/* 10. Partnership Models & Deployment Pathway */}
-            <section className="py-12 md:py-20 bg-white">
+            <section className="py-[var(--spacing-section)] bg-white">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
                         {/* Partnership Models */}
                         <div>
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">Partnership <span className="text-gradient-green-glow">Models</span></h2>
+                            <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary">Partnership <span className="text-gradient-green-glow">Models</span></h2>
                             <p className="text-lg text-gray-600 mb-8">
                                 Engagement structures are tailored to partner roles and objectives:
                             </p>
@@ -404,7 +404,7 @@ export default function PartnershipPage() {
 
                         {/* From Partnership to Deployment */}
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">From Partnership to <span className="text-gradient-green-glow">Deployment</span></h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">From Partnership to <span className="text-gradient-green-glow">Deployment</span></h2>
                             <p className="text-lg text-gray-600 mb-8">
                                 The pathway from engagement to operation is structured and disciplined:
                             </p>
@@ -415,12 +415,12 @@ export default function PartnershipPage() {
                                     { step: "3", title: "Performance validation" },
                                     { step: "4", title: "Commercial-scale rollout" }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                                    <div key={i} className="flex gap-4 items-start p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                                         <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
                                             {item.step}
                                         </div>
                                         <div className="flex-1">
-                                            <p className="text-gray-900 font-semibold">{item.title}</p>
+                                            <p className="text-brand-secondary font-semibold">{item.title}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -442,14 +442,14 @@ export default function PartnershipPage() {
                         <div className="absolute inset-0 bg-[url('/patnership/hero%20section.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-3xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 drop-shadow-md">Engage as a Partner</h2>
+                            <h2 className="text-[length:var(--font-h2)] font-bold text-white mb-4 drop-shadow-md">Engage as a Partner</h2>
                             <p className="text-white/95 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
                                 Engagement is focused on organizations seeking deployable, scalable hydrogen solutions.
                             </p>
 
                             <div className="flex justify-center">
                                 <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="w-full md:w-auto px-10 py-4 bg-white text-brand-primary font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-lg">
+                                    <button className="w-full md:w-auto px-10 py-4 bg-white text-brand-primary font-bold rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:bg-gray-50 hover:scale-105 transition-all text-lg">
                                         Discuss Partnership Opportunities
                                     </button>
                                 </Link>

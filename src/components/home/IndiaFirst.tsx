@@ -21,7 +21,7 @@ export default function IndiaFirst() {
                     >
                         <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gray-100 group">
                             <Image
-                                src="/home/build.jpg"
+                                src="/home/build.png"
                                 alt="Built for India's Scale"
                                 fill
                                 className="object-cover transform transition-transform duration-700 group-hover:scale-105"
