@@ -1,17 +1,16 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { ArrowRight, Factory, Zap, TrendingUp, Globe, MapPin, Truck, Leaf, Beaker, CheckCircle } from "lucide-react";
-import Link from "next/link";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
+import SplitSection from "@/components/ui/SplitSection";
+import { ArrowRight, Factory, Zap, TrendingUp, Globe, MapPin, Truck, Leaf, Beaker, CheckCircle } from "lucide-react";
 
 export default function ApplicationsPage() {
     return (
         <main className="bg-white">
-
             {/* 1. Hero Section */}
             <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
@@ -25,7 +24,7 @@ export default function ApplicationsPage() {
                         transition={{ duration: 0.8 }}
                         className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
                     >
-                        Hydrogen Where It Is <span className="text-gradient-green-glow">Actually Used</span>
+                        Hydrogen Where It Is <span className="text-brand-primary">Actually Used</span>
                     </motion.h1>
                 </SectionWrapper>
             </section>
@@ -38,290 +37,220 @@ export default function ApplicationsPage() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="max-w-5xl mx-auto flex flex-col items-center"
+                        className="max-w-4xl mx-auto flex flex-col items-center"
                     >
-                        <motion.p variants={fadeUp} className="text-[length:var(--font-intro)] text-gray-600 mb-10 max-w-3xl leading-relaxed font-light">
+                        <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
                             The platform is designed for applications where hydrogen demand already exists at scale and where cost, reliability, and integration determine adoption.
-                        </motion.p>
-
-                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed font-light">
+                        </motion.h2>
+                        <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
                             Rather than targeting speculative or niche use cases, deployment is focused on <span className="text-brand-primary font-bold">industrial sectors</span> with continuous hydrogen consumption and clear economic drivers.
                         </motion.p>
-
-                        <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-                            <Link href="/contact">
-                                <Button variant="primary" size="lg" className="min-w-[240px]">
-                                    Discuss Application Fit
-                                </Button>
-                            </Link>
-                            <Link href="/partnership">
-                                <Button variant="outline" size="lg" className="min-w-[240px]">
-                                    Explore Pilot Deployment
-                                </Button>
-                            </Link>
-                        </motion.div>
-
                     </motion.div>
                 </SectionWrapper>
             </section>
 
-            {/* 2. Industrial Hydrogen Feedstock */}
-            <section id="production" className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
-                <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
-                        <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
-                                <img
-                                    src="/application/Industrial%20Hydrogen%20Feedstock.png"
-                                    alt="Industrial Feedstock"
-                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                        </div>
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
-                                    <Factory className="w-4 h-4" /> Core Input
-                                </span>
-                            </div>
-                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary leading-tight">Industrial Hydrogen <span className="text-gradient-green-glow">Feedstock</span></h2>
-                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
-                                Hydrogen is a core input for multiple industrial processes. Replacing fossil-derived hydrogen requires a solution that can operate continuously and at competitive cost.
-                            </p>
-                            <h4 className="font-bold text-gray-900 mb-4 text-[length:var(--font-body)]">Applicable use cases:</h4>
-                            <ul className="space-y-4 mb-8">
-                                {[
-                                    "Chemical and petrochemical feedstock",
-                                    "Process hydrogen for industrial manufacturing",
-                                    "Replacement of captive grey hydrogen systems"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex gap-4 p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-brand-primary/30 transition-colors">
-                                        <div className="mt-1 bg-brand-primary/10 p-1 rounded-full h-fit">
-                                            <CheckCircle className="w-4 h-4 text-brand-primary" />
-                                        </div>
-                                        <span className="text-gray-700 font-medium">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="p-4 bg-white rounded-lg border-l-4 border-brand-primary shadow-sm">
-                                <p className="text-brand-primary font-medium italic">
-                                    Lower energy intensity directly improves the feasibility of transitioning to clean hydrogen without disrupting operations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </SectionWrapper>
-            </section>
-
-            {/* 3. Green Ammonia */}
-            <section id="ammonia" className="py-12 md:py-20 bg-white">
-                <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-12 items-center">
-                        <div className="flex-1 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-                                <img
-                                    src="/application/Green%20Ammonia.jpg"
-                                    alt="Green Ammonia"
-                                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                        </div>
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
-                                    <Leaf className="w-4 h-4" /> Fertilizer & Energy Export
-                                </span>
-                            </div>
-                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-gray-900">Green <span className="text-gradient-green-glow">Ammonia</span></h2>
-                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
-                                Ammonia is one of the largest existing sinks for hydrogen and a cornerstone of both fertilizer production and emerging energy-export strategies.
-                            </p>
-                            <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-brand-primary/10 mb-6 hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
-                                <h4 className="font-bold text-gray-900 mb-6 text-[length:var(--font-body)] border-b border-gray-100 pb-2">Platform Capabilities:</h4>
-                                <ul className="space-y-4">
-                                    <li className="flex items-center gap-3 text-gray-700 font-medium">
-                                        <div className="p-1.5 bg-brand-primary/10 rounded-full text-brand-primary">
-                                            <Zap className="w-4 h-4" />
-                                        </div>
-                                        Cost-competitive hydrogen input
-                                    </li>
-                                    <li className="flex items-center gap-3 text-gray-700 font-medium">
-                                        <div className="p-1.5 bg-brand-primary/10 rounded-full text-brand-primary">
-                                            <Zap className="w-4 h-4" />
-                                        </div>
-                                        Stable, continuous operation required for synthesis loops
-                                    </li>
-                                    <li className="flex items-center gap-3 text-gray-700 font-medium">
-                                        <div className="p-1.5 bg-brand-primary/10 rounded-full text-brand-primary">
-                                            <Zap className="w-4 h-4" />
-                                        </div>
-                                        Integration with large-scale facilities
-                                    </li>
-                                </ul>
-                            </div>
-                            <p className="text-gray-500 text-sm italic border-t border-gray-100 pt-4">
-                                particularly relevant for export-oriented projects and public-sector infrastructure.
-                            </p>
-                        </div>
-                    </div>
-                </SectionWrapper>
-            </section>
-
-            {/* 4. Steel and Refining */}
-            <section className="py-24 bg-brand-light border-y border-brand-primary/5">
-                <SectionWrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Steel */}
-                        <div className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-primary/5 hover:shadow-lg transition-all duration-500 group">
-                            <div className="h-[300px] overflow-hidden relative">
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img src="/application/Steel%20and%20Metals%20Processing.webp" alt="Steel" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
-                            </div>
-                            <div className="p-8 flex flex-col flex-1">
-                                <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4">Steel and Metals Processing</h3>
-                                <p className="text-gray-600 mb-6 flex-1 text-[length:var(--font-body)]">
-                                    Steelmaking is challenging to decarbonize due to high energy demand. Hydrogen applications include direct reduction, fuel substitution, and metallurgical integration.
-                                </p>
-                                <div className="mt-auto p-4 bg-brand-primary/5 rounded-xl border border-brand-primary/10">
-                                    <p className="text-brand-primary font-medium text-sm">Modular nature supports phased adoption without full plant redesign.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Refining */}
-                        <div className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-primary/5 hover:shadow-lg transition-all duration-500 group">
-                            <div className="h-[300px] overflow-hidden relative">
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
-                                <img src="/application/Refining%20and%20Petrochemicals.webp" alt="Refining" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
-                            </div>
-                            <div className="p-8 flex flex-col flex-1">
-                                <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4">Refining and Petrochemicals</h3>
-                                <p className="text-gray-600 mb-6 flex-1 text-[length:var(--font-body)]">
-                                    Refineries are natural early adopters. Deployment models include on-site generation, partial replacement of grey hydrogen, and renewable integration.
-                                </p>
-                                <div className="mt-auto p-4 bg-brand-primary/5 rounded-xl border border-brand-primary/10">
-                                    <p className="text-brand-primary font-medium text-sm">Designed to align with refinery uptime, reliability, and safety requirements.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </SectionWrapper>
-            </section>
-
-            {/* 5. Deployment Models */}
-            <section id="distributed" className="py-[var(--spacing-section)] bg-white">
-                <SectionWrapper>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
-                        <div>
-                            <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">On-Site and <span className="text-gradient-green-glow">Distributed Hydrogen</span></h2>
-                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
-                                For many industrial users, hydrogen transport, storage, and compression add significant cost and complexity.
-                            </p>
-                            <ul className="space-y-4">
-                                <li className="flex gap-4 p-5 bg-white rounded-xl border border-brand-primary/10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
-                                    <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary h-fit">
-                                        <MapPin className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-gray-800 font-medium self-center">On-site hydrogen generation</span>
+            {/* 3. Industrial Hydrogen Feedstock */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/Hydrogen is a core input for multiple industrial processes..jpg"
+                imageAlt="Industrial Feedstock"
+                subtitle="Core Input"
+                title="Industrial Hydrogen Feedstock"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Hydrogen is a core input for multiple industrial processes. Replacing fossil-derived hydrogen requires a solution that can operate continuously and at competitive cost.
+                        </p>
+                        <h4 className="font-bold text-gray-900 mb-4">Applicable use cases:</h4>
+                        <ul className="space-y-4 mb-8">
+                            {[
+                                "Chemical and petrochemical feedstock",
+                                "Process hydrogen for industrial manufacturing",
+                                "Replacement of captive grey hydrogen systems"
+                            ].map((item, i) => (
+                                <li key={i} className="flex gap-4 items-center">
+                                    <CheckCircle className="w-5 h-5 text-brand-primary shrink-0" />
+                                    <span className="text-gray-700 font-medium">{item}</span>
                                 </li>
-                                <li className="flex gap-4 p-5 bg-white rounded-xl border border-brand-primary/10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
-                                    <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary h-fit">
-                                        <Truck className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-gray-800 font-medium self-center">Reduced logistics and handling requirements</span>
+                            ))}
+                        </ul>
+                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4">
+                            Lower energy intensity directly improves the feasibility of transitioning to clean hydrogen.
+                        </p>
+                    </>
+                }
+            />
+
+            {/* 4. Green Ammonia */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Green%20Ammonia.jpg"
+                imageAlt="Green Ammonia"
+                subtitle="Fertilizer & Energy"
+                title="Green Ammonia"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Ammonia is one of the largest existing sinks for hydrogen and a cornerstone of both fertilizer production and emerging energy-export strategies.
+                        </p>
+                        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-6">
+                            <h4 className="font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Platform Capabilities:</h4>
+                            <ul className="space-y-3">
+                                <li className="flex items-center gap-3 text-gray-700 font-medium">
+                                    <Zap className="w-4 h-4 text-brand-primary" /> Cost-competitive hydrogen input
                                 </li>
-                                <li className="flex gap-4 p-5 bg-white rounded-xl border border-brand-primary/10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_4px_20px_rgba(0,213,99,0.08)] transition-all">
-                                    <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary h-fit">
-                                        <Zap className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-gray-800 font-medium self-center">Improved energy security for industrial clusters</span>
+                                <li className="flex items-center gap-3 text-gray-700 font-medium">
+                                    <Zap className="w-4 h-4 text-brand-primary" /> Stable, continuous operation
+                                </li>
+                                <li className="flex items-center gap-3 text-gray-700 font-medium">
+                                    <Zap className="w-4 h-4 text-brand-primary" /> Integration with large-scale facilities
                                 </li>
                             </ul>
                         </div>
-                        <div className="rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
-                            <img src="/application/On-Site%20and%20Distributed%20Hydrogen.jpg" alt="On Site Hydrogen" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
-                        </div>
-                    </div>
+                    </>
+                }
+            />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <div className="md:order-2">
-                            <div className="flex items-center gap-2 mb-4">
-                                <span className="bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider flex items-center gap-2">
-                                    <Beaker className="w-4 h-4" /> Energy Conversion
-                                </span>
-                            </div>
-                            <h2 id="integration" className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Energy <span className="text-gradient-green-glow">Storage</span> and Conversion</h2>
-                            <p className="text-[length:var(--font-intro)] text-gray-600 mb-8 leading-relaxed font-light">
-                                Beyond direct consumption, hydrogen plays a growing role in energy storage. Relevant pathways include H2-to-ammonia, combustion integration, and hybrid systems.
-                            </p>
-                            <div className="p-6 bg-brand-primary/5 border-l-4 border-brand-primary rounded-r-xl">
-                                <p className="text-gray-700 italic font-medium">The platform is designed to remain compatible with downstream conversion technologies.</p>
-                            </div>
+            {/* 5. Steel and Metals Processing */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/Steel%20and%20Metals%20Processing.webp"
+                imageAlt="Steel Processing"
+                subtitle="Heavy Industry"
+                title="Steel and Metals Processing"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Steelmaking is challenging to decarbonize due to high energy demand. Hydrogen applications include direct reduction, fuel substitution, and metallurgical integration.
+                        </p>
+                        <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-brand-primary">
+                            <p className="text-brand-primary font-medium text-sm">Modular nature supports phased adoption without full plant redesign.</p>
                         </div>
-                        <div className="md:order-1 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
-                            <img src="/application/Energy%20Storage%20and%20Conversion%20Pathways.jpg" alt="Energy Storage" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
+                    </>
+                }
+            />
+
+            {/* 6. Refining and Petrochemicals */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Refining%20and%20Petrochemicals.webp"
+                imageAlt="Refining"
+                subtitle="Early Adopters"
+                title="Refining and Petrochemicals"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Refineries are natural early adopters. Deployment models include on-site generation, partial replacement of grey hydrogen, and renewable integration.
+                        </p>
+                        <div className="p-4 bg-white rounded-lg border-l-4 border-brand-primary shadow-sm">
+                            <p className="text-brand-primary font-medium text-sm">Designed to align with refinery uptime, reliability, and safety requirements.</p>
                         </div>
-                    </div>
-                </SectionWrapper>
-            </section>
+                    </>
+                }
+            />
 
-            {/* 6. Geographic Strategy */}
-            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
-                <SectionWrapper>
-                    <div className="text-center mb-16">
-                        <h2 className="text-[length:var(--font-h1)] font-bold mb-4 text-brand-secondary">Deployment <span className="text-gradient-green-glow">Strategy</span></h2>
-                        <p className="text-[length:var(--font-intro)] text-gray-500">From Local Impact to Global Scale</p>
-                    </div>
+            {/* 7. On-Site and Distributed Hydrogen */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/On-Site%20and%20Distributed%20Hydrogen.jpg"
+                imageAlt="Distributed Hydrogen"
+                subtitle="Logistics"
+                title="On-Site and Distributed Hydrogen"
+                content={
+                    <>
+                        <p className="mb-6">
+                            For many industrial users, hydrogen transport, storage, and compression add significant cost and complexity.
+                        </p>
+                        <ul className="space-y-4">
+                            <li className="flex gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <MapPin className="w-6 h-6 text-brand-primary shrink-0" />
+                                <span className="text-gray-800 font-medium self-center">On-site hydrogen generation</span>
+                            </li>
+                            <li className="flex gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <Truck className="w-6 h-6 text-brand-primary shrink-0" />
+                                <span className="text-gray-800 font-medium self-center">Reduced logistics requirements</span>
+                            </li>
+                            <li className="flex gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                <Zap className="w-6 h-6 text-brand-primary shrink-0" />
+                                <span className="text-gray-800 font-medium self-center">Improved energy security</span>
+                            </li>
+                        </ul>
+                    </>
+                }
+            />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                        {/* India First */}
-                        <div className="bg-white rounded-3xl p-8 border border-brand-primary/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_40px_rgba(0,213,99,0.1)] transition-all duration-300">
-                            <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
-                                <img src="/application/India-First%20Industrial%20Deployment.jpg" alt="India Deployment" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
-                            </div>
-                            <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
-                                India-First Deployment
-                            </h3>
-                            <p className="text-gray-600 mb-6 text-[length:var(--font-body)]">
-                                India presents a unique combination of large hydrogen demand, cost sensitivity, and strong policy momentum.
-                            </p>
-                            <div className="bg-brand-primary/5 p-4 rounded-xl">
-                                <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Priority Sectors:</h4>
-                                <ul className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Fertilizer/Ammonia</span>
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Public Refining</span>
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Steel</span>
-                                </ul>
-                            </div>
+            {/* 8. Energy Storage and Conversion */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Energy%20Storage%20and%20Conversion%20Pathways.jpg"
+                imageAlt="Energy Storage"
+                subtitle="Integration"
+                title="Energy Storage and Conversion"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Beyond direct consumption, hydrogen plays a growing role in energy storage. Relevant pathways include H2-to-ammonia, combustion integration, and hybrid systems.
+                        </p>
+                        <p className="text-gray-700 italic font-medium border-l-4 border-brand-primary pl-4">
+                            The platform is designed to remain compatible with downstream conversion technologies.
+                        </p>
+                    </>
+                }
+            />
+
+            {/* 9. India-First Deployment */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/India-First%20Industrial%20Deployment.jpg"
+                imageAlt="India Deployment"
+                subtitle="Strategy"
+                title="India-First Deployment"
+                content={
+                    <>
+                        <p className="mb-6">
+                            India presents a unique combination of large hydrogen demand, cost sensitivity, and strong policy momentum.
+                        </p>
+                        <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Priority Sectors:</h4>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Fertilizer/Ammonia</span>
+                            <span className="px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Public Refining</span>
+                            <span className="px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Steel</span>
                         </div>
+                    </>
+                }
+            />
 
-                        {/* Global Scale */}
-                        <div className="bg-white rounded-3xl p-8 border border-brand-primary/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_40px_rgba(0,213,99,0.1)] transition-all duration-300">
-                            <div className="h-[250px] rounded-2xl overflow-hidden mb-8 shadow-md">
-                                <img src="/application/Globally%20Scalable%20Use%20Cases.png" alt="Global Scale" className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" />
-                            </div>
-                            <h3 className="text-[length:var(--font-h2)] font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <Globe className="w-8 h-8 text-brand-primary" />
-                                Globally Scalable
-                            </h3>
-                            <p className="text-gray-600 mb-6 text-[length:var(--font-body)]">
-                                The same application logic applies globally where industries face rising pressure to decarbonize without eroding margins.
-                            </p>
-                            <div className="bg-brand-primary/5 p-4 rounded-xl">
-                                <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Relevant Markets:</h4>
-                                <ul className="flex flex-wrap gap-2">
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Export Hubs</span>
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Decarbonization Zones</span>
-                                    <span className="px-3 py-1 bg-white border border-brand-primary/10 rounded-lg text-sm text-gray-700 font-medium shadow-sm">MFG Clusters</span>
-                                </ul>
-                            </div>
+            {/* 10. Globally Scalable */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Globally%20Scalable%20Use%20Cases.png"
+                imageAlt="Global Scale"
+                subtitle="Global Reach"
+                title="Globally Scalable Use Cases"
+                content={
+                    <>
+                        <p className="mb-6">
+                            The same application logic applies globally where industries face rising pressure to decarbonize without eroding margins.
+                        </p>
+                        <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Relevant Markets:</h4>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Export Hubs</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Decarbonization Zones</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">MFG Clusters</span>
                         </div>
-                    </div>
-                </SectionWrapper>
-            </section>
+                    </>
+                }
+            />
 
-            {/* 7. Strategic Deployment */}
+            {/* 11. Strategic Deployment (Feature Section) */}
             <section className="py-[var(--spacing-section)] bg-gray-900 text-white text-center">
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto">
@@ -350,45 +279,21 @@ export default function ApplicationsPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 8. CTA Section */}
-            <section className="py-[var(--spacing-section)] bg-white">
-                <SectionWrapper>
-                    <div className="relative rounded-3xl overflow-hidden bg-brand-primary shadow-[0_0_40px_rgba(0,213,99,0.4)] border border-brand-primary/30 text-center py-20 px-6 md:px-12 group">
-                        {/* Background Gradients */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90 z-0" />
-                        <div className="absolute inset-0 bg-[url('/application/hero%20section.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay z-0" />
-
-                        <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Engage on Applications</h2>
-                            <p className="text-white/95 text-[length:var(--font-intro)] mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                                The platform is intended for partners seeking deployable hydrogen solutions, not conceptual pilots.
-                            </p>
-
-                            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-                                <Link href="/contact" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-white text-brand-primary font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px]">
-                                        Discuss Application Fit
-                                    </button>
-                                </Link>
-                                <Link href="/partnership" className="w-full md:w-auto">
-                                    <button className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:scale-105 transition-all text-xl w-full md:w-auto min-w-[200px] md:min-w-[260px] flex items-center justify-center gap-2">
-                                        Explore Pilot Deployment <ArrowRight className="w-6 h-6" />
-                                    </button>
-                                </Link>
-                            </div>
-
-                            <div className="mt-16 flex flex-wrap justify-center gap-6 text-sm font-semibold text-white/90 uppercase tracking-wider">
-                                <span>Application-specific feasibility</span>
-                                <span className="opacity-50">•</span>
-                                <span>Pilot projects</span>
-                                <span className="opacity-50">•</span>
-                                <span>Public-sector partnerships</span>
-                            </div>
-                        </div>
-                    </div>
+            {/* 12. CTA Section */}
+            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+                <SectionWrapper className="relative z-10 text-center">
+                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Is the market ready?</h2>
+                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                        We don't build for hypothetical futures. We build for immediate industrial demand. See the market landscape.
+                    </p>
+                    <Link href="/market">
+                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                            Understand the Market
+                        </Button>
+                    </Link>
                 </SectionWrapper>
             </section>
-
         </main>
     );
 }

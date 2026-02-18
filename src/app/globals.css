@@ -32,7 +32,7 @@ html {
   --accent-hover: #00B353;
 
   /* Strict Spacing System */
-  --spacing-section: 72px;
+  --spacing-section: clamp(48px, 5vw, 96px);
   /* Fixed section spacing */
   --spacing-element: 24px;
   /* Fixed element spacing */
