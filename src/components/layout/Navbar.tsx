@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Users, MessageSquare, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Users, MessageSquare, Phone, Building2 } from "lucide-react";
 import clsx from "clsx";
 import SectionWrapper from "../ui/SectionWrapper";
 import { menuSlide } from "@/lib/motion";
@@ -25,7 +25,8 @@ const NAV_LINKS: NavLink[] = [
         name: "Company",
         href: "/company",
         children: [
-            { name: "About Us", href: "/company", icon: Users },
+            { name: "About Us", href: "/company", icon: Building2 },
+            { name: "Our Team", href: "/company/team", icon: Users },
             { name: "Blog", href: "/company/blog", icon: MessageSquare },
             { name: "Contact", href: "/contact", icon: Phone },
         ],
@@ -40,9 +41,10 @@ export default function Navbar() {
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
     const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Force dark text/white bg on blog pages
+    // Force dark text/white bg on blog pages and team page (due to light hero image)
     const isBlogPage = pathname?.includes("/company/blog");
-    const useDarkText = isScrolled || isBlogPage;
+    const isTeamPage = pathname?.includes("/company/team");
+    const useDarkText = isScrolled || isBlogPage || isTeamPage;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
