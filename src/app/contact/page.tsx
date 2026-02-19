@@ -12,7 +12,7 @@ export default function ContactPage() {
     return (
         <main className="bg-white">
             {/* 1. Hero Section */}
-            <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
+            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-[url('/contact/hero%20section.jpg')] bg-cover bg-center opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
