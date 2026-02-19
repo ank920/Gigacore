@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
@@ -115,18 +115,10 @@ export default function TeamPage() {
     return (
         <main className="bg-white min-h-screen">
             {/* 1. Hero Section - Premium Image with Bottom Text */}
-            <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-brand-dark">
-                {/* Background Image */}
-                <div className="absolute inset-0 top-0">
-                    <Image
-                        src="/our%20team/our%20team%20hero%20section.jpg"
-                        alt="GigaCore Team"
-                        fill
-                        className="object-cover object-top"
-                        priority
-                    />
-                    {/* Gradient Overlay for Text Visibility */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-90" />
+            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
+                <div className="absolute inset-0">
+                    <div className="absolute inset-0 bg-[url('/our%20team/our%20team%20hero%20section.jpg')] bg-cover bg-top opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
                 </div>
 
                 {/* Text Content positioned at center */}
@@ -135,19 +127,33 @@ export default function TeamPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="max-w-4xl mx-auto"
+                        className="max-w-4xl mx-auto md:mt-32"
                     >
                         <h1 className="text-[length:var(--font-hero)] font-bold text-white mb-6 tracking-tight leading-[1.1] drop-shadow-md">
-                            Our <span className="text-brand-primary">Team</span>
+                            Our <span className="text-gradient-green-glow">Team</span>
                         </h1>
-                        <p className="text-[length:var(--font-intro)] text-gray-200 leading-relaxed font-light drop-shadow-sm max-w-3xl mx-auto">
-                            The team consists of 14 people, the main specialists are highly qualified engineers and scientists who work on a permanent basis.
-                        </p>
                     </motion.div>
                 </SectionWrapper>
             </section>
 
-            {/* 2. Team Grid Section */}
+            {/* 2. Intro Section */}
+            <section className="py-[var(--spacing-section)] bg-white text-center">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="max-w-4xl mx-auto flex flex-col items-center"
+                    >
+                        <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-normal leading-relaxed text-gray-800 mb-8 max-w-3xl">
+                            The team consists of 14 people, the main specialists are highly qualified engineers and scientists who work on a permanent basis.
+                        </motion.h2>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* 3. Team Grid Section */}
             <section className="py-[var(--spacing-section)] bg-gray-50/50">
                 <SectionWrapper>
                     <motion.div
@@ -210,7 +216,7 @@ export default function TeamPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 3. CTA Section */}
+            {/* 4. CTA Section */}
             <section className="relative py-20 bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
