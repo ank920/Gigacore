@@ -4,6 +4,7 @@ import Credibility from "@/components/home/Credibility";
 import Differentiators from "@/components/home/Differentiators";
 import PlatformOverview from "@/components/home/PlatformOverview";
 import Economics from "@/components/home/Economics";
+import InvestmentThesis from "@/components/home/InvestmentThesis";
 import Applications from "@/components/home/Applications";
 import Partnerships from "@/components/home/Partnerships";
 import HomeBlogSection from "@/components/home/HomeBlogSection";
@@ -19,6 +20,7 @@ export default function Home() {
             <Differentiators />
             <Applications />
             <Economics />
+            <InvestmentThesis />
             <Partnerships />
             <HomeBlogSection />
             <CallToAction />

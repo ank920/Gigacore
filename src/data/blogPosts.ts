@@ -314,17 +314,17 @@ export const blogPosts: BlogPost[] = [
         ],
     },
     {
-        slug: "giga-cora-energy-approach-to-scalable-hydrogen",
-        title: "Giga Cora Energy's Approach to Scalable Hydrogen",
+        slug: "gigacore-approach-to-scalable-hydrogen",
+        title: "Gigacore's Approach to Scalable Hydrogen",
         excerpt:
-            "An inside look at how Giga Cora Energy is developing hydrogen production systems designed from the ground up for industrial scale and economic viability.",
+            "An inside look at how Gigacore is developing hydrogen production systems designed from the ground up for industrial scale and economic viability.",
         category: "Company News",
         date: "September 15, 2025",
-        image: "/blog/Giga Cora Energy's Approach to Scalable Hydrogen.png",
+        image: "/blog/Gigacore's Approach to Scalable Hydrogen.png",
         content: [
             {
                 type: "paragraph",
-                text: "At Giga Cora Energy, our approach to hydrogen production is fundamentally different from incremental improvements to existing technologies. We started with the question: what would a hydrogen production system look like if it were designed from scratch for industrial scale?",
+                text: "At Gigacore, our approach to hydrogen production is fundamentally different from incremental improvements to existing technologies. We started with the question: what would a hydrogen production system look like if it were designed from scratch for industrial scale?",
             },
             {
                 type: "heading",

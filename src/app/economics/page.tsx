@@ -110,7 +110,7 @@ export default function EconomicsPage() {
                 content={
                     <>
                         <p>
-                            Giga Cora Energy addresses the root cause of high LCOH by fundamentally reducing the energy required to split water.
+                            Gigacore addresses the root cause of high LCOH by fundamentally reducing the energy required to split water.
                         </p>
                         <p className="border-l-4 border-brand-primary pl-4 py-2 font-medium text-brand-secondary">
                             By bypassing the thermodynamic barriers of conventional electrolysis, our platform targets a production consumption of <strong>&lt; 35 kWh/kg</strong>.

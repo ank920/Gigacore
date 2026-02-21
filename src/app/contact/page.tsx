@@ -56,8 +56,8 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Email Us</p>
-                                <a href="mailto:info@gigacora.energy" className="text-xl font-bold text-gray-900 hover:text-brand-primary transition-colors">
-                                    info@gigacora.energy
+                                <a href="mailto:info@gigacore.energy" className="text-xl font-bold text-gray-900 hover:text-brand-primary transition-colors">
+                                    info@gigacore.energy
                                 </a>
                             </div>
                         </div>
@@ -224,7 +224,7 @@ export default function ContactPage() {
                     <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                         If you are evaluating hydrogen solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
                     </p>
-                    <Link href="mailto:info@gigacora.energy?subject=Request Executive Overview">
+                    <Link href="mailto:info@gigacore.energy?subject=Request Executive Overview">
                         <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
                             Request Executive Overview
                         </Button>

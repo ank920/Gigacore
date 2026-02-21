@@ -32,7 +32,7 @@ html {
   --accent-hover: #00B353;
 
   /* Strict Spacing System */
-  --spacing-section: clamp(48px, 5vw, 96px);
+  --spacing-section: clamp(16px, 2vw, 32px);
   /* Fixed section spacing */
   --spacing-element: 24px;
   /* Fixed element spacing */
@@ -73,8 +73,8 @@ h5,
 h6 {
   color: var(--text-primary);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 h1 {

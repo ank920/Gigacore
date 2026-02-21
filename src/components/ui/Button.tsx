@@ -20,23 +20,39 @@ const Button: React.FC<ButtonProps> = ({
     className,
     ...props
 }) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    const baseStyles = "group relative inline-flex items-center justify-center rounded-full font-bold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden z-20";
 
     const variants = {
-        // Bloom Energy green theme
-        primary: "bg-gradient-to-r from-brand-primary to-brand-accent text-white shadow-[0_0_20px_rgba(0,213,99,0.4)] hover:shadow-[0_0_30px_rgba(0,213,99,0.6)] hover:scale-105 border border-transparent",
-        secondary: "bg-brand-secondary text-white hover:bg-brand-green-800 hover:shadow-lg border border-transparent",
-        outline: "bg-transparent text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white",
-        ghost: "bg-transparent text-brand-secondary hover:bg-brand-green-50 hover:text-brand-primary",
+        primary: "bg-brand-primary text-brand-secondary border border-brand-primary hover:text-brand-primary shadow-[0_0_20px_rgba(0,213,99,0.4)]",
+        secondary: "bg-brand-secondary text-white border border-brand-secondary hover:text-brand-secondary hover:border-transparent",
+        outline: "bg-transparent text-white border-2 border-white hover:text-brand-primary hover:border-transparent",
+        ghost: "bg-transparent text-brand-secondary hover:text-brand-primary",
+    };
+
+    const slideBg = {
+        primary: "bg-white", // White slide looks great sliding over bright green
+        secondary: "bg-brand-primary",
+        outline: "bg-white", // White slide looks great over transparent
+        ghost: "bg-brand-green-50",
     };
 
     const sizes = {
         sm: "px-5 py-2 text-sm",
         md: "px-6 py-3 text-base",
-        lg: "px-10 py-4 text-lg", // Bloom Energy pattern: generous padding
+        lg: "px-10 py-4 text-lg",
     };
 
     const classes = clsx(baseStyles, variants[variant], sizes[size], className);
+
+    const SlideBackground = () => (
+        <span
+            className={clsx(
+                "absolute inset-0 -z-10 -translate-x-[101%] transition-transform duration-300 ease-out group-hover:translate-x-0 group-active:translate-x-0",
+                slideBg[variant as keyof typeof slideBg]
+            )}
+            aria-hidden="true"
+        />
+    );
 
     if (href) {
         return (
@@ -47,7 +63,8 @@ const Button: React.FC<ButtonProps> = ({
                     className={classes}
                     {...(props as any)}
                 >
-                    {children}
+                    <SlideBackground />
+                    <span className="relative z-10 flex items-center gap-2">{children}</span>
                 </motion.a>
             </Link>
         );
@@ -60,7 +77,8 @@ const Button: React.FC<ButtonProps> = ({
             className={classes}
             {...props}
         >
-            {children}
+            <SlideBackground />
+            <span className="relative z-10 flex items-center gap-2">{children}</span>
         </motion.button>
     );
 };
