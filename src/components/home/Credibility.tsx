@@ -8,13 +8,21 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 export default function Credibility() {
     return (
         <section className="py-[var(--spacing-section)] bg-brand-light relative border-b border-gray-100">
-            <SectionWrapper className="max-w-7xl relative z-10">
+            <SectionWrapper className="relative z-10">
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
+                    <div className="mb-12 text-left max-w-3xl">
+                        <h2 className="text-[length:var(--font-h2)] font-bold text-brand-secondary tracking-tight mb-4">
+                            Industry Validated
+                        </h2>
+                        <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed">
+                            Trusted by industry leaders for mission-critical hydrogen deployment.
+                        </p>
+                    </div>
                     <div className="relative w-full overflow-hidden">
                         <div className="flex w-max animate-[wave-scroll_40s_linear_infinite] hover:[animation-play-state:paused]">
                             {/* Duplicate items for seamless infinite scroll (2 sets) */}
@@ -84,13 +92,6 @@ export default function Credibility() {
                         </div>
                     </div>
                 </motion.div>
-
-                {/* Optional Text Overlay or Context if needed, but keeping it visual as requested */}
-                <div className="mt-12 text-center">
-                    <p className="text-[length:var(--font-intro)] text-brand-secondary font-medium">
-                        Trusted by industry leaders for mission-critical hydrogen deployment.
-                    </p>
-                </div>
             </SectionWrapper>
         </section>
     );

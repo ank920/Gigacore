@@ -9,7 +9,7 @@ interface SectionWrapperProps {
 
 export default function SectionWrapper({ children, className, id }: SectionWrapperProps) {
     return (
-        <div id={id} className={clsx("w-full px-6 md:px-10 lg:px-16 mx-auto max-w-[1600px]", className)}>
+        <div id={id} className={clsx("w-full px-6 md:px-10 lg:px-16 mx-auto max-w-[1440px]", className)}>
             {children}
         </div>
     );

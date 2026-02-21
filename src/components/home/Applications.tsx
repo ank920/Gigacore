@@ -38,7 +38,7 @@ export default function Applications() {
     return (
         <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
             <SectionWrapper>
-                <div className="max-w-4xl mb-16">
+                <div className="max-w-5xl mb-10">
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function Applications() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-brand-gray-600 font-light max-w-2xl"
+                        className="text-xl text-brand-gray-600 font-light max-w-2xl leading-[1.75]"
                     >
                         Gigacore systems are structured for massive-scale integration across critical industrial sectors.
                     </motion.p>

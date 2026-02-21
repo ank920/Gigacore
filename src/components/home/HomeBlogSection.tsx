@@ -13,7 +13,7 @@ export default function HomeBlogSection() {
     const latestPosts = blogPosts.slice(0, 3);
 
     return (
-        <section className="py-24 lg:py-32 bg-white overflow-hidden">
+        <section className="py-[var(--spacing-section)] bg-white overflow-hidden">
             <SectionWrapper>
                 <motion.div
                     variants={staggerContainer}
@@ -22,7 +22,7 @@ export default function HomeBlogSection() {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     {/* Header */}
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <motion.div variants={fadeUp} className="max-w-2xl">
                             <span className="text-sm font-bold tracking-widest text-brand-primary uppercase mb-3 block">
                                 Blog

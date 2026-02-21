@@ -16,8 +16,8 @@ const PLATFORM_FEATURES = [
 export default function PlatformOverview() {
     return (
         <section className="py-[var(--spacing-section)] bg-brand-light border-b border-gray-100 overflow-hidden">
-            <SectionWrapper className="max-w-7xl">
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <SectionWrapper>
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
 
                     {/* Content Side */}
                     <motion.div
@@ -32,17 +32,17 @@ export default function PlatformOverview() {
                             <span className="text-brand-primary">Hydrogen Generation</span>
                         </motion.h2>
 
-                        <motion.p variants={fadeUp} className="text-brand-gray-600 text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+                        <motion.p variants={fadeUp} className="text-brand-gray-600 text-[15px] sm:text-[16px] leading-relaxed mb-10 max-w-xl">
                             Gigacore’s platform uses controlled cold plasma excitation to activate water molecules under engineered electromagnetic conditions.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="space-y-6">
                             <h3 className="text-sm font-bold text-brand-secondary uppercase tracking-widest mb-4">The system architecture:</h3>
-                            <ul className="space-y-4">
+                            <ul className="space-y-8">
                                 {PLATFORM_FEATURES.map((item, idx) => (
                                     <li key={idx} className="flex items-center gap-4 text-brand-secondary border-b border-gray-200 pb-2 last:border-0">
                                         <span className="h-0.5 w-3 bg-brand-primary" /> {/* Simple industrial dash */}
-                                        <span className="font-medium text-lg text-brand-secondary">{item}</span>
+                                        <span className="font-medium text-[15px] sm:text-[16px] text-brand-secondary leading-relaxed">{item}</span>
                                     </li>
                                 ))}
                             </ul>

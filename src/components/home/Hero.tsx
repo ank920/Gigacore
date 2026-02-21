@@ -1,34 +1,16 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import SectionWrapper from "../ui/SectionWrapper";
-import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "../ui/Button";
+import { fadeUp, staggerContainer } from "@/lib/motion";
 import * as THREE from "three";
 // @ts-ignore
 import CELLS from "vanta/dist/vanta.cells.min";
 
-const rotatingTexts = [
-    "Deployment.",
-    "Reliability.",
-    "Scale.",
-    "Uptime.",
-    "Integration."
-];
-
 export default function Hero() {
     const vantaRef = useRef(null);
     const [vantaEffect, setVantaEffect] = useState(null);
-    const [currentTextIndex, setCurrentTextIndex] = useState(0);
-
-    // Rotating text effect
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTextIndex((prev) => (prev + 1) % rotatingTexts.length);
-        }, 3500); // 3.5 second interval
-
-        return () => clearInterval(interval);
-    }, []);
 
     useEffect(() => {
         const isMobile = window.innerWidth < 768;
@@ -58,7 +40,7 @@ export default function Hero() {
     }, [vantaEffect]);
 
     return (
-        <section className="relative h-screen min-h-[800px] flex items-center overflow-hidden bg-brand-secondary text-white">
+        <section className="relative h-[100svh] min-h-[600px] md:min-h-[800px] flex items-center overflow-hidden bg-brand-secondary text-white">
             {/* Background Vanta Effect */}
             <div ref={vantaRef} className="absolute inset-0 z-0 opacity-100" />
 
@@ -70,48 +52,45 @@ export default function Hero() {
                     variants={staggerContainer}
                     initial="hidden"
                     animate="visible"
-                    className="max-w-4xl mr-auto flex flex-col items-start text-left px-4 md:px-0"
+                    className="max-w-5xl flex flex-col items-start text-left px-4 md:px-0 pt-16 md:pt-20"
                 >
+                    <motion.div variants={fadeUp} className="mb-6 md:mb-8">
+                        <span className="text-brand-primary text-xs md:text-base font-bold tracking-widest uppercase">
+                            Cold Plasma Hydrogen Production
+                        </span>
+                    </motion.div>
+
                     <motion.h1
                         variants={fadeUp}
-                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
+                        className="text-[8.5vw] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-tight mb-8 md:mb-10 leading-[1.1] md:leading-[1.15] text-white uppercase break-words hyphens-auto"
                     >
-                        Industrial Hydrogen.<br />
-                        <span className="text-gray-300 relative inline-block w-full align-top">
-                            Engineered for{" "}
-                            <span className="relative inline-block align-top min-w-[120px]">
-                                {/* Spacer to prevent layout shifts */}
-                                <span className="invisible">Reliability.</span>
-                                <AnimatePresence mode="wait">
-                                    <motion.span
-                                        key={currentTextIndex}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -20 }}
-                                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                                        className="absolute left-0 top-0 whitespace-nowrap"
-                                    >
-                                        {rotatingTexts[currentTextIndex]}
-                                    </motion.span>
-                                </AnimatePresence>
-                            </span>
-                        </span>
+                        Breakthrough<br />
+                        Technology<br />
+                        Reshaping<br />
+                        <span className="text-brand-primary">Decarbonization</span>
                     </motion.h1>
 
-                    <motion.p
+                    <motion.div
                         variants={fadeUp}
-                        className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-[600px] leading-relaxed font-light"
-                    >
-                        Cold plasma hydrogen systems designed for continuous operation, modular scale, and industrial integration.
-                    </motion.p>
+                        className="w-full max-w-[800px] h-2 md:h-4 bg-brand-primary mb-8 md:mb-8"
+                    />
 
-                    <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 w-full justify-start relative z-20">
-                        <Button href="/technology" variant="primary" size="lg" className="min-w-[200px] !bg-brand-primary !text-brand-secondary font-bold hover:!bg-white transition-colors border-none">
-                            Explore the Platform
-                        </Button>
-                        <Button href="/contact" variant="outline" size="lg" className="min-w-[200px] !border-white/30 !text-white hover:!bg-white hover:!text-brand-secondary !bg-transparent backdrop-blur-sm">
-                            Contact Us
-                        </Button>
+                    <motion.div variants={fadeUp} className="flex flex-col gap-4">
+                        <span className="text-gray-400 text-xs md:text-base font-medium uppercase tracking-widest max-w-[250px] md:max-w-none leading-relaxed">
+                            Institutional Investor Memorandum
+                        </span>
+                        <div className="text-gray-300 text-sm md:text-base flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-2 mb-4">
+                            <span>Series A: <strong className="text-white">$20M</strong></span>
+                            <span className="hidden sm:inline text-brand-primary/50 text-xl leading-none">•</span>
+                            <strong className="text-white">33% Pure Equity</strong>
+                            <span className="hidden sm:inline text-brand-primary/50 text-xl leading-none">•</span>
+                            <span>Post-Money: <strong className="text-white">$60.6M</strong></span>
+                        </div>
+                        <div className="mt-6 md:mt-8 w-full sm:w-auto">
+                            <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto min-w-[180px]">
+                                Contact Us
+                            </Button>
+                        </div>
                     </motion.div>
                 </motion.div>
             </SectionWrapper>

@@ -8,8 +8,8 @@ import Image from "next/image";
 export default function Economics() {
     return (
         <section className="py-[var(--spacing-section)] bg-brand-light border-b border-gray-100">
-            <SectionWrapper className="max-w-7xl">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            <SectionWrapper>
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
                     {/* Content Side */}
                     <motion.div
@@ -22,7 +22,7 @@ export default function Economics() {
                             Designed Around <br />
                             <span className="text-brand-primary">Energy Efficiency</span>
                         </h2>
-                        <p className="text-xl text-brand-gray-600 font-light leading-relaxed mb-10 max-w-xl">
+                        <p className="text-xl text-brand-gray-600 font-light leading-[1.75] mb-10 max-w-xl">
                             Hydrogen economics are fundamentally driven by electrical input per unit of output. Gigacore’s architecture prioritizes ionization efficiency to minimize operational expenditure.
                         </p>
 
@@ -45,7 +45,7 @@ export default function Economics() {
                                     <h3 className="text-xl font-bold text-brand-secondary mb-2">
                                         {item.title}
                                     </h3>
-                                    <p className="text-brand-gray-500 font-light leading-relaxed">
+                                    <p className="text-gray-600 leading-relaxed text-[15px] sm:text-[16px]">
                                         {item.desc}
                                     </p>
                                 </div>

@@ -24,7 +24,7 @@ export default function CompanyPage() {
                         transition={{ duration: 0.8 }}
                         className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-tight text-white"
                     >
-                        About <span className="text-gradient-green-glow">Giga Cora Energy</span>
+                        About <span className="text-gradient-green-glow">Gigacore</span>
                     </motion.h1>
                 </SectionWrapper>
             </section>
@@ -40,7 +40,7 @@ export default function CompanyPage() {
                         className="max-w-5xl mx-auto flex flex-col items-center"
                     >
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
-                            Giga Cora Energy is a climate-technology company focused on advancing next-generation hydrogen production systems designed for real-world industrial deployment.
+                            Gigacore is a climate-technology company focused on advancing next-generation hydrogen production systems designed for real-world industrial deployment.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
                             We address a fundamental challenge: how to produce clean hydrogen at the <span className="text-brand-primary font-bold">scale and cost required by industry</span>, without relying on incremental improvements to legacy technologies.
@@ -82,7 +82,7 @@ export default function CompanyPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Giga Cora Energy envisions a future where green hydrogen is not a niche solution, but a core industrial input. We see a world where energy infrastructure is decoupled from carbon intensity without compromising on reliability or economic output.
+                            Gigacore envisions a future where green hydrogen is not a niche solution, but a core industrial input. We see a world where energy infrastructure is decoupled from carbon intensity without compromising on reliability or economic output.
                         </p>
                         <ul className="space-y-3">
                             <li className="flex gap-3 items-center text-gray-700 font-medium">
@@ -102,14 +102,14 @@ export default function CompanyPage() {
                 }
             />
 
-            {/* 5. Why Giga Cora Exists */}
+            {/* 5. Why Gigacore Exists */}
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/company/Why%20Giga%20Cora%20Energy%20Exists.jpg"
+                imageSrc="/company/Why%20Gigacore%20Exists.jpg"
                 imageAlt="The Challenge"
                 subtitle="The Challenge"
-                title="Why Giga Cora Energy Exists"
+                title="Why Gigacore Exists"
                 content={
                     <>
                         <p className="mb-6">
@@ -267,7 +267,7 @@ export default function CompanyPage() {
             <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
-                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Giga Cora Energy</h2>
+                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Gigacore</h2>
                     <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                         We work with partners who approach hydrogen as an industrial input and an infrastructure asset.
                     </p>

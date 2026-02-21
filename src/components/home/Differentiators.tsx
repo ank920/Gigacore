@@ -30,8 +30,8 @@ export default function Differentiators() {
 
     return (
         <section className="py-[var(--spacing-section)] bg-brand-secondary text-white border-t border-white/10">
-            <SectionWrapper className="max-w-4xl mr-auto"> {/* Left aligned container */}
-                <div className="mb-20 text-left">
+            <SectionWrapper>
+                <div className="mb-12 text-left">
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function Differentiators() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-[length:var(--font-intro)] text-white font-light max-w-2xl leading-relaxed"
+                        className="text-[length:var(--font-intro)] text-white font-light max-w-2xl leading-[1.75]"
                     >
                         Industrial systems require predictable performance. Gigacore’s architecture is engineered for reliability, redundancy, and scale—delivering consistent output in the harshest environments.
                     </motion.p>
@@ -85,7 +85,7 @@ export default function Differentiators() {
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                             className="overflow-hidden"
                                         >
-                                            <p className="text-white text-lg md:text-xl font-light leading-relaxed pb-8 pr-4">
+                                            <p className="text-white text-[15px] sm:text-[16px] leading-relaxed pb-8 pr-4">
                                                 {item.description}
                                             </p>
                                         </motion.div>
