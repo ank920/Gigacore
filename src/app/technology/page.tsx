@@ -61,7 +61,7 @@ export default function TechnologyPage() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="py-24 lg:py-32 bg-white text-center">
+            <section className="py-[calc(var(--spacing-section)*1.5)] bg-white text-center">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -81,8 +81,8 @@ export default function TechnologyPage() {
                             <Link href="/economics">
                                 <Button
                                     variant="primary"
-                                    size="lg"
-                                    className="min-w-[240px] px-8 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                                    size="md"
+                                    className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                                 >
                                     See the Economics
                                 </Button>
@@ -153,13 +153,13 @@ export default function TechnologyPage() {
                             Like pushing a heavy object continuously against friction—requiring constant, high-intensity force to maintain any movement.
                         </p>
 
-                        <p className="font-semibold text-brand-primary text-xl">
+                        <p className="font-semibold text-brand-primary text-[16px] sm:text-[18px]">
                             Cold Plasma: Resonance
                         </p>
                         <p>
                             Like tapping the object at exactly the right resonant frequency—using precise, minimal energy to create massive separation.
                         </p>
-                        <div className="flex items-center gap-2 mt-4 text-brand-secondary text-sm font-bold uppercase tracking-wider">
+                        <div className="flex items-center gap-2 mt-4 text-brand-secondary text-[15px] font-bold uppercase tracking-wider">
                             <span className="p-1 rounded bg-brand-primary/10 text-brand-primary">
                                 <Check className="w-4 h-4" />
                             </span>
@@ -324,7 +324,7 @@ export default function TechnologyPage() {
                             The technology is being developed to withstand scrutiny from industrial customers, government stakeholders, and infrastructure investors.
                         </p>
                         <div className="mt-6 p-4 bg-brand-light rounded-xl border-l-4 border-brand-primary">
-                            <p className="text-brand-secondary italic text-lg">
+                            <p className="text-brand-secondary italic text-[15px] sm:text-[16px] leading-relaxed">
                                 "Performance and efficiency are intended to be measurable, auditable, and verifiable, not theoretical."
                             </p>
                         </div>
@@ -342,16 +342,19 @@ export default function TechnologyPage() {
 
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Ready to see the numbers?</h2>
-                            <p className="text-white/95 text-[length:var(--font-intro)] mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                            <p className="text-[15px] sm:text-[16px] text-white/95 mb-10 max-w-3xl mx-auto leading-relaxed">
                                 Technology is only as good as its economic viability. See how low-energy inputs translate to market-leading LCOH.
                             </p>
 
                             <div className="flex justify-center">
-                                <Link href="/economics" className="w-full md:w-auto">
-                                    <button className="w-full md:w-auto px-10 py-4 bg-white text-brand-primary font-bold rounded-full shadow-lg hover:bg-gray-50 hover:scale-105 transition-all text-lg">
-                                        See the Economics
-                                    </button>
-                                </Link>
+                                <Button
+                                    href="/economics"
+                                    variant="primary"
+                                    size="md"
+                                    className="!bg-white !text-brand-primary hover:!bg-gray-50 shadow-lg min-w-[220px] w-full md:w-auto mt-2"
+                                >
+                                    See the Economics
+                                </Button>
                             </div>
                         </div>
                     </div>

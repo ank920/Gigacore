@@ -40,7 +40,7 @@ export default function IndiaFirst() {
                     >
                         <motion.div variants={fadeUp} className="flex items-center gap-2 mb-6">
                             <span className="h-px w-8 bg-brand-primary"></span>
-                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-[15px]">
                                 India-First, Globally Relevant
                             </span>
                         </motion.div>

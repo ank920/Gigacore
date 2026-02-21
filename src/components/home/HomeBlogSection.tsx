@@ -24,7 +24,7 @@ export default function HomeBlogSection() {
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <motion.div variants={fadeUp} className="max-w-2xl">
-                            <span className="text-sm font-bold tracking-widest text-brand-primary uppercase mb-3 block">
+                            <span className="text-[15px] font-bold tracking-widest text-brand-primary uppercase mb-3 block">
                                 Blog
                             </span>
                             <h2 className="text-4xl lg:text-5xl font-bold text-brand-secondary tracking-tight leading-[1.1]">
@@ -68,7 +68,7 @@ export default function HomeBlogSection() {
 
                                 {/* Category Line */}
                                 <div className="border-t border-gray-200 pt-6 mb-4">
-                                    <span className="text-xs font-bold text-gray-900 tracking-wide uppercase">
+                                    <span className="text-[15px] font-bold text-gray-900 tracking-wide uppercase">
                                         {post.category}
                                     </span>
                                 </div>

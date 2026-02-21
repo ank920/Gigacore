@@ -273,7 +273,7 @@ export default function PartnershipPage() {
                         {/* Partnership Models */}
                         <div>
                             <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary">Partnership <span className="text-gradient-green-glow">Models</span></h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
                                 Engagement structures are tailored to partner roles and objectives:
                             </p>
                             <ul className="space-y-4">
@@ -294,7 +294,7 @@ export default function PartnershipPage() {
                         {/* From Partnership to Deployment */}
                         <div>
                             <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary">From Partnership to <span className="text-gradient-green-glow">Deployment</span></h2>
-                            <p className="text-lg text-gray-600 mb-8">
+                            <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
                                 The pathway from engagement to operation is structured and disciplined:
                             </p>
                             <div className="space-y-4">
@@ -320,15 +320,15 @@ export default function PartnershipPage() {
             </section>
 
             {/* 11. Engage as a Partner - CTA */}
-            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage as a Partner</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         Engagement is focused on organizations seeking deployable, scalable hydrogen solutions.
                     </p>
                     <Link href="/contact">
-                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Contact Us
                         </Button>
                     </Link>

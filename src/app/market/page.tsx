@@ -6,7 +6,7 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
-import { ArrowRight, Globe, TrendingUp, BarChart3, Anchor, ShieldCheck, Target, Zap, Building2, Briefcase, CheckCircle, Truck } from "lucide-react";
+import { ArrowRight, Globe, TrendingUp, BarChart3, Anchor, ShieldCheck, Target, Zap, Building2, Briefcase, CheckCircle, Truck, Factory, TrendingDown } from "lucide-react";
 
 export default function MarketPage() {
     return (
@@ -130,21 +130,23 @@ export default function MarketPage() {
                             <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
                             <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary">India: A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
                         </div>
-                        <p className="text-[length:var(--font-intro)] text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-3xl mx-auto leading-relaxed">
                             Unlike markets driven primarily by subsidies, India’s hydrogen transition must succeed on economics and scale.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {[
-                            "Large, concentrated industrial hydrogen demand",
-                            "High sensitivity to input costs",
-                            "Rapidly expanding energy infrastructure",
-                            "Strong policy momentum "
+                            { title: "Large, concentrated industrial hydrogen demand", icon: Factory },
+                            { title: "High sensitivity to input costs", icon: TrendingDown },
+                            { title: "Rapidly expanding energy infrastructure", icon: Zap },
+                            { title: "Strong policy momentum", icon: Building2 }
                         ].map((item, i) => (
-                            <div key={i} className="p-6 bg-white rounded-2xl border border-brand-primary/10 text-center shadow-sm">
-                                <div className="w-3 h-3 bg-brand-primary rounded-full mx-auto mb-4" />
-                                <span className="font-bold text-brand-secondary">{item}</span>
+                            <div key={i} className="flex flex-col items-center justify-center p-8 bg-white rounded-xl border border-gray-100 shadow-sm transition-all hover:shadow-md hover:border-brand-primary/20 text-center">
+                                <div className="mb-5 p-4 bg-gray-50 rounded-full text-brand-primary">
+                                    <item.icon className="w-8 h-8" strokeWidth={1.5} />
+                                </div>
+                                <span className="font-bold text-brand-secondary leading-snug">{item.title}</span>
                             </div>
                         ))}
                     </div>
@@ -263,15 +265,15 @@ export default function MarketPage() {
             />
 
             {/* 9. CTA Section */}
-            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Ready to scale?</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         The market demand is real. The technology is ready. The next step is structured collaboration.
                     </p>
                     <Link href="/partnership">
-                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Partner Strategies
                         </Button>
                     </Link>

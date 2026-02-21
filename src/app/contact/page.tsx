@@ -21,7 +21,7 @@ export default function ContactPage() {
             </section>
 
             {/* 2. Intro Section */}
-            <section className="py-24 lg:py-32 bg-white text-center">
+            <section className="py-[calc(var(--spacing-section)*1.5)] bg-white text-center">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
@@ -55,8 +55,8 @@ export default function ContactPage() {
                                 <Mail className="w-6 h-6" />
                             </div>
                             <div>
-                                <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Email Us</p>
-                                <a href="mailto:info@gigacore.energy" className="text-xl font-bold text-gray-900 hover:text-brand-primary transition-colors">
+                                <p className="text-[15px] text-gray-500 font-bold uppercase tracking-wider">Email Us</p>
+                                <a href="mailto:info@gigacore.energy" className="text-[16px] sm:text-[18px] font-bold text-gray-900 hover:text-brand-primary transition-colors">
                                     info@gigacore.energy
                                 </a>
                             </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                         ].map((item, i) => (
                             <div key={i} className="relative p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors group">
                                 <div className="text-4xl font-bold text-brand-primary/20 mb-4 group-hover:text-brand-primary/40 transition-colors">{item.step}</div>
-                                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                <h3 className="text-[16px] sm:text-[18px] font-bold text-white mb-2">{item.title}</h3>
                                 <p className="text-sm text-gray-400">{item.desc}</p>
                             </div>
                         ))}
@@ -217,15 +217,15 @@ export default function ContactPage() {
             </section>
 
             {/* 9. CTA Section */}
-            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Ready to Engage?</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         If you are evaluating hydrogen solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
                     </p>
                     <Link href="mailto:info@gigacore.energy?subject=Request Executive Overview">
-                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Request Executive Overview
                         </Button>
                     </Link>

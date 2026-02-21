@@ -106,15 +106,15 @@ export default function InvestmentThesis() {
                             {atAGlance.map((row, idx) => (
                                 <div key={idx} className="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
                                     <div className="py-3 md:py-5 pl-4 md:pl-6 pr-4 font-bold text-gray-900 bg-gray-50 md:bg-transparent">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">METRIC</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">METRIC</span>
                                         {row.label}
                                     </div>
                                     <div className="py-3 md:py-5 px-4 md:border-l border-gray-200 text-brand-primary font-medium">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">VALUE</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">VALUE</span>
                                         {row.value}
                                     </div>
                                     <div className="py-3 md:py-5 pl-4 md:pl-4 pr-4 md:pr-6 md:border-l border-gray-200 text-gray-600 col-span-1 md:col-span-2">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">SIGNIFICANCE</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">SIGNIFICANCE</span>
                                         {row.desc}
                                     </div>
                                 </div>
@@ -135,15 +135,15 @@ export default function InvestmentThesis() {
                             {financialDetails.map((row, idx) => (
                                 <div key={idx} className="grid grid-cols-1 md:grid-cols-4 hover:bg-gray-50 transition-colors">
                                     <div className="py-3 md:py-5 pl-4 md:pl-6 pr-4 font-bold text-gray-900 bg-gray-50 md:bg-transparent">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">FINANCIALS</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">FINANCIALS</span>
                                         {row.label}
                                     </div>
                                     <div className="py-3 md:py-5 px-4 md:border-l border-gray-200 text-brand-primary font-medium">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">DETAILS</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">DETAILS</span>
                                         {row.value}
                                     </div>
                                     <div className="py-3 md:py-5 pl-4 md:pl-4 pr-4 md:pr-6 md:border-l border-gray-200 text-gray-600 col-span-1 md:col-span-2">
-                                        <span className="md:hidden text-xs text-gray-500 uppercase tracking-wider block mb-1 font-semibold">IMPLICATION</span>
+                                        <span className="md:hidden text-[15px] text-gray-500 uppercase tracking-wider block mb-1 font-semibold">IMPLICATION</span>
                                         {row.desc}
                                     </div>
                                 </div>
@@ -159,13 +159,13 @@ export default function InvestmentThesis() {
                         <div className="w-full border border-gray-200 rounded-xl shadow-sm overflow-hidden">
                             {/* Header Row (Hidden on mobile) */}
                             <div className="hidden lg:grid grid-cols-7 bg-[#0b1320] text-white">
-                                <div className="py-4 pl-6 pr-2 font-semibold uppercase tracking-wider text-xs">SCENARIO</div>
-                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-xs border-l border-white/10">TIMING</div>
-                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-xs border-l border-white/10">MULTIPLE</div>
-                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-xs border-l border-white/10">EXIT VAL.</div>
-                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-xs border-l border-white/10">INVESTOR</div>
-                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-xs border-l border-white/10">MOIC</div>
-                                <div className="py-4 pl-2 pr-6 font-semibold uppercase tracking-wider text-xs border-l border-white/10">~IRR</div>
+                                <div className="py-4 pl-6 pr-2 font-semibold uppercase tracking-wider text-[15px]">SCENARIO</div>
+                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">TIMING</div>
+                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">MULTIPLE</div>
+                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">EXIT VAL.</div>
+                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">INVESTOR</div>
+                                <div className="py-4 px-2 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">MOIC</div>
+                                <div className="py-4 pl-2 pr-6 font-semibold uppercase tracking-wider text-[15px] border-l border-white/10">~IRR</div>
                             </div>
                             {/* Data Rows */}
                             <div className="bg-white flex flex-col divide-y divide-gray-300 lg:divide-y-0 lg:divide-y">

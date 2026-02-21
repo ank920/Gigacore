@@ -217,7 +217,7 @@ export default function ApplicationsPage() {
                         <p className="mb-6">
                             India presents a unique combination of large hydrogen demand, cost sensitivity, and strong policy momentum.
                         </p>
-                        <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Priority Sectors:</h4>
+                        <h4 className="font-bold text-brand-primary mb-3 text-[15px] uppercase tracking-wider">Priority Sectors:</h4>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Fertilizer/Ammonia</span>
                             <span className="px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Public Refining</span>
@@ -240,7 +240,7 @@ export default function ApplicationsPage() {
                         <p className="mb-6">
                             The same application logic applies globally where industries face rising pressure to decarbonize without eroding margins.
                         </p>
-                        <h4 className="font-bold text-brand-primary mb-3 text-sm uppercase tracking-wider">Relevant Markets:</h4>
+                        <h4 className="font-bold text-brand-primary mb-3 text-[15px] uppercase tracking-wider">Relevant Markets:</h4>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Export Hubs</span>
                             <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 font-medium shadow-sm">Decarbonization Zones</span>
@@ -255,23 +255,23 @@ export default function ApplicationsPage() {
                 <SectionWrapper>
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-8 text-white">Application-Driven <span className="text-gradient-green-glow">Deployment Strategy</span></h2>
-                        <p className="text-[length:var(--font-intro)] text-white/80 mb-12 leading-relaxed font-light">
+                        <p className="text-[15px] sm:text-[16px] text-white/80 mb-12 leading-relaxed">
                             Deployment is prioritized where hydrogen demand already exists, cost sensitivity is high, and scale can be achieved through industrial partnerships.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <Beaker className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg text-white">Existing Demand</h4>
+                                <h4 className="font-bold mb-2 text-[15px] sm:text-[16px] text-white">Existing Demand</h4>
                                 <p className="text-sm text-gray-300">Replacement of grey hydrogen users</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <TrendingUp className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg text-white">High Cost Sensitivity</h4>
+                                <h4 className="font-bold mb-2 text-[15px] sm:text-[16px] text-white">High Cost Sensitivity</h4>
                                 <p className="text-sm text-gray-300">Where OPEX dominates decision making</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
                                 <Factory className="w-10 h-10 text-brand-primary mx-auto mb-6" />
-                                <h4 className="font-bold mb-2 text-lg text-white">Industrial Scale</h4>
+                                <h4 className="font-bold mb-2 text-[15px] sm:text-[16px] text-white">Industrial Scale</h4>
                                 <p className="text-sm text-gray-300">Partnerships for large consumption</p>
                             </div>
                         </div>
@@ -280,15 +280,15 @@ export default function ApplicationsPage() {
             </section>
 
             {/* 12. CTA Section */}
-            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Is the market ready?</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         We don't build for hypothetical futures. We build for immediate industrial demand. See the market landscape.
                     </p>
                     <Link href="/market">
-                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Understand the Market
                         </Button>
                     </Link>

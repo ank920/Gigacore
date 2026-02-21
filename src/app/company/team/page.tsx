@@ -184,7 +184,7 @@ export default function TeamPage() {
                                 <div className="p-6 flex flex-col flex-grow">
                                     <div className="flex justify-between items-start mb-2">
                                         <div className="pr-4">
-                                            <h3 className="text-xl font-bold text-brand-secondary leading-tight mb-1 group-hover:text-brand-primary transition-colors">
+                                            <h3 className="text-[16px] sm:text-[18px] font-bold text-brand-secondary leading-tight mb-1 group-hover:text-brand-primary transition-colors">
                                                 {member.name}
                                             </h3>
                                             <p className="text-sm font-medium text-gray-500 mb-3">
@@ -217,16 +217,16 @@ export default function TeamPage() {
             </section>
 
             {/* 4. CTA Section */}
-            <section className="relative py-20 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h2)] font-bold text-white mb-6">Want to work with us?</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                         We are always looking for talented individuals to join our team. Connect with us to explore opportunities.
                     </p>
                     <Link href="/contact">
                         {/*@ts-ignore*/}
-                        <Button variant="primary" size="lg" className="min-w-[200px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Contact Us
                         </Button>
                     </Link>

@@ -150,7 +150,7 @@ export default function BlogPage() {
                                             )}
                                         </div>
                                         <div className="p-6">
-                                            <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
+                                            <span className="text-brand-primary text-[15px] font-bold uppercase tracking-wider">
                                                 Featured &middot;{" "}
                                                 {featuredPost.category}
                                             </span>
@@ -201,7 +201,7 @@ export default function BlogPage() {
                                                 </div>
                                                 <div className="p-6 flex flex-col flex-1">
                                                     <div className="flex items-center gap-2 mb-3">
-                                                        <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
+                                                        <span className="text-brand-primary text-[15px] font-bold uppercase tracking-wider">
                                                             {post.category}
                                                         </span>
                                                     </div>
