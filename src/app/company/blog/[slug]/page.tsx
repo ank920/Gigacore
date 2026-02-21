@@ -278,7 +278,7 @@ export default function BlogPostPage() {
                                         )}
                                     </div>
                                     <div className="p-6 flex flex-col flex-1">
-                                        <span className="text-brand-primary text-xs font-bold uppercase tracking-wider">
+                                        <span className="text-brand-primary text-[15px] font-bold uppercase tracking-wider">
                                             {rp.category}
                                         </span>
                                         <h3 className="text-lg font-bold text-brand-secondary mt-2 mb-3 group-hover:text-brand-primary transition-colors leading-snug flex-grow">

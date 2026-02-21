@@ -55,7 +55,7 @@ export default function Hero() {
                     className="max-w-5xl flex flex-col items-start text-left px-4 md:px-0 pt-16 md:pt-20"
                 >
                     <motion.div variants={fadeUp} className="mb-6 md:mb-8">
-                        <span className="text-brand-primary text-xs md:text-base font-bold tracking-widest uppercase">
+                        <span className="text-brand-primary text-[15px] md:text-base font-bold tracking-widest uppercase">
                             Cold Plasma Hydrogen Production
                         </span>
                     </motion.div>
@@ -76,7 +76,7 @@ export default function Hero() {
                     />
 
                     <motion.div variants={fadeUp} className="flex flex-col gap-4">
-                        <span className="text-gray-400 text-xs md:text-base font-medium uppercase tracking-widest max-w-[250px] md:max-w-none leading-relaxed">
+                        <span className="text-gray-400 text-[15px] md:text-base font-medium uppercase tracking-widest max-w-[250px] md:max-w-none leading-relaxed">
                             Institutional Investor Memorandum
                         </span>
                         <div className="text-gray-300 text-sm md:text-base flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-2 mb-4">

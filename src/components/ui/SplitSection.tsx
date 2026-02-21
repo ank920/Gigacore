@@ -48,7 +48,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
     };
 
     return (
-        <section className={cn("py-12 md:py-20 lg:py-28 overflow-hidden", themeStyles[theme], className)}>
+        <section className={cn("py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] overflow-hidden", themeStyles[theme], className)}>
             <SectionWrapper>
                 <div className={cn(
                     "grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center"
@@ -87,7 +87,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
                         )}
                     >
                         {subtitle && (
-                            <span className="text-brand-primary font-bold uppercase tracking-widest text-xs mb-4 block">
+                            <span className="text-brand-primary font-bold uppercase tracking-widest text-[15px] mb-4 block">
                                 {subtitle}
                             </span>
                         )}

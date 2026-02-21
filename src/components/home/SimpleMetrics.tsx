@@ -104,7 +104,7 @@ export default function SimpleMetrics() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-12">
                         {/* Conventional */}
                         <div className="flex flex-col items-start relative lg:pr-10">
-                            <div className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">Conventional Electrolysis</div>
+                            <div className="text-[15px] font-bold tracking-widest uppercase text-gray-400 mb-4">Conventional Electrolysis</div>
                             <div className="flex items-baseline mb-4 text-gray-800">
                                 <span className="text-[56px] lg:text-[72px] font-medium tracking-tighter leading-none">
                                     <AnimatedNumber value={50} value2={55} />
@@ -121,7 +121,7 @@ export default function SimpleMetrics() {
                         {/* Gigacore */}
                         <div className="flex flex-col items-start relative lg:pl-16 lg:border-l lg:border-gray-200">
                             <div className="w-full h-px bg-gray-200 mb-8 lg:hidden" />
-                            <div className="text-xs font-bold tracking-widest uppercase text-brand-primary mb-4">Gigacore Cold Plasma Reactor</div>
+                            <div className="text-[15px] font-bold tracking-widest uppercase text-brand-primary mb-4">Gigacore Cold Plasma Reactor</div>
                             <div className="text-[56px] lg:text-[72px] font-medium tracking-tighter text-brand-primary leading-none mb-4 flex items-baseline">
                                 <AnimatedNumber value={30} value2={35} suffix="" suffix2="kWh/kg" />
                             </div>

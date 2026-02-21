@@ -229,7 +229,7 @@ export default function CompanyPage() {
                             <ShieldCheck className="w-8 h-8" />
                         </div>
                         <h2 className="text-[length:var(--font-h1)] font-bold mb-6 text-brand-secondary">Commitment to <span className="text-gradient-green-glow">Credibility</span></h2>
-                        <p className="text-[length:var(--font-intro)] text-gray-600 mb-12 font-light">
+                        <p className="text-[15px] sm:text-[16px] text-gray-600 mb-12 leading-relaxed">
                             We prioritize long-term credibility over short-term visibility. We build trust through measurable performance, transparent milestones, and structured validation.
                         </p>
 
@@ -237,7 +237,7 @@ export default function CompanyPage() {
                             <div className="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                                 <div className="flex items-center gap-3 mb-4">
                                     <UserCheck className="w-6 h-6 text-brand-primary" />
-                                    <h4 className="text-xl font-bold text-brand-secondary">Collaboration-Driven Growth</h4>
+                                    <h4 className="text-[16px] sm:text-[18px] font-bold text-brand-secondary">Collaboration-Driven Growth</h4>
                                 </div>
                                 <p className="text-gray-600 mb-4">Growth is pursued through partnerships that align technical capability with execution scale.</p>
                                 <ul className="space-y-2">
@@ -249,7 +249,7 @@ export default function CompanyPage() {
                             <div className="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Rocket className="w-6 h-6 text-brand-primary" />
-                                    <h4 className="text-xl font-bold text-brand-secondary">Looking Ahead</h4>
+                                    <h4 className="text-[16px] sm:text-[18px] font-bold text-brand-secondary">Looking Ahead</h4>
                                 </div>
                                 <p className="text-gray-600 mb-4">The company’s journey is defined not by hype, but by execution.</p>
                                 <ul className="space-y-2">
@@ -264,15 +264,15 @@ export default function CompanyPage() {
             </section>
 
             {/* 10. CTA Section */}
-            <section className="relative py-20 md:py-32 bg-brand-secondary overflow-hidden">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Gigacore</h2>
-                    <p className="text-[length:var(--font-intro)] text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         We work with partners who approach hydrogen as an industrial input and an infrastructure asset.
                     </p>
                     <Link href="/contact">
-                        <Button variant="primary" size="lg" className="min-w-[240px] shadow-glow">
+                        <Button variant="primary" size="md" className="w-full sm:w-auto min-w-[220px] whitespace-nowrap shadow-glow">
                             Strategic Discussions
                         </Button>
                     </Link>

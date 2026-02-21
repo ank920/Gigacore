@@ -133,7 +133,7 @@ export default function Applications() {
                                         <p className="text-gray-600 text-sm leading-relaxed mb-4 font-light flex-grow">
                                             {app.desc}
                                         </p>
-                                        <div className="flex items-center text-brand-primary text-xs font-bold uppercase tracking-widest mt-auto group-hover:text-brand-hover transition-colors">
+                                        <div className="flex items-center text-brand-primary text-[15px] font-bold uppercase tracking-widest mt-auto group-hover:text-brand-hover transition-colors">
                                             View Application <ArrowUpRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                         </div>
                                     </div>
