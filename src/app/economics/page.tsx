@@ -13,7 +13,7 @@ export default function EconomicsPage() {
             {/* 1. Hero Section */}
             <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/economics/hero%20section.png')] bg-cover bg-center opacity-60" />
+                    <div className="absolute inset-0 bg-[url('/economics/hero%20section.jpg')] bg-cover bg-center opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
                 </div>
                 <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10">
@@ -72,8 +72,9 @@ export default function EconomicsPage() {
             <SplitSection
                 theme="gray"
                 imagePosition="right"
-                imageSrc="/economics/Capital Efficiency & System Simplicity.webp"
+                imageSrc="/economics/Capital%20Efficiency%20%26%20System%20Simplicity.jpg"
                 imageAlt="Capital Efficiency"
+                unoptimized
                 subtitle="CAPEX Barrier"
                 title="The Capital Problem"
                 content={
