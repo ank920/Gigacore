@@ -114,131 +114,118 @@ export default function BlogPostPage() {
             </section>
 
             {/* Article Content */}
-            <section className="py-[var(--spacing-section)]">
+            <section className="py-16 lg:py-20 bg-white">
                 <SectionWrapper>
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-                        {/* Sidebar */}
-                        <aside className="lg:w-[240px] shrink-0 order-2 lg:order-1">
-                            <div className="lg:sticky lg:top-28">
-                                <Link
-                                    href="/company/blog"
-                                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary hover:text-brand-accent transition-colors mb-6"
-                                >
-                                    <ArrowLeft className="w-4 h-4" />
-                                    See all posts
-                                </Link>
-                                <nav className="space-y-1">
-                                    {BLOG_CATEGORIES.filter(
-                                        (c) => c !== "All"
-                                    ).map((cat) => (
-                                        <Link
-                                            key={cat}
-                                            href={`/company/blog`}
-                                            className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${post.category === cat
-                                                ? "bg-brand-primary text-white shadow-sm"
-                                                : "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
-                                                }`}
-                                        >
-                                            {cat}
-                                        </Link>
-                                    ))}
-                                </nav>
-                            </div>
-                        </aside>
-
-                        {/* Article Body */}
-                        <motion.article
-                            variants={staggerContainer}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            className="flex-1 order-1 lg:order-2 max-w-3xl"
+                    {/* Breadcrumb / back nav */}
+                    <div className="flex flex-wrap items-center gap-3 mb-10">
+                        <Link
+                            href="/company/blog"
+                            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:underline"
                         >
-                            {post.content.map((block, idx) => {
-                                if (block.type === "heading") {
-                                    return (
-                                        <motion.h2
-                                            key={idx}
-                                            variants={fadeUp}
-                                            className="text-[length:var(--font-h3)] font-bold text-brand-secondary mt-12 mb-6"
-                                        >
-                                            {block.text}
-                                        </motion.h2>
-                                    );
-                                }
-                                if (block.type === "list") {
-                                    return (
-                                        <motion.ul
-                                            key={idx}
-                                            variants={fadeUp}
-                                            className="space-y-3 my-6 pl-2"
-                                        >
-                                            {block.items?.map((item, i) => (
-                                                <li
-                                                    key={i}
-                                                    className="flex gap-3 items-start text-gray-600 leading-relaxed"
-                                                >
-                                                    <div className="w-2 h-2 rounded-full bg-brand-primary mt-2.5 shrink-0" />
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </motion.ul>
-                                    );
-                                }
+                            <ArrowLeft className="w-4 h-4" />
+                            All Articles
+                        </Link>
+                        <span className="text-gray-300">/</span>
+                        {/* Category chips */}
+                        {BLOG_CATEGORIES.filter((c) => c !== "All").map((cat) => (
+                            <Link
+                                key={cat}
+                                href="/company/blog"
+                                className={`px-3.5 py-1.5 rounded-full text-[12px] font-semibold border transition-all duration-200 ${post.category === cat
+                                        ? "bg-brand-primary text-white border-brand-primary"
+                                        : "bg-white text-gray-500 border-gray-200 hover:border-brand-primary hover:text-brand-primary"
+                                    }`}
+                            >
+                                {cat}
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Article Body */}
+                    <motion.article
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="max-w-3xl mx-auto"
+                    >
+                        {post.content.map((block, idx) => {
+                            if (block.type === "heading") {
                                 return (
-                                    <motion.p
+                                    <motion.h2
                                         key={idx}
                                         variants={fadeUp}
-                                        className="text-gray-600 leading-relaxed mb-6 text-lg"
+                                        className="text-[length:var(--font-h3)] font-bold text-brand-secondary mt-12 mb-6"
                                     >
                                         {block.text}
-                                    </motion.p>
+                                    </motion.h2>
                                 );
-                            })}
+                            }
+                            if (block.type === "list") {
+                                return (
+                                    <motion.ul
+                                        key={idx}
+                                        variants={fadeUp}
+                                        className="space-y-3 my-6 pl-2"
+                                    >
+                                        {block.items?.map((item, i) => (
+                                            <li
+                                                key={i}
+                                                className="flex gap-3 items-start text-gray-600 leading-relaxed"
+                                            >
+                                                <div className="w-2 h-2 rounded-full bg-brand-primary mt-2.5 shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </motion.ul>
+                                );
+                            }
+                            return (
+                                <motion.p
+                                    key={idx}
+                                    variants={fadeUp}
+                                    className="text-gray-600 leading-relaxed mb-6 text-lg"
+                                >
+                                    {block.text}
+                                </motion.p>
+                            );
+                        })}
 
-                            {/* Post Navigation */}
-                            <div className="mt-16 pt-10 border-t border-gray-100">
-                                <div className="flex flex-col sm:flex-row justify-between gap-6">
-                                    {prevPost ? (
-                                        <Link
-                                            href={`/company/blog/${prevPost.slug}`}
-                                            className="group flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors"
-                                        >
-                                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                                            <div>
-                                                <span className="text-xs text-gray-400 block">
-                                                    Previous
-                                                </span>
-                                                <span className="text-sm font-medium line-clamp-1">
-                                                    {prevPost.title}
-                                                </span>
-                                            </div>
-                                        </Link>
-                                    ) : (
-                                        <div />
-                                    )}
-                                    {nextPost && (
-                                        <Link
-                                            href={`/company/blog/${nextPost.slug}`}
-                                            className="group flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors text-right"
-                                        >
-                                            <div>
-                                                <span className="text-xs text-gray-400 block">
-                                                    Next
-                                                </span>
-                                                <span className="text-sm font-medium line-clamp-1">
-                                                    {nextPost.title}
-                                                </span>
-                                            </div>
-                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                        </Link>
-                                    )}
-                                </div>
+                        {/* Post Navigation */}
+                        <div className="mt-16 pt-10 border-t border-gray-100">
+                            <div className="flex flex-col sm:flex-row justify-between gap-6">
+                                {prevPost ? (
+                                    <Link
+                                        href={`/company/blog/${prevPost.slug}`}
+                                        className="group flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors"
+                                    >
+                                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                                        <div>
+                                            <span className="text-xs text-gray-400 block">Previous</span>
+                                            <span className="text-sm font-medium line-clamp-1">{prevPost.title}</span>
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <div />
+                                )}
+                                {nextPost && (
+                                    <Link
+                                        href={`/company/blog/${nextPost.slug}`}
+                                        className="group flex items-center gap-3 text-gray-600 hover:text-brand-primary transition-colors text-right"
+                                    >
+                                        <div>
+                                            <span className="text-xs text-gray-400 block">Next</span>
+                                            <span className="text-sm font-medium line-clamp-1">{nextPost.title}</span>
+                                        </div>
+                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                )}
                             </div>
-                        </motion.article>
-                    </div>
+                        </div>
+                    </motion.article>
                 </SectionWrapper>
             </section>
+
 
             {/* Related Posts */}
             <section className="py-[var(--spacing-section)] bg-brand-light border-t border-brand-primary/5">

@@ -76,16 +76,6 @@ export default function Hero() {
                     />
 
                     <motion.div variants={fadeUp} className="flex flex-col gap-4">
-                        <span className="text-gray-400 text-[15px] md:text-base font-medium uppercase tracking-widest max-w-[250px] md:max-w-none leading-relaxed">
-                            Institutional Investor Memorandum
-                        </span>
-                        <div className="text-gray-300 text-sm md:text-base flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mt-2 mb-4">
-                            <span>Series A: <strong className="text-white">$20M</strong></span>
-                            <span className="hidden sm:inline text-brand-primary/50 text-xl leading-none">•</span>
-                            <strong className="text-white">33% Pure Equity</strong>
-                            <span className="hidden sm:inline text-brand-primary/50 text-xl leading-none">•</span>
-                            <span>Post-Money: <strong className="text-white">$60.6M</strong></span>
-                        </div>
                         <div className="mt-6 md:mt-8 w-full sm:w-auto">
                             <Button href="/contact" variant="primary" size="md" className="w-full sm:w-auto min-w-[180px]">
                                 Contact Us

@@ -55,7 +55,7 @@ export default function IndiaFirst() {
                         <motion.div variants={fadeUp} className="space-y-8">
                             <div className="pl-6 border-l-2 border-brand-primary">
                                 <h4 className="font-bold text-xl mb-3 text-brand-secondary">India Strategy</h4>
-                                <ul className="space-y-3 text-gray-600 text-sm">
+                                <ul className="space-y-1.5 text-gray-600 text-sm">
                                     <li className="flex items-center gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                                         Alignment to India’s National Green Hydrogen Mission

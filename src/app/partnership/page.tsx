@@ -63,7 +63,7 @@ export default function PartnershipPage() {
                             Partnerships are structured around shared execution — not vendor relationships.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Guiding principles:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "Long-term alignment over transactional engagement",
                                 "Clear division of roles and responsibilities",
@@ -125,7 +125,7 @@ export default function PartnershipPage() {
                             Public-sector enterprises play a critical role where scale, reliability, and national priorities intersect.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Collaboration areas:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "Pilot and demonstration facilities",
                                 "Industrial retrofits and brownfield integration",
@@ -156,7 +156,7 @@ export default function PartnershipPage() {
                             EPC partners translate technology into bankable infrastructure. The platform integrates into <strong>established EPC workflows</strong> — not bespoke experimental builds.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Focus areas:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "System integration and plant design",
                                 "Construction and commissioning",
@@ -187,7 +187,7 @@ export default function PartnershipPage() {
                             Scalable deployment requires aligned manufacturing capability. This enables <strong>predictable scaling</strong> aligned with domestic manufacturing priorities.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Partnership scope:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "Modular system fabrication",
                                 "Localization of components",
@@ -218,7 +218,7 @@ export default function PartnershipPage() {
                             Independent validation underpins industrial adoption and financing. Credibility is built through <strong>validation</strong> — not claims.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Research collaboration supports:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "Performance verification",
                                 "Long-duration reliability testing",
@@ -249,7 +249,7 @@ export default function PartnershipPage() {
                             Hydrogen infrastructure requires patient, infrastructure-aligned capital. The platform is structured for <strong>bankable assets</strong>.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Investor collaboration focuses on:</h4>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {[
                                 "Project-level structures",
                                 "Infrastructure-grade risk assessment",
@@ -276,7 +276,7 @@ export default function PartnershipPage() {
                             <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
                                 Engagement structures are tailored to partner roles and objectives:
                             </p>
-                            <ul className="space-y-4">
+                            <ul className="space-y-2">
                                 {[
                                     "Pilot and demonstration collaborations",
                                     "Joint development and deployment",
@@ -297,7 +297,7 @@ export default function PartnershipPage() {
                             <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
                                 The pathway from engagement to operation is structured and disciplined:
                             </p>
-                            <div className="space-y-4">
+                            <div className="space-y-2">
                                 {[
                                     { step: "1", title: "Technical and economic alignment" },
                                     { step: "2", title: "Pilot or demonstration deployment" },

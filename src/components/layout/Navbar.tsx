@@ -41,10 +41,11 @@ export default function Navbar() {
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
     const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Force dark text/white bg on blog pages and team page (due to light hero image)
-    const isBlogPage = pathname?.includes("/company/blog");
+    // Blog listing page has dark hero → white navbar text (like Home)
+    // Blog detail pages have light background → need dark navbar text
+    const isBlogDetailPage = /^\/company\/blog\/.+/.test(pathname || "");
     const isTeamPage = pathname?.includes("/company/team");
-    const useDarkText = isScrolled || isBlogPage || isTeamPage;
+    const useDarkText = isScrolled || isTeamPage || isBlogDetailPage;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);

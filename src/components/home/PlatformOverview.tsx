@@ -38,11 +38,11 @@ export default function PlatformOverview() {
 
                         <motion.div variants={fadeUp} className="space-y-6">
                             <h3 className="text-[15px] font-bold text-brand-secondary uppercase tracking-widest mb-4">The system architecture:</h3>
-                            <ul className="space-y-8">
+                            <ul className="space-y-2">
                                 {PLATFORM_FEATURES.map((item, idx) => (
                                     <li key={idx} className="flex items-center gap-4 text-brand-secondary border-b border-gray-200 pb-2 last:border-0">
                                         <span className="h-0.5 w-3 bg-brand-primary" /> {/* Simple industrial dash */}
-                                        <span className="font-medium text-[15px] sm:text-[16px] text-brand-secondary leading-relaxed">{item}</span>
+                                        <span className="font-medium text-[15px] sm:text-[16px] text-brand-secondary leading-[1.5]">{item}</span>
                                     </li>
                                 ))}
                             </ul>

@@ -60,7 +60,7 @@ export default function Partnerships() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="flex-1 w-full space-y-6 pt-1 lg:pt-2"
+                        className="flex-1 w-full space-y-3 pt-1 lg:pt-2"
                     >
                         {COLLABORATION_MODELS.map((model, idx) => (
                             <motion.div

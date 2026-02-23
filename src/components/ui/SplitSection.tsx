@@ -61,7 +61,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className={cn(
-                            "relative w-full aspect-[16/9] shadow-md", // Reduced aspect ratio and subtler shadow
+                            "relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-xl",
                             isImageRight ? "lg:order-2" : "lg:order-1"
                         )}
                     >
@@ -69,7 +69,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
                             unoptimized={unoptimized}
                         />
@@ -100,7 +100,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
                         </h2>
 
                         <div className={cn(
-                            "text-lg md:text-xl leading-relaxed font-normal space-y-6",
+                            "text-lg md:text-xl leading-[1.5] font-normal space-y-6",
                             textColors[theme]
                         )}>
                             {content}
