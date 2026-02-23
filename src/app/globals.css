@@ -58,7 +58,7 @@ html {
 body {
   @apply bg-white font-sans;
   font-size: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

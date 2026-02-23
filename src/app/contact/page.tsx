@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
 import { Mail, ArrowRight, HeartHandshake, Microscope, TrendingUp, Megaphone, Globe, CheckCircle } from "lucide-react";
+import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactPage() {
     return (
@@ -37,7 +38,14 @@ export default function ContactPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 3. General Enquiries */}
+            {/* 3. Contact Form Submission Area */}
+            <section className="py-[var(--spacing-section)] bg-gray-50/50 border-b border-gray-100">
+                <SectionWrapper>
+                    <ContactForm />
+                </SectionWrapper>
+            </section>
+
+            {/* 4. General Enquiries */}
             <SplitSection
                 theme="light"
                 imagePosition="left"

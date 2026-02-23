@@ -16,12 +16,6 @@ const midRow = [
     { prefix: "TRL ", value: 5, value2: 6, label: "Technology Readiness", subtext: "Lab-validated • pre-commercial pilot stage" }
 ];
 
-const bottomRow = [
-    { prefix: "$", value: 20, suffix: "M", label: "Series A Raise", subtext: "Full Phase 1 — 18-month pilot programme" },
-    { value: 33, suffix: "%", label: "Pure Equity, No Prefs", subtext: "No ratchet, no liquidation priority" },
-    { value: 3, value2: 5, suffix: "x", label: "Target Return Multiple", subtext: "Valuation re-rating on pilot validation" }
-];
-
 const AnimatedNumber = ({ value, value2 = undefined, from = 0, prefix = "", suffix = "", suffix2 = "", decimals = 0, isStatic = false, staticText = "" }: any) => {
     const ref = useRef<HTMLSpanElement>(null);
     const ref2 = useRef<HTMLSpanElement>(null);
@@ -155,23 +149,6 @@ export default function SimpleMetrics() {
                     {/* 3 Mid Metrics */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mb-16">
                         {midRow.map((metric, idx) => (
-                            <div key={idx} className="flex flex-col items-start w-full border-t border-gray-300 pt-6">
-                                <div className="text-[64px] lg:text-[80px] font-light tracking-tighter text-brand-primary flex items-start leading-[1] mb-2 min-h-[70px]">
-                                    <AnimatedNumber {...metric} />
-                                </div>
-                                <h3 className="text-[16px] font-bold text-gray-900 leading-snug">
-                                    {metric.label}
-                                </h3>
-                                <p className="text-[14px] text-gray-600 mt-1 font-medium">
-                                    {metric.subtext}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* 3 Bottom Metrics */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
-                        {bottomRow.map((metric, idx) => (
                             <div key={idx} className="flex flex-col items-start w-full border-t border-gray-300 pt-6">
                                 <div className="text-[64px] lg:text-[80px] font-light tracking-tighter text-brand-primary flex items-start leading-[1] mb-2 min-h-[70px]">
                                     <AnimatedNumber {...metric} />
