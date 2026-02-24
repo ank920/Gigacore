@@ -12,26 +12,43 @@ import ContactForm from "@/components/contact/ContactForm";
 export default function ContactPage() {
     return (
         <main className="bg-white">
-            {/* 1. Hero Section */}
-            <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden bg-gray-900">
+            {/* 1. Full-Screen Hero Section */}
+            <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900 border-b border-gray-100 flex items-center justify-center">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/contact/hero%20section.jpg')] bg-cover bg-center opacity-60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-[url('/contact/hero%20section.jpg')] bg-cover bg-center" />
                 </div>
 
+                <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10 w-full">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-5xl mx-auto flex flex-col items-center"
+                    >
+                        <span className="inline-block text-sm font-semibold tracking-widest uppercase text-brand-primary mb-4 drop-shadow-md">
+                            Engage With Us
+                        </span>
+                        <h1 className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white drop-shadow-lg">
+                            Get in <span className="text-brand-primary">Touch</span>
+                        </h1>
+                    </motion.div>
+                </SectionWrapper>
             </section>
 
-            {/* 2. Intro Section */}
-            <section className="py-[calc(var(--spacing-section)*1.5)] bg-white text-center">
+            {/* 2. Intro Statement Below Hero */}
+            <section className="py-[calc(var(--spacing-section)*1.2)] bg-white text-center border-b border-gray-100">
                 <SectionWrapper>
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="max-w-4xl mx-auto flex flex-col items-center"
                     >
-                        <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl leading-tight font-medium text-gray-800 mb-8 max-w-4xl">
+                        <motion.h2
+                            variants={fadeUp}
+                            className="text-3xl md:text-4xl lg:text-[40px] leading-tight md:leading-snug font-medium text-gray-800"
+                        >
                             We engage with partners, institutions, and stakeholders evaluating hydrogen as an <span className="text-brand-primary font-bold">industrial input</span> and <span className="text-brand-primary font-bold">infrastructure asset</span>.
                         </motion.h2>
                     </motion.div>
