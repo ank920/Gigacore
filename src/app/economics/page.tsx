@@ -228,11 +228,11 @@ export default function EconomicsPage() {
                 imageSrc="/economics/Application-Level Economic Impact.webp"
                 imageAlt="Economic Impact"
                 subtitle="Economic Viability"
-                title="A Path to $1/kg"
+                title="A Path to $2/kg"
                 content={
                     <>
                         <p>
-                            When high efficiency is combined with low-cost, modular hardware, the pathway to $1/kg green hydrogen becomes an engineering reality rather than a forecast.
+                            When high efficiency is combined with low-cost, modular hardware, the pathway to $2/kg green hydrogen becomes an engineering reality rather than a forecast.
                         </p>
                         <p>
                             This price point effectively unlocks heavy industry applications—steel, shipping, and chemicals—that cannot switch to hydrogen at current prices of $4-6/kg.
