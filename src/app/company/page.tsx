@@ -106,7 +106,7 @@ export default function CompanyPage() {
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/company/Why%20Gigacore%20Exists.jpg"
+                imageSrc="/company/Why%20Giga.jpg"
                 imageAlt="The Challenge"
                 subtitle="The Challenge"
                 title="Why Gigacore Exists"
@@ -146,7 +146,7 @@ export default function CompanyPage() {
             <SplitSection
                 theme="gray"
                 imagePosition="right"
-                imageSrc="/company/Technology%20Philosophy.png"
+                imageSrc="/company/Technology%20Philosophy.jpg"
                 imageAlt="Philosophy"
                 subtitle="Innovation"
                 title="Technology Philosophy"
