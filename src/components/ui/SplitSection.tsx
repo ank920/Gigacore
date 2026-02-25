@@ -14,6 +14,7 @@ interface SplitSectionProps {
     theme?: 'light' | 'dark' | 'gray';
     className?: string;
     unoptimized?: boolean;
+    imageClassName?: string;
 }
 
 const SplitSection: React.FC<SplitSectionProps> = ({
@@ -26,6 +27,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
     theme = 'light',
     className,
     unoptimized = false,
+    imageClassName,
 }) => {
     const isImageRight = imagePosition === 'right';
 
@@ -69,7 +71,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({
                             src={imageSrc}
                             alt={imageAlt}
                             fill
-                            className="object-cover"
+                            className={cn("object-cover", imageClassName)}
                             sizes="(max-width: 768px) 100vw, 50vw"
                             unoptimized={unoptimized}
                         />

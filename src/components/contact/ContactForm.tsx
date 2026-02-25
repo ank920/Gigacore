@@ -2,25 +2,18 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const INDUSTRIES = [
-    "Aerospace and Defense",
-    "Agriculture",
-    "Banking and Financial Services",
-    "Cloud Services and Data Centers",
-    "Construction",
-    "Consulting",
-    "Consumer Goods",
-    "Education",
-    "Energy",
-    "Food and Beverage",
-    "Government",
-    "Hospitality and Entertainment",
-    "Hospitals and Healthcare",
-    "Manufacturing",
-    "Media and Telecommunications",
-    "Medical, Pharmaceuticals, and Biotechnology",
-    "Other",
-    "Real Estate",
-    "Retail"
+    "Data Centers",
+    "Energy Storage & Sector Coupling",
+    "Green Ammonia",
+    "Green Steel",
+    "Industrial Corridors & Clusters",
+    "Industrial Hydrogen Feedstock",
+    "Marine & Heavy Transport",
+    "Oil & Gas",
+    "On-Site & Distributed Hydrogen",
+    "Refining & Petrochemicals",
+    "Utilities & Grid Support",
+    "Other"
 ];
 
 const COUNTRIES = [

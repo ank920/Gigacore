@@ -37,7 +37,7 @@ export default function ApplicationsPage() {
             {/* ── 1. Hero ─────────────────────────────────────────────── */}
             <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/application/hero%20section.jpg')] bg-cover bg-center opacity-60" />
+                    <div className="absolute inset-0 bg-[url('/application/hero%20section.png')] bg-cover bg-center opacity-60" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
                 </div>
                 <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10">
@@ -72,7 +72,7 @@ export default function ApplicationsPage() {
                         className="max-w-4xl mx-auto flex flex-col items-center"
                     >
                         <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-normal leading-relaxed text-gray-800 mb-8">
-                            The platform is designed for applications where hydrogen demand already exists at scale — where cost, reliability, and integration determine adoption.
+                            The platform is designed for applications where hydrogen demand already exists at scale - where cost, reliability, and integration determine adoption.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
                             Rather than targeting speculative or niche use cases, deployment is focused on{" "}
@@ -83,127 +83,7 @@ export default function ApplicationsPage() {
                 </SectionWrapper>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════════
-                ESTABLISHED INDUSTRIAL APPLICATIONS
-            ═══════════════════════════════════════════════════════════ */}
-
-            {/* ── 3. Industrial Hydrogen Feedstock ─────────────────────── */}
-            <SplitSection
-                theme="light"
-                imagePosition="left"
-                imageSrc="/application/Hydrogen is a core input for multiple industrial processes..jpg"
-                imageAlt="Industrial Feedstock"
-                subtitle="Core Industrial Input"
-                title="Industrial Hydrogen Feedstock"
-                content={
-                    <>
-                        <p className="mb-6">
-                            Hydrogen is a foundational input across refining, chemicals, steel, and heavy industry. Replacing fossil-derived hydrogen requires continuous, industrial-grade systems operating at competitive cost.
-                        </p>
-                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Applicable Use Cases</h4>
-                        <ul className="space-y-1 mb-6">
-                            {[
-                                "Chemical & petrochemical feedstock",
-                                "Process hydrogen for manufacturing",
-                                "Replacement of captive grey hydrogen systems",
-                                "Integration with existing hydrogen infrastructure",
-                            ].map((item, i) => <CheckItem key={i} text={item} />)}
-                        </ul>
-                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                            Lower energy intensity directly improves the economic feasibility of industrial decarbonization at scale.
-                        </p>
-                    </>
-                }
-            />
-
-            {/* ── 4. Green Ammonia ─────────────────────────────────────── */}
-            <SplitSection
-                theme="gray"
-                imagePosition="right"
-                imageSrc="/application/ScottishPowerGreenHydrogen.jpg"
-                imageAlt="Green Ammonia"
-                unoptimized
-                subtitle="Fertilizer & Energy Export"
-                title="Green Ammonia"
-                content={
-                    <>
-                        <p className="mb-6">
-                            Ammonia remains one of the largest global hydrogen sinks and a cornerstone of fertilizer production and emerging energy export markets.
-                        </p>
-                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Platform Capabilities</h4>
-                        <ul className="space-y-1 mb-6">
-                            {[
-                                "Cost-competitive hydrogen supply",
-                                "Continuous, baseload operation",
-                                "Integration with large ammonia synthesis plants",
-                            ].map((item, i) => <CheckItem key={i} text={item} />)}
-                        </ul>
-                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                            Competitive hydrogen economics enable decarbonization without disrupting plant margins.
-                        </p>
-                    </>
-                }
-            />
-
-            {/* ── 5. Steel & Metals ────────────────────────────────────── */}
-            <SplitSection
-                theme="light"
-                imagePosition="left"
-                imageSrc="/application/Steel%20and%20Metals%20Processing.webp"
-                imageAlt="Steel Processing"
-                subtitle="Heavy Industry Transition"
-                title="Steel & Metals Processing"
-                content={
-                    <>
-                        <p className="mb-6">
-                            Steelmaking is structurally difficult to decarbonize due to high energy demand and metallurgical constraints.
-                        </p>
-                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Hydrogen Enables</h4>
-                        <ul className="space-y-1 mb-6">
-                            {[
-                                "Direct Reduced Iron (DRI) pathways",
-                                "Partial fuel substitution",
-                                "Integration with existing blast or electric arc systems",
-                            ].map((item, i) => <CheckItem key={i} text={item} />)}
-                        </ul>
-                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                            Modular deployment supports phased adoption without full plant redesign.
-                        </p>
-                    </>
-                }
-            />
-
-            {/* ── 6. Refining & Petrochemicals ─────────────────────────── */}
-            <SplitSection
-                theme="gray"
-                imagePosition="right"
-                imageSrc="/application/Refining%20%26%20Petrochemicals.jpg"
-                imageAlt="Refining"
-                unoptimized
-                subtitle="Early Adoption Sector"
-                title="Refining & Petrochemicals"
-                content={
-                    <>
-                        <p className="mb-6">
-                            Refineries are natural early adopters due to constant hydrogen demand and existing process integration.
-                        </p>
-                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Deployment Models</h4>
-                        <ul className="space-y-1 mb-6">
-                            {[
-                                "On-site hydrogen generation",
-                                "Partial grey hydrogen replacement",
-                                "Renewable integration for emissions reduction",
-                            ].map((item, i) => <CheckItem key={i} text={item} />)}
-                        </ul>
-                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
-                            Designed to align with refinery uptime, reliability, and safety standards.
-                        </p>
-                    </>
-                }
-            />
-
-
-            {/* ── 7. Data Centers ──────────────────────────────────────── */}
+            {/* ── 3. Data Centers ──────────────────────────────────────── */}
             <section className="py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] overflow-hidden bg-white">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center">
@@ -246,11 +126,130 @@ export default function ApplicationsPage() {
                 </SectionWrapper>
             </section>
 
+            {/* ═══════════════════════════════════════════════════════════
+                ESTABLISHED INDUSTRIAL APPLICATIONS
+            ═══════════════════════════════════════════════════════════ */}
+
+            {/* ── 4. Industrial Hydrogen Feedstock ─────────────────────── */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Hydrogen is a core input for multiple industrial processes..jpg"
+                imageAlt="Industrial Feedstock"
+                subtitle="Core Industrial Input"
+                title="Industrial Hydrogen Feedstock"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Hydrogen is a foundational input across refining, chemicals, steel, and heavy industry. Replacing fossil-derived hydrogen requires continuous, industrial-grade systems operating at competitive cost.
+                        </p>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Applicable Use Cases</h4>
+                        <ul className="space-y-1 mb-6">
+                            {[
+                                "Chemical & petrochemical feedstock",
+                                "Process hydrogen for manufacturing",
+                                "Replacement of captive grey hydrogen systems",
+                                "Integration with existing hydrogen infrastructure",
+                            ].map((item, i) => <CheckItem key={i} text={item} />)}
+                        </ul>
+                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
+                            Lower energy intensity directly improves the economic feasibility of industrial decarbonization at scale.
+                        </p>
+                    </>
+                }
+            />
+
+            {/* ── 5. Green Ammonia ─────────────────────────────────────── */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/ScottishPowerGreenHydrogen.jpg"
+                imageAlt="Green Ammonia"
+                unoptimized
+                subtitle="Fertilizer & Energy Export"
+                title="Green Ammonia"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Ammonia remains one of the largest global hydrogen sinks and a cornerstone of fertilizer production and emerging energy export markets.
+                        </p>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Platform Capabilities</h4>
+                        <ul className="space-y-1 mb-6">
+                            {[
+                                "Cost-competitive hydrogen supply",
+                                "Continuous, baseload operation",
+                                "Integration with large ammonia synthesis plants",
+                            ].map((item, i) => <CheckItem key={i} text={item} />)}
+                        </ul>
+                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
+                            Competitive hydrogen economics enable decarbonization without disrupting plant margins.
+                        </p>
+                    </>
+                }
+            />
+
+            {/* ── 6. Green Steel ───────────────────────────────────────── */}
+            <SplitSection
+                theme="gray"
+                imagePosition="right"
+                imageSrc="/application/Steel%20and%20Metals%20Processing.webp"
+                imageAlt="Green Steel"
+                subtitle="Heavy Industry Transition"
+                title="Green Steel"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Steelmaking is structurally difficult to decarbonize due to high energy demand and metallurgical constraints.
+                        </p>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Hydrogen Enables</h4>
+                        <ul className="space-y-1 mb-6">
+                            {[
+                                "Direct Reduced Iron (DRI) pathways",
+                                "Partial fuel substitution",
+                                "Integration with existing blast or electric arc systems",
+                            ].map((item, i) => <CheckItem key={i} text={item} />)}
+                        </ul>
+                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
+                            Modular deployment supports phased adoption without full plant redesign.
+                        </p>
+                    </>
+                }
+            />
+
+            {/* ── 7. Refining & Petrochemicals ─────────────────────────── */}
+            <SplitSection
+                theme="light"
+                imagePosition="left"
+                imageSrc="/application/Refining%20%26%20Petrochemicals.jpg"
+                imageAlt="Refining"
+                unoptimized
+                subtitle="Early Adoption Sector"
+                title="Refining & Petrochemicals"
+                content={
+                    <>
+                        <p className="mb-6">
+                            Refineries are natural early adopters due to constant hydrogen demand and existing process integration.
+                        </p>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Deployment Models</h4>
+                        <ul className="space-y-1 mb-6">
+                            {[
+                                "On-site hydrogen generation",
+                                "Partial grey hydrogen replacement",
+                                "Renewable integration for emissions reduction",
+                            ].map((item, i) => <CheckItem key={i} text={item} />)}
+                        </ul>
+                        <p className="text-brand-primary font-medium italic border-l-4 border-brand-primary pl-4 text-[15px]">
+                            Designed to align with refinery uptime, reliability, and safety standards.
+                        </p>
+                    </>
+                }
+            />
+
             {/* ── 8. Utilities & Grid Support ──────────────────────────── */}
             <section className="py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] overflow-hidden bg-gray-50">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center">
-                        {/* Image — first in DOM so it appears first on mobile */}
+                        {/* Image - first in DOM so it appears first on mobile */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -338,7 +337,7 @@ export default function ApplicationsPage() {
             <section className="py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] overflow-hidden bg-gray-50">
                 <SectionWrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center">
-                        {/* Image — first in DOM so it appears first on mobile */}
+                        {/* Image - first in DOM so it appears first on mobile */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -420,7 +419,7 @@ export default function ApplicationsPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Hydrogen enables long-duration energy storage and sector integration — bridging renewable generation with industrial and power demand.
+                            Hydrogen enables long-duration energy storage and sector integration - bridging renewable generation with industrial and power demand.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider text-brand-primary">Relevant Pathways</h4>
                         <ul className="space-y-1">

@@ -76,7 +76,7 @@ export default function BlogPage() {
                             >
                                 <p className="text-[17px] text-gray-300 leading-[1.7]">
                                     Rigorous perspectives on green hydrogen, cold plasma technology, and the hard
-                                    economics of industrial decarbonisation — written for engineers, investors, and
+                                    economics of industrial decarbonisation - written for engineers, investors, and
                                     decision-makers.
                                 </p>
                             </motion.div>
@@ -166,8 +166,8 @@ export default function BlogPage() {
                                 key={cat}
                                 onClick={() => { setActiveCategory(cat); setVisibleCount(6); }}
                                 className={`px-4 py-2 rounded-full text-[13px] font-semibold transition-all duration-200 border ${activeCategory === cat
-                                        ? "bg-brand-primary text-white border-brand-primary shadow-sm"
-                                        : "bg-white text-gray-600 border-gray-200 hover:border-brand-primary hover:text-brand-primary"
+                                    ? "bg-brand-primary text-white border-brand-primary shadow-sm"
+                                    : "bg-white text-gray-600 border-gray-200 hover:border-brand-primary hover:text-brand-primary"
                                     }`}
                             >
                                 {cat}

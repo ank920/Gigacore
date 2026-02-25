@@ -48,7 +48,7 @@ export default function Differentiators() {
                         transition={{ delay: 0.1 }}
                         className="text-[length:var(--font-intro)] text-white font-light max-w-2xl leading-[1.75]"
                     >
-                        Industrial systems require predictable performance. Gigacore’s architecture is engineered for reliability, redundancy, and scale—delivering consistent output in the harshest environments.
+                        Industrial systems require predictable performance. Gigacore’s architecture is engineered for reliability, redundancy, and scale - delivering consistent output in the harshest environments.
                     </motion.p>
                 </div>
 

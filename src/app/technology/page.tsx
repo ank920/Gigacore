@@ -107,7 +107,7 @@ export default function TechnologyPage() {
                             The technology platform under development takes a fundamentally different path. Instead of steady voltage, it uses controlled electrical excitation within a cold plasma environment to interact with water in a more precise and efficient way.
                         </p>
                         <p className="border-l-4 border-brand-primary pl-4 py-2 font-medium text-brand-secondary">
-                            This shift—from constant force to targeted energy delivery—is the foundation of the platform.
+                            This shift, from constant force to targeted energy delivery, is the foundation of the platform.
                         </p>
                     </>
                 }
@@ -129,7 +129,7 @@ export default function TechnologyPage() {
                             Cold plasma is created when electricity energizes a gas or vapor without heating it to extreme temperatures.
                         </p>
                         <p>
-                            Instead of making everything hot, only a small fraction of particles—mainly electrons—carry high energy.
+                            Instead of making everything hot, only a small fraction of particles, mainly electrons, carry high energy.
                             Because the bulk material stays near room temperature, it is called cold plasma.
                         </p>
                     </>
@@ -150,14 +150,14 @@ export default function TechnologyPage() {
                             Traditional Electrolysis: Brute Force
                         </p>
                         <p className="mb-4 text-sm text-gray-500">
-                            Like pushing a heavy object continuously against friction—requiring constant, high-intensity force to maintain any movement.
+                            Like pushing a heavy object continuously against friction, requiring constant, high-intensity force to maintain any movement.
                         </p>
 
                         <p className="font-semibold text-brand-primary text-[16px] sm:text-[18px]">
                             Cold Plasma: Resonance
                         </p>
                         <p>
-                            Like tapping the object at exactly the right resonant frequency—using precise, minimal energy to create massive separation.
+                            Like tapping the object at exactly the right resonant frequency, using precise, minimal energy to create massive separation.
                         </p>
                         <div className="flex items-center gap-2 mt-4 text-brand-secondary text-[15px] font-bold uppercase tracking-wider">
                             <span className="p-1 rounded bg-brand-primary/10 text-brand-primary">

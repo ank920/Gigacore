@@ -64,7 +64,7 @@ export default function CompanyPage() {
                         </p>
                         <div className="p-4 bg-white rounded-lg border-l-4 border-brand-primary shadow-sm">
                             <p className="text-brand-primary font-medium italic">
-                                "Clean energy solutions must compete on fundamentals—cost, reliability, and scale—to achieve lasting impact."
+                                "Clean energy solutions must compete on fundamentals - cost, reliability, and scale - to achieve lasting impact."
                             </p>
                         </div>
                     </>

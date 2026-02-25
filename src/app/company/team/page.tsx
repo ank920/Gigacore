@@ -58,7 +58,7 @@ const leaders = [
         title: "Director – Finance, Tax & Compliance",
         bio: "Oversees financial governance, cross-border structuring, and regulatory compliance.",
         background:
-            "Former Head of Taxation (South West Asia & Middle East) at Motorola Solutions India. Prior senior roles at Coca-Cola India and Nestlé India. Began career at Price Waterhouse advising multinational companies on India entry strategy.",
+            "Former Head of Taxation (South West Asia & Middle East) at Motorola Solutions India. Previously served as Head of Treasury at Coca-Cola India (North & North East), following distinguished senior leadership tenures at Nestlé India and Price Waterhouse.",
         education: [
             "Chartered Accountant",
             "B.Com (Hons) – SRCC, Delhi University",
@@ -99,7 +99,7 @@ export default function TeamPage() {
                                 <span className="text-gray-400">&amp; Team</span>
                             </h1>
                             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
-                                A team of operators, engineers, and scientists united by a single mission&mdash;making green hydrogen industrially deployable and economically viable.
+                                A team of operators, engineers, and scientists united by a single mission - making green hydrogen industrially deployable and economically viable.
                             </p>
                         </motion.div>
 
@@ -135,13 +135,13 @@ export default function TeamPage() {
                             variants={fadeUp}
                             className="text-2xl md:text-3xl lg:text-4xl font-medium leading-normal md:leading-relaxed text-gray-800"
                         >
-                            Our leadership brings decades of experience across energy, finance, engineering, and government&mdash;combined with deep technical expertise in plasma physics and reactor design. We are building the infrastructure for the next industrial era.
+                            Our leadership brings decades of experience across energy, finance, engineering, and government - combined with deep technical expertise in plasma physics and reactor design. We are building the infrastructure for the next industrial era.
                         </motion.h2>
                     </motion.div>
                 </SectionWrapper>
             </section>
 
-            {/* 3. Leadership Cards — Clean, White, Structural */}
+            {/* 3. Leadership Cards - Clean, White, Structural */}
             <section className="py-[var(--spacing-section)] bg-slate-50 border-y border-slate-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
                 <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-primary/[0.05] rounded-full blur-3xl pointer-events-none" />
