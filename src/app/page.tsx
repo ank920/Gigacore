@@ -1,5 +1,5 @@
 import Hero from "@/components/home/Hero";
-import SimpleMetrics from "@/components/home/SimpleMetrics";
+import SmarterPath from "@/components/home/SmarterPath";
 import Credibility from "@/components/home/Credibility";
 import Differentiators from "@/components/home/Differentiators";
 import PlatformOverview from "@/components/home/PlatformOverview";
@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <main className="min-h-screen">
             <Hero />
-            <SimpleMetrics />
+            <SmarterPath />
             <Credibility />
             <PlatformOverview />
             <Differentiators />
