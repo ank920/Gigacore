@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import Logo from "../ui/Logo";
-import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from "../ui/SocialIcons";
+import { LinkedinIcon } from "../ui/SocialIcons";
 
 export default function Footer() {
     return (
@@ -18,15 +18,14 @@ export default function Footer() {
                             Advancing next-generation hydrogen production systems designed for real-world industrial deployment. Built for scale, reliability, and economic viability.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            {[LinkedinIcon, TwitterIcon, FacebookIcon, InstagramIcon].map((Icon, idx) => (
-                                <a
-                                    key={idx}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full bg-brand-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-all duration-300 text-gray-400 group"
-                                >
-                                    <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
-                                </a>
-                            ))}
+                            <a
+                                href="https://www.linkedin.com/company/gigacore-energy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-brand-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-all duration-300 text-gray-400 group"
+                            >
+                                <LinkedinIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
+                            </a>
                         </div>
                     </div>
 
@@ -85,11 +84,20 @@ export default function Footer() {
                             </li>
                             <li className="flex items-start gap-4 group">
                                 <div className="p-2 rounded-lg bg-brand-gray-800 text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                                    <Phone className="w-5 h-5" />
+                                </div>
+                                <div>
+                                    <p className="text-white mb-1 font-medium">Phone</p>
+                                    <a href="tel:+911202443724" className="hover:text-brand-primary transition-colors">+ 91-120-2443724</a>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-4 group">
+                                <div className="p-2 rounded-lg bg-brand-gray-800 text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-colors">
                                     <MapPin className="w-5 h-5" />
                                 </div>
                                 <div>
                                     <p className="text-white mb-1 font-medium">Headquarters</p>
-                                    <p className="leading-relaxed">Global Industrial Hubs<br />New Delhi, India</p>
+                                    <p className="leading-relaxed">B-37, Sector - 1, Noida - 201 301<br />Delhi NCR</p>
                                 </div>
                             </li>
                         </ul>
