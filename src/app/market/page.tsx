@@ -187,7 +187,7 @@ export default function MarketPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Beyond domestic consumption, hydrogen enables export-oriented value chains—particularly through ammonia. Markets that can produce hydrogen at structurally lower cost gain a durable advantage.
+                            Beyond domestic consumption, hydrogen enables export-oriented value chains - particularly through ammonia. Markets that can produce hydrogen at structurally lower cost gain a durable advantage.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Export dynamics are shaped by:</h4>
                         <ul className="space-y-4">

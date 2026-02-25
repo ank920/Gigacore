@@ -116,10 +116,10 @@ export default function EconomicsPage() {
                             Gigacore addresses the root cause of high LCOH by fundamentally reducing the energy required to split water.
                         </p>
                         <p className="border-l-4 border-brand-primary pl-4 py-2 font-medium text-brand-secondary">
-                            By bypassing the thermodynamic barriers of conventional electrolysis, our platform targets a production consumption of <strong>&lt; 35 kWh/kg</strong>.
+                            By bypassing the thermodynamic barriers of conventional electrolysis, our platform targets a production consumption of <strong>&lt; 40 kWh/kg</strong>.
                         </p>
                         <p>
-                            This 30% reduction in energy intensity effectively decouples hydrogen production from peak power volatility.
+                            This 20% reduction in energy intensity effectively decouples hydrogen production from peak power volatility.
                         </p>
                     </>
                 }
@@ -139,7 +139,7 @@ export default function EconomicsPage() {
                             When high efficiency is combined with low-cost, modular hardware, the pathway to $2/kg green hydrogen becomes an engineering reality rather than a forecast.
                         </p>
                         <p>
-                            This price point effectively unlocks heavy industry applications—steel, shipping, and chemicals—that cannot switch to hydrogen at current prices of $4-6/kg.
+                            This price point effectively unlocks heavy industry applications - steel, shipping, and chemicals - that cannot switch to hydrogen at current prices of $4-6/kg.
                         </p>
                     </>
                 }

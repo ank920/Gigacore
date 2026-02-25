@@ -43,7 +43,7 @@ export default function PartnershipPage() {
                             Large-scale deployment requires coordinated execution across technology, infrastructure, and capital.
                         </motion.h2>
                         <motion.p variants={fadeUp} className="text-[length:var(--font-body)] text-gray-600 mb-10 max-w-3xl leading-relaxed">
-                            Our platform is designed for deployment with partners—combining technical capability with industrial reach. The objective is simple: <span className="text-brand-primary font-bold">Move from pilot to disciplined commercial scale.</span>
+                            Our platform is designed for deployment with partners - combining technical capability with industrial reach. The objective is simple: <span className="text-brand-primary font-bold">Move from pilot to disciplined commercial scale.</span>
                         </motion.p>
                     </motion.div>
                 </SectionWrapper>
@@ -60,7 +60,7 @@ export default function PartnershipPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Partnerships are structured around shared execution — not vendor relationships.
+                            Partnerships are structured around shared execution - not vendor relationships.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Guiding principles:</h4>
                         <ul className="space-y-2">
@@ -105,7 +105,7 @@ export default function PartnershipPage() {
                             ))}
                         </div>
                         <p className="text-gray-800 font-medium border-l-4 border-brand-primary pl-4">
-                            Deployment is driven by <strong>demand certainty</strong> — not speculative projections.
+                            Deployment is driven by <strong>demand certainty</strong> - not speculative projections.
                         </p>
                     </>
                 }
@@ -153,7 +153,7 @@ export default function PartnershipPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            EPC partners translate technology into bankable infrastructure. The platform integrates into <strong>established EPC workflows</strong> — not bespoke experimental builds.
+                            EPC partners translate technology into bankable infrastructure. The platform integrates into <strong>established EPC workflows</strong> - not bespoke experimental builds.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Focus areas:</h4>
                         <ul className="space-y-2">
@@ -215,7 +215,7 @@ export default function PartnershipPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Independent validation underpins industrial adoption and financing. Credibility is built through <strong>validation</strong> — not claims.
+                            Independent validation underpins industrial adoption and financing. Credibility is built through <strong>validation</strong> - not claims.
                         </p>
                         <h4 className="font-bold text-gray-900 mb-4">Research collaboration supports:</h4>
                         <ul className="space-y-2">

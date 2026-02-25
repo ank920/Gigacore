@@ -90,7 +90,7 @@ export default function SimpleMetrics() {
                     {/* Title */}
                     <div className="mb-12 border-b border-gray-200 pb-4">
                         <h2 className="text-[20px] lg:text-[24px] tracking-tight">
-                            <span className="text-brand-secondary font-medium">Cold Plasma Reactor Technology — </span><span className="text-brand-primary font-bold">Green Hydrogen Production</span>
+                            <span className="text-brand-secondary font-medium">Cold Plasma Reactor Technology - </span><span className="text-brand-primary font-bold">Green Hydrogen Production</span>
                         </h2>
                     </div>
 

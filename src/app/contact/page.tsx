@@ -1,13 +1,46 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
-import { Mail, ArrowRight, HeartHandshake, Microscope, TrendingUp, Megaphone, Globe, CheckCircle } from "lucide-react";
+import { Mail, ArrowRight, HeartHandshake, Microscope, TrendingUp, Megaphone, Globe, CheckCircle, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
+
+const offices = [
+    {
+        country: "India Headquarters",
+        address: "B-37, Sector - 1, Noida - 201 301, Delhi NCR",
+        phone: "+91-120-2443724",
+    },
+    {
+        country: "Netherlands",
+        address: "Zuidplein 126 WTC, Toren H, 1077 XV Amsterdam, Netherlands",
+        phone: "+31 0 (20) 240 30 80",
+    },
+    {
+        country: "USA",
+        address: "3001 Mallard Fox Drive NW, Decatur, Alabama – 35601 USA",
+        phone: "+1-256-686-2953",
+    },
+    {
+        country: "Singapore",
+        address: "Levels 21 & 34, Centennial Tower, 3 Temasek Avenue, Singapore - 039190",
+    },
+    {
+        country: "Japan",
+        address: "Parks Tower, 19F, Namba 2-10-70 Nanbanaka, Naniwa-ku, Osaka-shi, Japan, 556-0011",
+        phone: "+81-6-7662-8710",
+    },
+    {
+        country: "Korea",
+        address: "Gangnam B/D, 1321-1, Seocho-dong, Seocho-gu, Seoul, Korea 137-070",
+        phone: "+82 2 2190 3836",
+    }
+];
 
 export default function ContactPage() {
     return (
@@ -191,8 +224,9 @@ export default function ContactPage() {
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/contact/India-Aligned,%20Globally%20Competitive.jpg"
+                imageSrc="/contact/India-Aligned, Globally Competitive.jpg"
                 imageAlt="Operating Regions"
+                imageClassName="object-contain"
                 subtitle="Reach"
                 title="Operating Regions"
                 content={
@@ -204,19 +238,101 @@ export default function ContactPage() {
                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center">
                                 <Globe className="w-6 h-6 text-brand-primary mx-auto mb-2" />
                                 <h4 className="font-bold text-gray-900">India</h4>
-                                <span className="text-xs font-bold text-white bg-brand-primary px-2 py-0.5 rounded-full inline-block mt-1">PRIMARY</span>
+                                <span className="text-xs font-bold text-white bg-brand-primary px-2 py-0.5 rounded-full inline-block mt-1">SECONDARY</span>
                             </div>
                             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center">
                                 <Globe className="w-6 h-6 text-gray-400 mx-auto mb-2" />
                                 <h4 className="font-bold text-gray-900">Global</h4>
-                                <span className="text-xs font-bold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full inline-block mt-1">EXPORT</span>
+                                <span className="text-xs font-bold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full inline-block mt-1">EVALUATING</span>
                             </div>
                         </div>
                     </>
                 }
             />
 
-            {/* 8. Engagement Process Feature Section */}
+            {/* 8. Global Offices */}
+            <section className="py-[var(--spacing-section)] bg-gray-50/50 border-t border-gray-100">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                    >
+                        {/* Premium Header with Dual Images */}
+                        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-20 text-left">
+                            <motion.div variants={fadeUp} className="lg:w-5/12">
+                                <span className="text-brand-primary text-[13px] font-bold tracking-widest uppercase mb-4 block">
+                                    Global Presence
+                                </span>
+                                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#001F1B] leading-[1.1] tracking-tight">
+                                    Our Global Footprint
+                                </h2>
+                                <p className="text-[17px] text-gray-600 leading-relaxed font-medium">
+                                    Strategically located across key international markets to support our expanding deployment of industrial hydrogen solutions and infrastructure assets.
+                                </p>
+                            </motion.div>
+
+                            <motion.div variants={fadeUp} className="lg:w-7/12 flex gap-4 lg:gap-6 h-[300px] sm:h-[400px]">
+                                <div className="w-1/2 relative rounded-[1.5rem] overflow-hidden shadow-lg transform -translate-y-4">
+                                    <Image
+                                        src="/contact/globe.jpg"
+                                        alt="Global Connections"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay"></div>
+                                </div>
+                                <div className="w-1/2 relative rounded-[1.5rem] overflow-hidden shadow-lg transform translate-y-8">
+                                    <Image
+                                        src="/contact/globe2.jpg"
+                                        alt="International Team"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay"></div>
+                                </div>
+                            </motion.div>
+                        </div>
+
+                        {/* Cards Grid */}
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-left relative z-10">
+                            {offices.map((office, i) => (
+                                <div key={i} className="p-8 lg:p-10 bg-white rounded-[1.25rem] border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                                    <div className="flex items-center gap-4 mb-8 relative z-10">
+                                        <div className="w-[42px] h-[42px] rounded-full bg-[#E5F3EB] flex items-center justify-center text-brand-primary shrink-0 transition-transform group-hover:scale-110 duration-300">
+                                            <Globe className="w-5 h-5" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-900 tracking-tight">
+                                            {office.country}
+                                        </h3>
+                                    </div>
+                                    <div className="space-y-6 flex-grow relative z-10">
+                                        <div className="flex items-start gap-4">
+                                            <MapPin className="w-[18px] h-[18px] text-gray-400 shrink-0 mt-[3px]" />
+                                            <p className="text-[15px] text-gray-600 leading-[1.6]">
+                                                {office.address}
+                                            </p>
+                                        </div>
+                                        {office.phone && (
+                                            <div className="flex items-center gap-4">
+                                                <Phone className="w-[18px] h-[18px] text-gray-400 shrink-0" />
+                                                <a href={`tel:${office.phone.replace(/[^0-9+]/g, '')}`} className="text-[15px] text-gray-600 hover:text-brand-primary transition-colors">
+                                                    {office.phone}
+                                                </a>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* 9. Engagement Process Feature Section */}
             <section className="py-[var(--spacing-section)] bg-gray-900 text-white">
                 <SectionWrapper>
                     <div className="text-center mb-16">
@@ -241,7 +357,7 @@ export default function ContactPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 9. CTA Section */}
+            {/* 10. CTA Section */}
             <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
