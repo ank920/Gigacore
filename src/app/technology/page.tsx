@@ -260,7 +260,7 @@ export default function TechnologyPage() {
             <SplitSection
                 theme="gray"
                 imagePosition="right"
-                imageSrc="/Technology/Scalability Through Modularity.jpeg"
+                imageSrc="/Technology/Scalability Through Modularity.png"
                 imageAlt="Scalability"
                 subtitle="Scalability"
                 title="Scalability Through Modularity"
