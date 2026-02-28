@@ -75,9 +75,9 @@ function CustomDropdown({ id, value, options, placeholder = "Please Select", req
                 onClick={() => setOpen(prev => !prev)}
                 aria-haspopup="listbox"
                 aria-expanded={open}
-                className={`w-full flex items-center justify-between px-4 py-3.5 rounded-lg border bg-white text-left text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all duration-300 shadow-sm hover:border-brand-primary/50 ${open ? "border-brand-primary ring-2 ring-brand-primary/30" : "border-gray-200"}`}
+                className={`w-full flex items-center justify-between px-4 py-3.5 bg-[#f8f9fa] border rounded-lg text-left focus:outline-none transition-all duration-300 ${open ? "bg-white border-gray-300 ring-4 ring-gray-50" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
             >
-                <span className={`truncate text-[15px] ${value ? "text-gray-900" : "text-gray-400"}`}>
+                <span className={`truncate text-[15px] ${value ? "text-gray-900" : "text-gray-500"}`}>
                     {value || placeholder}
                 </span>
                 <svg
@@ -160,119 +160,106 @@ Policy Agreed: ${formData.agreePolicy ? "Yes" : "No"}
         window.location.href = `mailto:info@gigacore.energy?subject=${subject}&body=${body}`;
     };
 
-    const inputClass = "w-full px-4 py-3.5 rounded-lg border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary focus:bg-white transition-all duration-300 placeholder:text-gray-400";
-    const labelClass = "text-[14px] font-semibold text-gray-700";
-    const fieldClass = "flex flex-col gap-2 min-w-0";
+    const inputClass = "w-full px-4 py-3.5 bg-[#f8f9fa] border border-transparent rounded-lg text-gray-900 focus:outline-none focus:bg-white focus:border-gray-300 focus:ring-4 focus:ring-gray-50 transition-all duration-300 placeholder:text-gray-500";
+    const labelTextClass = "text-[14px] md:text-[15px] font-bold text-[#1a1a1a]";
+    const asteriskClass = "text-red-500 font-bold text-[15px] leading-none";
+
+    const renderLabel = (text: string, required: boolean = false) => (
+        <div className="flex flex-col gap-1 mb-2">
+            <label className={labelTextClass}>{text}</label>
+            {required && <span className={asteriskClass}>*</span>}
+        </div>
+    );
 
     return (
-        <div className="w-full max-w-[95%] lg:max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 md:p-14 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow duration-500">
-            <h2 className="text-[28px] md:text-[40px] font-bold text-center text-gray-900 mb-8 md:mb-12 tracking-tight">
-                Reach our experts.
-            </h2>
+        <div className="w-full max-w-[95%] lg:max-w-4xl mx-auto bg-white rounded-2xl p-6 sm:p-10 md:p-12 shadow-sm border border-gray-100">
+            <div className="relative z-10">
+                <form onSubmit={handleSubmit} className="space-y-8 max-w-3xl mx-auto">
 
-            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 md:gap-y-8">
-
-                    {/* First Name */}
-                    <div className={fieldClass}>
-                        <label htmlFor="firstName" className={labelClass}>First name<span className="text-red-500 ml-1">*</span></label>
-                        <input type="text" id="firstName" name="firstName" required value={formData.firstName} onChange={handleChange} className={inputClass} />
+                    {/* Industry */}
+                    <div className="w-full z-20 relative">
+                        {renderLabel("Industry category", true)}
+                        <CustomDropdown id="industry" value={formData.industry} options={INDUSTRIES} placeholder="Select an industry" required onChange={handleDropdown("industry")} />
                     </div>
 
-                    {/* Last Name */}
-                    <div className={fieldClass}>
-                        <label htmlFor="lastName" className={labelClass}>Last name<span className="text-red-500 ml-1">*</span></label>
-                        <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} className={inputClass} />
+                    {/* Company */}
+                    <div className="w-full">
+                        {renderLabel("Organization name", true)}
+                        <input type="text" id="company" name="company" required value={formData.company} onChange={handleChange} className={inputClass} placeholder="Full legal or operating name" />
                     </div>
 
-                    {/* Company Email */}
-                    <div className={fieldClass}>
-                        <label htmlFor="email" className={labelClass}>Company Email<span className="text-red-500 ml-1">*</span></label>
-                        <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className={inputClass} />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+                        <div>
+                            {renderLabel("First name", true)}
+                            <input type="text" id="firstName" name="firstName" required value={formData.firstName} onChange={handleChange} className={inputClass} placeholder="Your first name" />
+                        </div>
+                        <div>
+                            {renderLabel("Last name", true)}
+                            <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} className={inputClass} placeholder="Your last name" />
+                        </div>
+                        <div>
+                            {renderLabel("Email address", true)}
+                            <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className={inputClass} placeholder="your.email@organization.com" />
+                        </div>
+                        <div>
+                            {renderLabel("Phone number", true)}
+                            <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleChange} className={inputClass} placeholder="+1 (555) 000-0000" />
+                        </div>
+                        <div>
+                            {renderLabel("Job Title", true)}
+                            <input type="text" id="jobTitle" name="jobTitle" required value={formData.jobTitle} onChange={handleChange} className={inputClass} placeholder="Your current role" />
+                        </div>
+                        <div className="relative z-10">
+                            {renderLabel("Geographic focus")}
+                            <CustomDropdown id="country" value={formData.country} options={COUNTRIES} placeholder="Country, state, or specific site" required onChange={handleDropdown("country")} />
+                        </div>
                     </div>
 
-                    {/* Phone Number */}
-                    <div className={fieldClass}>
-                        <label htmlFor="phone" className={labelClass}>Phone number<span className="text-red-500 ml-1">*</span></label>
-                        <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleChange} className={inputClass} />
+                    {/* Textarea */}
+                    <div className="w-full">
+                        {renderLabel("Project context or engagement objective", true)}
+                        <textarea
+                            id="message" name="message" required rows={4}
+                            value={formData.message} onChange={handleChange}
+                            className={`${inputClass} resize-y bg-[#f8f9fa] border border-transparent`}
+                            placeholder="Please describe the scope, timeline, and decision-making context for this inquiry."
+                        ></textarea>
                     </div>
 
-                    {/* Company Name */}
-                    <div className={fieldClass}>
-                        <label htmlFor="company" className={labelClass}>Company name<span className="text-red-500 ml-1">*</span></label>
-                        <input type="text" id="company" name="company" required value={formData.company} onChange={handleChange} className={inputClass} />
+                    {/* Confidentiality Block */}
+                    <div className="w-full border-l-[3px] border-brand-primary bg-white py-1 pl-4 mt-8 mb-4">
+                        <p className="text-[14px] text-[#4a4a4a] leading-relaxed">
+                            <span className="font-bold text-[#1a1a1a]">Confidentiality:</span> All submissions are treated as confidential and reviewed internally before external distribution. We do not share contact details or project information without explicit consent.
+                        </p>
                     </div>
 
-                    {/* Job Title */}
-                    <div className={fieldClass}>
-                        <label htmlFor="jobTitle" className={labelClass}>Job Title<span className="text-red-500 ml-1">*</span></label>
-                        <input type="text" id="jobTitle" name="jobTitle" required value={formData.jobTitle} onChange={handleChange} className={inputClass} />
-                    </div>
-
-                    {/* Industry – custom dropdown */}
-                    <div className={fieldClass}>
-                        <label className={labelClass}>Industry<span className="text-red-500 ml-1">*</span></label>
-                        <CustomDropdown
-                            id="industry"
-                            value={formData.industry}
-                            options={INDUSTRIES}
-                            required
-                            onChange={handleDropdown("industry")}
-                        />
-                    </div>
-
-                    {/* Country – custom dropdown */}
-                    <div className={fieldClass}>
-                        <label className={labelClass}>Country/Region<span className="text-red-500 ml-1">*</span></label>
-                        <CustomDropdown
-                            id="country"
-                            value={formData.country}
-                            options={COUNTRIES}
-                            required
-                            onChange={handleDropdown("country")}
-                        />
-                    </div>
-                </div>
-
-                {/* Message */}
-                <div className="flex flex-col gap-2 mt-2">
-                    <label htmlFor="message" className={labelClass}>How can we help you?<span className="text-red-500 ml-1">*</span></label>
-                    <textarea
-                        id="message" name="message" required rows={5}
-                        value={formData.message} onChange={handleChange}
-                        className="w-full px-4 py-3.5 rounded-lg border border-gray-200 bg-gray-50/50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary focus:bg-white transition-all duration-300 resize-y placeholder:text-gray-400"
-                    ></textarea>
-                </div>
-
-                {/* Consent */}
-                <div className="mt-8 bg-gray-50/30 p-4 sm:p-6 rounded-xl border border-gray-100">
-                    <div className="flex items-start gap-4">
+                    {/* Consent */}
+                    <div className="flex items-start gap-3">
                         <div className="relative flex items-center h-5 mt-0.5 shrink-0">
                             <input
                                 type="checkbox" id="agreePolicy" name="agreePolicy" required
                                 checked={formData.agreePolicy} onChange={handleChange}
-                                className="w-5 h-5 rounded border-gray-300 text-brand-primary focus:ring-brand-primary focus:ring-offset-1 cursor-pointer"
+                                className="w-4 h-4 rounded border-gray-300 text-brand-primary focus:ring-brand-primary focus:ring-offset-1 cursor-pointer transition-colors"
                             />
                         </div>
-                        <label htmlFor="agreePolicy" className="text-[14px] text-gray-600 leading-[1.6] cursor-pointer">
-                            By submitting the form, you agree to the <a href="/privacy-policy" className="text-brand-primary font-medium hover:underline">Privacy Policy</a>, authorize Gigacore to use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we may contact you for products, services, and other content that may be of interest to you.
-                        </label>
+                        <div>
+                            <label htmlFor="agreePolicy" className="text-[14px] text-[#4a4a4a] leading-[1.6] cursor-pointer block">
+                                By submitting the form, you agree to the <a href="/privacy-policy" className="text-brand-primary font-bold hover:underline">Privacy Policy</a>, authorize Gigacore to use your personal information to administer your account and to provide the products and services you requested from us.
+                            </label>
+                        </div>
                     </div>
-                    <p className="text-[14px] text-gray-600 leading-[1.6] mt-4 ml-0 sm:ml-9">
-                        You can unsubscribe from these communications at any time. Please review our <a href="/privacy-policy" className="text-brand-primary font-medium hover:underline">Privacy Policy</a>.
-                    </p>
-                </div>
 
-                {/* Submit */}
-                <div className="pt-6">
-                    <button
-                        type="submit"
-                        className="bg-[#56a345] hover:bg-[#468c37] text-white font-bold py-3.5 px-12 rounded-lg transition-all duration-300 text-[16px] focus:outline-none focus:ring-4 focus:ring-[#56a345]/30 shadow-md hover:shadow-lg w-full sm:w-auto"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
+                    {/* Submit Button */}
+                    <div className="pt-2">
+                        <button
+                            type="submit"
+                            className="bg-brand-primary hover:bg-[#468c37] text-white font-bold py-3.5 px-8 rounded-md transition-colors duration-300 text-[15px] focus:outline-none focus:ring-4 focus:ring-brand-primary/30 w-auto"
+                        >
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
