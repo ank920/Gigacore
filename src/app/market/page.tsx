@@ -60,7 +60,7 @@ export default function MarketPage() {
                 content={
                     <>
                         <p className="mb-6">
-                            Three forces are reshaping the hydrogen market:
+                            Three forces are reshaping the hydrogen market
                         </p>
                         <ul className="space-y-4">
                             {[
@@ -128,7 +128,7 @@ export default function MarketPage() {
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-3 justify-center mb-4">
                             <img src="https://flagcdn.com/w40/in.png" alt="India" className="w-8 rounded shadow-sm" />
-                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary">India: A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary">India - A <span className="text-gradient-green-glow">First-Principles</span> Hydrogen Market</h2>
                         </div>
                         <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-3xl mx-auto leading-relaxed">
                             Unlike markets driven primarily by subsidies, India’s hydrogen transition must succeed on economics and scale.
@@ -189,7 +189,7 @@ export default function MarketPage() {
                         <p className="mb-6">
                             Beyond domestic consumption, hydrogen enables export-oriented value chains - particularly through ammonia. Markets that can produce hydrogen at structurally lower cost gain a durable advantage.
                         </p>
-                        <h4 className="font-bold text-gray-900 mb-4">Export dynamics are shaped by:</h4>
+                        <h4 className="font-bold text-gray-900 mb-4">Export dynamics are shaped by</h4>
                         <ul className="space-y-4">
                             <li className="flex gap-3 items-center">
                                 <Anchor className="w-5 h-5 text-brand-primary" />
@@ -222,7 +222,7 @@ export default function MarketPage() {
                             While India is a primary focus, the same economic logic applies globally. As subsidies normalize, cost-led hydrogen platforms are expected to outperform subsidy-dependent models.
                         </p>
                         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                            <h4 className="font-bold text-brand-secondary mb-4 border-b border-gray-100 pb-2">Relevant Markets:</h4>
+                            <h4 className="font-bold text-brand-secondary mb-4 border-b border-gray-100 pb-2">Relevant Markets</h4>
                             <div className="flex flex-wrap gap-3">
                                 <span className="px-3 py-1.5 bg-gray-50 rounded-lg text-sm text-gray-700 font-medium border border-gray-100">Decarbonization zones</span>
                                 <span className="px-3 py-1.5 bg-gray-50 rounded-lg text-sm text-gray-700 font-medium border border-gray-100">Manufacturing regions</span>
@@ -237,7 +237,7 @@ export default function MarketPage() {
             <SplitSection
                 theme="light"
                 imagePosition="left"
-                imageSrc="/market/From%20Policy%20Alignment%20to%20Commercial%20Realit.jpg"
+                imageSrc="/market/From%20Policy%20Alignment%20to%20Commercial%20Realit.png"
                 imageAlt="Commercial Reality"
                 subtitle="Market Maturity"
                 title="From Policy to Reality"
@@ -268,7 +268,7 @@ export default function MarketPage() {
             <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
-                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Ready to scale?</h2>
+                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Scaling the Future</h2>
                     <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         The market demand is real. The technology is ready. The next step is structured collaboration.
                     </p>

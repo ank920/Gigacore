@@ -286,7 +286,7 @@ export const blogPosts: BlogPost[] = [
         slug: "sustainability-metrics-hydrogen-production",
         title: "Sustainability Metrics for Hydrogen Production",
         excerpt:
-            "Beyond carbon intensity: a comprehensive look at the sustainability metrics that matter for evaluating hydrogen production pathways.",
+            "Beyond carbon intensity is a comprehensive look at the sustainability metrics that matter for evaluating hydrogen production pathways.",
         category: "Sustainability",
         date: "October 1, 2025",
         image: "/blog/Sustainability Metrics for Hydrogen Production.png",
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
         content: [
             {
                 type: "paragraph",
-                text: "At Gigacore, our approach to hydrogen production is fundamentally different from incremental improvements to existing technologies. We started with the question: what would a hydrogen production system look like if it were designed from scratch for industrial scale?",
+                text: "At Gigacore, our approach to hydrogen production is fundamentally different from incremental improvements to existing technologies. We started by redesigning the hydrogen production system from scratch for industrial scale.",
             },
             {
                 type: "heading",

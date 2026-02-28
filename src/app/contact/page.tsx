@@ -23,7 +23,7 @@ const offices = [
     },
     {
         country: "USA",
-        address: "3001 Mallard Fox Drive NW, Decatur, Alabama – 35601 USA",
+        address: "3001 Mallard Fox Drive NW, Decatur, Alabama - 35601 USA",
         phone: "+1-256-686-2953",
     },
     {
@@ -120,7 +120,7 @@ export default function ContactPage() {
                             </div>
                         </div>
                         <p className="text-sm text-gray-500 italic">
-                            Response time: 1–2 business days
+                            Response time: 1-2 business days
                         </p>
                     </>
                 }
@@ -273,7 +273,7 @@ export default function ContactPage() {
                                 </p>
                             </motion.div>
 
-                            <motion.div variants={fadeUp} className="lg:w-7/12 flex gap-4 lg:gap-6 h-[300px] sm:h-[400px]">
+                            <motion.div variants={fadeUp} className="w-full lg:w-7/12 flex gap-4 lg:gap-6 h-[300px] sm:h-[400px] mt-8 lg:mt-0">
                                 <div className="w-1/2 relative rounded-[1.5rem] overflow-hidden shadow-lg transform -translate-y-4">
                                     <Image
                                         src="/contact/globe.jpg"
@@ -361,7 +361,7 @@ export default function ContactPage() {
             <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
-                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Ready to Engage?</h2>
+                    <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">Engage with Us</h2>
                     <p className="text-[15px] sm:text-[16px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         If you are evaluating hydrogen solutions with a focus on cost, scale, and industrial viability, we invite you to connect.
                     </p>
