@@ -46,7 +46,7 @@ export default function SmarterPath() {
                             A Smarter Path to <span className="text-brand-primary">Clean Hydrogen</span>
                         </h2>
                         <p className="text-[16px] sm:text-[18px] text-gray-600 leading-relaxed">
-                            The global energy transition demands solutions that are:
+                            The global energy transition demands solutions that are
                         </p>
                     </motion.div>
                 </div>

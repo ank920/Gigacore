@@ -6,9 +6,9 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import { Zap, DollarSign, Target, CheckCircle2, Hexagon, TrendingUp, Presentation, LogOut } from "lucide-react";
 
 const atAGlance = [
-    { label: "Current Performance", value: "30–35 kWh/kg", desc: "Multiple successful runs confirmed" },
+    { label: "Current Performance", value: "30-35 kWh/kg", desc: "Multiple successful runs confirmed" },
     { label: "Target Performance", value: "25 kWh/kg (commercial pilot)", desc: "Unlocks $2.25/kg LCOH subject to pilot validation" },
-    { label: "Current Status", value: "TRL 5–6 Lab Validated", desc: "Bench-scale proven; structured pilot programme next" },
+    { label: "Current Status", value: "TRL 5-6 Lab Validated", desc: "Bench-scale proven; structured pilot programme next" },
     { label: "Market Inflection", value: "$2.75/kg cost parity", desc: "Ammonia & refining parity relevant addressable segment" },
     { label: "Series A Raise", value: "$20M (full Phase 1)", desc: "18-month runway covering pilot, demo, team, BD" }
 ];
@@ -16,7 +16,7 @@ const atAGlance = [
 const financialDetails = [
     { label: "Investor Equity", value: "33% pure equity", desc: "No preferences, no ratchet, no liquidation priority" },
     { label: "Post-Money Valuation", value: "$60.6M", desc: "Pre-pilot, pre-demo, pre-customer venture-stage entry point" },
-    { label: "Strategic Exit Target", value: "36–60 months post-pilot validation", desc: "IP acquisition by Tier 1 industrial; multiple credible acquirers" },
+    { label: "Strategic Exit Target", value: "36-60 months post-pilot validation", desc: "IP acquisition by Tier 1 industrial; multiple credible acquirers" },
     { label: "Exit Framing", value: "Science/IP asset acquisition", desc: "Exit thesis is strategic IP value not EBITDA or revenue multiples" },
     { label: "Return Basis", value: "Valuation re-rating at milestones", desc: "Each validation milestone (pilot → cost cert → offtake) re-rates the asset" },
     { label: "Primary Market", value: "India: ammonia & refining", desc: "IFFCO, KRIBHCO cost parity unlocks immediate switching" },
@@ -24,9 +24,9 @@ const financialDetails = [
 ];
 
 const returnScenarios = [
-    { name: "CONSERVATIVE", timing: "36–60 months post-pilot", multiple: "3.0×", val: "3× post-money", investor: "$52M proceeds", moic: "3.0×", irr: "55%" },
-    { name: "BASE CASE", timing: "36–60 months post-pilot", multiple: "4.0×", val: "4× post-money", investor: "$69M proceeds", moic: "3.9×", irr: "74%" },
-    { name: "UPSIDE", timing: "36–60 months post-pilot", multiple: "5.0×", val: "5× post-money", investor: "$87M proceeds", moic: "4.9×", irr: "90%" }
+    { name: "CONSERVATIVE", timing: "36-60 months post-pilot", multiple: "3.0×", val: "3× post-money", investor: "$52M proceeds", moic: "3.0×", irr: "55%" },
+    { name: "BASE CASE", timing: "36-60 months post-pilot", multiple: "4.0×", val: "4× post-money", investor: "$69M proceeds", moic: "3.9×", irr: "74%" },
+    { name: "UPSIDE", timing: "36-60 months post-pilot", multiple: "5.0×", val: "5× post-money", investor: "$87M proceeds", moic: "4.9×", irr: "90%" }
 ];
 
 const whyNow = [
@@ -207,7 +207,7 @@ export default function InvestmentThesis() {
                     {/* Section: Why Gigacore Energy Now? */}
                     <motion.div variants={fadeUp} className="w-full pt-10">
                         <h3 className="text-2xl lg:text-3xl font-bold text-brand-secondary uppercase tracking-tight mb-10 pb-4 border-b-2 border-brand-primary w-full">
-                            Why <span className="text-brand-primary">GigaCore Energy</span> Now?
+                            The Case for <span className="text-brand-primary">GigaCore Energy</span>
                         </h3>
                         <div className="flex flex-col gap-8">
                             {whyNow.map((item, idx) => {

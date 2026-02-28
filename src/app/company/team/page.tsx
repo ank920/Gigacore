@@ -18,18 +18,18 @@ const leaders = [
         background:
             "Previously founded Bene LLC. Earlier senior roles at Barclays Global Investors, Wells Fargo, and Pacific Gas & Electric.",
         education: [
-            "M.Sc Computer Science – University of South Carolina",
-            "BE Electrical Engineering – IIT Roorkee",
+            "M.Sc Computer Science - University of South Carolina",
+            "BE Electrical Engineering - IIT Roorkee",
         ],
     },
     {
         name: "Vandit Verma",
         initials: "VV",
-        title: "President – Infrastructure & Energy Platforms",
+        title: "President, Infrastructure & Energy Platforms",
         bio: "Leads global infrastructure development and commercialization of advanced energy platforms. Brings cross-border project structuring expertise and strategic capital partnerships experience.",
         background:
             "Background includes hydrogen and low-carbon fuel systems, rare earth extraction, and waste-to-energy infrastructure across North America, Europe, and emerging markets.",
-        education: ["B.Eng Mechanical Engineering – Ryerson University, Canada"],
+        education: ["B.Eng Mechanical Engineering - Ryerson University, Canada"],
     },
     {
         name: "Igor Kuntevitsky",
@@ -43,25 +43,25 @@ const leaders = [
     {
         name: "Ajeet Saran",
         initials: "AS",
-        title: "EPC Director & Government Relations – India",
+        title: "EPC Director & Government Relations, India",
         bio: "Leads project execution, regulatory interface, and industrial deployment in India.",
         background:
             "Industry leader with nearly 25 years of experience at Tata Steel across mining, power, sales, logistics, and EPC project execution. Brings deep techno-commercial expertise and strong government liaison capability.",
         education: [
-            "BE Electrical Engineering – IIT-BHU",
-            "PG Supply Chain – XLRI",
+            "BE Electrical Engineering - IIT-BHU",
+            "PG Supply Chain - XLRI",
         ],
     },
     {
         name: "Gautam Ghosh",
         initials: "GG",
-        title: "Director – Finance, Tax & Compliance",
+        title: "Director, Finance, Tax & Compliance",
         bio: "Oversees financial governance, cross-border structuring, and regulatory compliance.",
         background:
             "Former Head of Taxation (South West Asia & Middle East) at Motorola Solutions India. Previously served as Head of Treasury at Coca-Cola India (North & North East), following distinguished senior leadership tenures at Nestlé India and Price Waterhouse.",
         education: [
             "Chartered Accountant",
-            "B.Com (Hons) – SRCC, Delhi University",
+            "B.Com (Hons) - SRCC, Delhi University",
         ],
     },
 ];
@@ -88,8 +88,7 @@ export default function TeamPage() {
                     >
                         {/* Text Col */}
                         <motion.div variants={fadeUp} className="max-w-2xl w-full">
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="h-px w-12 bg-brand-primary" />
+                            <div className="flex items-center mb-6">
                                 <span className="text-sm font-bold tracking-widest uppercase text-brand-primary whitespace-nowrap">
                                     The People Behind the Platform
                                 </span>
@@ -98,15 +97,21 @@ export default function TeamPage() {
                                 Leadership <br />
                                 <span className="text-gray-400">&amp; Team</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
+                            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg mb-8">
                                 A team of operators, engineers, and scientists united by a single mission - making green hydrogen industrially deployable and economically viable.
                             </p>
+
+                            <div className="relative pl-6 border-l-4 border-brand-primary/30 max-w-lg">
+                                <p className="text-gray-700 italic font-medium leading-relaxed">
+                                    "Execution at scale requires more than just breakthrough science. It requires a discipline forged in industry, complex operations, and capital markets."
+                                </p>
+                            </div>
                         </motion.div>
 
                         {/* Image Col */}
                         <motion.div variants={fadeUp} className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/50 group">
                             <Image
-                                src="/our team/our team hero section.jpg"
+                                src="/our team/our team hero section.png"
                                 alt="GigaCore Team Hero"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

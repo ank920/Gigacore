@@ -164,7 +164,7 @@ export default function ApplicationsPage() {
                 <SplitSection
                     theme="light"
                     imagePosition="left"
-                    imageSrc="/application/ScottishPowerGreenHydrogen.jpg"
+                    imageSrc="/application/Green Ammonia.png"
                     imageAlt="Green Ammonia"
                     unoptimized
                     subtitle="Fertilizer & Energy Export"
@@ -556,7 +556,7 @@ export default function ApplicationsPage() {
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <SectionWrapper className="relative z-10 text-center">
                     <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6">
-                        Is the market ready?
+                        The Market is Ready
                     </h2>
                     <p className="text-[15px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         We don&apos;t build for hypothetical futures. We build for immediate industrial demand. See the market landscape.

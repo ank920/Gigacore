@@ -120,7 +120,7 @@ export default function TechnologyPage() {
                 imageSrc="/Technology/Plasma_Animation_AdobeStock_165519357.gif"
                 imageAlt="Cold Plasma Animation"
                 subtitle="The Medium"
-                title="What Is Cold Plasma?"
+                title="Understanding Cold Plasma"
                 unoptimized={true}
                 content={
                     <>
@@ -143,18 +143,18 @@ export default function TechnologyPage() {
                 imageSrc="/Technology/Traditional Electrolysis.png"
                 imageAlt="Resonance and Precision"
                 subtitle="Comparative Analysis"
-                title="A Simple Analogy: Resonance & Precision"
+                title="A Simple Analogy - Resonance & Precision"
                 content={
                     <>
                         <p className="font-semibold text-gray-800">
-                            Traditional Electrolysis: Brute Force
+                            Traditional Electrolysis - Brute Force
                         </p>
                         <p className="mb-4 text-sm text-gray-500">
                             Like pushing a heavy object continuously against friction, requiring constant, high-intensity force to maintain any movement.
                         </p>
 
                         <p className="font-semibold text-brand-primary text-[16px] sm:text-[18px]">
-                            Cold Plasma: Resonance
+                            Cold Plasma - Resonance
                         </p>
                         <p>
                             Like tapping the object at exactly the right resonant frequency, using precise, minimal energy to create massive separation.
@@ -343,7 +343,7 @@ export default function TechnologyPage() {
                         <div className="absolute inset-0 bg-[url('/Technology/hero%20section.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay z-0" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Ready to see the numbers?</h2>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 drop-shadow-md">Explore the Economics</h2>
                             <p className="text-[15px] sm:text-[16px] text-white/95 mb-10 max-w-3xl mx-auto leading-[1.5]">
                                 Technology is only as good as its economic viability. See how low-energy inputs translate to market-leading LCOH.
                             </p>

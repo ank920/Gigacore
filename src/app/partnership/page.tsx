@@ -267,54 +267,99 @@ export default function PartnershipPage() {
             />
 
             {/* 10. Partnership Models & Deployment Pathway (Feature Section) */}
-            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
-                <SectionWrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.2)] bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
+                <SectionWrapper className="relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
                         {/* Partnership Models */}
-                        <div>
-                            <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary">Partnership <span className="text-gradient-green-glow">Models</span></h2>
-                            <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
+                        <motion.div
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-50px" }}
+                        >
+                            <motion.h2
+                                variants={fadeUp}
+                                className="text-3xl md:text-4xl font-bold mb-4 text-brand-secondary tracking-tight"
+                            >
+                                Partnership <span className="text-brand-primary">Models</span>
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                className="text-[16px] text-gray-600 leading-relaxed mb-10"
+                            >
                                 Engagement structures are tailored to partner roles and objectives:
-                            </p>
-                            <ul className="space-y-2">
+                            </motion.p>
+
+                            <div className="space-y-4">
                                 {[
                                     "Pilot and demonstration collaborations",
                                     "Joint development and deployment",
                                     "Licensing and manufacturing partnerships",
                                     "Project-level joint ventures"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex gap-3 text-gray-700 font-medium items-start p-4 bg-white rounded-xl border border-brand-primary/10 shadow-sm">
-                                        <Target className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                                        {item}
-                                    </li>
+                                    <motion.div
+                                        key={i}
+                                        variants={fadeUp}
+                                        className="group flex gap-4 items-center p-5 bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-brand-primary/20 transition-all duration-300"
+                                    >
+                                        <div className="w-10 h-10 rounded-full bg-[#E5F3EB] flex items-center justify-center text-brand-primary shrink-0 transition-transform group-hover:scale-110 duration-300">
+                                            <Target className="w-5 h-5" />
+                                        </div>
+                                        <span className="text-gray-800 font-semibold group-hover:text-brand-secondary transition-colors">
+                                            {item}
+                                        </span>
+                                    </motion.div>
                                 ))}
-                            </ul>
-                        </div>
+                            </div>
+                        </motion.div>
 
                         {/* From Partnership to Deployment */}
-                        <div>
-                            <h2 className="text-[length:var(--font-h2)] font-bold mb-6 text-brand-secondary">From Partnership to <span className="text-gradient-green-glow">Deployment</span></h2>
-                            <p className="text-[15px] sm:text-[16px] text-gray-600 leading-relaxed mb-8">
+                        <motion.div
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-50px" }}
+                        >
+                            <motion.h2
+                                variants={fadeUp}
+                                className="text-3xl md:text-4xl font-bold mb-4 text-brand-secondary tracking-tight"
+                            >
+                                From Partnership to <span className="text-brand-primary">Deployment</span>
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeUp}
+                                className="text-[16px] text-gray-600 leading-relaxed mb-10"
+                            >
                                 The pathway from engagement to operation is structured and disciplined:
-                            </p>
-                            <div className="space-y-2">
+                            </motion.p>
+
+                            <div className="relative space-y-6">
+                                {/* Connecting timeline line */}
+                                <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-brand-primary via-brand-primary/50 to-transparent hidden sm:block" />
+
                                 {[
                                     { step: "1", title: "Technical and economic alignment" },
                                     { step: "2", title: "Pilot or demonstration deployment" },
                                     { step: "3", title: "Performance validation" },
                                     { step: "4", title: "Commercial-scale rollout" }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-4 items-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
-                                        <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                                    <motion.div
+                                        key={i}
+                                        variants={fadeUp}
+                                        className="relative flex gap-5 md:gap-6 items-center group"
+                                    >
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary font-bold flex-shrink-0 z-10 border-2 border-brand-primary relative shadow-[0_0_15px_rgba(0,213,99,0.15)] group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
                                             {item.step}
                                         </div>
-                                        <div className="flex-1">
-                                            <p className="text-brand-secondary font-semibold">{item.title}</p>
+                                        <div className="flex-1 p-5 bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] group-hover:-translate-y-1 transition-all duration-300">
+                                            <p className="text-gray-800 font-semibold text-[16px]">{item.title}</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </SectionWrapper>
             </section>

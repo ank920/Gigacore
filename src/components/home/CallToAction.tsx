@@ -31,7 +31,7 @@ export default function CallToAction() {
                             viewport={{ once: true }}
                         >
                             <span className="text-brand-primary font-bold tracking-widest uppercase text-[15px] mb-4 block">
-                                Ready to Scale?
+                                Scale with Us
                             </span>
                             <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-6 tracking-tight leading-[1.1]">
                                 Engage with Gigacore
