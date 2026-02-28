@@ -33,12 +33,12 @@ export default function Credibility() {
                                     label: "Proven Reliability"
                                 },
                                 {
-                                    src: "/home/CREDIBILITY.jpg",
+                                    src: "/home/CREDIBILITY.png",
                                     alt: "Verified Performance Data",
                                     label: "Verified Performance"
                                 },
                                 {
-                                    src: "/home/Global Safety.jpg",
+                                    src: "/home/Global Safety.png",
                                     alt: "Global Safety Standards",
                                     label: "Global Safety"
                                 },
@@ -54,12 +54,12 @@ export default function Credibility() {
                                     label: "Proven Reliability"
                                 },
                                 {
-                                    src: "/home/CREDIBILITY.jpg",
+                                    src: "/home/CREDIBILITY.png",
                                     alt: "Verified Performance Data",
                                     label: "Verified Performance"
                                 },
                                 {
-                                    src: "/home/Global Safety.jpg",
+                                    src: "/home/Global Safety.png",
                                     alt: "Global Safety Standards",
                                     label: "Global Safety"
                                 },

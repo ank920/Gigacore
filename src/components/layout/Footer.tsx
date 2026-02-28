@@ -36,7 +36,11 @@ export default function Footer() {
                             {[
                                 { name: "Technology", href: "/technology" },
                                 { name: "Economics", href: "/economics" },
-                                { name: "Applications", href: "/applications" }
+                                { name: "Applications", href: "/applications" },
+                                { name: "Green Ammonia", href: "/applications#green-ammonia" },
+                                { name: "Green Steel", href: "/applications#green-steel" },
+                                { name: "Data Centers", href: "/applications#data-centers" },
+                                { name: "Refining & Petrochemicals", href: "/applications#refining-petrochemicals" }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="hover:text-brand-primary transition-colors flex items-center gap-3 group">
@@ -56,6 +60,7 @@ export default function Footer() {
                                 { name: "Market Opportunity", href: "/market" },
                                 { name: "Partnerships", href: "/partnership" },
                                 { name: "About Us", href: "/company" },
+                                { name: "Our Team", href: "/company/team" },
                                 { name: "Blog", href: "/company/blog" },
                                 { name: "Contact", href: "/contact" }
                             ].map((item) => (
