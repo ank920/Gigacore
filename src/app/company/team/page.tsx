@@ -66,6 +66,23 @@ const leaders = [
     },
 ];
 
+const advisors = [
+    {
+        name: "Praveen K. Singh",
+        initials: "PS",
+        title: "Former Director (Commercial & Projects), Power Finance Corporation",
+        description:
+            "Praveen K. Singh is a senior power-sector executive with nearly three decades of leadership at Power Finance Corporation (PFC), where he served as Director (Commercial) and Director (Projects), and as Nominee Director on the Board of REC Ltd. He has overseen financing and monitoring of large-scale generation and transmission assets across India, including Ultra Mega Power Projects and state-level infrastructure programs. Currently Senior Advisor (Technical) at the Power Foundation of India, he brings deep expertise in project finance, regulatory oversight, and government-linked infrastructure execution. An IIT Delhi M.Tech in Energy & Environment Management, he provides GigaCore with institutional-grade guidance on project structuring, lender interface, and public-sector alignment for large industrial deployments.",
+    },
+    {
+        name: "Upal Basu",
+        initials: "UB",
+        title: "General Partner, NGP Capital",
+        description:
+            "Upal Basu is a General Partner and Managing Member at NGP Capital, a global venture capital firm managing over $2 billion across the U.S., Europe, China, and India. He leads the North America office and global software investments under a “Convergence” thesis focused on robotics, industrial systems, applied AI, space, and dual-use technologies. With more than 25 years of experience, he has led over 20 investments with 10 successful exits and previously co-founded and exited a global mobile security platform exceeding $50M in revenue. A Stanford M.S. in Engineering and Harvard MBA, he brings deep capital markets expertise and global scale-up insight to GigaCore’s advanced industrial technology strategy and institutional investor positioning.",
+    },
+];
+
 const techExpertise = [
     "Plasma Physics",
     "Materials Science",
@@ -234,7 +251,70 @@ export default function TeamPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 4. Core Technical Team - Split Layout */}
+            {/* 4. Board of Advisors */}
+            <section className="py-[var(--spacing-section)] bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+                <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-brand-primary/[0.04] rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-sky-500/[0.03] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
+                <SectionWrapper className="relative z-10">
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-80px" }}
+                        className="mb-12 md:mb-16"
+                    >
+                        <motion.h2
+                            variants={fadeUp}
+                            className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight"
+                        >
+                            Board of Advisors
+                        </motion.h2>
+                        <motion.div variants={fadeUp} className="h-1 w-20 bg-brand-primary mt-6" />
+                    </motion.div>
+
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-60px" }}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8"
+                    >
+                        {advisors.map((advisor, i) => (
+                            <motion.article
+                                key={advisor.name}
+                                variants={fadeUp}
+                                className="group relative bg-white border border-gray-200 p-8 md:p-10 flex flex-col gap-6 hover:border-brand-primary/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300"
+                            >
+                                <header className="flex items-center gap-5">
+                                    <div
+                                        aria-hidden="true"
+                                        className="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-secondary font-bold text-xl group-hover:bg-brand-primary/5 group-hover:text-brand-primary transition-colors shrink-0"
+                                    >
+                                        {advisor.initials}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-gray-900 font-bold text-xl mb-1">
+                                            {advisor.name}
+                                        </h3>
+                                        <p className="text-brand-primary font-semibold text-sm tracking-wide uppercase">
+                                            {advisor.title}
+                                        </p>
+                                    </div>
+                                </header>
+
+                                <div className="h-px bg-gray-100" />
+
+                                <p className="text-gray-600 text-[15px] leading-relaxed">
+                                    {advisor.description}
+                                </p>
+                            </motion.article>
+                        ))}
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* 5. Core Technical Team - Split Layout */}
             <section className="relative py-[var(--spacing-section)] bg-gradient-to-t from-slate-50 to-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05]" />
                 <div className="absolute -bottom-40 -left-60 w-[800px] h-[800px] bg-emerald-500/[0.04] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
@@ -307,7 +387,7 @@ export default function TeamPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 5. Minimal Light CTA */}
+            {/* 6. Minimal Light CTA */}
             <section className="py-24 bg-gray-50 border-t border-gray-100 text-center">
                 <SectionWrapper>
                     <motion.div
