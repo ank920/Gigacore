@@ -68,13 +68,6 @@ const leaders = [
 
 const advisors = [
     {
-        name: "Praveen K. Singh",
-        initials: "PS",
-        title: "Former Director (Commercial & Projects), Power Finance Corporation",
-        description:
-            "Praveen K. Singh is a senior power-sector executive with nearly three decades of leadership at Power Finance Corporation (PFC), where he served as Director (Commercial) and Director (Projects), and as Nominee Director on the Board of REC Ltd. He has overseen financing and monitoring of large-scale generation and transmission assets across India, including Ultra Mega Power Projects and state-level infrastructure programs. Currently Senior Advisor (Technical) at the Power Foundation of India, he brings deep expertise in project finance, regulatory oversight, and government-linked infrastructure execution. An IIT Delhi M.Tech in Energy & Environment Management, he provides GigaCore with institutional-grade guidance on project structuring, lender interface, and public-sector alignment for large industrial deployments.",
-    },
-    {
         name: "Upal Basu",
         initials: "UB",
         title: "General Partner, NGP Capital",
