@@ -49,6 +49,63 @@ export default function MarketPage() {
                 </SectionWrapper>
             </section>
 
+            {/* NEW: Global Hydrogen Demand by Sector */}
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="w-full"
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-14">
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Market Scale</span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">
+                                95 Million Tonnes <span className="text-brand-primary">Consumed Annually</span>
+                            </h2>
+                            <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                                The global hydrogen market already consumes approximately 95 MTPA — almost entirely produced via fossil-based processes. Decarbonising this existing demand is the primary commercial opportunity, before any new applications emerge.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                            {[
+                                { sector: "Ammonia Production", mtpa: "~35", icon: Globe, desc: "Fertilizer & chemical feedstock — single largest demand sector globally" },
+                                { sector: "Petroleum Refining", mtpa: "~40", icon: BarChart3, desc: "Hydrotreating, hydrocracking and desulphurisation at refineries worldwide" },
+                                { sector: "Methanol Production", mtpa: "~12", icon: TrendingUp, desc: "Chemical feedstock and emerging transport fuel application" },
+                                { sector: "Steel & Emerging Uses", mtpa: "8+", icon: Briefcase, desc: "DRI-based steel and new industrial decarbonisation pathways" },
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    variants={fadeUp}
+                                    className="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-brand-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col"
+                                >
+                                    <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        <item.icon className="w-5 h-5" strokeWidth={1.5} />
+                                    </div>
+                                    <div className="text-[48px] font-bold text-brand-primary leading-none mb-1 tracking-tight">{item.mtpa}</div>
+                                    <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">MTPA</div>
+                                    <h3 className="font-bold text-brand-secondary text-[15px] mb-2">{item.sector}</h3>
+                                    <p className="text-gray-500 text-[13px] leading-relaxed flex-1">{item.desc}</p>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="bg-[#0b1320] rounded-2xl p-8 md:p-10 text-white flex flex-col md:flex-row items-center gap-8 border border-brand-primary/20">
+                            <div className="shrink-0 text-center">
+                                <div className="text-[56px] md:text-[72px] font-bold text-brand-primary leading-none">95</div>
+                                <div className="text-[12px] text-gray-400 font-bold uppercase tracking-widest mt-1">MTPA Global Demand</div>
+                            </div>
+                            <div className="h-px w-full md:h-16 md:w-px bg-white/10 shrink-0" />
+                            <p className="text-[16px] sm:text-[17px] leading-relaxed text-gray-300">
+                                Each sector operates with <span className="text-white font-bold">existing hydrogen supply chains, handling infrastructure, and captive demand</span>. GigaCore's initial commercial focus is on replacing incumbent fossil-derived supply — not creating new demand from scratch. This is the largest available addressable market for a cost-competitive green hydrogen producer.
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
             {/* 3. What Is Changing */}
             <SplitSection
                 theme="light"
@@ -137,16 +194,18 @@ export default function MarketPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {[
-                            { title: "Large, concentrated industrial hydrogen demand", icon: Factory },
-                            { title: "High sensitivity to input costs", icon: TrendingDown },
-                            { title: "Rapidly expanding energy infrastructure", icon: Zap },
-                            { title: "Strong policy momentum", icon: Building2 }
+                            { title: "Domestic Hydrogen Demand", stat: "10–12 MTPA", icon: Factory, desc: "Existing captive demand across fertilizer and refining industries" },
+                            { title: "Renewable Electricity Cost", stat: "$0.03–$0.05/kWh", icon: TrendingDown, desc: "Among the lowest input cost structures globally for green H₂" },
+                            { title: "Growing Energy Infrastructure", stat: "500+ GW target", icon: Zap, desc: "Rapidly expanding renewable capacity creating low-cost power availability" },
+                            { title: "SIGHT Policy Commitment", stat: "$530M", icon: Building2, desc: "Government of India strategic intervention for green hydrogen adoption" }
                         ].map((item, i) => (
-                            <div key={i} className="flex flex-col items-center justify-center p-8 bg-white rounded-xl border border-gray-100 shadow-sm transition-all hover:shadow-md hover:border-brand-primary/20 text-center">
-                                <div className="mb-5 p-4 bg-gray-50 rounded-full text-brand-primary">
-                                    <item.icon className="w-8 h-8" strokeWidth={1.5} />
+                            <div key={i} className="flex flex-col items-start p-8 bg-white rounded-xl border border-gray-100 shadow-sm transition-all hover:shadow-md hover:border-brand-primary/20">
+                                <div className="mb-5 p-4 bg-brand-primary/10 rounded-xl text-brand-primary">
+                                    <item.icon className="w-7 h-7" strokeWidth={1.5} />
                                 </div>
-                                <span className="font-bold text-brand-secondary leading-snug">{item.title}</span>
+                                <div className="text-[22px] font-bold text-brand-primary mb-1 leading-tight">{item.stat}</div>
+                                <div className="font-bold text-brand-secondary text-[14px] mb-2">{item.title}</div>
+                                <p className="text-gray-500 text-[13px] leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>

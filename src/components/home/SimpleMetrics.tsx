@@ -6,12 +6,12 @@ import { useInView, useMotionValue, animate } from "framer-motion";
 const smallRow = [
     { value: 30, suffix: "%", label: "Less energy than conventional electrolysis", subtext: "(observed)" },
     { value: 38, suffix: "%", label: "Lower LCOH target", subtext: "($2.75 vs $4.40/kg)" },
-    { value: 99.99, decimals: 2, suffix: "%", label: "Hydrogen purity output", subtext: "" },
+    { value: 99.95, decimals: 2, suffix: "%", label: "Hydrogen purity output", subtext: "(dry gas basis, 0°C, 1 atm)" },
     { isStatic: true, staticText: "Zero", label: "Precious metal catalysts required", subtext: "" }
 ];
 
 const midRow = [
-    { value: 30, value2: 35, suffix: "\n", suffix2: " kWh/kg", label: "Observed Energy Range", subtext: "Target 25 kWh/kg at pilot scale" },
+    { value: 38, suffix: "\n", suffix2: " kWh/kg", label: "Observed System Energy", subtext: "AC wall-plug measurement (full system load)" },
     { prefix: "$", value: 2.75, decimals: 2, suffix: "/kg", label: "LCOH Target", subtext: "Parity with grey ammonia (pilot certification required)" },
     { prefix: "TRL ", value: 5, value2: 6, label: "Technology Readiness", subtext: "Lab-validated • pre-commercial pilot stage" }
 ];
@@ -90,7 +90,7 @@ export default function SimpleMetrics() {
                     {/* Title */}
                     <div className="mb-12 border-b border-gray-200 pb-4">
                         <h2 className="text-[20px] lg:text-[24px] tracking-tight">
-                            <span className="text-brand-secondary font-medium">Cold Plasma Reactor Technology - </span><span className="text-brand-primary font-bold">Green Hydrogen Production</span>
+                            <span className="text-brand-secondary font-medium">Next Gen Hydrogen Reactor Technology - </span><span className="text-brand-primary font-bold">Green Hydrogen Production</span>
                         </h2>
                     </div>
 
@@ -115,13 +115,13 @@ export default function SimpleMetrics() {
                         {/* Gigacore */}
                         <div className="flex flex-col items-start relative lg:pl-16 lg:border-l lg:border-gray-200">
                             <div className="w-full h-px bg-gray-200 mb-8 lg:hidden" />
-                            <div className="text-[15px] font-bold tracking-widest uppercase text-brand-primary mb-4">Gigacore Cold Plasma Reactor</div>
+                            <div className="text-[15px] font-bold tracking-widest uppercase text-brand-primary mb-4">Gigacore Next Gen Hydrogen Reactor</div>
                             <div className="text-[56px] lg:text-[72px] font-medium tracking-tighter text-brand-primary leading-none mb-4 flex items-baseline">
-                                <AnimatedNumber value={30} value2={35} suffix="" suffix2="kWh/kg" />
+                                <AnimatedNumber value={38} suffix="" suffix2="kWh/kg" />
                             </div>
                             <div className="space-y-1 text-gray-800 font-medium text-[15px]">
                                 <p>Target LCOH $2.75/kg (pilot-stage)</p>
-                                <p>Non-thermal plasma + metal reaction</p>
+                                <p>Proprietary next-gen electrochemical reactor</p>
                                 <p>No precious metals. Near-ambient operation</p>
                             </div>
                         </div>

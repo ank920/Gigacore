@@ -33,7 +33,7 @@ export default function PlatformOverview() {
                         </motion.h2>
 
                         <motion.p variants={fadeUp} className="text-brand-gray-600 text-[15px] sm:text-[16px] leading-relaxed mb-10 max-w-xl">
-                            Gigacore’s platform uses controlled cold plasma excitation to activate water molecules under engineered electromagnetic conditions.
+                            Gigacore’s platform employs a proprietary next-gen electrochemical reactor architecture designed to materially improve the energy efficiency of water-based hydrogen production — without reliance on precious group metals or extreme operating conditions.
                         </motion.p>
 
                         <motion.div variants={fadeUp} className="space-y-6">

@@ -145,6 +145,64 @@ export default function EconomicsPage() {
                 }
             />
 
+            {/* NEW: LCOH Sensitivity Model */}
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="w-full"
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-12">
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Cost Model</span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">
+                                LCOH Sensitivity: <span className="text-brand-primary">Electricity Price vs Efficiency</span>
+                            </h2>
+                            <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                                Because electricity is 60–70% of hydrogen production cost, every reduction in system energy intensity directly flows to lower LCOH. At India's renewable electricity pricing of $0.03–$0.05/kWh, the GigaCore platform models as follows:
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="w-full border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-10">
+                            {/* Header */}
+                            <div className="grid grid-cols-3 bg-[#0b1320] text-white text-[13px] font-bold uppercase tracking-wider">
+                                <div className="py-4 pl-6 pr-4">Electricity Price</div>
+                                <div className="py-4 px-4 border-l border-white/10 text-brand-primary">GigaCore (~38 kWh/kg)</div>
+                                <div className="py-4 px-4 border-l border-white/10 text-gray-400">Conventional (50–55 kWh/kg)</div>
+                            </div>
+                            {/* Rows */}
+                            {[
+                                { price: "$0.03 / kWh", gigacore: "$2.16 / kg", conv: "$3.00–$3.40 / kg", highlight: true },
+                                { price: "$0.04 / kWh", gigacore: "$2.52 / kg", conv: "$3.60–$4.00 / kg", highlight: false },
+                                { price: "$0.05 / kWh", gigacore: "$2.92 / kg", conv: "$4.25–$4.70 / kg", highlight: false },
+                            ].map((row, i) => (
+                                <div key={i} className={`grid grid-cols-3 border-t border-gray-100 ${row.highlight ? "bg-brand-primary/5" : "bg-white"} hover:bg-gray-50 transition-colors`}>
+                                    <div className="py-5 pl-6 pr-4 font-bold text-gray-700">{row.price}</div>
+                                    <div className="py-5 px-4 border-l border-gray-100 font-bold text-brand-primary text-[16px]">{row.gigacore}</div>
+                                    <div className="py-5 px-4 border-l border-gray-100 text-gray-400 font-medium">{row.conv}</div>
+                                </div>
+                            ))}
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                { label: "Grey Ammonia Parity", value: "~$2.75/kg", sub: "Target cost parity threshold for Indian fertilizer producers including IFFCO and KRIBHCO" },
+                                { label: "GigaCore LCOH Range", value: "$2.16–$2.92/kg", sub: "Modelled at $0.03–$0.05/kWh electricity. Base case: $2.52/kg at $0.04/kWh" },
+                                { label: "Conventional LCOH", value: "$4.40/kg", sub: "Current green hydrogen LCOH benchmark for conventional alkaline and PEM electrolysis" },
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+                                    <div className="text-[28px] md:text-[32px] font-bold text-brand-primary mb-2 leading-none tracking-tight">{item.value}</div>
+                                    <div className="text-[13px] font-bold text-brand-secondary uppercase tracking-wider mb-3">{item.label}</div>
+                                    <p className="text-gray-500 text-[13px] leading-relaxed">{item.sub}</p>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
             {/* 7. Scalability */}
             <SplitSection
                 theme="light"
@@ -167,6 +225,75 @@ export default function EconomicsPage() {
 
 
 
+
+            {/* NEW: Plant Revenue Potential */}
+            <section className="py-[var(--spacing-section)] bg-brand-light border-b border-brand-primary/5">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="w-full"
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-14">
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Revenue Model</span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">
+                                Revenue at <span className="text-brand-primary">Industrial Scale</span>
+                            </h2>
+                            <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                                Hydrogen plants are expected to scale from pilot deployments to large industrial facilities. At $3/kg hydrogen pricing, the per-plant revenue potential is substantial.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                            {[
+                                {
+                                    type: "Equipment Sales",
+                                    metric: "Per System",
+                                    value: "Standardised",
+                                    color: "border-brand-primary",
+                                    detail: "Sale of modular hydrogen production systems to industrial operators. Each 1 kg/hr module is manufactured as a standardised containerised unit enabling mass production.",
+                                    badge: "Primary Revenue"
+                                },
+                                {
+                                    type: "10,000 tpa Plant",
+                                    metric: "Annual Revenue at $3/kg",
+                                    value: "~$30M / yr",
+                                    color: "border-brand-primary",
+                                    detail: "Large-scale industrial facility producing 10,000 tonnes of hydrogen annually. Consistent with current refinery hydrogen procurement pricing in India.",
+                                    badge: "Industrial Scale"
+                                },
+                                {
+                                    type: "20,000 tpa Plant",
+                                    metric: "Annual Revenue at $3/kg",
+                                    value: "~$60M / yr",
+                                    color: "border-brand-primary",
+                                    detail: "Full-scale hydrogen production hub. Multiple modules integrated into shared balance-of-plant infrastructure. Target for GCC and export-oriented projects.",
+                                    badge: "Export Scale"
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className={`bg-white rounded-2xl border-2 ${item.color} p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col`}>
+                                    <div className="inline-flex items-center mb-4">
+                                        <span className="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary">{item.badge}</span>
+                                    </div>
+                                    <h3 className="text-[18px] font-bold text-brand-secondary mb-1">{item.type}</h3>
+                                    <div className="text-[11px] text-gray-400 font-bold uppercase tracking-wider mb-4">{item.metric}</div>
+                                    <div className="text-[32px] md:text-[36px] font-bold leading-none mb-5 tracking-tight text-brand-primary">{item.value}</div>
+                                    <p className="text-gray-500 text-[13px] leading-relaxed flex-1">{item.detail}</p>
+                                </div>
+                            ))}
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="bg-[#0b1320] rounded-2xl p-8 border border-brand-primary/20 text-center">
+                            <div className="text-[13px] font-bold uppercase tracking-widest text-brand-primary mb-3">O&amp;M Recurring Revenue</div>
+                            <p className="text-[16px] sm:text-[18px] text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                                Long-term Operations &amp; Maintenance contracts are modelled at approximately <span className="text-white font-bold">8% of system value annually</span> — creating a growing recurring revenue base as the installed fleet expands across commercial deployments.
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
 
             {/* 8. CTA Section */}
             <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.5)] bg-brand-secondary overflow-hidden">

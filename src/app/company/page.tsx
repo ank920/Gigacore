@@ -127,7 +127,7 @@ export default function CompanyPage() {
                                 <div className="w-8 h-8 bg-brand-primary/10 rounded-full flex items-center justify-center shrink-0 text-brand-primary font-bold text-sm">2</div>
                                 <div>
                                     <h4 className="font-bold text-gray-900 text-sm">Advanced Physics</h4>
-                                    <p className="text-gray-600 text-sm">Applying advanced electrical and plasma-based concepts.</p>
+                                    <p className="text-gray-600 text-sm">Applying a proprietary next-gen electrochemical reactor architecture.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4 items-start">
@@ -220,6 +220,98 @@ export default function CompanyPage() {
                     </>
                 }
             />
+
+            {/* NEW: Global Commercialisation Phases */}
+            <section className="py-[var(--spacing-section)] bg-[#0b1320] border-y border-brand-primary/20 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04] pointer-events-none" />
+                <SectionWrapper className="relative z-10">
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="w-full"
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-14">
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Deployment Strategy</span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-white mb-4">
+                                Global Commercialisation <span className="text-brand-primary">Pathway</span>
+                            </h2>
+                            <p className="text-[15px] sm:text-[16px] text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                                Following pilot validation in India, expansion proceeds in three structured phases — each building on operational data, commercial relationships, and validated economics from the prior stage.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    phase: "Phase 1",
+                                    years: "Years 1–3",
+                                    region: "India",
+                                    flag: "🇮🇳",
+                                    title: "Validation & First Commercial Systems",
+                                    color: "border-brand-primary",
+                                    items: [
+                                        "Pilot deployment and independent certification",
+                                        "First commercial modular systems deployed",
+                                        "Ammonia and refining sector offtake",
+                                        "India SIGHT grant applications ($2–$5M target)",
+                                    ],
+                                    highlight: true,
+                                },
+                                {
+                                    phase: "Phase 2",
+                                    years: "Years 3–4",
+                                    region: "GCC",
+                                    flag: "🇦🇪",
+                                    title: "Joint-Venture Regional Expansion",
+                                    color: "border-white/20",
+                                    items: [
+                                        "JV deployments with regional EPC partners",
+                                        "Green ammonia export infrastructure",
+                                        "Co-located renewable power agreements",
+                                        "Multi-site modular manufacturing in region",
+                                    ],
+                                    highlight: false,
+                                },
+                                {
+                                    phase: "Phase 3",
+                                    years: "Years 4–5",
+                                    region: "Europe & US",
+                                    flag: "🌐",
+                                    title: "Industrial Decarbonisation Projects",
+                                    color: "border-white/20",
+                                    items: [
+                                        "EU hydrogen strategy alignment",
+                                        "US IRA-supported industrial projects",
+                                        "Refining and steel sector decarbonisation",
+                                        "IP acquisition or licensing opportunities",
+                                    ],
+                                    highlight: false,
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className={`rounded-2xl border ${item.color} p-8 flex flex-col ${item.highlight ? "bg-brand-primary/10" : "bg-white/5"} hover:bg-white/10 transition-all duration-300`}>
+                                    <div className="flex items-center justify-between mb-6">
+                                        <span className={`text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${item.highlight ? "bg-brand-primary text-white" : "bg-white/10 text-gray-400"}`}>{item.phase}</span>
+                                        <span className="text-2xl">{item.flag}</span>
+                                    </div>
+                                    <div className="text-brand-primary text-[12px] font-bold uppercase tracking-wider mb-1">{item.years}</div>
+                                    <div className="text-gray-300 text-[14px] font-bold mb-1">{item.region}</div>
+                                    <h3 className="text-white text-[16px] font-bold mb-4 leading-snug">{item.title}</h3>
+                                    <ul className="space-y-2 mt-auto">
+                                        {item.items.map((point, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-gray-400 text-[13px]">
+                                                <CheckCircle className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
 
             {/* 9. Credibility */}
             <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">

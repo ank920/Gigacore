@@ -266,6 +266,78 @@ export default function PartnershipPage() {
                 }
             />
 
+            {/* NEW: Revenue Streams */}
+            <section className="py-[var(--spacing-section)] bg-brand-light border-y border-brand-primary/5">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="w-full"
+                    >
+                        <motion.div variants={fadeUp} className="text-center mb-14">
+                            <span className="text-brand-primary font-bold tracking-widest uppercase text-[12px] mb-3 block">Business Model</span>
+                            <h2 className="text-[length:var(--font-h1)] font-bold text-brand-secondary mb-4">
+                                Three Revenue <span className="text-brand-primary">Streams</span>
+                            </h2>
+                            <p className="text-[15px] sm:text-[16px] text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                                GigaCore's revenue model is structured around the deployment and long-term servicing of modular hydrogen production systems — creating both upfront equipment revenue and durable recurring income.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    number: "01",
+                                    title: "Equipment Sales",
+                                    icon: Factory,
+                                    tag: "Upfront Capital Revenue",
+                                    desc: "Sale of standardised modular hydrogen production systems to industrial operators. Each base module produces approximately 1 kg H₂/hr and is manufactured as a standardised containerised unit — enabling mass production and rapid deployment.",
+                                    highlight: ["Modular 1 kg/hr containerised units", "Scalable factory production model", "Industrial-grade materials — no PGMs"],
+                                },
+                                {
+                                    number: "02",
+                                    title: "O&M Contracts",
+                                    icon: Coins,
+                                    tag: "Recurring Annual Revenue",
+                                    desc: "Long-term Operations & Maintenance service agreements modelled at approximately 8% of system value annually. As the installed fleet grows, this revenue stream compounds — providing durable income independent of new equipment sales.",
+                                    highlight: ["~8% of system value per year", "Long-term service agreements", "Grows with installed fleet size"],
+                                },
+                                {
+                                    number: "03",
+                                    title: "Joint-Venture Deployment",
+                                    icon: Building2,
+                                    tag: "Project Revenue Share",
+                                    desc: "Industrial partners finance plant construction and hydrogen offtake while GigaCore provides reactor technology, engineering integration, and operational oversight. Hydrogen plants are expected to target 10,000–20,000 tonnes annually at $30M–$60M per facility revenue.",
+                                    highlight: ["Partner-financed plant construction", "$30M–$60M revenue per facility at $3/kg", "GCC and export market focus"],
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-primary/30 transition-all duration-300 flex flex-col group">
+                                    <div className="flex items-start justify-between mb-6">
+                                        <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover:scale-110 transition-transform duration-300">
+                                            <item.icon className="w-6 h-6" strokeWidth={1.5} />
+                                        </div>
+                                        <span className="text-[40px] font-black text-gray-100 leading-none">{item.number}</span>
+                                    </div>
+                                    <div className="text-[11px] font-bold uppercase tracking-widest text-brand-primary mb-2">{item.tag}</div>
+                                    <h3 className="text-[20px] font-bold text-brand-secondary mb-3">{item.title}</h3>
+                                    <p className="text-gray-500 text-[14px] leading-relaxed mb-5 flex-1">{item.desc}</p>
+                                    <ul className="space-y-2 border-t border-gray-100 pt-4 mt-auto">
+                                        {item.highlight.map((point, j) => (
+                                            <li key={j} className="flex items-start gap-2 text-gray-600 text-[13px] font-medium">
+                                                <CheckCircle className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
             {/* 10. Partnership Models & Deployment Pathway (Feature Section) */}
             <section className="relative py-[var(--spacing-section)] lg:py-[calc(var(--spacing-section)*1.2)] bg-gradient-to-b from-gray-50 to-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />

@@ -56,7 +56,7 @@ export default function Hero() {
                 >
                     <motion.div variants={fadeUp} className="mb-6 md:mb-8">
                         <span className="text-brand-primary text-[15px] md:text-base font-bold tracking-widest uppercase">
-                            Cold Plasma Hydrogen Production
+                            Next Gen Hydrogen Production
                         </span>
                     </motion.div>
 

@@ -85,7 +85,7 @@ export default function SmarterPath() {
                     <div className="inline-block bg-white px-8 py-6 rounded-2xl border border-brand-primary/20 shadow-sm relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-1 h-full bg-brand-primary" />
                         <p className="text-[16px] sm:text-[18px] text-gray-800 font-medium leading-relaxed">
-                            Gigacore’s plasma-based approach is <span className="text-brand-primary font-bold">engineered to meet these demands</span> while accelerating the shift toward sustainable hydrogen ecosystems.
+                            Gigacore’s next-gen electrochemical approach is <span className="text-brand-primary font-bold">engineered to meet these demands</span> while accelerating the shift toward sustainable hydrogen ecosystems.
                         </p>
                     </div>
                 </motion.div>

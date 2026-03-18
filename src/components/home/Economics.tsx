@@ -30,7 +30,7 @@ export default function Economics() {
                             {[
                                 {
                                     title: "Optimized Energy Transfer",
-                                    desc: "Direct modulation of plasma density matches input availability without significant rectification losses."
+                                    desc: "Controlled electrical input is matched precisely to the water-splitting reaction, minimising rectification and parasitic losses."
                                 },
                                 {
                                     title: "Elimination of Auxiliary Loads",

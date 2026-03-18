@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { GraduationCap, FlaskConical, Users, Lock, ChevronRight } from "lucide-react";
+import { GraduationCap, FlaskConical, Users, Lock, ChevronRight, Globe, TrendingUp, Award, Briefcase } from "lucide-react";
 
 // ─── Leadership Data ──────────────────────────────────────────────────────────
 const leaders = [
@@ -14,12 +14,19 @@ const leaders = [
         name: "Manish Kothary",
         initials: "MK",
         title: "Chief Executive Officer",
-        bio: "Founder developing scalable hydrogen and plasma-based energy systems for industrial decarbonization. Focused on high-efficiency reactor platforms, modular deployment, and strategic partnerships to enable disciplined commercial scale-up.",
+        bio: "Founder developing scalable next-gen hydrogen production systems for industrial decarbonization. Focused on high-efficiency reactor platforms, modular deployment, and strategic partnerships to enable disciplined commercial scale-up.",
         background:
             "Previously founded Bene LLC. Earlier senior roles at Barclays Global Investors, Wells Fargo, and Pacific Gas & Electric.",
         education: [
             "M.Sc Computer Science - University of South Carolina",
             "BE Electrical Engineering - IIT Roorkee",
+        ],
+        tags: ["Capital Markets", "Energy Systems", "Startup Scaling"],
+        credentials: [
+            { label: "Prior MNCs", value: "3" },
+            { label: "Founded", value: "1 Co." },
+            { label: "Alma Mater", value: "IIT" },
+            { label: "Expertise", value: "20+ yrs" },
         ],
     },
     {
@@ -30,6 +37,13 @@ const leaders = [
         background:
             "Background includes hydrogen and low-carbon fuel systems, rare earth extraction, and waste-to-energy infrastructure across North America, Europe, and emerging markets.",
         education: ["B.Eng Mechanical Engineering - Ryerson University, Canada"],
+        tags: ["Cross-Border Projects", "Hydrogen Systems", "Infrastructure"],
+        credentials: [
+            { label: "Continents", value: "3" },
+            { label: "Sectors", value: "4+" },
+            { label: "Focus", value: "H₂ Infra" },
+            { label: "Markets", value: "Global" },
+        ],
     },
     {
         name: "Igor Kuntevitsky",
@@ -37,8 +51,15 @@ const leaders = [
         title: "Chief Technology Officer",
         bio: "Leads reactor architecture, hydrogen systems engineering, and IP development. Expertise spans matrix reactor systems, controlled partial oxidation, and integrated hydrogen purification.",
         background:
-            "Inventor of multiple granted U.S. patents covering hydrogen production and critical mineral recovery systems (including hydrocarbon gas pathways and red mud processing). GigaCore's cold plasma method and reactor architecture are subject to a patent application currently in preparation.",
+            "Inventor of multiple granted U.S. patents covering hydrogen production and critical mineral recovery systems (including hydrocarbon gas pathways and red mud processing). GigaCore's next gen hydrogen method and reactor architecture are subject to a patent application currently in preparation.",
         education: [],
+        tags: ["Reactor Architecture", "U.S. Patents", "IP Development"],
+        credentials: [
+            { label: "US Patents", value: "4+" },
+            { label: "Domain", value: "H₂ + Minerals" },
+            { label: "IP Status", value: "Active" },
+            { label: "Reactor", value: "Design Lead" },
+        ],
     },
     {
         name: "Ajeet Saran",
@@ -50,6 +71,13 @@ const leaders = [
         education: [
             "BE Electrical Engineering - IIT-BHU",
             "PG Supply Chain - XLRI",
+        ],
+        tags: ["EPC Execution", "Tata Steel (25 yrs)", "Gov. Relations"],
+        credentials: [
+            { label: "Tata Steel", value: "25 yrs" },
+            { label: "Alma Mater", value: "IIT" },
+            { label: "PG", value: "XLRI" },
+            { label: "Depts.", value: "5+" },
         ],
     },
     {
@@ -63,6 +91,13 @@ const leaders = [
             "Chartered Accountant",
             "B.Com (Hons) - SRCC, Delhi University",
         ],
+        tags: ["Taxation", "Treasury", "Compliance"],
+        credentials: [
+            { label: "MNCs", value: "4" },
+            { label: "Qualification", value: "CA" },
+            { label: "Alma Mater", value: "SRCC" },
+            { label: "Regions", value: "India + ME" },
+        ],
     },
 ];
 
@@ -72,22 +107,37 @@ const advisors = [
         initials: "UB",
         title: "General Partner, NGP Capital",
         description:
-            "Upal Basu is a General Partner and Managing Member at NGP Capital, a global venture capital firm managing over $2 billion across the U.S., Europe, China, and India. He leads the North America office and global software investments under a “Convergence” thesis focused on robotics, industrial systems, applied AI, space, and dual-use technologies. With more than 25 years of experience, he has led over 20 investments with 10 successful exits and previously co-founded and exited a global mobile security platform exceeding $50M in revenue. A Stanford M.S. in Engineering and Harvard MBA, he brings deep capital markets expertise and global scale-up insight to GigaCore’s advanced industrial technology strategy and institutional investor positioning.",
+            "Upal Basu is a General Partner and Managing Member at NGP Capital, a global venture capital firm managing over $2 billion across the U.S., Europe, China, and India. He leads the North America office and global software investments under a 'Convergence' thesis focused on robotics, industrial systems, applied AI, space, and dual-use technologies. With more than 25 years of experience, he has led over 20 investments with 10 successful exits and previously co-founded and exited a global mobile security platform exceeding $50M in revenue. A Stanford M.S. in Engineering and Harvard MBA, he brings deep capital markets expertise and global scale-up insight to GigaCore's advanced industrial technology strategy and institutional investor positioning.",
+        credentials: [
+            { label: "AUM", value: "$2B+" },
+            { label: "Investments Led", value: "20+" },
+            { label: "Exits", value: "10" },
+            { label: "Experience", value: "25 yrs" },
+        ],
+        education: ["M.S. Engineering — Stanford University", "MBA — Harvard Business School"],
     },
 ];
 
 const techExpertise = [
-    "Plasma Physics",
+    "Electrochemical Reactor Design",
     "Materials Science",
     "Nanostructured Media",
     "Industrial Reactor Engineering",
+];
+
+const teamStats = [
+    { icon: Users, value: "5", label: "Executive Leaders" },
+    { icon: Briefcase, value: "14", label: "Technical Specialists" },
+    { icon: Globe, value: "3", label: "Continents" },
+    { icon: Award, value: "25+", label: "Avg. Yrs Experience" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function TeamPage() {
     return (
         <main className="bg-white min-h-screen selection:bg-brand-primary/20 selection:text-brand-secondary">
-            {/* 1. Hero Section - Premium Light Theme */}
+
+            {/* 1. Hero Section */}
             <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-gray-50 border-b border-gray-100">
                 <SectionWrapper className="relative z-10">
                     <motion.div
@@ -133,49 +183,91 @@ export default function TeamPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 2. Intro Statement */}
-            <section className="relative py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.06]" />
-                <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-brand-primary/[0.06] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sky-200/[0.2] rounded-full blur-3xl pointer-events-none" />
+            {/* 2. Team Stats Bar */}
+            <section className="bg-[#0b1320] border-b border-white/5">
+                <SectionWrapper>
+                    <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10"
+                    >
+                        {teamStats.map((stat, i) => (
+                            <motion.div key={i} variants={fadeUp} className="flex flex-col items-center justify-center py-8 px-4 text-center gap-2">
+                                <stat.icon size={20} className="text-brand-primary mb-1" />
+                                <div className="text-3xl font-black text-white tracking-tight">{stat.value}</div>
+                                <div className="text-xs font-bold uppercase tracking-widest text-gray-400">{stat.label}</div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </SectionWrapper>
+            </section>
+
+            {/* 3. Intro Statement + Competencies */}
+            <section className="relative py-20 bg-white overflow-hidden border-b border-gray-100">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04]" />
                 <SectionWrapper className="relative z-10">
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="max-w-4xl mx-auto md:ml-0 md:mr-auto pl-6 md:pl-10 border-l-4 border-brand-primary"
+                        className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-start"
                     >
-                        <motion.h2
-                            variants={fadeUp}
-                            className="text-2xl md:text-3xl lg:text-4xl font-medium leading-normal md:leading-relaxed text-gray-800"
-                        >
-                            Our leadership brings decades of experience across energy, finance, engineering, and government - combined with deep technical expertise in plasma physics and reactor design. We are building the infrastructure for the next industrial era.
-                        </motion.h2>
+                        {/* Quote */}
+                        <motion.div variants={fadeUp} className="lg:col-span-3 pl-6 md:pl-10 border-l-4 border-brand-primary">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-normal md:leading-relaxed text-gray-800">
+                                Our leadership brings decades of experience across energy, finance, engineering, and government - combined with deep technical expertise in advanced reactor design and electrochemical systems. We are building the infrastructure for the next industrial era.
+                            </h2>
+                        </motion.div>
+
+                        {/* Side Info */}
+                        <motion.div variants={fadeUp} className="lg:col-span-2 flex flex-col gap-5">
+                            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">Core Disciplines</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {["Energy Finance", "EPC Execution", "Reactor Engineering", "Industrial Policy", "Capital Markets", "Tax & Compliance"].map((tag, i) => (
+                                        <span key={i} className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-[12px] font-semibold rounded-full">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="bg-brand-primary/5 rounded-2xl p-6 border border-brand-primary/15">
+                                <TrendingUp size={22} className="text-brand-primary mb-3" />
+                                <p className="text-[13px] text-gray-700 font-medium leading-relaxed">
+                                    Backed by advisors with $2B+ AUM and global technology commercialization track records across the U.S., Europe, and Asia.
+                                </p>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 </SectionWrapper>
             </section>
 
-            {/* 3. Leadership Cards - Clean, White, Structural */}
+            {/* 4. Leadership Cards */}
             <section className="py-[var(--spacing-section)] bg-slate-50 border-y border-slate-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
                 <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-primary/[0.05] rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-[800px] h-[800px] bg-sky-600/[0.03] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
                 <SectionWrapper className="relative z-10">
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-80px" }}
-                        className="mb-16 md:mb-20"
+                        className="mb-14"
                     >
-                        <motion.h2
-                            variants={fadeUp}
-                            className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight"
-                        >
-                            Executive Leadership
-                        </motion.h2>
-                        <motion.div variants={fadeUp} className="h-1 w-20 bg-brand-primary mt-6" />
+                        <motion.div variants={fadeUp} className="flex items-end justify-between gap-4 flex-wrap">
+                            <div>
+                                <span className="text-xs font-bold tracking-widest uppercase text-brand-primary mb-3 block">Leadership</span>
+                                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+                                    Executive Team
+                                </h2>
+                            </div>
+                            <div className="h-px flex-1 bg-gray-200 mb-2 min-w-[40px] hidden md:block" />
+                            <span className="text-sm text-gray-400 font-medium mb-2">{leaders.length} members</span>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="h-[3px] w-16 bg-brand-primary mt-5 rounded-full" />
                     </motion.div>
 
                     {/* Cards Grid */}
@@ -190,21 +282,40 @@ export default function TeamPage() {
                             <motion.div
                                 key={i}
                                 variants={fadeUp}
-                                className="group relative bg-white border border-gray-200 p-8 md:p-10 flex flex-col gap-6 hover:border-brand-primary/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300"
+                                className="group relative bg-white border border-gray-200 rounded-2xl p-8 md:p-10 flex flex-col gap-6 hover:border-brand-primary/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all duration-300"
                             >
                                 {/* Top row */}
                                 <div className="flex items-center gap-5">
-                                    <div className="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-secondary font-bold text-xl group-hover:bg-brand-primary/5 group-hover:text-brand-primary transition-colors shrink-0">
+                                    <div className="w-16 h-16 rounded-2xl bg-brand-primary/8 border border-brand-primary/15 flex items-center justify-center text-brand-primary font-black text-xl group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shrink-0">
                                         {person.initials}
                                     </div>
-                                    <div>
-                                        <h3 className="text-gray-900 font-bold text-xl mb-1">
+                                    <div className="flex-1 min-w-0">
+                                        <h3 className="text-gray-900 font-bold text-xl mb-1 truncate">
                                             {person.name}
                                         </h3>
-                                        <p className="text-brand-primary font-semibold text-sm tracking-wide uppercase">
+                                        <p className="text-brand-primary font-semibold text-[12px] tracking-wide uppercase leading-snug">
                                             {person.title}
                                         </p>
                                     </div>
+                                </div>
+
+                                {/* Credential Chips */}
+                                <div className="flex flex-wrap gap-2">
+                                    {person.credentials.map((c, j) => (
+                                        <div key={j} className="bg-white border border-gray-200 rounded-xl px-3 py-2 text-center min-w-[64px]">
+                                            <div className="text-[16px] font-black text-brand-primary leading-none">{c.value}</div>
+                                            <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mt-0.5">{c.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Tags */}
+                                <div className="flex flex-wrap gap-2">
+                                    {person.tags.map((tag, j) => (
+                                        <span key={j} className="px-2.5 py-1 bg-gray-50 border border-gray-100 text-gray-500 text-[11px] font-semibold rounded-md tracking-wide">
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
 
                                 <div className="h-px bg-gray-100" />
@@ -215,23 +326,24 @@ export default function TeamPage() {
                                 </p>
 
                                 {/* Background / Experience */}
-                                <div className="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                                    <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                                <div className="bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-2">Background</p>
+                                    <p className="text-gray-700 text-sm leading-relaxed">
                                         {person.background}
                                     </p>
                                 </div>
 
                                 {/* Education */}
                                 {person.education.length > 0 && (
-                                    <div className="flex flex-col gap-2 mt-auto pt-4">
-                                        <div className="flex items-center gap-2 text-gray-400 text-xs font-bold uppercase tracking-widest">
-                                            <GraduationCap size={14} className="text-gray-400" />
+                                    <div className="flex flex-col gap-2 mt-auto pt-2 border-t border-gray-100">
+                                        <div className="flex items-center gap-2 text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-1">
+                                            <GraduationCap size={13} />
                                             <span>Education</span>
                                         </div>
                                         <ul className="space-y-1.5">
                                             {person.education.map((edu, j) => (
                                                 <li key={j} className="text-gray-600 text-[13px] flex items-start gap-2">
-                                                    <ChevronRight size={14} className="text-brand-primary mt-0.5 shrink-0 opacity-70" />
+                                                    <ChevronRight size={13} className="text-brand-primary mt-0.5 shrink-0 opacity-70" />
                                                     {edu}
                                                 </li>
                                             ))}
@@ -240,78 +352,163 @@ export default function TeamPage() {
                                 )}
                             </motion.div>
                         ))}
+
+                        {/* 6th slot filler — decorative dark card */}
+                        <motion.div
+                            variants={fadeUp}
+                            className="relative bg-[#0b1320] border border-brand-primary/25 rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden"
+                        >
+                            {/* Glow blobs */}
+                            <div className="absolute -top-16 -right-16 w-56 h-56 bg-brand-primary/15 rounded-full blur-3xl pointer-events-none" />
+                            <div className="absolute -bottom-16 -left-10 w-48 h-48 bg-brand-primary/8 rounded-full blur-2xl pointer-events-none" />
+                            {/* Subtle grid overlay */}
+                            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.07] pointer-events-none" />
+
+                            <div className="relative z-10 flex flex-col h-full gap-8">
+                                <div>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-brand-primary mb-4 block">The Collective</span>
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug">
+                                        Built for<br />Industrial Reality
+                                    </h3>
+                                    <p className="text-gray-400 text-[14px] leading-relaxed">
+                                        Combining IIT-trained engineering, global EPC execution, Fortune 500 finance, and $2B+ advisory backing to take hydrogen from lab to industry.
+                                    </p>
+                                </div>
+
+                                {/* Mini stat grid */}
+                                <div className="grid grid-cols-2 gap-3">
+                                    {[
+                                        { value: "IIT", label: "Engineering" },
+                                        { value: "$2B+", label: "Advisor AUM" },
+                                        { value: "CA", label: "Finance Lead" },
+                                        { value: "3", label: "Continents" },
+                                    ].map((s, i) => (
+                                        <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                                            <div className="text-[22px] font-black text-brand-primary leading-none">{s.value}</div>
+                                            <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-1.5">{s.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Decorative ring graphic */}
+                                <div className="flex justify-center mt-auto pt-2">
+                                    <div className="relative w-28 h-28 flex items-center justify-center">
+                                        <div className="absolute inset-0 rounded-full border-2 border-brand-primary/20 animate-[spin_20s_linear_infinite]" />
+                                        <div className="absolute inset-3 rounded-full border border-brand-primary/30 animate-[spin_14s_linear_infinite_reverse]" />
+                                        <div className="absolute inset-6 rounded-full border border-brand-primary/40" />
+                                        <div className="w-10 h-10 rounded-full bg-brand-primary/15 border border-brand-primary/40 flex items-center justify-center">
+                                            <Users size={18} className="text-brand-primary" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
                     </motion.div>
                 </SectionWrapper>
             </section>
 
-            {/* 4. Board of Advisors */}
-            <section className="py-[var(--spacing-section)] bg-slate-50 border-y border-slate-200 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-                <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-brand-primary/[0.04] rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-sky-500/[0.03] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
+            {/* 5. Board of Advisors — Featured Layout */}
+            <section className="py-[var(--spacing-section)] bg-white border-b border-gray-100 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04]" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/[0.04] rounded-full blur-3xl pointer-events-none" />
                 <SectionWrapper className="relative z-10">
                     <motion.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-80px" }}
-                        className="mb-12 md:mb-16"
+                        className="mb-14"
                     >
-                        <motion.h2
-                            variants={fadeUp}
-                            className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight"
-                        >
-                            Board of Advisors
-                        </motion.h2>
-                        <motion.div variants={fadeUp} className="h-1 w-20 bg-brand-primary mt-6" />
+                        <motion.div variants={fadeUp} className="flex items-end justify-between gap-4 flex-wrap">
+                            <div>
+                                <span className="text-xs font-bold tracking-widest uppercase text-brand-primary mb-3 block">Advisors</span>
+                                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
+                                    Board of Advisors
+                                </h2>
+                            </div>
+                        </motion.div>
+                        <motion.div variants={fadeUp} className="h-[3px] w-16 bg-brand-primary mt-5 rounded-full" />
                     </motion.div>
 
-                    <motion.div
-                        variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-60px" }}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8"
-                    >
-                        {advisors.map((advisor, i) => (
-                            <motion.article
-                                key={advisor.name}
-                                variants={fadeUp}
-                                className="group relative bg-white border border-gray-200 p-8 md:p-10 flex flex-col gap-6 hover:border-brand-primary/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300"
-                            >
-                                <header className="flex items-center gap-5">
-                                    <div
-                                        aria-hidden="true"
-                                        className="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-secondary font-bold text-xl group-hover:bg-brand-primary/5 group-hover:text-brand-primary transition-colors shrink-0"
-                                    >
-                                        {advisor.initials}
-                                    </div>
+                    {advisors.map((advisor, i) => (
+                        <motion.div
+                            key={advisor.name}
+                            variants={fadeUp}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-60px" }}
+                            className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-primary/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all duration-300"
+                        >
+                            {/* Top header bar */}
+                            <div className="bg-gray-50 border-b border-gray-100 px-8 md:px-10 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                                <div className="w-16 h-16 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary font-black text-xl shrink-0">
+                                    {advisor.initials}
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-gray-900 font-bold text-2xl mb-1">{advisor.name}</h3>
+                                    <p className="text-brand-primary font-semibold text-[12px] tracking-widest uppercase">{advisor.title}</p>
+                                </div>
+                                {/* Credential chips */}
+                                <div className="flex flex-wrap gap-2 sm:justify-end">
+                                    {advisor.credentials.map((c, j) => (
+                                        <div key={j} className="bg-white border border-gray-200 rounded-xl px-4 py-2 text-center min-w-[70px]">
+                                            <div className="text-[18px] font-black text-brand-primary leading-none">{c.value}</div>
+                                            <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mt-0.5">{c.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Body */}
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                                {/* Bio - takes 2/3 */}
+                                <div className="lg:col-span-2 px-8 md:px-10 py-8 border-b lg:border-b-0 lg:border-r border-gray-100">
+                                    <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">About</p>
+                                    <p className="text-gray-600 text-[15px] leading-relaxed">{advisor.description}</p>
+                                </div>
+
+                                {/* Sidebar - 1/3 */}
+                                <div className="px-8 md:px-10 py-8 flex flex-col gap-6 bg-gray-50/50">
                                     <div>
-                                        <h3 className="text-gray-900 font-bold text-xl mb-1">
-                                            {advisor.name}
-                                        </h3>
-                                        <p className="text-brand-primary font-semibold text-sm tracking-wide uppercase">
-                                            {advisor.title}
+                                        <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">Education</p>
+                                        <ul className="space-y-2">
+                                            {advisor.education.map((edu, j) => (
+                                                <li key={j} className="text-gray-700 text-[13px] font-medium flex items-start gap-2">
+                                                    <GraduationCap size={13} className="text-brand-primary mt-0.5 shrink-0" />
+                                                    {edu}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="h-px bg-gray-100" />
+                                    <div>
+                                        <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">Focus Areas</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {["Robotics & AI", "Industrial Systems", "Dual-Use Tech", "Space", "Venture Capital"].map((tag, j) => (
+                                                <span key={j} className="px-2.5 py-1 bg-white border border-gray-200 text-gray-600 text-[11px] font-semibold rounded-md">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="h-px bg-gray-100" />
+                                    <div className="bg-brand-primary/5 border border-brand-primary/15 rounded-xl p-4">
+                                        <p className="text-[12px] text-gray-700 leading-relaxed font-medium">
+                                            Provides GigaCore with deep institutional investor networks and scale-up expertise across North America, Europe, and Asia.
                                         </p>
                                     </div>
-                                </header>
-
-                                <div className="h-px bg-gray-100" />
-
-                                <p className="text-gray-600 text-[15px] leading-relaxed">
-                                    {advisor.description}
-                                </p>
-                            </motion.article>
-                        ))}
-                    </motion.div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </SectionWrapper>
             </section>
 
-            {/* 5. Core Technical Team - Split Layout */}
-            <section className="relative py-[var(--spacing-section)] bg-gradient-to-t from-slate-50 to-white overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05]" />
+            {/* 6. Core Technical Team */}
+            <section className="relative py-[var(--spacing-section)] bg-slate-50 border-b border-slate-200 overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04]" />
                 <div className="absolute -bottom-40 -left-60 w-[800px] h-[800px] bg-emerald-500/[0.04] rounded-full blur-3xl pointer-events-none mix-blend-multiply" />
-                <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-sky-500/[0.03] rounded-full blur-3xl pointer-events-none" />
                 <SectionWrapper className="relative z-10">
                     <motion.div
                         variants={staggerContainer}
@@ -332,35 +529,40 @@ export default function TeamPage() {
                                 Our bench of engineers and scientists forms the backbone of GigaCore's reactor development, rigorous testing, and expanding IP portfolio.
                             </p>
 
-                            <div className="flex items-center gap-4 mb-10 pb-10 border-b border-gray-100">
-                                <Users size={40} className="text-gray-300" />
+                            <div className="flex items-center gap-5 mb-10 pb-10 border-b border-gray-200">
+                                <div className="w-16 h-16 rounded-2xl bg-brand-primary/10 border border-brand-primary/15 flex items-center justify-center shrink-0">
+                                    <Users size={28} className="text-brand-primary" />
+                                </div>
                                 <div>
-                                    <div className="text-4xl font-black text-gray-900 tracking-tight">14</div>
-                                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mt-1">Full-time Specialists</div>
+                                    <div className="text-4xl font-black text-gray-900 tracking-tight leading-none">14</div>
+                                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mt-1.5">Full-time Specialists</div>
                                 </div>
                             </div>
 
                             <div className="mb-10">
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Core Competencies</p>
+                                <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-4">Core Competencies</p>
                                 <div className="flex flex-wrap gap-2">
                                     {techExpertise.map((tag, i) => (
                                         <span
                                             key={i}
-                                            className="px-4 py-2 bg-gray-50 border border-gray-100 text-gray-700 font-medium text-sm rounded flex items-center gap-2"
+                                            className="px-4 py-2 bg-white border border-gray-200 text-gray-700 font-semibold text-sm rounded-xl flex items-center gap-2 hover:border-brand-primary/30 transition-colors"
                                         >
-                                            <FlaskConical size={14} className="text-gray-400" />
+                                            <FlaskConical size={13} className="text-brand-primary" />
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="bg-gray-50 border-l-2 border-amber-400 p-5 rounded-r-lg">
+                            <div className="bg-white border border-amber-200 rounded-xl p-5">
                                 <div className="flex items-start gap-3">
-                                    <Lock size={16} className="text-amber-500 mt-1 shrink-0" />
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        <span className="font-semibold text-gray-900">Confidentiality.</span> Individual CVs and detailed credentials for core technical team members are available upon execution of a Non-Disclosure Agreement (NDA).
-                                    </p>
+                                    <Lock size={16} className="text-amber-500 mt-0.5 shrink-0" />
+                                    <div>
+                                        <p className="text-[12px] font-bold uppercase tracking-widest text-amber-600 mb-1.5">Confidentiality Notice</p>
+                                        <p className="text-gray-600 text-sm leading-relaxed">
+                                            Individual CVs and detailed credentials for core technical team members are available upon execution of a Non-Disclosure Agreement (NDA).
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -380,9 +582,11 @@ export default function TeamPage() {
                 </SectionWrapper>
             </section>
 
-            {/* 6. Minimal Light CTA */}
-            <section className="py-24 bg-gray-50 border-t border-gray-100 text-center">
-                <SectionWrapper>
+            {/* 7. CTA — Dark */}
+            <section className="relative py-24 md:py-32 bg-[#0b1320] overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.08]" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+                <SectionWrapper className="relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -390,14 +594,15 @@ export default function TeamPage() {
                         viewport={{ once: true }}
                         className="max-w-2xl mx-auto"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 tracking-tight">
-                            Build the Infrastructure of Tomorrow
+                        <span className="text-[11px] font-bold tracking-widest uppercase text-brand-primary mb-6 block">Join the Mission</span>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
+                            Build the Infrastructure<br className="hidden sm:block" /> of Tomorrow
                         </h2>
-                        <p className="text-gray-600 mb-10 text-lg leading-relaxed">
+                        <p className="text-gray-400 mb-10 text-lg leading-relaxed">
                             We are always looking for driven engineers, scientists, and operators who share our conviction that industrial decarbonization is both necessary and achievable.
                         </p>
                         <Link href="/contact">
-                            <Button variant="primary" size="md" className="min-w-[200px] shadow-lg shadow-brand-primary/20">
+                            <Button variant="primary" size="md" className="min-w-[220px] shadow-glow">
                                 Get in Touch
                             </Button>
                         </Link>

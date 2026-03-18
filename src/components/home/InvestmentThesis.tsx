@@ -6,8 +6,8 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import { Zap, DollarSign, Target, CheckCircle2, Hexagon, TrendingUp, Presentation, LogOut } from "lucide-react";
 
 const atAGlance = [
-    { label: "Current Performance", value: "30-35 kWh/kg", desc: "Multiple successful runs confirmed" },
-    { label: "Target Performance", value: "25 kWh/kg (commercial pilot)", desc: "Unlocks $2.25/kg LCOH subject to pilot validation" },
+    { label: "Current Performance", value: "~38 kWh/kg", desc: "AC wall-plug measurement — full system load validated across multiple runs" },
+    { label: "Pilot Milestone", value: "Sustain 38 kWh/kg at scale", desc: "Independent third-party certification of 1 kg H₂/hr pilot module required" },
     { label: "Current Status", value: "TRL 5-6 Lab Validated", desc: "Bench-scale proven; structured pilot programme next" },
     { label: "Market Inflection", value: "$2.75/kg cost parity", desc: "Ammonia & refining parity relevant addressable segment" },
     { label: "Series A Raise", value: "$20M (full Phase 1)", desc: "18-month runway covering pilot, demo, team, BD" }
@@ -33,7 +33,7 @@ const whyNow = [
     {
         icon: Zap,
         title: "Different Physics",
-        desc: "Cold plasma observed at 30 to 35 kWh/kg vs 45 to 55 kWh/kg for conventional electrolysis. This is not an optimisation of existing technology. It operates on a different physical mechanism."
+        desc: "Laboratory-validated energy consumption of ~38 kWh/kg (AC wall-plug) vs 50 to 55 kWh/kg for conventional electrolysis — a 20–30% reduction. This is not an optimisation of existing technology. It operates on a fundamentally different electrochemical mechanism."
     },
     {
         icon: DollarSign,
