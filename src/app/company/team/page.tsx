@@ -116,6 +116,37 @@ const advisors = [
         ],
         education: ["M.S. Engineering — Stanford University", "MBA — Harvard Business School"],
     },
+    {
+        name: "Pranay Kothari",
+        initials: "PK",
+        title: "Strategic Advisor",
+        description:
+            "Pranay Kothari, senior executive at Polyplex Corporation, joins Gigacore as a Strategic Advisor, bringing deep global industrial experience across large-scale manufacturing and supply chains. Through Polyplex’s operations spanning Europe, the United States, and Asia, he has developed strong relationships across international industrial ecosystems, customers, and partners. His exposure to cross-border operations, capital-intensive plant development, and global market dynamics provides Gigacore with valuable strategic insight as it scales. He offers guidance on international expansion, plant execution, and supply chain structuring. His network supports access to potential partners, customers, and investors across key geographies. With board-level perspective and operational discipline, he strengthens Gigacore’s positioning with institutional stakeholders. His involvement enhances both credibility and execution capability as the company moves toward commercial deployment.",
+        credentials: [
+            { label: "Regions", value: "3" },
+            { label: "Experience", value: "Global Ind." },
+            { label: "Role", value: "Exec. Polyplex" },
+            { label: "Focus", value: "Scale-up" },
+        ],
+        education: [],
+    },
+    {
+        name: "Neeraj Agarwal",
+        initials: "NA",
+        title: "Senior Project & Operations Leader",
+        description:
+            "Neeraj Agarwal is a senior project and operations leader bringing deep execution and infrastructure expertise to GigaCore’s industrial deployment strategy. He has over 25 years of experience across energy, oil & gas, and infrastructure projects in India and the Middle East. He held leadership roles at Engineers India Limited, including Chief Operating Officer (UAE) and Chief General Manager, and worked with Worley. He has led large-scale projects ranging from $200M to over $1B and served as Lender’s Independent Engineer on projects of approximately $10B, working with international banking consortiums.",
+        credentials: [
+            { label: "Experience", value: "25+ yrs" },
+            { label: "Projects Led", value: "$1B+" },
+            { label: "Lender's Eng", value: "$10B" },
+            { label: "Alma Mater", value: "IIT" },
+        ],
+        education: [
+            "B.Tech - IIT Roorkee",
+            "Certified Independent Director (IICA)",
+        ],
+    },
 ];
 
 const techExpertise = [
