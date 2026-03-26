@@ -6,27 +6,13 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import SplitSection from "@/components/ui/SplitSection";
+import MergedHero from "@/components/economics/MergedHero";
 
 export default function EconomicsPage() {
     return (
         <main className="bg-white">
             {/* 1. Hero Section */}
-            <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gray-900">
-                <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/economics/hero%20section.png')] bg-cover bg-center opacity-60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
-                </div>
-                <SectionWrapper className="relative h-full flex flex-col justify-center items-center text-center text-white z-10">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-[length:var(--font-hero)] font-bold tracking-tight mb-6 leading-[1.1] text-white"
-                    >
-                        Hydrogen Economics Is an <span className="text-brand-primary">Energy Problem</span>
-                    </motion.h1>
-                </SectionWrapper>
-            </section>
+            <MergedHero />
 
             {/* 2. Intro Section */}
             <section className="py-[var(--spacing-section)] bg-white text-center">
