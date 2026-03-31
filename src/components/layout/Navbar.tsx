@@ -76,7 +76,7 @@ export default function Navbar() {
             >
                 <SectionWrapper className="flex items-center justify-between">
                     <Link href="/" className="relative z-50 group">
-                        <Logo className="w-[176px] md:w-auto" isScrolled={useDarkText || isMobileOpen} />
+                        <Logo isScrolled={useDarkText || isMobileOpen} />
                     </Link>
 
                     {/* Desktop nav */}

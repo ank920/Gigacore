@@ -14,12 +14,12 @@ const leaders = [
         name: "Manish Kothary",
         initials: "MK",
         title: "Chief Executive Officer",
-        bio: "Founder developing scalable next-gen hydrogen production systems for industrial decarbonization. Focused on high-efficiency reactor platforms, modular deployment, and strategic partnerships to enable disciplined commercial scale-up.",
+        bio: "Entrepreneur and technology founder developing scalable hydrogen and plasma-based energy systems for industrial decarbonisation. Brings 25+ years of experience building and scaling ventures across technology, financial platforms and industrial infrastructure.",
         background:
-            "Previously founded Bene LLC. Earlier senior roles at Barclays Global Investors, Wells Fargo, and Pacific Gas & Electric.",
+            "Previously senior roles at Barclays Global Investors, Wells Fargo and Pacific Gas & Electric.",
         education: [
-            "M.Sc Computer Science - University of South Carolina",
-            "BE Electrical Engineering - IIT Roorkee",
+            "M.Sc Computer Science, University of South Carolina",
+            "BE Electrical Engineering, IIT Roorkee",
         ],
         tags: ["Capital Markets", "Energy Systems", "Startup Scaling"],
         credentials: [
