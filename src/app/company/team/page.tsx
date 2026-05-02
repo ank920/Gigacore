@@ -158,13 +158,27 @@ const advisors = [
         credentials: [
             { label: "Experience", value: "25+ yrs" },
             { label: "Projects Led", value: "$1B+" },
-            { label: "Lender's Eng", value: "$10B" },
+            { label: "Lender’s Eng", value: "$10B" },
             { label: "Alma Mater", value: "IIT" },
         ],
         education: [
             "B.Tech - IIT Roorkee",
             "Certified Independent Director (IICA)",
         ],
+    },
+    {
+        name: "Ranju Mehta",
+        initials: "RM",
+        title: "Director (North), I Create India",
+        description:
+            "Ranju Mehta is the Director (North) at I Create India, where she drives entrepreneurship-led ecosystem development across youth, marginalized communities, and Indian Army veterans. She has led the establishment of eight Business Incubation Centres across Army locations, enabling venture creation and supporting first-generation entrepreneurs. She brings over three and a half decades of experience in education and institutional leadership, including her tenure as Vice-Principal at Kanoria Girls College, with a focus on capacity building and talent development. Her work contributes to building a future-ready workforce by aligning entrepreneurship with emerging sectors such as clean energy, sustainable technologies, and industrial decarbonisation. She has mentored entrepreneurs to transition into enterprise and participate in evolving energy and infrastructure ecosystems. She has been recognized internationally by NFTE USA as a Best Entrepreneurship Educator (twice).",
+        credentials: [
+            { label: "Experience", value: "35+ yrs" },
+            { label: "Incubation Ctrs", value: "8" },
+            { label: "NFTE USA", value: "2× Award" },
+            { label: "Focus", value: "Edu + Entrep." },
+        ],
+        education: [],
     },
 ];
 
@@ -470,18 +484,22 @@ export default function TeamPage() {
 
                                 {/* Sidebar - 1/3 */}
                                 <div className="px-8 md:px-10 py-8 flex flex-col gap-6 bg-gray-50/50">
-                                    <div>
-                                        <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">Education</p>
-                                        <ul className="space-y-2">
-                                            {advisor.education.map((edu, j) => (
-                                                <li key={j} className="text-gray-700 text-[13px] font-medium flex items-start gap-2">
-                                                    <GraduationCap size={13} className="text-brand-primary mt-0.5 shrink-0" />
-                                                    {edu}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <div className="h-px bg-gray-100" />
+                                    {advisor.education.length > 0 && (
+                                        <>
+                                            <div>
+                                                <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-4">Education</p>
+                                                <ul className="space-y-2">
+                                                    {advisor.education.map((edu, j) => (
+                                                        <li key={j} className="text-gray-700 text-[13px] font-medium flex items-start gap-2">
+                                                            <GraduationCap size={13} className="text-brand-primary mt-0.5 shrink-0" />
+                                                            {edu}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            <div className="h-px bg-gray-100" />
+                                        </>
+                                    )}
                                     <div>
                                         <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3">Focus Areas</p>
                                         <div className="flex flex-wrap gap-2">
